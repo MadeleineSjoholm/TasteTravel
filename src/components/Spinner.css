@@ -1,6 +1,4 @@
 
-
-
 .spinner-container {
   position: fixed;
   top: 50%;
@@ -40,3 +38,5 @@
     opacity: 0;
   }
 }
+
+

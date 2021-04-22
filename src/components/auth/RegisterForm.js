@@ -6,7 +6,6 @@ import useForm from 'react-hook-form'
 
 import { isValidImage, isValidUrl, sameAs } from 'helpers/validators'
 
-
 const RegisterForm = (props) => {
 
   const { register, handleSubmit, errors, getValues } = useForm()
@@ -101,3 +100,5 @@ const RegisterForm = (props) => {
 }
 
 export default RegisterForm
+
+

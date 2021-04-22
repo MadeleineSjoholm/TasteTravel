@@ -14,7 +14,6 @@ export const sendMessage = message =>
     .collection('messages')
     .add(message)
 
-
 export const subscribeToMessages = (userId, callback) =>
   db.collection('profiles')
     .doc(userId)
@@ -24,7 +23,6 @@ export const subscribeToMessages = (userId, callback) =>
       callback(messages)
   })
 
-
 export const markMessageAsRead = message =>
   db.collection('profiles')
     .doc(message.toUser)
@@ -32,13 +30,11 @@ export const markMessageAsRead = message =>
     .doc(message.id)
     .update({isRead: true})
 
-
 export const fetchCollaborations = userId =>
   db.collection('collaborations')
     .where('allowedPeople', 'array-contains', userId)
     .get()
     .then(snapshot => snapshot.docs.map(doc => ({id: doc.id, ...doc.data()})))
-
 
 export const subToCollaboration = (collabId, done) =>
   db.collection('collaborations')
@@ -47,7 +43,6 @@ export const subToCollaboration = (collabId, done) =>
       const collab = {id: snapshot.id, ...snapshot.data()}
       done(collab)
     })
-
 
 export const joinCollaboration = (collabId, uid) => {
   const userRef = createRef('profiles', uid)
@@ -66,7 +61,6 @@ export const leaveCollaboration = (collabId, uid) => {
     .doc(collabId)
     .update({ joinedPeople: firebase.firestore.FieldValue.arrayRemove(userRef)})
 }
-
 
 export const subToProfile = (uid, done) =>
   db.collection('profiles')
@@ -89,8 +83,9 @@ export const subToMessages = (collabId, done) =>
     .collection('messages')
     .onSnapshot(snapshot => done(snapshot.docChanges()))
 
-
 export const startCollaboration = (collabId, expiresAt) =>
   db.collection('collaborations')
     .doc(collabId)
     .update({expiresAt})
+
+

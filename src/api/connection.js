@@ -20,7 +20,6 @@ export const isOnlineForFirestore = {
   last_changed: firebase.firestore.FieldValue.serverTimestamp()
 }
 
-
 export const onConnectionChanged = callback =>
   firebase
     .database()
@@ -28,3 +27,5 @@ export const onConnectionChanged = callback =>
     .on('value', snapshot => {
       callback(snapshot.val())
     })
+
+

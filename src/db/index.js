@@ -5,14 +5,13 @@ import 'firebase/firestore'
 const db = firebase
   .initializeApp(
     {
-      apiKey: "AIzaSyCywhXBN24vpBvJLF9ELonOANiElpcyghM",
-      authDomain: "servicario.firebaseapp.com",
-      databaseURL: "https://servicario.firebaseio.com",
-      projectId: "servicario",
-      storageBucket: "servicario.appspot.com",
-      messagingSenderId: "279450226918",
-      appId: "1:279450226918:web:dc6d344dfe6703eb2b2b27",
-      measurementId: "G-ES0BWGWWLM"
+      apiKey: "AIzaSyD-P4BCjKFFC_nkMpWLMDTIfOFqV5FYzQw",
+      authDomain: "tastetravel-39c9d.firebaseapp.com",
+      projectId: "tastetravel-39c9d",
+      storageBucket: "tastetravel-39c9d.appspot.com",
+      messagingSenderId: "114702386767",
+      appId: "1:114702386767:web:7fd1786198518aa69c0c3a",
+      measurementId: "G-59BQ49Q90J"
     }
   )
   .firestore()

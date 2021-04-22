@@ -1,4 +1,3 @@
-
 import React from 'react'
 import { connect } from 'react-redux'
 import { getMessages } from 'reducers'
@@ -48,11 +47,13 @@ const ReceivedMessages = ({dispatch, messages}) => {
     return filteredMessages
   }
 
-
   return renderMessages(messages)
 }
-
 
 const mapStateToProps = (state) => ({messages: getMessages(state)})
 
 export default connect(mapStateToProps)(ReceivedMessages)
+
+
+
+
