@@ -3,13 +3,13 @@
 Color variables
 ========================================================================== */
 
-$white: #fff;
+$white: #482728;
 $smoke-white: #fcfcfc;
 $grey-white: #f2f2f2;
 
-$primary: #4FC1EA;
-$secondary: #F39200;
-$accent: #00efb7;
+$primary: #B287A3;
+$secondary: #B287A3; //(Register knapp uppe i Navbar)
+$accent: #B287A3;
 
 $fade-grey: #ededed;
 $light-grey: #EFF4F7;
@@ -25,10 +25,10 @@ $bloody: #FC354C;
 $pinky: #ff00cc;
 $frost: #004e92;
 $placeholder: #cecece;
-$dark-grey: #344258;
-$border-grey: #ccc;
-$muted-grey: #999;
-$section-grey: #fbfbfb;
+$dark-grey: #B287A3;
+$border-grey: #BDCFB5;
+$muted-grey: #BDCFB5;
+$section-grey: #BDCFB5;
 
 .s-m-r {
  margin-right: 5px;
@@ -711,10 +711,10 @@ Navbar
    }
    //Navbar items
    .navbar-item {
-       color: $muted-grey;
+       color: #7E4E60;
        &.is-secondary {
            &:hover {
-               color: $secondary !important;
+               color: $secondary!important;
            }
        }
        &.has-dropdown {
@@ -1146,7 +1146,7 @@ Sidebar Styles
        }
 
        .sidebar-title {
-           color: white;
+           color: #482728;
            font-weight: bold;
            font-size: 26px;
        }
