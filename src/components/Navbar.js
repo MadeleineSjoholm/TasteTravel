@@ -30,7 +30,7 @@ const Navbar = props => {
           <Link
             to="/"
             className="navbar-item">
-             <div className="title"> <img src="nylogg.png" width="50" height="50" /> TasteTravel</div>
+             <div className="title"> <img src="nylogg.png" width="40" height="50" /> TasteTravel</div>
           </Link>
 
           <a className="navbar-item is-hidden-desktop is-hidden-tablet">

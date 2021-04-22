@@ -1,12 +1,13 @@
 /* eslint jsx-a11y/anchor-is-valid: 0 */
 
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Sidebar = () => {
   return (
     <div className="sidebar">
       <div className="sidebar-header">
-        <div className="sidebar-title"><img src="nylogg.png"/> Menu  </div>
+        <div className="sidebar-title"> Menu  </div>
         <a className="sidebar-close">
           <i className="fa fa-times-circle"></i>
         </a>
@@ -14,26 +15,27 @@ const Sidebar = () => {
       <div className="inner">
         <ul className="sidebar-menu">
           <li><span className="nav-section-title"></span></li>
-          <li className="have-children"><a href="#">PREFERENCES</a>
+          <li className="have-children">
+          <a href="#"><img src="preferences.png" width="40" height="40" /><br/>PREFERENCES</a>
             <ul>
               <li><a href="#">Profile</a></li>
               <li><a href="#">Account</a></li>
               <li><a href="#">Settings</a></li>
             </ul>
           </li>
-          <li className="have-children"><a href="#">SAVED RECIPIES</a>
+          <li className="have-children"><a href="#"><img src="saved.png" width="40" height="40" /><br/>SAVED RECIPIES</a>
             <ul>
               <li><a href="#">Inbox</a></li>
               <li><a href="#">Compose</a></li>
             </ul>
           </li>
-          <li className="have-children"><a href="#">MOST POPULAR</a>
+          <li className="have-children"><a href="#"><img src="stars.png" width="50" height="50" /><br/>MOST POPULAR</a>
             <ul>
               <li><a href="#">Library</a></li>
               <li><a href="#">Upload</a></li>
             </ul>
           </li>
-          <li className="have-children"><a href="#">HELP</a>
+          <li className="have-children"><a href="#"><img src="help.png" width="30" height="30" /><br/>HELP</a>
             <ul>
               <li><a href="#">User settings</a></li>
               <li><a href="#">App settings</a></li>
