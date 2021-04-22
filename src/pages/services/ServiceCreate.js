@@ -36,18 +36,19 @@ const ServiceCreate = ({auth}) => {
     <div className="create-page">
       <div className="container">
         <div className="form-container">
-          <h1 className="title">Create Service</h1>
+          <h1 className="title">Create Recipe</h1>
           <form>
             <div className="field">
-              <label className="label">Category</label>
+              <label className="label">Continent</label>
               <div className="control">
                 <div className="select">
                   <select name="category" onChange={handleChange}>
-                    <option value="mathematics">Mathematics</option>
-                    <option value="programming">Programming</option>
-                    <option value="painting">Painting</option>
-                    <option value="singing">Singing</option>
-                    <option value="english">English</option>
+                    <option value="mathematics">Europe</option>
+                    <option value="programming">Asia</option>
+                    <option value="english">Africa</option>
+                    <option value="painting">North America</option>
+                    <option value="singing">South America</option>
+                    <option value="english">Oceania</option>
                   </select>
                 </div>
               </div>
@@ -64,7 +65,7 @@ const ServiceCreate = ({auth}) => {
               </div>
             </div>
             <div className="field">
-              <label className="label">Description</label>
+              <label className="label">Directions</label>
               <div className="control">
                 <textarea
                   onChange={handleChange}
@@ -85,7 +86,7 @@ const ServiceCreate = ({auth}) => {
               </div>
             </div>
             <div className="field">
-              <label className="label">Price per Hour</label>
+              <label className="label">Portions</label>
               <div className="control">
                 <input
                   onChange={handleChange}
