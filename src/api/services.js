@@ -9,7 +9,6 @@ export const fetchServiceById = serviceId =>
     .get()
     .then(snapshot => ({id: snapshot.id, ...snapshot.data()}))
 
-
 export const fetchServices = () =>
   db.collection('services')
     .get()
@@ -30,10 +29,10 @@ export const fetchUserServices = userId => {
     })
   }
 
-
 export const createService = newService => {
   return db
     .collection('services')
     .add(newService)
     .then(docRef => docRef.id)
 }
+
