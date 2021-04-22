@@ -21,7 +21,7 @@ const Hero = () =>
           </div>
           <div className="column is-5 is-offset-1">
             <figure className="image is-4by3">
-                <img src={process.env.PUBLIC_URL + '/worker.svg'} alt="Description" />
+                <img src={process.env.PUBLIC_URL + 'worker.svg'} alt="Description" />
             </figure>
           </div>
         </div>

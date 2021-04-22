@@ -6,7 +6,7 @@ const Sidebar = () => {
   return (
     <div className="sidebar">
       <div className="sidebar-header">
-        <div className="sidebar-title">Menu</div>
+        <div className="sidebar-title">Menu  <img src="nylogg.png"/></div>
         <a className="sidebar-close">
           <i className="fa fa-times-circle"></i>
         </a>
@@ -14,26 +14,26 @@ const Sidebar = () => {
       <div className="inner">
         <ul className="sidebar-menu">
           <li><span className="nav-section-title"></span></li>
-          <li className="have-children"><a href="#">User</a>
+          <li className="have-children"><a href="#">PREFERENCES</a>
             <ul>
               <li><a href="#">Profile</a></li>
               <li><a href="#">Account</a></li>
               <li><a href="#">Settings</a></li>
             </ul>
           </li>
-          <li className="have-children"><a href="#">Messages</a>
+          <li className="have-children"><a href="#">SAVED RECIPIES</a>
             <ul>
               <li><a href="#">Inbox</a></li>
               <li><a href="#">Compose</a></li>
             </ul>
           </li>
-          <li className="have-children"><a href="#">Images</a>
+          <li className="have-children"><a href="#"></a>
             <ul>
               <li><a href="#">Library</a></li>
               <li><a href="#">Upload</a></li>
             </ul>
           </li>
-          <li className="have-children"><a href="#">Settings</a>
+          <li className="have-children"><a href="#">MOST POPULAR</a>
             <ul>
               <li><a href="#">User settings</a></li>
               <li><a href="#">App settings</a></li>
@@ -45,4 +45,4 @@ const Sidebar = () => {
   )
 }
 
-export default Sidebar 
+export default Sidebar
