@@ -567,7 +567,7 @@ footer.footer-dark {
            line-height: 40px;
            font-size: 1.1rem;
            a {
-               color: $light-blue-grey;
+               color: pink;
                font-weight: 400;
                transition: all 0.5s;
            }
@@ -1187,7 +1187,7 @@ Sidebar Styles
                            background-color: darken($dark-grey, 5%);
                            padding-left: 62px;
                            border-bottom: 1px solid darken($dark-grey, 2%);
-                           font-size: 4rem;
+                           font-size: 1rem;
                            &:hover {
                                color: $primary;
                                padding-left: 62px;
