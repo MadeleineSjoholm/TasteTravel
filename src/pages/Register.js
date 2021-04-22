@@ -21,10 +21,13 @@ const registerUser = (userData) => {
 
 return (
   <div className="auth-page">
+    <figure className="map_background">
+      <img src="map.png" alt="Company Logo" />
+    </figure>
     <div className="container has-text-centered">
       <div className="column is-4 is-offset-4">
         <h3 className="title has-text-grey">Register</h3>
-        <p className="subtitle has-text-grey">Please Register to proceed.</p>
+        <p className="subtitle has-text-grey">Thank you for joining us, your journey starts here.</p>
         <div className="box">
           <figure className="avatar">
             <img src="logga.png" alt="Company Logo" />

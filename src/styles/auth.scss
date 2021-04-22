@@ -2,8 +2,18 @@
 
 // AUTH STARTS
 .auth-page {
+
+  .map_background{
+    max-width: 100%;
+    height: auto;
+    img {width: 100%}
+    position: absolute;
+    opacity: 0.9;
+  }
+
   .hero.is-success {
     background: #F2F6FA;
+    opacity: 0.4;
   }
   .hero .nav, .hero.is-success .nav {
     -webkit-box-shadow: none;
@@ -11,7 +21,8 @@
   }
   .box {
     margin-top: 5rem;
-    border:5px dotted #BDCFB5;
+    border:6px dotted #BDCFB5;
+    background: rgba(255,255,255,0.4);
   }
   .avatar {
     margin-top: -70px;
