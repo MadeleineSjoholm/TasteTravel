@@ -192,7 +192,7 @@ Classes to change the feel of bulma buttons
    transition: all 0.5s;
    &.cta {
        font-family: 'Open Sans', sans-serif;
-       font-size: 1rem;
+       font-size: 1.5rem;
        font-weight: 600;
        padding: 26px 40px 26px 40px;
    }
@@ -210,7 +210,7 @@ Classes to change the feel of bulma buttons
        background: transparent;
    }
    &.signup-button {
-       font-size: .9rem;
+       font-size: 1rem;
        font-weight: 600;
        font-family: 'Open Sans', sans-serif;
        padding: 24px 26px;
@@ -1186,7 +1186,7 @@ Sidebar Styles
                            background-color: darken($dark-grey, 5%);
                            padding-left: 62px;
                            border-bottom: 1px solid darken($dark-grey, 2%);
-                           font-size: .8rem;
+                           font-size: 4rem;
                            &:hover {
                                color: $primary;
                                padding-left: 62px;
