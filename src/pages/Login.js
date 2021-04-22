@@ -29,7 +29,7 @@ return (
     <div className="container has-text-centered">
       <div className="column is-4 is-offset-4">
         <h3 className="title has-text-grey">Login</h3>
-        <p className="subtitle has-text-grey">Please login to proceed.</p>
+        <p className="subtitle has-text-grey">Please login to start TasteTravel! </p>
         <div className="box">
           <figure className="avatar">
             <img src="Logga.png" alt="Company Logo" />
@@ -64,7 +64,7 @@ return (
         </div>
         <p className="has-text-grey">
           <a>Sign In With Google</a>&nbsp;
-          <a href="/">Sign Up</a> &nbsp;·&nbsp;
+          <a href="/">SIGN UP</a> &nbsp;·&nbsp;
           <a href="../">Need Help?</a>
         </p>
       </div>

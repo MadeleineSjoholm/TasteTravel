@@ -6,7 +6,7 @@ const Sidebar = () => {
   return (
     <div className="sidebar">
       <div className="sidebar-header">
-        <div className="sidebar-title">Menu  <img src="nylogg.png"/></div>
+        <div className="sidebar-title"><img src="nylogg.png"/> Menu  </div>
         <a className="sidebar-close">
           <i className="fa fa-times-circle"></i>
         </a>

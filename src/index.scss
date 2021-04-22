@@ -10,7 +10,7 @@ $grey-white: #f2f2f2;
 
 $primary: #B287A3;
 $secondary: #B287A3; //(Register knapp uppe i Navbar)
-$accent: #B287A3;
+$accent: #B287A3; //Knapparna för de olika kurserna längst ner på sidan
 
 $fade-grey: #ededed;
 $light-grey: #EFF4F7;
@@ -712,7 +712,7 @@ Navbar
    }
    //Navbar items
    .navbar-item {
-       color: #7E4E60;
+       color: #7E4E60; //Home, faq osv färg.
        &.is-secondary {
            &:hover {
                color: $secondary!important;
@@ -823,6 +823,7 @@ Responsive Styles
 
    .title.section-title {
        font-size: 2rem !important;
+       
    }
 
    .level-left.level-social {
