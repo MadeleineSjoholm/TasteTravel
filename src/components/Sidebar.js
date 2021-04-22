@@ -27,13 +27,13 @@ const Sidebar = () => {
               <li><a href="#">Compose</a></li>
             </ul>
           </li>
-          <li className="have-children"><a href="#"></a>
+          <li className="have-children"><a href="#">MOST POPULAR</a>
             <ul>
               <li><a href="#">Library</a></li>
               <li><a href="#">Upload</a></li>
             </ul>
           </li>
-          <li className="have-children"><a href="#">MOST POPULAR</a>
+          <li className="have-children"><a href="#">HELP</a>
             <ul>
               <li><a href="#">User settings</a></li>
               <li><a href="#">App settings</a></li>
