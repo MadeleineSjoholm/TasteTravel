@@ -27,7 +27,7 @@ return (
         <p className="subtitle has-text-grey">Please Register to proceed.</p>
         <div className="box">
           <figure className="avatar">
-            <img src="https://placehold.it/128x128" alt="Company Logo" />
+            <img src="logga.png" alt="Company Logo" />
           </figure>
           <RegisterForm onRegister={registerUser} />
         </div>
