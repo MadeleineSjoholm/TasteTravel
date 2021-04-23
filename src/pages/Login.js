@@ -26,6 +26,9 @@ if (redirect) { return <Redirect to="/" />}
 
 return (
   <div className="auth-page">
+    <figure className="map_background">
+      <img src="map.png" alt="Company Logo" />
+    </figure>
     <div className="container has-text-centered">
       <div className="column is-4 is-offset-4">
         <h3 className="title has-text-grey">Login</h3>

@@ -12,6 +12,11 @@ import LogoutPage from './pages/Logout'
 import RegisterPage from './pages/Register'
 import SecretPage from './pages/Secret'
 
+import Preferences from './pages/Preferences'
+import SavedRecipes from './pages/SavedRecipes'
+import MostPopular from './pages/MostPopular'
+
+
 import ServiceCreatePage from './pages/services/ServiceCreate'
 import UserServicesPage from './pages/services/UserServices'
 
@@ -64,6 +69,15 @@ const Routes = () =>
     </Route>
     <Route path="/faq">
       <FaqPage />
+    </Route>
+    <Route path="/Preferences">
+      <Preferences />
+    </Route>
+    <Route path="/SavedRecipes">
+      <SavedRecipes />
+    </Route>
+    <Route path="/MostPopular">
+      <MostPopular />
     </Route>
     <Route path="/">
       <HomePage />
