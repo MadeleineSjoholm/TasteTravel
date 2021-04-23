@@ -1,7 +1,7 @@
 /* eslint jsx-a11y/anchor-is-valid: 0 */
 
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 
 const Sidebar = () => {
   return (
@@ -14,36 +14,31 @@ const Sidebar = () => {
       </div>
       <div className="inner">
         <ul className="sidebar-menu">
-          <li><span className="nav-section-title"></span></li>
-          <li className="have-children">
-          <a href="#"><img src="preferences.png" width="40" height="40" alt='description'/><br/>PREFERENCES</a>
-            <ul>
-              <li><a href="#">Profile</a></li>
-              <li><a href="#">Account</a></li>
-              <li><a href="#">Settings</a></li>
-            </ul>
-          </li>
-          <li className="have-children"><a href="#"><img src="saved.png" width="40" height="40" alt='description' /><br/>SAVED RECIPIES</a>
-            <ul>
-              <li><a href="#">Inbox</a></li>
-              <li><a href="#">Compose</a></li>
-            </ul>
-          </li>
-          <li className="have-children"><a href="#"><img src="stars.png" width="50" height="50" alt='description' /><br/>MOST POPULAR</a>
-            <ul>
-              <li><a href="#">Library</a></li>
-              <li><a href="#">Upload</a></li>
-            </ul>
-          </li>
+
+        <div className="have-children">
+        <li><span className="nav-section-title"></span></li>
+         <a href="/preferences"><img src="preferences.png" width="40" height="40" alt='description'/><br/>PREFERENCES</a>
+        </div>
+
+        <div className="have-children">
+        <li><span className="nav-section-title"></span></li>
+        <a href="/mostPopular"><img src="stars.png" width="50" height="50" alt='description' /><br/>MOST POPULAR</a>        
+        </div>
+
+        <div className="have-children">
+        <li><span className="nav-section-title"></span></li>
+        <a href="/savedRecipes"><img src="saved.png" width="50" height="50" alt='description' /><br/>SAVED RECIPES</a>        
+        </div>
+      
           <li className="have-children"><a href="#"><img src="help.png" width="30" height="30" alt='description' /><br/>HELP</a>
             <ul>
-              <li><a href="#">User settings</a></li>
-              <li><a href="#">App settings</a></li>
+              <li><a href="#">Account settings</a></li>
+              <li><a href="#">App Information</a></li>
             </ul>
           </li>
-        </ul>
-      </div>
-    </div>
+          </ul>
+        </div>
+    </div> 
   )
 }
 
