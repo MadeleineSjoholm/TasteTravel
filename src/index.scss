@@ -586,7 +586,6 @@ footer.footer-dark {
 }
 
 
-
 /* ==========================================================================
 Inputs styles
 ========================================================================== */
@@ -648,10 +647,12 @@ Hero styles
 ========================================================================== */
 
 .hero-body {
-   padding-top: 6rem;
+   padding-top: 3rem;
    padding-bottom: 6rem;
    .title, .subtitle {
        font-family: 'Open Sans', sans-serif;
+       font-size: 25px;
+       color: $white;
    }
    .title {
        &.is-bold {
@@ -662,12 +663,6 @@ Hero styles
        &.is-muted {
            color: $muted-grey;
        }
-   }
-}
-
-.hero-foot {
-   img.partner-logo {
-       height: 70px;
    }
 }
 
@@ -1133,7 +1128,7 @@ Sidebar Styles
            height: 32px;
        }
        a {
-           width: 24px;
+           width: 20px;
            height: 24px;
        }
        svg {
@@ -1175,18 +1170,13 @@ Sidebar Styles
                        color: $white;
                    }
                }
-
-               .have-children {
-                   align-items: center;
-                   
-               }
                a span {
                    margin-right: 20px;
                    color: $white;
                }
                &.have-children {
                    ul {
-                       padding: 0px;
+                       padding-right: 10px;
                    }
                    li {
                        a {
@@ -1213,8 +1203,16 @@ Sidebar Styles
                }
            }
        }
+
+       .category-sidebar-buttons {
+           align-items: center;
+           padding: 20px;
+           display:block;
+
+
+       }
        li.have-children, li {
-           position: relative;
+           position: center;
        }
        li.have-children.active > a, li.have-children.active > a span, li.have-children.active > a span:after {
            color: $secondary;

@@ -15,27 +15,27 @@ const Sidebar = () => {
       <div className="inner">
         <ul className="sidebar-menu">
 
-        <div className="have-children">
+        <button className="category-sidebar-buttons">
         <li><span className="nav-section-title"></span></li>
          <a href="/preferences"><img src="preferences.png" width="40" height="40" alt='description'/><br/>PREFERENCES</a>
-        </div>
+        </button>
 
-        <div className="have-children">
+        <button className="category-sidebar-buttons">
         <li><span className="nav-section-title"></span></li>
         <a href="/mostPopular"><img src="stars.png" width="50" height="50" alt='description' /><br/>MOST POPULAR</a>        
-        </div>
+        </button>
 
-        <div className="have-children">
+        <button className="category-sidebar-buttons">
         <li><span className="nav-section-title"></span></li>
         <a href="/savedRecipes"><img src="saved.png" width="50" height="50" alt='description' /><br/>SAVED RECIPES</a>        
-        </div>
+        </button>
       
-          <li className="have-children"><a href="#"><img src="help.png" width="30" height="30" alt='description' /><br/>HELP</a>
+          {/* <li className="have-children"><a href="#"><img src="help.png" width="30" height="30" alt='description' /><br/>HELP</a>
             <ul>
               <li><a href="#">Account settings</a></li>
               <li><a href="#">App Information</a></li>
             </ul>
-          </li>
+  </li> */}
           </ul>
         </div>
     </div> 

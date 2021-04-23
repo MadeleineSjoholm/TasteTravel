@@ -11,9 +11,7 @@ const Hero = () =>
                 Travel with your taste buds.
             </h1>
             <MapIndex className= 'map'/>
-            <a className="button cta rounded primary-btn raised">
-                  Get Started
-              </a>
+          
           </div>
     </div>
   </section>
