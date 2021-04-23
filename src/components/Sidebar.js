@@ -1,6 +1,7 @@
 /* eslint jsx-a11y/anchor-is-valid: 0 */
 
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 
 const Sidebar = () => {
@@ -16,9 +17,15 @@ const Sidebar = () => {
         <ul className="sidebar-menu">
           <li><span className="nav-section-title"></span></li>
           <li className="have-children">
-          <a href="#"><img src="preferences.png" width="40" height="40" alt='description'/><br/>PREFERENCES</a>
+          <a href="#"><img src="preferences.png" width="40" height="40" alt='description'/><br/>PREFERENCE</a>
             <ul>
-              <li><a href="#">Profile</a></li>
+              <li><a href="#">Profile
+              <Link
+                to="/Preferences"
+                className="navbar-item is-secondary">
+                  Preferences
+              </Link>
+              </a></li>
               <li><a href="#">Account</a></li>
               <li><a href="#">Settings</a></li>
             </ul>
