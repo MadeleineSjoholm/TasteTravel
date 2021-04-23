@@ -27,18 +27,20 @@ return (
     <div className="container has-text-centered">
       <div className="column is-4 is-offset-4">
         <h3 className="title has-text-grey">Register</h3>
-        <p className="subtitle has-text-grey">Thank you for joining us, your journey starts here.</p>
+        <p className="subtitle has-text-grey"> Let's start your TasteTravel journey!</p>
         <div className="box">
           <figure className="avatar">
             <img src="logga.png" alt="Company Logo" />
           </figure>
           <RegisterForm onRegister={registerUser} />
         </div>
+
         <p className="has-text-grey">
           <a>Sign In With Google</a>&nbsp;
           <a href="/">Sign Up</a> &nbsp;·&nbsp;
           <a href="../">Need Help?</a>
         </p>
+
       </div>
     </div>
   </div>
