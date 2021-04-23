@@ -1111,7 +1111,7 @@ Sidebar Styles
 .sidebar {
    background: $dark-grey;
    width: 280px;
-   height: 100%;
+   height: 50%;
    position: fixed;
    top: 0;
    left: 0;
@@ -1178,7 +1178,7 @@ Sidebar Styles
 
                .have-children {
                    align-items: center;
-                   
+
                }
                a span {
                    margin-right: 20px;
