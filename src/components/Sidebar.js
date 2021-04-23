@@ -7,7 +7,7 @@ const Sidebar = () => {
   return (
     <div className="sidebar">
       <div className="sidebar-header">
-        <div className="sidebar-title"> Menu  </div>
+        <div className="sidebar-title"> MENU  </div>
         <a className="sidebar-close">
           <i className="fa fa-times-circle"></i>
         </a>
@@ -17,20 +17,21 @@ const Sidebar = () => {
 
         <button className="category-sidebar-buttons">
         <li><span className="nav-section-title"></span></li>
-         <a href="/preferences"><img src="preferences.png" width="40" height="40" alt='description'/><br/>PREFERENCES</a>
-        </button>
+         <a href="/preferences"> PREFERENCES </a><img src="preferences.png" width="35" height="35" alt='description'/>
+        </div>
 
         <button className="category-sidebar-buttons">
         <li><span className="nav-section-title"></span></li>
-        <a href="/mostPopular"><img src="stars.png" width="50" height="50" alt='description' /><br/>MOST POPULAR</a>        
-        </button>
+        <a href="/mostPopular"> MOST POPULAR</a> <img src="stars.png" width="40" height="40" alt='description' />
+        </div>
 
         <button className="category-sidebar-buttons">
         <li><span className="nav-section-title"></span></li>
-        <a href="/savedRecipes"><img src="saved.png" width="50" height="50" alt='description' /><br/>SAVED RECIPES</a>        
-        </button>
-      
-          {/* <li className="have-children"><a href="#"><img src="help.png" width="30" height="30" alt='description' /><br/>HELP</a>
+        <a href="/savedRecipes"> SAVED RECIPES </a> <img src="heart.png" width="40" height="40" alt='description' /><br/>
+        </div>
+
+
+          <li className="have-children"><a href="#"><img src="help.png" width="20" height="20" alt='description' /><br/>HELP</a>
             <ul>
               <li><a href="#">Account settings</a></li>
               <li><a href="#">App Information</a></li>
@@ -38,7 +39,7 @@ const Sidebar = () => {
   </li> */}
           </ul>
         </div>
-    </div> 
+    </div>
   )
 }
 
