@@ -91,12 +91,12 @@ const Navbar = props => {
                     <Link
                       to="/services/new"
                       className="navbar-item">
-                        Create Service
+                        Create Recipe
                     </Link>
                     <Link
                       to="/services/me"
                       className="navbar-item">
-                        Your Services
+                        Your Recipes
                     </Link>
                     <Link
                       to="/offers/sent"

@@ -17,7 +17,7 @@ const Sidebar = () => {
 
         <div className="have-children">
         <li><span className="nav-section-title"></span></li>
-         <a href="/preferences"><img src="preferences.png" width="40" height="40" alt='description'/><br/>PREFERENCES</a>
+         <a href="/preferences"><img src="preferences.png" width="30" height="30" alt='description'/><br/>PREFERENCES</a>
         </div>
 
         <div className="have-children">
@@ -27,13 +27,13 @@ const Sidebar = () => {
 
         <div className="have-children">
         <li><span className="nav-section-title"></span></li>
-        <a href="/savedRecipes"><img src="saved.png" width="50" height="50" alt='description' /><br/>SAVED RECIPES</a>        
+        <a href="/savedRecipes"><img src="saved.png" width="40" height="40" alt='description' /><br/>SAVED RECIPES</a>        
         </div>
       
-          <li className="have-children"><a href="#"><img src="help.png" width="30" height="30" alt='description' /><br/>HELP</a>
+          <li className="have-children"><a href="#"><img src="help.png" width="25" height="25" alt='description' /><br/>HELP</a>
             <ul>
               <li><a href="#">Account settings</a></li>
-              <li><a href="#">App Information</a></li>
+              <li><a href="/onBoard">How does it work?</a></li>
             </ul>
           </li>
           </ul>

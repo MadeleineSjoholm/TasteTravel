@@ -15,7 +15,7 @@ import SecretPage from './pages/Secret'
 import Preferences from './pages/Preferences'
 import SavedRecipes from './pages/SavedRecipes'
 import MostPopular from './pages/MostPopular'
-
+import OnBoard from './pages/OnBoard'
 
 import ServiceCreatePage from './pages/services/ServiceCreate'
 import UserServicesPage from './pages/services/UserServices'
@@ -78,6 +78,9 @@ const Routes = () =>
     </Route>
     <Route path="/MostPopular">
       <MostPopular />
+    </Route>
+    <Route path="/OnBoard">
+      <OnBoard />
     </Route>
     <Route path="/">
       <HomePage />
