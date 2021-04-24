@@ -1105,8 +1105,8 @@ Sidebar Styles
 //Sidebar
 .sidebar {
    background: $dark-grey;
-   width: 280px;
-   height: 50%;
+   width: 153px;
+   height: 55%;
    position: fixed;
    top: 0;
    left: 0;
@@ -1152,7 +1152,7 @@ Sidebar Styles
        position: relative;
        .sidebar-menu {
            margin: 0;
-           padding: 0;
+           padding: 15px;
            max-width: 400px;
            list-style: none;
            list-style-type: none;
@@ -1206,11 +1206,14 @@ Sidebar Styles
 
        .category-sidebar-buttons {
            align-items: center;
-           padding: 20px;
-           display:block;
+           padding: 10px;
+           background-color: #b287a3;
+           color: #ba73a1;
+           display: block;
+         /*  height: 100px;
+           width: 150px;*/
+        }
 
-
-       }
        li.have-children, li {
            position: center;
        }
