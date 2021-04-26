@@ -47,3 +47,12 @@ export const createService = (newService, userId) => {
 
   return api.createService(newService)
 }
+
+
+// export const createPref = (newService, userId) => {
+//   newService.price = parseInt(newService.price, 10)
+//   newService.user = api.createRef('profiles', userId)
+
+//   return api.createPref(newService)
+// }
+
