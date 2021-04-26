@@ -1136,13 +1136,8 @@ Sidebar Styles
 //Sidebar
 .sidebar {
    background: $dark-grey;
-<<<<<<< HEAD
-   width: 250px;
-   height: 100%; //Size på sidebar.
-=======
    width: 225px;
    height: 100%;
->>>>>>> 87d784e1c719e5925300bf8091b2033ee185f741
    position: fixed;
    opacity: 90%; //Opacity på sidebar.
    top: 0;
@@ -1216,7 +1211,7 @@ Sidebar Styles
                &.have-children {
                    ul {
                        padding-right: 10px;
-                   } 
+                   }
                    li {
                        a {
                            background-color: darken($dark-grey, 5%);
@@ -1252,7 +1247,7 @@ Sidebar Styles
            background-color:$secondary;
            color: $secondary;
 
-           
+
         }
 
         .nav-section-title {
@@ -1261,10 +1256,10 @@ Sidebar Styles
             height: auto;
             width: 178px;
             border: 1px solid darken($dark-grey, 2%);
-            font-size: .8rem;  
+            font-size: .8rem;
             &:hover {
                 background-color: darken($secondary, 5%);
-               }     
+               }
         }
 
        li.have-children, li {
