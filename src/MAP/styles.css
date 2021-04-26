@@ -11,6 +11,6 @@ html {
   svg {
     display: inline-block;
     vertical-align: middle;
-
+    border: dotted #BDCFB5 6px;
   }
   
