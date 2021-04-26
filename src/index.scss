@@ -788,6 +788,32 @@ width: 4.5rem;
    }
 }
 
+
+/*===========================================================================
+Text Area (Alltså boxen i Help)
+===========================================================================*/
+
+.text-area{
+  width: 60%;
+  border:6px dotted #BDCFB5;
+  background: rgba(255,255,255,0.4);
+  padding: 30px;
+  margin: 0px;
+}
+
+.circle {
+  position: relative;
+  display: block;
+   width: 70px;
+   height: 70px;
+   line-height: 7.5vh;
+  border-radius: 50%;
+  margin: 2em 0;
+  background-color: #B287A3;
+  color: #222;
+  text-align: center;
+}
+
 /*===========================================================================
 Map styles
 ===========================================================================*/
