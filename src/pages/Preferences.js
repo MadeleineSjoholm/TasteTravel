@@ -18,6 +18,7 @@ const SetPref = ({auth}) => {
     ingredient: ''
   })
 
+
   const handleChange = e => {
     const { name, value } = e.target
     setPrefForm({...prefForm, [name]: value})
@@ -58,6 +59,8 @@ const SetPref = ({auth}) => {
                 </div>
               </div>
             </div>
+        
+
             <div className="field">
               <label className="label">Intolerances</label>
               <div className="control">
@@ -95,12 +98,19 @@ const SetPref = ({auth}) => {
                 <button
                   onClick={handleSubmit}
                   type="button"
-                  className="button is-link">Create</button>
+                  className="button is-link">Update Preferences</button>
               </div>
               <div className="control">
-                <button className="button is-text">Cancel</button>
+                <button className="button is-secondary">Cancel</button>
               </div>
             </div>
+
+            <div onClick={handleSubmit}>
+        <input type="radio" value="Male" name="gender" /> Male
+        <input type="radio" value="Female" name="gender" /> Female
+        <input type="radio" value="Other" name="gender" /> Other
+      </div>
+
           </form>
         </div>
       </div>
