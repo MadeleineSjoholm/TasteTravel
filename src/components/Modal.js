@@ -11,7 +11,7 @@ const Modal = props => {
       <button
         onClick={() => changeModalState(true)}
         type="button"
-        className="button is-medium is-info is-outlined"
+        className="button is-medium  is-outlined"
         data-toggle="modal"
         data-target="#exampleModal">
         { props.openButtonText || 'Open' }

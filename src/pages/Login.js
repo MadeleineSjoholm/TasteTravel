@@ -62,7 +62,7 @@ return (
             </div>
             <button
               type="submit"
-              className="button is-block is-info is-large is-fullwidth">Sign In</button>
+              className="button is-block rounded secondary-btn raised is-large is-fullwidth">Sign In</button>
           </form>
         </div>
         <p className="has-text-grey">
