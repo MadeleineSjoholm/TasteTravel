@@ -22,7 +22,7 @@ const Navbar = props => {
   return (
     <nav
       id={props.id || ''}
-      className="navbar is-fresh is-transparent no-shadow"
+      className="navbar is-fresh is-transparent no-shadow is-light"
       role="navigation"
       aria-label="main navigation">
       <div className="container">
@@ -30,8 +30,10 @@ const Navbar = props => {
           <Link
             to="/"
             className="navbar-item">
-             <div className="title"> <img src="nylogg.png" width="40" height="50" alt='description' /> TasteTravel</div>
+             <div className="title">  TasteTravel </div>
+
           </Link>
+
 
           <a className="navbar-item is-hidden-desktop is-hidden-tablet">
             <div id="menu-icon-wrapper" className="menu-icon-wrapper" style={{visibility: 'visible'}}>
@@ -51,6 +53,8 @@ const Navbar = props => {
           </a>
         </div>
 
+
+
         <div id="navbar-menu" className="navbar-menu is-static">
           <div className="navbar-start">
             <a className="navbar-item is-hidden-mobile">
@@ -63,13 +67,23 @@ const Navbar = props => {
                 <button id="menu-icon-trigger" className="menu-icon-trigger"></button>
               </div>
             </a>
+
           </div>
+
+          <div className= "test">
+          <img src="nylogg.png"/>
+          </div>
+
 
           <div className="navbar-end">
             { isAuth &&
               <div className="navbar-item is-secondary user-welcome">
                 {`Hi ${user.fullName}`}
               </div>
+
+
+
+
             }
             <Link
               to="/"
@@ -80,6 +94,11 @@ const Navbar = props => {
               to="/faq"
               className="navbar-item is-secondary">
                 Faq
+            </Link>
+            <Link
+              to="/profile"
+              className="navbar-item is-secondary">
+                Profile
             </Link>
             { isAuth &&
               <React.Fragment>
