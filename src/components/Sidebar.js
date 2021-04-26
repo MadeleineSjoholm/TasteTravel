@@ -12,11 +12,11 @@ const Sidebar = () => {
           <i className="fa fa-times-circle"></i>
         </a>
       </div>
-     
+
       <div className="inner">
       <div className='category-sidebar-buttons'>
         <ul className="sidebar-menu">
-        <button className="nav-section-title"> 
+        <button className="nav-section-title">
         <li>
          <a href="/preferences"><img src="preferences.png" width="40" height="40" alt='description'/><br></br>PREFERENCES</a>
          </li>
@@ -25,21 +25,21 @@ const Sidebar = () => {
         <br></br>
         <button className="nav-section-title">
         <li>
-        <a href="/mostPopular"><img src="stars.png" width="50" height="20" alt='description' /><br></br>MOST POPULAR</a> 
+        <a href="/mostPopular"><img src="stars.png" width="50" height="20" alt='description' /><br></br>MOST POPULAR</a>
         </li>
         </button>
 
         <br></br>
         <button className="nav-section-title">
         <li>
-        <a href="/savedRecipes"><img src="saved.png" width="50" height="50" alt='description' /><br></br>SAVED RECIPES</a>        
+        <a href="/savedRecipes"><img src="heart.png" width="50" height="50" alt='description' /><br></br>SAVED RECIPES</a>        
         </li>
         </button>
 
         <br></br>
         <button className="nav-section-title">
         <li>
-        <a href="/savedRecipes"href="/onBoard"><img src="help.png" width="30" height="30" alt='description' /><br/>HOW DOES IT WORK?</a>        
+        <a href="/savedRecipes"href="/onBoard"><img src="help.png" width="30" height="30" alt='description' /><br/>HOW DOES IT WORK?</a>
         </li>
         </button>
         </ul>
