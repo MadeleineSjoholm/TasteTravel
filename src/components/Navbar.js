@@ -70,7 +70,7 @@ const Navbar = props => {
 
           </div>
 
-          <div className= "test">
+          <div className= "logo">
           <img src="nylogg.png"/>
           </div>
 

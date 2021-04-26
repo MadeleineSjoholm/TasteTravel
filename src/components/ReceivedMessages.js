@@ -53,7 +53,3 @@ const ReceivedMessages = ({dispatch, messages}) => {
 const mapStateToProps = (state) => ({messages: getMessages(state)})
 
 export default connect(mapStateToProps)(ReceivedMessages)
-
-
-
-

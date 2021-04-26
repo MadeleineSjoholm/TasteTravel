@@ -1,4 +1,3 @@
-
 /* eslint no-useless-escape: 0 */
 
 import React from 'react'
@@ -100,5 +99,3 @@ const RegisterForm = (props) => {
 }
 
 export default RegisterForm
-
-
