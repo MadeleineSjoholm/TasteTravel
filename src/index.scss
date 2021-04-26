@@ -658,6 +658,7 @@ Hero styles
    .title {
        &.is-bold {
            font-weight: 700;
+           color: $white; //färg till texten på homepage
        }
    }
    .subtitle {
@@ -983,7 +984,6 @@ Section Styles
    margin: 0 auto;
    .title, .subtitle {
        font-family: 'Open Sans', sans-serif;
-
    }
    .subtitle {
        &.is-muted {
