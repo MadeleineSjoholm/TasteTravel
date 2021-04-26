@@ -117,21 +117,21 @@ const Navbar = props => {
                       className="navbar-item">
                         Your Recipes
                     </Link>
-                    <Link
+                    {/* <Link
                       to="/offers/sent"
                       className="navbar-item">
                         Sent Offers
-                    </Link>
-                    <Link
+                    </Link> */}
+                    {/* <Link
                       to="/offers/received"
                       className="navbar-item">
                         Received Offers
-                    </Link>
-                    <Link
+                    </Link> */}
+                    {/* <Link
                       to="/collaborations/me"
                       className="navbar-item">
                         Received Collaborations
-                    </Link>
+                    </Link> */}
                   </div>
                 </div>
                 <div className="navbar-item has-dropdown is-hoverable">
