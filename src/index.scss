@@ -4,6 +4,27 @@ Color variables
 ========================================================================== */
 
 
+.test1{
+
+
+
+
+
+}
+
+.test {
+
+height: 4.5rem;
+width: 4.5rem;
+
+
+
+
+}
+
+
+
+
 $white: #482728;
 $smoke-white: #fcfcfc;
 $grey-white: #f2f2f2;
@@ -657,6 +678,7 @@ Hero styles
    .title {
        &.is-bold {
            font-weight: 700;
+
        }
    }
    .subtitle {
@@ -679,9 +701,11 @@ Navbar
    z-index: 29;
    .container {
        min-height: 4rem;
+
    }
    &.no-shadow {
        box-shadow: none !important;
+
    }
    //Responsive menu icon
    .navbar-burger {
@@ -691,6 +715,7 @@ Navbar
    //Brand
    .navbar-brand {
        min-height: 4rem;
+
        img {
            max-height: 36px !important;
            height: 36px;
@@ -756,6 +781,7 @@ Navbar
        top: 0;
        left: 0;
        width: 100%;
+
        min-height: 4rem !important;
        background: $white;
        box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.12);
@@ -774,6 +800,7 @@ Navbar
    top: 0;
    left: 0;
    width: 100%;
+
    background: $smoke-white;
    transform: translateY(-100%);
    z-index: 100;
@@ -867,11 +894,13 @@ Responsive Styles
        .is-static {
            position: absolute;
            width: 100%;
+
        }
 
        .is-fixed {
            position: fixed;
            width: 100%;
+
        }
 
        .navbar-item {
@@ -916,6 +945,7 @@ Responsive Styles
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
 
    .navbar-menu {
+
        .navbar-end {
            a {
                display: flex;
@@ -1105,9 +1135,10 @@ Sidebar Styles
 //Sidebar
 .sidebar {
    background: $dark-grey;
-   width: 153px;
-   height: 55%;
+   width: 250px;
+   height: 100%; //Size på sidebar.
    position: fixed;
+   opacity: 90%; //Opacity på sidebar.
    top: 0;
    left: 0;
    transform: translateX(-281px);
