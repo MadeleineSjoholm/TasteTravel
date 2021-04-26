@@ -94,7 +94,7 @@ const RegisterForm = (props) => {
       </div>
       <button
         type="submit"
-        className="button is-block is-info is-large is-fullwidth">Register</button>
+        className="button is-block rounded secondary-btn raised is-large is-fullwidth">Register</button>
     </form>
   )
 }

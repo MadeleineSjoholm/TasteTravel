@@ -1,19 +1,19 @@
+
+
 import React from 'react'
 
-const OnBoard = () => {
+const Help = () => {
+
   return (
     <div className="container">
       <div className="content-wrapper">
-        <h1 className="title">I am OnBoard page</h1>
+        <h1 className="title">Help</h1>
         <p>
-          Here is all the OnBoarding information that you need
+          This is the Help page
         </p>
       </div>
     </div>
   )
 }
 
-
-export default OnBoard
-
-
+export default Help

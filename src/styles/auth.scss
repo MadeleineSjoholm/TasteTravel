@@ -45,4 +45,9 @@
     padding-top: 1rem;
   }
 }
+
+.is-block { //klass för att fixa knappar register och login
+  color: black;
+  background-color: $secondary;
+}
 // AUTH ENDS

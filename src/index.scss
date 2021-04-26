@@ -217,6 +217,7 @@ Classes to change the feel of bulma buttons
        font-size: 1.5rem;
        font-weight: 600;
        padding: 26px 40px 26px 40px;
+
    }
    &.is-clear {
        line-height: 0 !important;
@@ -1135,8 +1136,13 @@ Sidebar Styles
 //Sidebar
 .sidebar {
    background: $dark-grey;
+<<<<<<< HEAD
    width: 250px;
    height: 100%; //Size på sidebar.
+=======
+   width: 225px;
+   height: 100%;
+>>>>>>> 87d784e1c719e5925300bf8091b2033ee185f741
    position: fixed;
    opacity: 90%; //Opacity på sidebar.
    top: 0;
@@ -1160,13 +1166,14 @@ Sidebar Styles
        }
        a {
            width: 20px;
-           height: 24px;
+           height: 30px; //position på krysset i sidebar
        }
        svg {
            stroke: $white;
            transform: rotate(0);
            transition: all .3s;
            cursor: pointer;
+           color: $fade-grey; //färg på krysset i sidebar
            &:hover {
                stroke: $secondary;
                transform: rotate(180deg);
@@ -1183,7 +1190,7 @@ Sidebar Styles
        position: relative;
        .sidebar-menu {
            margin: 0;
-           padding: 15px;
+           padding: 10px; // i menyn
            max-width: 400px;
            list-style: none;
            list-style-type: none;
@@ -1198,7 +1205,8 @@ Sidebar Styles
                        padding: 20px 25px;
                        display: block;
                        text-decoration: none;
-                       color: $white;
+                       background-color: darken($secondary, 20%);
+                       color: white; //texten på knappatrna när man hovrar
                    }
                }
                a span {
@@ -1208,7 +1216,7 @@ Sidebar Styles
                &.have-children {
                    ul {
                        padding-right: 10px;
-                   }
+                   } 
                    li {
                        a {
                            background-color: darken($dark-grey, 5%);
@@ -1237,12 +1245,26 @@ Sidebar Styles
 
        .category-sidebar-buttons {
            align-items: center;
-           padding: 10px;
-           background-color: #b287a3;
-           color: #ba73a1;
+           padding-left: 10px;
            display: block;
-         /*  height: 100px;
-           width: 150px;*/
+           height: auto;
+           width: 178px;
+           background-color:$secondary;
+           color: $secondary;
+
+           
+        }
+
+        .nav-section-title {
+            align-items: center;
+            background-color: darken($dark-grey, 5%);
+            height: auto;
+            width: 178px;
+            border: 1px solid darken($dark-grey, 2%);
+            font-size: .8rem;  
+            &:hover {
+                background-color: darken($secondary, 5%);
+               }     
         }
 
        li.have-children, li {
@@ -1272,8 +1294,8 @@ Testimonials Styles
    position: relative;
    overflow: hidden;
    margin: 10px auto;
-   min-width: 220px;
-   max-width: 310px;
+   min-width: 2200px;
+   max-width: 31px;
    width: 100%;
    color: #333;
    text-align: left;
