@@ -81,6 +81,11 @@ const Navbar = props => {
               className="navbar-item is-secondary">
                 Faq
             </Link>
+            <Link
+              to="/profile"
+              className="navbar-item is-secondary">
+                Profile
+            </Link>
             { isAuth &&
               <React.Fragment>
                 <div className="navbar-item has-dropdown is-hoverable">
