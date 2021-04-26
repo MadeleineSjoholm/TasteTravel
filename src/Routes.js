@@ -20,11 +20,11 @@ import OnBoard from './pages/OnBoard'
 import ServiceCreatePage from './pages/services/ServiceCreate'
 import UserServicesPage from './pages/services/UserServices'
 
-import SentOffersPage from './pages/offers/SentOffers'
-import ReceivedOffersPage from './pages/offers/ReceivedOffers'
+// import SentOffersPage from './pages/offers/SentOffers'
+// import ReceivedOffersPage from './pages/offers/ReceivedOffers'
 
-import ReceivedCollaborationsPage from './pages/collaborations/ReceivedCollaborations'
-import CollaborationDetailPage from './pages/collaborations/CollaborationDetail'
+// import ReceivedCollaborationsPage from './pages/collaborations/ReceivedCollaborations'
+// import CollaborationDetailPage from './pages/collaborations/CollaborationDetail'
 
 const Routes = () =>
   <Switch>
@@ -40,18 +40,18 @@ const Routes = () =>
     <Route path="/logout">
       <LogoutPage />
     </Route>
-    <Route path="/collaborations/me">
+    {/* <Route path="/collaborations/me">
       <ReceivedCollaborationsPage />
     </Route>
     <Route path="/collaborations/:id">
       <CollaborationDetailPage />
-    </Route>
-    <Route path="/offers/sent">
+    </Route> */}
+    {/* <Route path="/offers/sent">
       <SentOffersPage />
     </Route>
     <Route path="/offers/received">
       <ReceivedOffersPage />
-    </Route>
+    </Route> */}
     <Route path="/services/me">
       <UserServicesPage />
     </Route>
