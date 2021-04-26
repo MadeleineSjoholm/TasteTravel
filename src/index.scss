@@ -3,28 +3,6 @@
 Color variables
 ========================================================================== */
 
-
-.test1{
-
-
-
-
-
-}
-
-.test {
-
-height: 4.5rem;
-width: 4.5rem;
-
-
-
-
-}
-
-
-
-
 $white: #482728;
 $smoke-white: #fcfcfc;
 $grey-white: #f2f2f2;
@@ -670,7 +648,7 @@ Hero styles
 
 .hero-body {
    padding-top: 3rem;
-   padding-bottom: 6rem;
+   padding-bottom: 1rem;
    .title, .subtitle {
        font-family: 'Open Sans', sans-serif;
        font-size: 25px;
@@ -693,6 +671,13 @@ Hero styles
 /* ==========================================================================
 Navbar
 ========================================================================== */
+//Logga i Navbar
+
+.logo {
+height: 4.5rem;
+width: 4.5rem;
+}
+
 
 //Navbar
 .navbar.is-fresh {
@@ -1298,6 +1283,9 @@ Testimonials Styles
        -webkit-box-sizing: border-box;
        box-sizing: border-box;
    }
+
+
+
    img {
        max-width: 100%;
        height: 80px;
@@ -1309,6 +1297,8 @@ Testimonials Styles
        position: absolute;
        right: 60%;
    }
+
+   /*
    blockquote {
        margin: 0;
        display: block;
@@ -1321,7 +1311,7 @@ Testimonials Styles
        margin: 0 0 -40px;
        line-height: 1.6em;
        box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-   }
+   }*/
    blockquote:before, blockquote:after {
        font-family: 'FontAwesome';
        content: "\f10d";
@@ -1392,24 +1382,7 @@ button {
    z-index: 99;
 }
 
-// #status {
-//     width: 200px;
-//     height: 200px;
-//     position: absolute;
-//     left: 50%;
-//     // centers the loading animation horizontally on the screen
-//     top: 50%;
-//     // centers the loading animation vertically on the screen
-//     background-image: url(../images/loaders/rings.svg);
-//     background-size: 80px 80px;
-//     // path to loading animation
-//     background-repeat: no-repeat;
-//     background-position: center;
-//     margin: -100px 0 0 -100px;
-//     // width and height divided by two
-// }
 
-// Back to top button
 #backtotop {
    position: fixed;
    right: 0;
