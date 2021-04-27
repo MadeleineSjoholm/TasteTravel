@@ -35,14 +35,13 @@ const MapChart = ({ setTooltipContent }) => {
                     const { NAME, POP_EST } = geo.properties;
                     setTooltipContent(`${NAME} — ${rounded(POP_EST)}`);
                   }}
-                  //=======NYTT===================
                   onClick={()=> {
                     const { NAME, POP_EST } = geo.properties;
                     console.log(NAME);
                     window.location.href = "/MatchingRecipes";
-                  }}
-                  //======NYTT====================
 
+                  }}
+                  
                   onMouseLeave={() => {
                     setTooltipContent("");
                   }}
