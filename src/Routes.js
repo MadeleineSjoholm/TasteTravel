@@ -11,6 +11,7 @@ import LoginPage from './pages/Login'
 import LogoutPage from './pages/Logout'
 import RegisterPage from './pages/Register'
 import SecretPage from './pages/Secret'
+import HelpPage from './pages/Help'
 
 import Preferences from './pages/Preferences'
 import SavedRecipes from './pages/SavedRecipes'
