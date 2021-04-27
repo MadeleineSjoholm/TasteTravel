@@ -6,7 +6,7 @@ const OnBoard = () => {
 
     <div className="container">
       <div className="content-wrapper">
-        <h1 className="title">I am OnBoard page</h1>
+        <h1 className="title">I am On-boarding page</h1>
           <p>
             Here is all the OnBoarding information that you need
           </p>
