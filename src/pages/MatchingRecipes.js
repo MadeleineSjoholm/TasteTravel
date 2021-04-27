@@ -15,7 +15,7 @@ const MatchingRecipes = () => {
         </p>
         <p>
           Här tänker jag att oberoende av vilket land man klickar på så kommer man till den här sidan.
-          Och sen beroende på vilken land och vilka prefereser man har så gör vi if-satser och allt sånt där 
+          Och sen beroende på vilket land och vilka prefereser man har så gör vi if-satser och allt sånt där 
           och så visas bara de recept som ska visas?
         </p>
       </div>
