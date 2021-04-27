@@ -1,4 +1,5 @@
 import React, { memo } from "react";
+import { Link } from 'react-router-dom'
 import {
   ZoomableGroup,
   ComposableMap,
@@ -38,6 +39,7 @@ const MapChart = ({ setTooltipContent }) => {
                   onClick={()=> {
                     const { NAME, POP_EST } = geo.properties;
                     console.log(NAME);
+                    window.location.href = "/MatchingRecipes";
                   }}
                   //======NYTT====================
 
