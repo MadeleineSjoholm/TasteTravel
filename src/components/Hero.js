@@ -12,16 +12,11 @@ const Hero = () =>
     <div className="hero-body">
 
       <div className="container">
-      <h1 className="title is-1 is-bold is-spaced">
-         Travel with your taste buds
-       </h1>
+    
 
           <MapIndex className= 'map'/>
-          </div>    
+          </div>
         </div>
   </section>
 
 export default Hero
-
-
-
