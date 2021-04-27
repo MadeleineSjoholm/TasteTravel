@@ -66,9 +66,9 @@ return (
           </form>
         </div>
         <p className="has-text-grey">
-          <a>Sign In With Google</a>&nbsp;
-          <a href="/">SIGN UP</a> &nbsp;·&nbsp;
-          <a href="../">Need Help?</a>
+
+          <a href="/Register">SIGN UP</a> &nbsp;·&nbsp;
+          <a href="/Faq">Need Help?</a>
         </p>
       </div>
     </div>

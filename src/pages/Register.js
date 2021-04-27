@@ -36,9 +36,9 @@ return (
         </div>
 
         <p className="has-text-grey">
-          <a>Sign In With Google</a>&nbsp;
-          <a href="/">Sign Up</a> &nbsp;·&nbsp;
-          <a href="../">Need Help?</a>
+
+
+          <a href="/Faq">Need Help?</a>
         </p>
 
       </div>
