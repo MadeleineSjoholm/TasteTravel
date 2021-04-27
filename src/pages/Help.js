@@ -2,12 +2,6 @@
 
 import React from 'react'
 
-//import React, { useState } from 'react'
-import useForm from 'react-hook-form'
-import { useToasts } from 'react-toast-notifications'
-import { Redirect } from 'react-router-dom'
-import onlyGuest from 'components/hoc/onlyGuest'
-
 
 const Help = () => {
   return (

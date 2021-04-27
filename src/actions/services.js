@@ -31,7 +31,7 @@ export const fetchServiceById = serviceId => (dispatch, getState) => {
   return api
     .fetchServiceById(serviceId)
     .then(async service => {
-      // service.user = await api.getUserProfile(service.user)
+      service.user = await api.getUserProfile(service.user)
       const user = await service.user.get()
       service.user = user.data()
       service.user.id = user.id

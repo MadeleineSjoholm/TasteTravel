@@ -664,12 +664,14 @@ Hero styles
 Navbar
 ========================================================================== */
 //Logga i Navbar
-
 .logo {
-height: 4.5rem;
-width: 4.5rem;
+    position: center; 
+ //   height: 15%;
+ //   width: 15%;
 }
 
+.navbar {
+    background-color: lighten($secondary, 30%);}
 
 //Navbar
 .navbar.is-fresh {
@@ -683,7 +685,6 @@ width: 4.5rem;
    }
    &.no-shadow {
        box-shadow: none !important;
-
    }
    //Responsive menu icon
    .navbar-burger {
@@ -692,11 +693,11 @@ width: 4.5rem;
    }
    //Brand
    .navbar-brand {
-       min-height: 4rem;
-
+       min-height: 70px;
        img {
-           max-height: 36px !important;
-           height: 36px;
+           max-height: 90px !important;
+           height: 90px;
+           padding-top: 3px;
        }
        //Removing navbar item default hover behaviour
        &:hover {
@@ -707,6 +708,7 @@ width: 4.5rem;
    }
    .navbar-end {
        align-items: center;
+
    }
    //Navbar items
    .navbar-item {
@@ -1154,12 +1156,12 @@ Sidebar Styles
    width: 225px;
    height: 100%;
    position: fixed;
-   opacity: 90%; //Opacity på sidebar.
+   opacity: 100%; //Opacity på sidebar.
    top: 0;
    left: 0;
    transform: translateX(-281px);
    transition: all .3s;
-   z-index: 10000;
+   z-index: 1000;
    overflow-y: auto;
    &.is-active {
        transform: translateX(0);

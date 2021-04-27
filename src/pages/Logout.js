@@ -21,6 +21,7 @@ class Logout extends React.Component {
           { !isAuth && <h1 className="title">You are logged out</h1>}
         </div>
       </div>
+
     )
   }
 }

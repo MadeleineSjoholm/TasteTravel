@@ -55,7 +55,6 @@ const Routes = () =>
     <Route path="/faq">
       <FaqPage />
     </Route>
-
     <Route path="/help">
       <Help />
     </Route>

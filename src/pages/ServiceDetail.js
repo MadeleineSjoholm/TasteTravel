@@ -5,7 +5,6 @@ import { connect } from 'react-redux'
 import { fetchServiceById } from 'actions'
 
 import Spinner from 'components/Spinner'
-import OfferModal from 'components/service/OfferModal'
 
 const ServiceDetail = props => {
 
@@ -17,7 +16,7 @@ const ServiceDetail = props => {
   }, [serviceId, fetchServiceById])
 
 
-  const { service, auth } = props
+  const { service } = props
   const { user } = service
 
   if (isFetching || serviceId !== service.id) { return <Spinner /> }
@@ -68,11 +67,11 @@ const ServiceDetail = props => {
               </h2>
               <br />
               <div className="has-text-centered">
-                { auth.isAuth && auth.user.uid !== service.user.uid &&
+              {/* { auth.isAuth && auth.user.uid !== service.user.uid && 
                   <OfferModal
                     auth={auth}
-                    service={service}/>
-                }
+              service={service}/> } */}
+                
               </div>
             </div>
           </div>

@@ -1,5 +1,6 @@
 
 
+
 export const isValidImage = value => {
   if (!value) return true
   if (typeof value !== 'string') return false
@@ -23,6 +24,7 @@ export const isValidUrl = value => {
 export const sameAs = (getValues, field) => value => {
   if (!value) return true
   if (typeof value !== 'string') return false
+
 
   const compareToValue = getValues()[field]
   return compareToValue === value

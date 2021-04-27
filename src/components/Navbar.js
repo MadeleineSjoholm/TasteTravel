@@ -2,12 +2,11 @@
 
 import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import ReceivedMessages from './ReceivedMessages'
 
 const Navbar = props => {
 
-  const { user, isAuth, messages } = props.auth
-  const { loadFresh } = props
+  const { user, isAuth } = props.auth
+  const {  loadFresh } = props
 
   useEffect(() => {
     if (!loadFresh) { return }
@@ -20,20 +19,21 @@ const Navbar = props => {
 
 
   return (
-    <nav
+    <nav 
       id={props.id || ''}
-      className="navbar is-fresh is-transparent no-shadow is-light"
-      role="navigation"
+      className="navbar is-fresh is-transparent no-shadow" 
+      role="navigation" 
       aria-label="main navigation">
       <div className="container">
         <div className="navbar-brand">
-          <Link
+        <div className= "logo">
+            <img src="nylogg.png" alt='description'/>
+          </div>
+          <Link 
             to="/"
             className="navbar-item">
-             <div className="title">  TasteTravel </div>
-
+             <div className="title">TasteTravel</div>
           </Link>
-
 
           <a className="navbar-item is-hidden-desktop is-hidden-tablet">
             <div id="menu-icon-wrapper" className="menu-icon-wrapper" style={{visibility: 'visible'}}>
@@ -45,6 +45,7 @@ const Navbar = props => {
               <button id="menu-icon-trigger" className="menu-icon-trigger"></button>
             </div>
           </a>
+          
 
           <a role="button" className="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar-menu">
               <span aria-hidden="true"></span>
@@ -52,6 +53,7 @@ const Navbar = props => {
               <span aria-hidden="true"></span>
           </a>
         </div>
+
 
 
 
@@ -67,82 +69,50 @@ const Navbar = props => {
                 <button id="menu-icon-trigger" className="menu-icon-trigger"></button>
               </div>
             </a>
-
           </div>
 
-          <div className= "logo">
-          <img src="nylogg.png"/>
-          </div>
+          
 
 
           <div className="navbar-end">
             { isAuth &&
-              <div className="navbar-item is-secondary user-welcome">
+              <div className="navbar-item">
                 {`Hi ${user.fullName}`}
               </div>
-
-
-
-
             }
-            <Link
-              to="/"
+           <Link 
+              to="/" 
               className="navbar-item is-secondary">
                 Home
             </Link>
-            <Link
-              to="/faq"
+            <Link 
+              to="/services" 
+              className="navbar-item is-secondary">
+                Services
+            </Link>
+            <Link 
+              to="/faq" 
               className="navbar-item is-secondary">
                 Faq
             </Link>
-            <Link
-              to="/profile"
-              className="navbar-item is-secondary">
-                Profile
-            </Link>
             { isAuth &&
-              <React.Fragment>
-                <div className="navbar-item has-dropdown is-hoverable">
-                  <a className="navbar-link">
-                      Manage
-                  </a>
-                  <div className="navbar-dropdown">
-                    <Link
-                      to="/services/new"
-                      className="navbar-item">
-                        Create Recipe
-                    </Link>
-                    <Link
-                      to="/services/me"
-                      className="navbar-item">
-                        Your Recipes
-                    </Link>
-                    {/* <Link
-                      to="/offers/sent"
-                      className="navbar-item">
-                        Sent Offers
-                    </Link> */}
-                    {/* <Link
-                      to="/offers/received"
-                      className="navbar-item">
-                        Received Offers
-                    </Link> */}
-                    {/* <Link
-                      to="/collaborations/me"
-                      className="navbar-item">
-                        Received Collaborations
-                    </Link> */}
-                  </div>
+              <div className="navbar-item has-dropdown is-hoverable">
+                <a className="navbar-link">
+                    Manage Your Recipes
+                </a>
+                <div className="navbar-dropdown">
+                  <Link 
+                    to="/services/new"
+                    className="navbar-item">
+                      Create Recipe
+                  </Link>
+                  <Link 
+                    to="/services/me"
+                    className="navbar-item">
+                      Your Recipes
+                  </Link>
                 </div>
-                <div className="navbar-item has-dropdown is-hoverable">
-                  <a className="navbar-link">
-                      Messages
-                  </a>
-                  <div className="navbar-dropdown navbar-dropdown-messages">
-                    { messages && <ReceivedMessages /> }
-                  </div>
-                </div>
-              </React.Fragment>
+              </div>
             }
             { !isAuth &&
               <React.Fragment>
@@ -151,7 +121,7 @@ const Navbar = props => {
                   className="navbar-item is-secondary modal-trigger" data-modal="auth-modal">
                     Login
                 </Link>
-                <Link
+                <Link 
                   to="/register"
                   className="navbar-item">
                   <span className="button signup-button rounded secondary-btn raised">
@@ -161,10 +131,19 @@ const Navbar = props => {
               </React.Fragment>
             }
             { isAuth &&
-              <Link
+              <Link 
+                to="/profile"
+                className="navbar-item">
+                <span className="button signup-button rounded secondary-btn raised">
+                    Profile
+                </span>
+              </Link>
+            }
+            { isAuth &&
+              <Link 
                 to="/logout"
                 className="navbar-item">
-                <span className="button signup-button is-danger rounded raised">
+                <span className="button signup-button rounded secondary-btn raised">
                     Logout
                 </span>
               </Link>
@@ -175,5 +154,4 @@ const Navbar = props => {
     </nav>
   )
 }
-
 export default Navbar

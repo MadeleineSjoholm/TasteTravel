@@ -3,24 +3,25 @@
 import React from 'react'
 import MapIndex from './MapIndex'
 
+
 const Hero = () =>
 
 
   <section className="hero is-default is-bold">
+
     <div className="hero-body">
 
       <div className="container">
+      <h1 className="title is-1 is-bold is-spaced">
+         Travel with your taste buds
+       </h1>
 
           <MapIndex className= 'map'/>
-
-          </div>
-    </div>
+          </div>    
+        </div>
   </section>
 
 export default Hero
 
 
 
-//<h1 className="title is-1 is-bold is-spaced">
-  //  Travel with your taste buds.
-//  </h1>

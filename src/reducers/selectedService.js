@@ -16,7 +16,7 @@ const initSelectedService = () => {
 
   const isFetching = (state = false, action) => {
     switch(action.type) {
-      case REQUEST_SERVICE:
+      case REQUEST_SERVICE: 
         return true
       case FETCH_SERVICE_SUCCESS:
         return false
@@ -33,3 +33,7 @@ const initSelectedService = () => {
 
 const selectedService = initSelectedService()
 export default selectedService
+
+
+
+

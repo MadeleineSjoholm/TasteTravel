@@ -1,7 +1,7 @@
 /* eslint jsx-a11y/anchor-is-valid: 0 */
 
 import React from 'react'
-import { Link } from 'react-router-dom'
+
 
 const Sidebar = () => {
   return (
@@ -39,7 +39,7 @@ const Sidebar = () => {
         <br></br>
         <button className="nav-section-title">
         <li>
-        <a href="/savedRecipes"href="/onBoard"><img src="help.png" width="30" height="30" alt='description' /><br/>HOW DOES IT WORK?</a>
+        <a href="/onBoard"><img src="help.png" width="30" height="30" alt='description' /><br/>HOW DOES IT WORK?</a>
         </li>
         </button>
         </ul>

@@ -21,7 +21,7 @@ class UserServices extends React.Component {
         <div className="content-wrapper">
           <h1 className="title">Your Services</h1>
           <div className="columns is-multiline">
-            {
+           {
               services.map(s => (
                 <div key={s.id} className="column">
                   <ServiceItem service={s} />
