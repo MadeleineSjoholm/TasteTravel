@@ -1,16 +1,59 @@
 
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Faq = () => {
 
   return (
-    <div className="container">
-      <div className="content-wrapper">
-        <h1 className="title">FAQ</h1>
-        <p>
-          Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-          The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
-        </p>
+    <div className="FaqPage">
+      <figure className="map_background">
+        <img src="map.png" alt="Company Logo" />
+      </figure>
+      <div className="container">
+
+        <div className="content-wrapper">
+          <h1 className="title">FAQ</h1>
+          <h3 className="question"> Do I need to have an account to use TasteTravel? </h3>
+            <p>
+              Yes, you need to have an account to use TasteTravel. You can visit the FAQ page and the On Board page to read about the site, however, you need to have an account to be able to experience the full TasteTravel journey.
+            </p>
+             <br></br>
+          <h3 className="question"> How does it work? </h3>
+            <p>
+              The On Board page gives you all the information you need to learn more about the site. Click here to navigate to the page:
+              <Link
+                to="/OnBoard">
+                <button className="faqButton">
+                      On Board
+                </button>
+              </Link>
+            </p>
+            <br></br>
+          <h3 className="question"> How do I change my preferences? </h3>
+            <p>
+              You can change your preferences on the preference side. Click here to navigate to the page:
+              <Link
+                to="/Preferences">
+                <button className="faqButton">
+                    Preferences
+                </button>
+              </Link>
+            </p><br></br>
+            <h3 className="question"> How do I change my profile settings? </h3>
+              <p>
+                You can change your preferences on the preference side. Click here to navigate to the page:
+
+            <Link
+              to="/profile">
+              <button className="faqButton">
+                  Profile
+              </button>
+            </Link>
+            </p><br></br>
+          <h3 className="question"> Can I create my own recipes? </h3>
+          <h3 className="question"> Can I share recipe to others? </h3>
+          <h3 className="question"> How do I save recipes? </h3>
+        </div>
       </div>
     </div>
   )

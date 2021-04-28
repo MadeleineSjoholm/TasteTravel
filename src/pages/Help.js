@@ -18,20 +18,25 @@ const Help = () => {
         <h1> EJ KLAR </h1>
           <div className="circle">Step 1
           </div>
-          <p> Put in your preferences. Here you can... </p>
+          <p> Put in your preferences. Here you can specify your allergies or food you don't like. </p>
           <Link
             to="/Preferences">
-            <button>
+            <button className="onBoardButton">
                 Go to Preferences
             </button>
           </Link>
           <div className="circle">Step 2
           </div>
-          <p> Choose where you want to travel. Click on the map... </p>
-          <button> Go to Map</button>
+          <p> Choose where you want to travel. Click on a country on the map and travel to that region.   </p>
+          <Link
+            to="/">
+            <button className="onBoardButton">
+                Go to Map
+            </button>
+          </Link>
           <div className="circle">Step 3
           </div>
-          <p> Get your matching recipes and start coocking!... </p>
+          <p> Get your matching recipes and start coocking! The recipes you will see matches your preferences. </p>
         </div>
       </div>
     </div>
