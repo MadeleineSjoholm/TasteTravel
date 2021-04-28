@@ -7,8 +7,7 @@ import { Redirect } from 'react-router-dom'
 import Select from 'react-select'
 import { ingredientOpt } from 'docs/data'
 
-
-//import { createPref } from 'actions'
+import { createPreference } from 'actions'
 
 const SetPref = ({ auth }) => {
 
@@ -18,18 +17,19 @@ const SetPref = ({ auth }) => {
     intolerance: '',
     ingredient: ''
   })
+ 
 
 
   const handleChange = e => {
-    const { name, value } = e.target
-    setPrefForm({ ...prefForm, [name]: value })
+    const { name, values } = e.target
+    setPrefForm({...prefForm, [name]: values})
   }
 
   const handleSubmit = () => {
     const { user } = auth
-    // createPref(prefForm, user.uid)
-    //   .then(() => setRedirect(true))
-    //   .catch(() => alert('SOME ERROR!'))
+    createPreference(prefForm, user.uid)
+      .then(() => setRedirect(true))
+      .catch(() => alert('SOME ERROR!'))
   }
 
   if (redirect) { return <Redirect to="/" /> }
@@ -45,6 +45,7 @@ const SetPref = ({ auth }) => {
               <div className="control">
                 <div className="select">
                   <select name="diet" onChange={handleChange}>
+                    
                     <option value="vegetarian">Vegetarian</option>
                     <option value="vegan">Vegan</option>
                     <option value="glutenfree">Gluten Free</option>
@@ -83,16 +84,7 @@ const SetPref = ({ auth }) => {
                 </div>
               </div>
             </div>
-            {/* <div className="field">
-              <label className="label">Exclude Ingredients</label>
-              <div className="control">
-                <textarea
-                  // onChange={handleChange}
-                  name="ingredient"
-                  className="textarea"
-                  placeholder="Textarea"></textarea>
-              </div>
-            </div> */}
+         
             <div className="field">
               <label className="label">Exclude Ingredients</label>
               <div className="control">
@@ -116,7 +108,7 @@ const SetPref = ({ auth }) => {
                   className="button is-link">Update Preferences</button>
               </div>
               <div className="control">
-                <button className="button is-secondary">Cancel</button>
+                <button className="button is-secondary" >Cancel</button>
               </div>
             </div>
 

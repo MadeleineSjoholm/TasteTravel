@@ -47,3 +47,9 @@ export const createService = (newService, userId) => {
 
   return api.createService(newService)
 }
+
+export const createPreference = (newPreference, userId) => {
+  newPreference.user = api.createRef('profiles', userId)
+
+  return api.createPreference(newPreference)
+}
