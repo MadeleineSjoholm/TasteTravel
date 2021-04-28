@@ -31,3 +31,10 @@ export const createService = newService => {
     .add(newService)
     .then(docRef => docRef.id)
 }
+
+export const createPreference = newPreference => {
+  return db
+    .collection('preference')
+    .add(newPreference)
+    .then(docRef => docRef.id)
+}
