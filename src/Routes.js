@@ -5,15 +5,12 @@ import { Switch, Route } from 'react-router-dom'
 import HomePage from './pages/Home'
 import FaqPage from './pages/Faq'
 import ProfilePage from './pages/Profile'
-import ServicesPage from './pages/Services'
 import ServiceDetailPage from './pages/ServiceDetail'
 import LoginPage from './pages/Login'
 import LogoutPage from './pages/Logout'
 import RegisterPage from './pages/Register'
 import SecretPage from './pages/Secret'
-import HelpPage from './pages/Help'
 import MatchingRecipes from './pages/MatchingRecipes'
-
 import Preferences from './pages/Preferences'
 import SavedRecipes from './pages/SavedRecipes'
 import MostPopular from './pages/MostPopular'
@@ -47,9 +44,6 @@ const Routes = () =>
     </Route>
     <Route path="/services/:serviceId">
       <ServiceDetailPage />
-    </Route>
-    <Route path="/services">
-      <ServicesPage />
     </Route>
     <Route path="/profile">
       <ProfilePage />

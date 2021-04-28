@@ -85,11 +85,11 @@ const Navbar = props => {
               className="navbar-item is-secondary">
                 Home
             </Link>
-            <Link 
+            {/* <Link 
               to="/services" 
               className="navbar-item is-secondary">
                 Services
-            </Link>
+            </Link> */}
             <Link 
               to="/faq" 
               className="navbar-item is-secondary">

@@ -66,6 +66,7 @@ const SetPref = ({ auth }) => {
               <div className="control">
                 <div className="select">
                   <select name="intolerance" onChange={handleChange}>
+                  <option value="">None</option>
                     <option value="dairy">Dairy</option>
                     <option value="egg">Egg</option>
                     <option value="gluten">Gluten</option>
@@ -82,21 +83,21 @@ const SetPref = ({ auth }) => {
                 </div>
               </div>
             </div>
-            <div className="field">
+            {/* <div className="field">
               <label className="label">Exclude Ingredients</label>
               <div className="control">
                 <textarea
-                  onChange={handleChange}
+                  // onChange={handleChange}
                   name="ingredient"
                   className="textarea"
                   placeholder="Textarea"></textarea>
               </div>
-            </div>
+            </div> */}
             <div className="field">
               <label className="label">Exclude Ingredients</label>
               <div className="control">
                 <Select
-                  onChange={handleChange}
+                  // onChange={handleChange}
                   defaultValue={''}
                   isMulti
                   name="ingredient"

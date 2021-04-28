@@ -7,6 +7,7 @@ import * as api from 'api'
 
 export const register = registerFormData => api.register({...registerFormData})
 export const login = loginData => api.login({...loginData})
+// export const preferences = prefData => api.preferences({...prefData})
 export const onAuthStateChanged = onAuthCallback => api.onAuthStateChanged(onAuthCallback)
 
 export const logout = uid => dispatch => 
