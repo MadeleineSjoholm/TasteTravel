@@ -21,8 +21,8 @@ const SetPref = ({ auth }) => {
 
 
   const handleChange = e => {
-    const { name, values } = e.target
-    setPrefForm({...prefForm, [name]: values})
+    const { name, value } = e.target
+    setPrefForm({...prefForm, [name]: value})
   }
 
   const handleSubmit = () => {
