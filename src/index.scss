@@ -634,6 +634,8 @@ input.input {
 }
 
 
+
+
 /* ==========================================================================
 Hero styles
 ========================================================================== */
@@ -655,6 +657,7 @@ Hero styles
    .subtitle {
        &.is-muted {
            color: $muted-grey;
+           padding-top: 30px;
        }
    }
 }
@@ -1138,6 +1141,25 @@ Section Styles
        }
    }
 }
+.diet-wrapper {
+    max-width: 500px;
+    margin: 0 auto;
+    .title, .subtitle {
+        font-family: 'Open Sans', sans-serif;
+        
+        
+    }
+    .subtitle {
+        &.is-muted {
+            color: $muted-grey;  
+            margin-top: 30px;          
+        }
+    }
+    .subtitle {
+        margin-bottom: 70px;
+    }
+ }
+ 
 
 //Divider
 .divider {

@@ -9,6 +9,8 @@ import { ingredientOpt, intoleranceOpt } from 'docs/data'
 
 import { createPreference } from 'actions'
 import { useHistory } from "react-router-dom";
+import diet from 'docs/diet'
+
 
 
   const SetPref = ({ auth }) => {
@@ -22,10 +24,9 @@ import { useHistory } from "react-router-dom";
 
 
   const handleChange = e => {
-    const { name, value } = e.target
-    setPrefForm({...prefForm, [name]: value})
-    console.log(name, value)
-    console.log(intoleranceOpt.value, ingredientOpt.name)
+    // const { name, value } = e.target
+    // setPrefForm({...prefForm, [name]: value})
+    console.log()
   }
 
   const handleSubmit = () => {
@@ -36,9 +37,11 @@ import { useHistory } from "react-router-dom";
   }
 
   const history = useHistory()
+  const labels = diet.Labels
 
 
   if (redirect) { return <Redirect to="/" /> }
+
   return (
     <div className="create-page">
       <div className="container">
@@ -123,30 +126,6 @@ import { useHistory } from "react-router-dom";
               </div>
             </div>
             
-            {/* <div className="radio">
-              <label className="label">Test</label>
-              <div className="control">
-
-              <label>
-                  <input type="radio" value="option1" checked={true} />
-                  Option 1
-                </label>
-              </div>
-              <div className="radio">
-                <label>
-                  <input type="radio" value="option2" />
-                  Option 2
-                </label>
-              </div>
-              <div className="radio">
-                <label>
-                  <input type="radio" value="option3" />
-                  Option 3
-                </label>
-                           
-              </div>
-              </div> */}
-            
 
             <div className="field is-grouped">
               <div className="control">
@@ -164,8 +143,47 @@ import { useHistory } from "react-router-dom";
 
           </form>
         </div>
-      </div>
+      </div>  
+
+
+      <section className="section section-feature-grey is-medium">
+          <div className="container">
+            <div className="diet-wrapper has-text-centered">
+            <h3 className="title is-3">Learn more about diets </h3>
+              <h3 className="title is-muted is-4 ">Vegetarian </h3>
+              <h4 className="subtitle is-6 is-2 ">{ labels.vegetarian }</h4>
+              <h3 className="title is-4">Vegan</h3>
+              <h4 className="subtitle is-6 is-2">{ labels.vegan }</h4>
+              <h3 className="title is-4">Gluten Free </h3>
+              <h4 className="subtitle is-6 is-2">{ labels.gluten }</h4>
+              <h3 className="title is-4">Lacto-Vegetarian</h3>
+              <h4 className="subtitle is-6 is-2">{ labels.lacto }</h4>
+              <h3 className="title is-4">Ovo-vegetarian </h3>
+              <h4 className="subtitle is-6 is-2">{ labels.ovo }</h4>
+              <h3 className="title is-4">Pescetarian</h3>
+              <h4 className="subtitle is-6 is-2">{ labels.pesc }</h4>
+              <h3 className="title is-4">Ketogenic </h3>
+              <h4 className="subtitle is-6 is-2">{ labels.keto }</h4>
+              <h3 className="title is-4">Paleo</h3>
+              <h4 className="subtitle is-6 is-2">{ labels.paleo }</h4>
+              <h3 className="title is-4">Primal </h3>
+              <h4 className="subtitle is-6 is-2">{ labels.primal }</h4>
+              <h3 className="title is-4">Whole 30</h3>
+              <h4 className="subtitle is-6 is-2">{ labels.whole }</h4>
+              <div className="divider is-centered"></div>
+            </div>
+
+            <div className="content-wrapper">
+              <div className="columns is-multiline">
+              </div>
+            </div>
+          </div>
+        </section>
+
     </div>
+
+
+
   )
 }
 
