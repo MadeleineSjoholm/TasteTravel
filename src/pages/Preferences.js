@@ -5,24 +5,27 @@ import React, { useState } from 'react'
 import withAuthorization from 'components/hoc/withAuthorization'
 import { Redirect } from 'react-router-dom'
 import Select from 'react-select'
-import { ingredientOpt } from 'docs/data'
+import { ingredientOpt, intoleranceOpt } from 'docs/data'
 
 import { createPreference } from 'actions'
+import { useHistory } from "react-router-dom";
 
-const SetPref = ({ auth }) => {
+
+  const SetPref = ({ auth }) => {
 
   const [redirect, setRedirect] = useState(false)
   const [prefForm, setPrefForm] = useState({
     diet: 'vegetarian',
-    intolerance: '',
+    intolerance: 'none',
     ingredient: ''
   })
- 
 
 
   const handleChange = e => {
     const { name, value } = e.target
     setPrefForm({...prefForm, [name]: value})
+    console.log(name, value)
+    console.log(intoleranceOpt.value, ingredientOpt.name)
   }
 
   const handleSubmit = () => {
@@ -32,8 +35,10 @@ const SetPref = ({ auth }) => {
       .catch(() => alert('SOME ERROR!'))
   }
 
-  if (redirect) { return <Redirect to="/" /> }
+  const history = useHistory()
 
+
+  if (redirect) { return <Redirect to="/" /> }
   return (
     <div className="create-page">
       <div className="container">
@@ -61,8 +66,23 @@ const SetPref = ({ auth }) => {
               </div>
             </div>
 
-
             <div className="field">
+              <label className="label">Intolerance</label>
+              <div className="control">
+                <Select
+                  value={intoleranceOpt.value}
+                  // onChange={handleChange}
+                  isMulti
+                  name="intolerance"
+                  options={intoleranceOpt}
+                  className="basic-multi-select"
+                  classNamePrefix="select"
+                />
+                
+              </div>
+            </div>
+
+            {/* <div className="field">
               <label className="label">Intolerances</label>
               <div className="control">
                 <div className="select">
@@ -83,12 +103,14 @@ const SetPref = ({ auth }) => {
                   </select>
                 </div>
               </div>
-            </div>
+            </div> */}
+            
          
             <div className="field">
               <label className="label">Exclude Ingredients</label>
               <div className="control">
                 <Select
+
                   // onChange={handleChange}
                   defaultValue={''}
                   isMulti
@@ -97,8 +119,34 @@ const SetPref = ({ auth }) => {
                   className="basic-multi-select"
                   classNamePrefix="select"
                 />
+                
               </div>
             </div>
+            
+            {/* <div className="radio">
+              <label className="label">Test</label>
+              <div className="control">
+
+              <label>
+                  <input type="radio" value="option1" checked={true} />
+                  Option 1
+                </label>
+              </div>
+              <div className="radio">
+                <label>
+                  <input type="radio" value="option2" />
+                  Option 2
+                </label>
+              </div>
+              <div className="radio">
+                <label>
+                  <input type="radio" value="option3" />
+                  Option 3
+                </label>
+                           
+              </div>
+              </div> */}
+            
 
             <div className="field is-grouped">
               <div className="control">
@@ -108,7 +156,9 @@ const SetPref = ({ auth }) => {
                   className="button is-link">Update Preferences</button>
               </div>
               <div className="control">
-                <button className="button is-secondary" >Cancel</button>
+                <button 
+                onClick={()=> history.push("/")}
+                className="button is-secondary" >Cancel</button>
               </div>
             </div>
 

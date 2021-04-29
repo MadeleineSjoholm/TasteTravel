@@ -38,3 +38,10 @@ export const createPreference = newPreference => {
     .add(newPreference)
     .then(docRef => docRef.id)
 }
+
+export const createCountry = newCountry => {
+  return db
+    .collection('country')
+    .add(newCountry)
+    .then(docRef => docRef.id)
+}
