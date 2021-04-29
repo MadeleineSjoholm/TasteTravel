@@ -44,6 +44,7 @@ import diet from 'docs/diet'
 
   return (
     <div className="create-page">
+      <section className="section is-medium">
       <div className="container">
         <div className="form-container">
           <h1 className="title">Your Preferences</h1>
@@ -144,7 +145,7 @@ import diet from 'docs/diet'
           </form>
         </div>
       </div>  
-
+      </section>
 
       <section className="section section-feature-grey is-medium">
           <div className="container">
