@@ -171,7 +171,9 @@ import diet from 'docs/diet'
               <h4 className="subtitle is-6 is-2">{ labels.primal }</h4>
               <h3 className="title is-4">Whole 30</h3>
               <h4 className="subtitle is-6 is-2">{ labels.whole }</h4>
+              
               <div className="divider is-centered"></div>
+              
             </div>
 
             <div className="content-wrapper">

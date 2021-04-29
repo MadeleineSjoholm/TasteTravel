@@ -17,7 +17,7 @@ const OnBoard = () => {
     <div className="text-area">
 
     <div className="circle1">Step 1</div>
-    <p className="step1"> Put in your preferences. Here you can specify your allergies or food you don't like. </p>
+    <p className="step1"> <b>Start off by specifying you preferences.</b> On the <a href="/preferences">Preferences Page</a> you will be able to add your diet, allergies and food items you just particularly don't like. </p>
     <Link
     to="/Preferences">
     <button className="onBoardButton1">
@@ -29,7 +29,7 @@ const OnBoard = () => {
 
 
     <div className="circle2">Step 2</div>
-    <p className= "step2"> Choose where you want to travel. Click on a country on the map and travel to that region.</p>
+    <p className= "step2"> <b>Choose where you want to travel.</b> Click on a country on the map that interests you and travel to that region.</p>
 
     <Link
     to="/">
@@ -41,7 +41,7 @@ const OnBoard = () => {
 
 
     <div className="circle3">Step 3</div>
-    <p className="step3"> Get your matching recipes and start coocking! The recipes you will see matches your preferences. </p>
+    <p className="step3"> <b>Get your matching recipes and start cooking!</b> <br></br>The recipe provided matches you personal preferences. From here you can just enjoy your experience but also add your recipes to your favourites as well as rate it to let your fellow travelers know what you think about it. </p>
 
 
     </div>
