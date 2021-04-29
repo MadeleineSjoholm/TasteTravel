@@ -13,6 +13,7 @@ const Faq = () => {
 
         <div className="content-wrapper">
           <h1 className="title">FAQ</h1>
+          <h3 className="question"> What is TasteTravel? </h3><br></br>
           <h3 className="question"> Do I need to have an account to use TasteTravel? </h3>
             <p>
               Yes, you need to have an account to use TasteTravel. You can visit the FAQ page and the On Board page to read about the site, however, you need to have an account to be able to experience the full TasteTravel journey.

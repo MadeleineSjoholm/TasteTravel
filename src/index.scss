@@ -792,30 +792,94 @@ Navbar
 
 
 /*===========================================================================
-Text Area (Alltså boxen i Help)
+OnBoard-och allt som görs på den!! Har detta nya system och all denna kod pga cirklarna blir annars konstiga.
 ===========================================================================*/
 
 .text-area{
   position: absolute;
-  width: 60%;
+  width: 80%;
   border:6px dotted #BDCFB5;
-  //background: rgba(255,255,255,0.4);
   padding: 30px;
   margin: 0px;
-}
+box-sizing: border-box;
+display: grid;
+grid-template-rows: 15vh 15vh 15vh;
+grid-template-columns: 1fr 20fr 1fr;
+grid-template-areas:
+  "circle1 step1 button1"
+  "circle2 step2 button2"
+  "circle3 step3 step3"
 
-.circle {
+}
+.circle1 {
+  grid-area: circle1;
   position: relative;
-  display: block;
    width: 70px;
    height: 70px;
    line-height: 7.5vh;
-  border-radius: 50%;
-  margin: 2em 0;
+  border-radius: 500px;
   background-color: #B287A3;
   color: #222;
   text-align: center;
 }
+
+.circle2 {
+  grid-area: circle2;
+  position: relative;
+   width: 70px;
+   height: 70px;
+   line-height: 7.5vh;
+  border-radius: 50%;
+  background-color: #B287A3;
+  color: #222;
+  text-align: center;
+}
+
+.circle3 {
+  grid-area: circle3;
+  position: relative;
+   width: 70px;
+   height: 70px;
+   line-height: 7.5vh;
+  border-radius: 50%;
+  background-color: #B287A3;
+  color: #222;
+  text-align: center;
+}
+
+.step1{
+grid-area: step1;
+padding-top: 1px;
+margin: 1rem;
+color:#482728;
+}
+
+.step2 {
+grid-area: step2;
+padding-top: 1px;
+margin: 1rem;
+color:#482728;
+}
+
+.step3{
+grid-area: step3;
+padding-top: 1px;
+margin: 1rem;
+color:#482728;
+
+}
+
+.onBoardButton1, .onBoardButton2 {
+  grid-area: button1;
+  grid-area: button2;
+  background-color: #B287A3;
+  border-color: #B287A3;
+  border-style: solid;
+  border-radius: 500px;
+  padding: 20px;
+
+}
+
 
 /*===========================================================================
 Faq
@@ -824,20 +888,32 @@ Faq
   font-size: 30px;
   color: #482728;
 }
-.faqButton{
+.faqButton{                   //Samma knapp används på Help sidan.
   background-color: #B287A3;
   border-color: #B287A3;
   border-style: solid;
   border-radius: 100px;
+  opacity: 1;
   padding: 10px;
   margin: 10px;
   transition: 0.3s;
 
-
-
 }
 .faqButton:hover {
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.10), 0 17px 50px 0 rgba(0,0,0,0.19);
+  opacity: 0.8;
+}
+
+/*===========================================================================
+ProfilePage
+===========================================================================*/
+.box{
+  background-color: rgba(255,255,255,0.6);
+  border:6px dotted #BDCFB5;
+  width: 20%;
+  top: 50%;
+  left: 50%;
+  //transform: translate(-50%, -50%);
 }
 
 /*===========================================================================

@@ -15,28 +15,35 @@ const Help = () => {
       <div className="content-wrapper">
         <h1 className="title">How does it work?</h1>
         <div className="text-area">
-        <h1> EJ KLAR </h1>
-          <div className="circle">Step 1
-          </div>
-          <p> Put in your preferences. Here you can specify your allergies or food you don't like. </p>
+
+          <div className="circle1">Step 1</div>
+          <p className="step1"> Put in your preferences. Here you can specify your allergies or food you don't like. </p>
           <Link
-            to="/Preferences">
-            <button className="onBoardButton">
-                Go to Preferences
-            </button>
-          </Link>
-          <div className="circle">Step 2
-          </div>
-          <p> Choose where you want to travel. Click on a country on the map and travel to that region.   </p>
+                      to="/Preferences">
+                      <button className="onBoardButton1">
+                          Go to Preferences
+                      </button>
+           </Link>
+
+
+
+
+          <div className="circle2">Step 2</div>
+          <p className= "step2"> Choose where you want to travel. Click on a country on the map and travel to that region.</p>
+
           <Link
             to="/">
-            <button className="onBoardButton">
+            <button className="onBoardButton2">
                 Go to Map
             </button>
-          </Link>
-          <div className="circle">Step 3
-          </div>
-          <p> Get your matching recipes and start coocking! The recipes you will see matches your preferences. </p>
+            </Link>
+
+
+
+          <div className="circle3">Step 3</div>
+          <p className="step3"> Get your matching recipes and start coocking! The recipes you will see matches your preferences. </p>
+
+
         </div>
       </div>
     </div>
