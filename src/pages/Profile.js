@@ -17,11 +17,9 @@ const Profile = () => {
           <div className="content-wrapper">
             <h1 className="title">Profile</h1>
 
-            <div className="box">
-              <figure className="avatar">
-                <img src="logga.png" alt="Company Logo" />
-              </figure>
-
+            <div class="grid-container">
+              <div class="item1">1</div>
+              <div class="item2">2</div>
             </div>
 
           </div>
