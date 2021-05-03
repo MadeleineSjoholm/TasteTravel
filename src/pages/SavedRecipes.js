@@ -1,7 +1,7 @@
-
+import withAuthorization from 'components/hoc/withAuthorization'
 import React from 'react'
 
-const SavedRecipes = () => {
+const SavedRecipes = ({auth}) => {
 
   return (
     <div className="container">
@@ -15,4 +15,4 @@ const SavedRecipes = () => {
   )
 }
 
-export default SavedRecipes
+export default withAuthorization(SavedRecipes)

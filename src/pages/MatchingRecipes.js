@@ -3,22 +3,36 @@
 import React from 'react'
 import MapChart from "../MAP/MapChart";
 import withAuthorization from 'components/hoc/withAuthorization'
+import diet from 'docs/diet'
 
 const MatchingRecipes = () => {
   console.log(MapChart.NAME)
+  const labels = diet.Labels
   return (
-    <div className="container">
-      <div className="content-wrapper">
-        <h1 className="title">Matching Recipes</h1>
-        <p>
-          This is your matching Recipes
-        </p>
-        <p>
-          Här tänker jag att oberoende av vilket land man klickar på så kommer man till den här sidan.
-          Och sen beroende på vilket land och vilka prefereser man har så gör vi if-satser och allt sånt där
-          och så visas bara de recept som ska visas?
-        </p>
-      </div>
+    <div className="create-page">
+      <section className="section section-feature-grey is-medium">
+
+        <div className="container">
+          <div className="content-wrapper has-text-centered">
+            <h1 className="title is-3">Italy</h1>
+            <figure className="countryPic">
+              <img src="https://rccl-h.assetsadobe.com/is/image/content/dam/royal/content/destinations/italy/italy-amalfi-coast.jpg?$750x667$" alt="Italian town by sea" />
+            </figure>
+            <h2 className="subtitle is-6 is-2 ">{labels.italy}</h2>
+            <h2 className="subtitle is-6 is-2 ">{labels.italy2}</h2>
+            <h2 className="subtitle is-6 is-2 ">{labels.italy3}</h2>
+              <button className="countryButton">
+                  Find Recipes
+              </button>
+          
+          </div>
+          
+          <div className="divider is-centered"></div>
+          <div className="content-wrapper">
+            <div className="columns is-multiline"> </div>
+          </div>
+        </div>
+      </section>
     </div>
   )
 }
