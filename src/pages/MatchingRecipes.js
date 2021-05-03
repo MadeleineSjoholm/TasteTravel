@@ -14,7 +14,7 @@ const MatchingRecipes = () => {
 
         <div className="container">
           <div className="content-wrapper has-text-centered">
-            <h1 className="title is-3">Italy</h1>
+            <h1 className="title is-1">Italy</h1>
             <figure className="countryPic is-medium">
               <img src="https://rccl-h.assetsadobe.com/is/image/content/dam/royal/content/destinations/italy/italy-amalfi-coast.jpg?$750x667$" alt="Italian town by sea" />
             </figure>
