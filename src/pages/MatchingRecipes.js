@@ -15,12 +15,12 @@ const MatchingRecipes = () => {
         <div className="container">
           <div className="content-wrapper has-text-centered">
             <h1 className="title is-3">Italy</h1>
-            <figure className="countryPic">
+            <figure className="countryPic is-medium">
               <img src="https://rccl-h.assetsadobe.com/is/image/content/dam/royal/content/destinations/italy/italy-amalfi-coast.jpg?$750x667$" alt="Italian town by sea" />
             </figure>
-            <h2 className="subtitle is-6 is-2 ">{labels.italy}</h2>
-            <h2 className="subtitle is-6 is-2 ">{labels.italy2}</h2>
-            <h2 className="subtitle is-6 is-2 ">{labels.italy3}</h2>
+            <h2 className="subtitle is-5 is-2 ">{labels.italy}</h2>
+            <h2 className="subtitle is-5 is-2 ">{labels.italy2}</h2>
+            <h2 className="subtitle is-5 is-2 ">{labels.italy3}</h2>
               <button className="countryButton">
                   Find Recipes
               </button>
