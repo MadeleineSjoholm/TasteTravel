@@ -24,6 +24,8 @@ const Recipe = () => {
           <div class="name">
             <h2 className="title">Carbonara</h2>
             <p>Spaghetti carbonara är en snabblagad italiensk klassiker. En äkta carbonara görs utan grädde och blir krämig tack vare en skvätt pastavatten i såsen. Snåla inte med svartpepparn och använd nymalen från kvarn. </p>
+            <img src="stars.png" width="70" height="70" alt="Italian Trulli"/>
+            <img src="heart.png" width="40" height="40" alt="Italian Trulli"/>
           </div>
           <div class="instructions">
             <ol>

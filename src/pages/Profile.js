@@ -1,31 +1,38 @@
 
 import React from 'react'
 import { Link } from 'react-router-dom'
-import RegisterForm from 'components/auth/RegisterForm'
+import UpdateForm from 'components/auth/UpdateForm'
 import { register } from 'actions'
 import { useToasts } from 'react-toast-notifications'
 import onlyGuest from 'components/hoc/onlyGuest'
 
-const Profile = () => {
+const Profile = (props) => {
+const { addToast } = useToasts()
 
-  return (
-      <div className="ProfilePage">
-        <figure className="map_background">
-          <img src="map.png" alt="Company Logo" />
-        </figure>
-        <div className="container">
-          <div className="content-wrapper">
-            <h1 className="title">Profile</h1>
-
-            <div class="grid-container">
-              <div class="item1">1</div>
-              <div class="item2">2</div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-  )
+const registerUser = (userData) => {
+  register(userData)
+    .then(
+      _ => () => {},
+      errorMessage => addToast(errorMessage, { appearance: 'error', autoDismiss: true, autoDismissTimeout: 3000 }))
 }
 
+return (
+  <div className="auth-page">
+    <figure className="map_background">
+      <img src="map.png" alt="Company Logo" />
+    </figure>
+    <div className="container has-text-centered">
+      <div className="column is-4 is-offset-4">
+        <h3 className="title has-text-grey">Your Profile</h3>
+        <p className="subtitle has-text-grey"> Here you can update your information.</p>
+        <div className="box">
+          <UpdateForm onRegister={registerUser} />
+        </div>
+      </div>
+    </div>
+  </div>
+)
+}
+
+// export default withRouter(Register)
 export default Profile

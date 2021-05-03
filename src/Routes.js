@@ -11,6 +11,7 @@ import LogoutPage from './pages/Logout'
 import RegisterPage from './pages/Register'
 import SecretPage from './pages/Secret'
 import MatchingRecipes from './pages/MatchingRecipes'
+import FindRecipe from './pages/FindRecipe'
 import Recipe from './pages/Recipe'
 import Preferences from './pages/Preferences'
 import SavedRecipes from './pages/SavedRecipes'
@@ -70,6 +71,9 @@ const Routes = () =>
 </Route>
 <Route path="/MatchingRecipes">
 <MatchingRecipes />
+</Route>
+<Route path="/FindRecipe">
+<FindRecipe />
 </Route>
 <Route path="/Recipe">
 <Recipe />

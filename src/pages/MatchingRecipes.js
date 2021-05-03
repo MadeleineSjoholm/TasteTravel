@@ -2,6 +2,7 @@
 
 import React from 'react'
 import MapChart from "../MAP/MapChart";
+import { Link } from 'react-router-dom'
 import withAuthorization from 'components/hoc/withAuthorization'
 import diet from 'docs/diet'
 
@@ -21,12 +22,16 @@ const MatchingRecipes = () => {
             <h2 className="subtitle is-5 is-2 ">{labels.italy}</h2>
             <h2 className="subtitle is-5 is-2 ">{labels.italy2}</h2>
             <h2 className="subtitle is-5 is-2 ">{labels.italy3}</h2>
+
+            <Link
+              to="/FindRecipe">
               <button className="countryButton">
                   Find Recipes
               </button>
-          
+            </Link>
+
           </div>
-          
+
           <div className="divider is-centered"></div>
           <div className="content-wrapper">
             <div className="columns is-multiline"> </div>

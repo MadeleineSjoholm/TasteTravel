@@ -918,6 +918,7 @@ RecipePage
   grid-template-columns: auto auto;
   grid-gap: 10px;
   padding: 10px;
+  color: 482728;
 }
 
 .grid-container > div {
@@ -940,6 +941,10 @@ RecipePage
   grid-row-end: 6;
   border: dotted;
   padding: 30px;
+  background-color: #BDCFB5;
+  color: #482728;
+
+
 }
 .name {
   grid-column-start: 2;
@@ -948,6 +953,7 @@ RecipePage
   grid-row-end: 1;
   border: dotted;
   padding: 30px;
+  color: #BDCFB5;
 }
 .instructions {
   grid-column-start: 2;
@@ -956,6 +962,8 @@ RecipePage
   grid-row-end: 6;
   border: dotted;
   padding: 30px;
+  color: #482728;
+  border-color: #BDCFB5;
 }
 
 
@@ -990,8 +998,9 @@ RecipePage
   .grid-container {
     display: grid;
     grid-template-columns: auto auto;
+    grid-template-columns: auto;
     grid-gap: 10px;
-    background-color:  rgba(255, 255, 255, 0.8);
+
     padding: 10px;
   }
 
@@ -1001,13 +1010,24 @@ RecipePage
     grid-column-end: 1;
     grid-row-start:1;
     grid-row-end: 1;
+    border:6px dotted #BDCFB5;
+
   }
 
   .item2 {
     grid-column-start: 2;
     grid-column-end: 4;
     grid-row-start:1;
-    grid-row-end: 5;
+    grid-row-end: 6;
+    border:6px dotted #BDCFB5;
+    background-color:  rgba(255, 255, 255, 0.8);
+    display: inline-grid;
+  }
+
+  .inputs{
+    background-color: black;
+    grid-column-start: 3;
+    grid-column-end: 3;
   }
 
   /*===========================================================================
