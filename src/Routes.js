@@ -11,6 +11,7 @@ import LogoutPage from './pages/Logout'
 import RegisterPage from './pages/Register'
 import SecretPage from './pages/Secret'
 import MatchingRecipes from './pages/MatchingRecipes'
+import Recipe from './pages/Recipe'
 import Preferences from './pages/Preferences'
 import SavedRecipes from './pages/SavedRecipes'
 import MostPopular from './pages/MostPopular'
@@ -69,6 +70,9 @@ const Routes = () =>
 </Route>
 <Route path="/MatchingRecipes">
 <MatchingRecipes />
+</Route>
+<Route path="/Recipe">
+<Recipe />
 </Route>
 <Route path="/">
 <HomePage />
