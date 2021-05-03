@@ -23,56 +23,56 @@ import UserServicesPage from './pages/services/UserServices'
 
 
 const Routes = () =>
-  <Switch>
-    <Route path="/secret">
-      <SecretPage />
-    </Route>
-    <Route path="/register">
-      <RegisterPage />
-    </Route>
-    <Route path="/login">
-      <LoginPage />
-    </Route>
-    <Route path="/logout">
-      <LogoutPage />
-    </Route>
-    <Route path="/services/me">
-      <UserServicesPage />
-    </Route>
-    <Route path="/services/new">
-      <ServiceCreatePage />
-    </Route>
-    <Route path="/services/:serviceId">
-      <ServiceDetailPage />
-    </Route>
-    <Route path="/profile">
-      <ProfilePage />
-    </Route>
-    <Route path="/faq">
-      <FaqPage />
-    </Route>
-    <Route path="/help">
-      <Help />
-    </Route>
+<Switch>
+<Route path="/secret">
+<SecretPage />
+</Route>
+<Route path="/register">
+<RegisterPage />
+</Route>
+<Route path="/login">
+<LoginPage />
+</Route>
+<Route path="/logout">
+<LogoutPage />
+</Route>
+<Route path="/services/me">
+<UserServicesPage />
+</Route>
+<Route path="/services/new">
+<ServiceCreatePage />
+</Route>
+<Route path="/services/:serviceId">
+<ServiceDetailPage />
+</Route>
+<Route path="/profile">
+<ProfilePage />
+</Route>
+<Route path="/faq">
+<FaqPage />
+</Route>
+<Route path="/help">
+<Help />
+</Route>
 
-    <Route path="/Preferences">
-      <Preferences />
-    </Route>
-    <Route path="/SavedRecipes">
-      <SavedRecipes />
-    </Route>
-    <Route path="/MostPopular">
-      <MostPopular />
-    </Route>
-    <Route path="/OnBoard">
-      <OnBoard />
-    </Route>
-    <Route path="/MatchingRecipes">
-      <MatchingRecipes />
-    </Route>
-    <Route path="/">
-      <HomePage />
-    </Route>
-  </Switch>
+<Route path="/Preferences">
+<Preferences />
+</Route>
+<Route path="/SavedRecipes">
+<SavedRecipes />
+</Route>
+<Route path="/MostPopular">
+<MostPopular />
+</Route>
+<Route path="/OnBoard">
+<OnBoard />
+</Route>
+<Route path="/MatchingRecipes">
+<MatchingRecipes />
+</Route>
+<Route path="/">
+<HomePage />
+</Route>
+</Switch>
 
 export default Routes
