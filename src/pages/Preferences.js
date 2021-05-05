@@ -8,7 +8,7 @@ import Select from 'react-select'
 import { ingredientOpt, intoleranceOpt } from 'docs/data'
 
 import { createPreference } from 'actions'
-import { useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom"
 import diet from 'docs/diet'
 
 
