@@ -24,7 +24,7 @@ const MatchingRecipes = () => {
             <h2 className="subtitle is-5 is-2 ">{labels.italy3}</h2>
 
             <Link
-              to="/FindRecipe">
+              to="/Recipe">
               <button className="countryButton">
                   Find Recipes
               </button>

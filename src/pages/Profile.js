@@ -5,20 +5,10 @@ import UpdateForm from 'components/auth/UpdateForm'
 import { register } from 'actions'
 import { useToasts } from 'react-toast-notifications'
 import onlyGuest from 'components/hoc/onlyGuest'
-import withAuthorization from 'components/hoc/withAuthorization'
-import db from 'db'
 
 const Profile = (props) => {
 const { addToast } = useToasts()
 
-var user = db.auth().currentUser;
-var fullName, email, avatar, uid;
-
-if (user != null) {
-  fullName = user.fullName;
-  email = user.email;
-  avatar = user.photoURL;
-  uid = user.uid; 
 
 
 const registerUser = (userData) => {
