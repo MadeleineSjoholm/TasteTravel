@@ -17,6 +17,7 @@ import Preferences from './pages/Preferences'
 import SavedRecipes from './pages/SavedRecipes'
 import MostPopular from './pages/MostPopular'
 import OnBoard from './pages/OnBoard'
+import Italy from './pages/Italy'
 
 import Help from './pages/Help'
 
@@ -77,6 +78,9 @@ const Routes = () =>
 </Route>
 <Route path="/Recipe">
 <Recipe />
+</Route>
+<Route path="/Italy">
+<Italy />
 </Route>
 <Route path="/">
 <HomePage />

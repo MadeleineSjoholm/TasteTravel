@@ -39,7 +39,7 @@ const MapChart = ({ setTooltipContent }) => {
                     const { NAME, POP_EST } = geo.properties;
                     console.log(NAME);
                     if (NAME === "Italy") {
-                      window.location.href = "/MatchingRecipes";
+                      window.location.href = "/Italy";
                     }
                   
 
