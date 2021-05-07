@@ -38,10 +38,13 @@ const MapChart = ({ setTooltipContent }) => {
                   onClick={()=> {
                     const { NAME, POP_EST } = geo.properties;
                     console.log(NAME);
-                    window.location.href = "/MatchingRecipes";
+                    if (NAME === "Italy") {
+                      window.location.href = "/MatchingRecipes";
+                    }
+                  
 
                   }}
-                  
+
                   onMouseLeave={() => {
                     setTooltipContent("");
                   }}
