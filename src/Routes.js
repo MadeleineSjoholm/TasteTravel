@@ -1,6 +1,16 @@
 
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
+import Africa from './pages/Africa'
+import Italy from './pages/cuisine/Italy'
+import Britain from './pages/cuisine/Britain'
+import America from './pages/cuisine/America'
+import China from './pages/cuisine/China'
+import EastEurope from './pages/cuisine/EastEurope'
+import India from './pages/cuisine/India'
+import LatinAmerica from './pages/cuisine/LatinAmerica'
+import MiddleEast from './pages/cuisine/MiddleEast'
+import Nordic from './pages/cuisine/Nordic'
 
 import HomePage from './pages/Home'
 import FaqPage from './pages/Faq'
@@ -17,12 +27,15 @@ import Preferences from './pages/Preferences'
 import SavedRecipes from './pages/SavedRecipes'
 import MostPopular from './pages/MostPopular'
 import OnBoard from './pages/OnBoard'
-import Italy from './pages/Italy'
+
 
 import Help from './pages/Help'
 
 import ServiceCreatePage from './pages/services/ServiceCreate'
 import UserServicesPage from './pages/services/UserServices'
+
+//Countries/Regions Pages
+
 
 
 const Routes = () =>
@@ -79,11 +92,39 @@ const Routes = () =>
 <Route path="/Recipe">
 <Recipe />
 </Route>
+<Route path="/">
+<HomePage />
+</Route>
+{/* Countries/Regions: Cuisine */}
 <Route path="/Italy">
 <Italy />
 </Route>
-<Route path="/">
-<HomePage />
+<Route path="/Africa">
+<Africa />
+</Route>
+<Route path="/America">
+<America />
+</Route>
+<Route path="/Britain">
+<Britain />
+</Route>
+<Route path="/China">
+<China />
+</Route>
+<Route path="/EastEurope">
+<EastEurope />
+</Route>
+<Route path="/India">
+<India />
+</Route>
+<Route path="/LatinAmerica">
+<LatinAmerica />
+</Route>
+<Route path="/MiddleEast">
+<MiddleEast />
+</Route>
+<Route path="/Nordic">
+<Nordic />
 </Route>
 </Switch>
 

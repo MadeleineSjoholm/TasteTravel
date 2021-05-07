@@ -1,13 +1,11 @@
 
 
 import React from 'react'
-import MapChart from "../MAP/MapChart";
 import { Link } from 'react-router-dom'
-import withAuthorization from 'components/hoc/withAuthorization'
 import diet from 'docs/diet'
 
-const Italy = () => {
-  console.log(MapChart.NAME)
+const India = () => {
+  
   const labels = diet.Labels
   return (
     <div className="create-page">
@@ -15,7 +13,7 @@ const Italy = () => {
 
         <div className="container">
           <div className="content-wrapper has-text-centered">
-            <h1 className="title is-1">Italy</h1>
+            <h1 className="title is-1">India</h1>
             <figure className="countryPic is-medium">
               <img src="https://rccl-h.assetsadobe.com/is/image/content/dam/royal/content/destinations/italy/italy-amalfi-coast.jpg?$750x667$" alt="Italian town by sea" />
             </figure>
@@ -42,4 +40,4 @@ const Italy = () => {
   )
 }
 
-export default Italy
+export default India

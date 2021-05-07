@@ -63,7 +63,7 @@ export const ingredientOpt = [
   { value: 'peas', label: 'Peas' },
   { value: 'butter', label: 'Butter' },
   { value: 'margarine', label: 'Margarine' },
-  { value: 'cream', label: 'Cream' },
+  { value: 'cream', label: 'Cream' }
 ];
 
 
@@ -79,9 +79,15 @@ export const intoleranceOpt = [
   { value: 'soy', label: 'Soy' },
   { value: 'sulfite', label: 'Sulfite' },
   { value: 'treenut', label: 'Tree Nut' },
-  { value: 'wheat', label: 'Wheat' },
+  { value: 'wheat', label: 'Wheat' }
 ]
 
+export const NordicCuisine = [
+  "Sweden", "Norway", "Denmark", "Iceland", "Finland"
+]
+export const AfricaCuisine = [
+  'Algeria', 'Angola', 'Benin', 'Botswana', 'Burkina Faso', 'Burundi', 'Cameroon', 'Cabo Verde', 'Central African Republic', 'Chad', 'Comoros', 'Congo', 'the Democratic Republic of Congo', 'Cote d’Ivoire', 'Djibouti', 'Equatorial Guinea', 'Egypt', 'Eritrea', 'Ethiopia', 'Gabon', 'Gambia', 'Ghana', 'Guinea', 'Guinea-Bissau', 'Kenya', 'Lesotho', 'Liberia', 'Libya', 'Madagascar', 'Malawi', 'Mali', 'Mauritania', 'Mauritius', 'Morocco', 'Mozambique', 'Namibia', 'Niger', 'Nigeria', 'Rwanda', 'Saharawi Arab Democratic Republic', 'Sao Tome and Principe', 'Senegal', 'Seychelles', 'Sierra Leone', 'Somalia', 'South Africa', 'South Sudan', 'Sudan', 'Swaziland', 'Tanzania', 'Togo', 'Tunisia', 'Uganda', 'Zambia', 'Zimbabwe'
+]
 
 export const dietExplained = [
 {title: "Vegetarian", text:"No ingredients may contain meat or meat by-products, such as bones or gelatin."},

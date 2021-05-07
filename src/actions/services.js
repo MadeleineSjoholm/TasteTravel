@@ -54,8 +54,8 @@ export const createPreference = (newPreference, userId) => {
   return api.createPreference(newPreference)
 }
 
-export const createCountry = (newCountry) => {
+export const createCuisine = (newCuisine) => {
   
 
-  return api.createCountry(newCountry)
+  return api.createCuisine(newCuisine)
 }

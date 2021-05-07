@@ -1,12 +1,11 @@
 
-
 import React from 'react'
 
 import { Link } from 'react-router-dom'
 import withAuthorization from 'components/hoc/withAuthorization'
 import diet from 'docs/diet'
 
-const MatchingRecipes = () => {
+const Africa = () => {
 
   const labels = diet.Labels
   return (
@@ -42,4 +41,4 @@ const MatchingRecipes = () => {
   )
 }
 
-export default withAuthorization(MatchingRecipes)
+export default withAuthorization(Africa)
