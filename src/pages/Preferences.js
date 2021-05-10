@@ -24,8 +24,8 @@ import diet from 'docs/diet'
 
 
   const handleChange = e => {
-    // const { name, value } = e.target
-    // setPrefForm({...prefForm, [name]: value})
+    const { name, value } = e.target
+    setPrefForm({...prefForm, [name]: value})
     console.log()
   }
 

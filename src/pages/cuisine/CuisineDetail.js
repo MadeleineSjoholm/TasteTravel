@@ -35,24 +35,13 @@ const CuisineDetail = props => {
     <div className="media service-user">
     <div className="media-left">
     <figure className="image is-48x48">
-    <img
-    className="is-rounded"
-    src={user.avatar}
-    alt={user.fullName} />
     </figure>
-    </div>
-    <div className="media-content">
-    <p className="title is-4">{user.fullName}</p>
-    <p className="subtitle is-6">Owner</p>
     </div>
     </div>
     </div>
     <h1 className="title service-title is-2">
     {cuisine.title}
     </h1>
-    {/* <div className="tag is-large service-category">
-    {cuisine.category}
-    </div> */}
     <h2 className="subtitle is-4">
     {cuisine.description}
     </h2>
