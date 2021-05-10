@@ -9,8 +9,6 @@ import onlyGuest from 'components/hoc/onlyGuest'
 import { Redirect } from 'react-router-dom'
 
 
-// import { withRouter } from 'react-router-dom'
-
 const Register = (props) => {
 const { addToast } = useToasts()
 const [redirect, setRedirect] = useState(false)

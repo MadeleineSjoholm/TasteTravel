@@ -1,23 +1,23 @@
-
+/* eslint no-useless-escape: 0 */
 import React from 'react'
-import { Link } from 'react-router-dom'
 import UpdateForm from 'components/auth/UpdateForm'
-import { register } from 'actions'
-import { useToasts } from 'react-toast-notifications'
-import onlyGuest from 'components/hoc/onlyGuest'
+import withAuthorization from 'components/hoc/withAuthorization'
+import firebase from 'firebase/app'
+import 'firebase/auth'
 
 const Profile = (props) => {
-const { addToast } = useToasts()
+const user = firebase.auth().currentUser
+const userid  = props.auth
 
-
-
-const registerUser = (userData) => {
-  register(userData)
-    .then(
-      _ => () => {},
-      errorMessage => addToast(errorMessage, { appearance: 'error', autoDismiss: true, autoDismissTimeout: 3000 }))
+const updateUserProfile = () => {
+  const password = '999999' 
+  //NU ÄR DET DETTA LÖSEN OVAN SOM SÄTTS NÄR MAN UPPDATERAR OAVSETT VAD MAN SKRIVER IN
+ user.updatePassword(password).then(function() {
+   alert('Password updated!')
+ }).catch(function(errors) {
+ alert('An error!')
+ })
 }
-
 
 return (
   <div className="auth-page">
@@ -27,15 +27,24 @@ return (
     <div className="container has-text-centered">
       <div className="column is-4 is-offset-4">
         <h3 className="title has-text-grey">Your Profile</h3>
-        <p className="subtitle has-text-grey"> Here you can update your information.</p>
+        <figure className=" is-medium">
+        <img src = {userid.user.avatar} width='100' height='100'/> 
+        </figure>
+        <div align='left'>
+        <h2 className="subtitle has-text-grey">{`Name: ${userid.user.fullName}`}</h2>
+        <h2 className="subtitle has-text-grey">{`Email: ${userid.user.email}`}</h2>
+        <h2 className="subtitle has-text-grey">{`User ID: ${userid.user.uid}`}</h2>
+        <h2 className="subtitle has-text-grey"> Preferences: hejhejhej </h2>
+        </div>
+        
         <div className="box">
-          <UpdateForm onRegister={registerUser} />
+        <p className="subtitle has-text-grey"> Here you can update your information. If it does not work, try to logout then login again.</p>
+          <UpdateForm onClick={updateUserProfile()}/>
         </div>
       </div>
     </div>
-  </div>
+</div> 
 )
 }
 
-// export default withRouter(Register)
-export default Profile
+export default withAuthorization(Profile)

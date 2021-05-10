@@ -7,6 +7,10 @@ import { useToasts } from 'react-toast-notifications'
 import { Redirect } from 'react-router-dom'
 import onlyGuest from 'components/hoc/onlyGuest'
 
+import firebase from 'firebase/app'
+import 'firebase/auth'
+
+
 import { login } from 'actions'
 
 const Login = () => {
@@ -21,6 +25,8 @@ const onLogin = loginData => {
       errorMessage => addToast(errorMessage, { appearance: 'error', autoDismiss: true, autoDismissTimeout: 3000 })
     )
 }
+
+
 
 if (redirect) { return <Redirect to="/" />}
 
@@ -66,9 +72,10 @@ return (
           </form>
         </div>
         <p className="has-text-grey">
-
           <a href="/Register">SIGN UP</a> &nbsp;·&nbsp;
           <a href="/Faq">Need Help?</a>
+          <a href='/ResetPassword'>Forgot Password?</a>
+      
         </p>
       </div>
     </div>

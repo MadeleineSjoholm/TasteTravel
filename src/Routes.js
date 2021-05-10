@@ -31,6 +31,7 @@ import Preferences from './pages/Preferences'
 import SavedRecipes from './pages/SavedRecipes'
 import MostPopular from './pages/MostPopular'
 import OnBoard from './pages/OnBoard'
+import ResetPasswordPage from './pages/ResetPassword'
 
 
 import Help from './pages/Help'
@@ -68,6 +69,9 @@ const Routes = () =>
 <Route path="/services/:serviceId">
 <ServiceDetailPage />
 </Route>
+<Route path="/Resetpassword">
+<ResetPasswordPage />
+</Route>
 
 <Route path="/profile">
 <ProfilePage />
@@ -78,7 +82,6 @@ const Routes = () =>
 <Route path="/help">
 <Help />
 </Route>
-
 {/* Countries/Regions: Cuisine */}
 <Route path="/Italy">
 <Italy />
