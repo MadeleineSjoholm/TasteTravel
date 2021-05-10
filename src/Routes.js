@@ -32,6 +32,7 @@ import SavedRecipes from './pages/SavedRecipes'
 import MostPopular from './pages/MostPopular'
 import OnBoard from './pages/OnBoard'
 import ResetPasswordPage from './pages/ResetPassword'
+import ChangePasswordPage from './pages/ChangePassword'
 
 
 import Help from './pages/Help'
@@ -71,6 +72,9 @@ const Routes = () =>
 </Route>
 <Route path="/Resetpassword">
 <ResetPasswordPage />
+</Route>
+<Route path="/ChangePassword">
+<ChangePasswordPage />
 </Route>
 
 <Route path="/profile">
