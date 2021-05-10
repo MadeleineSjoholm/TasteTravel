@@ -39,9 +39,9 @@ export const createPreference = newPreference => {
     .then(docRef => docRef.id)
 }
 
-export const createCountry = newCountry => {
+export const createCuisine = newCuisine => {
   return db
-    .collection('country')
-    .add(newCountry)
+    .collection('cuisine')
+    .add(newCuisine)
     .then(docRef => docRef.id)
 }

@@ -1,5 +1,6 @@
 import React, { memo } from "react";
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
+import { NordicCuisine, AfricaCuisine } from 'docs/data'
 import {
   ZoomableGroup,
   ComposableMap,
@@ -9,6 +10,7 @@ import {
 
 const geoUrl =
   "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json";
+ 
 
 const rounded = num => {
   if (num > 1000000000) {
@@ -38,10 +40,13 @@ const MapChart = ({ setTooltipContent }) => {
                   onClick={()=> {
                     const { NAME, POP_EST } = geo.properties;
                     console.log(NAME);
-                    if (NAME === "Italy") {
+                    if (NordicCuisine.includes(NAME)) {
                       window.location.href = "/MatchingRecipes";
+                    } else if (AfricaCuisine.includes(NAME)) {
+                      window.location.href = "/Africa";
                     }
                   }}
+                  
 
                   onMouseLeave={() => {
                     setTooltipContent("");
