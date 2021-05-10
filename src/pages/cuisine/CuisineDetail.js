@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { fetchCuisineById } from 'actions'
+import { Link } from 'react-router-dom'
 
 import Spinner from 'components/Spinner'
 
@@ -16,7 +17,6 @@ const CuisineDetail = props => {
 
 
   const { cuisine } = props
-  const { user } = cuisine 
 
   if (isFetching || cuisineId !== cuisine.id) { return <Spinner /> }
 
@@ -29,6 +29,9 @@ const CuisineDetail = props => {
     <figure className="image is-4by3">
     <img src={cuisine.image} alt="Description" />
     </figure>
+    <figure className="image is-4by3">
+    <img src={cuisine.altimage} alt="Description" />
+    </figure>
     </div>
     <div className="column is-6 is-offset-1">
     <div className="service-header-container">
@@ -37,15 +40,23 @@ const CuisineDetail = props => {
     <figure className="image is-48x48">
     </figure>
     </div>
+    
     </div>
     </div>
-    <h1 className="title service-title is-2">
+    <h1 className="title is-2">
     {cuisine.title}
     </h1>
-    <h2 className="subtitle is-4">
+    <br />
+    <h2 className="subtitle is-6">
     {cuisine.description}
     </h2>
     <br />
+    <Link
+              to="/Recipe">
+              <button className="countryButton">
+                  Find Recipes
+              </button>
+            </Link>
       </div>
       </div>
       </div>

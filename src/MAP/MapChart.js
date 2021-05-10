@@ -49,27 +49,27 @@ const MapChart = ({ setTooltipContent }) => {
                     const { NAME, POP_EST } = geo.properties;
                     console.log(NAME);
                     if (NordicCuisine.includes(NAME)) {
-                      window.location.href = "/Nordic";
+                      window.location.href = "/cuisine/nordic";
                     } else if (AfricaCuisine.includes(NAME)) {
-                      window.location.href = "/Africa";
+                      window.location.href = "/cuisine/africa";
                     } else if (MiddleEastCuisine.includes(NAME)) {
-                      window.location.href = "/MiddleEast";
+                      window.location.href = "/cuisine/middleeast";
                     } else if (EastEuropeCuisine.includes(NAME)) {
-                      window.location.href = "/EastEurope";
+                      window.location.href = "/cuisine/easteurope";
                     } else if (LatinAmericaCuisine.includes(NAME)) {
-                      window.location.href = "/LatinAmerica"
+                      window.location.href = "/cuisine/latinamerica"
                     } else if (AmericaCuisine.includes(NAME)) {
-                      window.location.href = "/America";
+                      window.location.href = "/cuisine/america";
                     } else if (NAME === "United Kingdom" || NAME === "Ireland" ) {
-                      window.location.href = "/Britain";
+                      window.location.href = "/cuisine/britain";
                     } else if (NAME === "India" ) {
-                      window.location.href = "/India";
+                      window.location.href = "/cuisine/india";
                     } else if (NAME === "China" ) {
-                      window.location.href = "/China";
+                      window.location.href = "/cuisine/china";
                     } else if (NAME === "Italy" ) {
-                      window.location.href = "/Italy";
+                      window.location.href = "/cuisine/italy";
                     } else if (MediterraneanCuisine.includes(NAME)) {
-                      window.location.href = "/Mediterranean";
+                      window.location.href = "/cuisine/mediterranean";
                     }   
                   }}
                   
