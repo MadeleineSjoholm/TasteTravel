@@ -27,10 +27,11 @@ const CuisineDetail = props => {
     <div className="columns is-vcentered">
     <div className="column is-5">
     <figure className="image is-4by3">
-    <img src={cuisine.image} alt="Description" />
+    <img src={cuisine.image} alt="First pic of region" />
     </figure>
+    <br />
     <figure className="image is-4by3">
-    <img src={cuisine.altimage} alt="Description" />
+    <img src={cuisine.altimage} alt="Second pic of region" />
     </figure>
     </div>
     <div className="column is-6 is-offset-1">
