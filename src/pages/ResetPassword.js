@@ -5,13 +5,12 @@ import 'firebase/auth'
 
 
 const ResetPassword = ( ) => {
-
     const user = firebase.auth()
-
     const resetPassword = () => {
         const email = 'alva.b.99@live.se'
         console.log(email)
-        return firebase.auth().sendPasswordResetEmail('alva.b.99@live.se')
+        firebase.auth().sendPasswordResetEmail(email)
+        alert('An email has been sent')
     }
 
 return (
@@ -29,7 +28,7 @@ return (
           autoComplete="email" />
     <button
         type='submit'
-        onClick = {resetPassword}
+        onClick = {resetPassword()}
         className="button is-block rounded secondary-btn raised is-large is-fullwidth">
             Send Email
     </button>
