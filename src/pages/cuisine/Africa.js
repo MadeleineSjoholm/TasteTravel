@@ -1,18 +1,11 @@
-import React, { useEffect } from 'react'
+
+import React from 'react'
+
 import { Link } from 'react-router-dom'
 import withAuthorization from 'components/hoc/withAuthorization'
 import diet from 'docs/diet'
-import db from 'db'
 
-const Italy = () => {
-
-  const italyRef = db.collection("profile").doc('title');
-  const doc = italyRef.get();
-  if (!doc.exists) {
-    console.log('No such document!');
-  } else {
-    console.log('Document data:', doc.data());
-  }
+const Africa = () => {
 
   const labels = diet.Labels
   return (
@@ -21,13 +14,11 @@ const Italy = () => {
 
         <div className="container">
           <div className="content-wrapper has-text-centered">
-            <h1 className="title is-1">  {`${doc.Title}`}</h1>
+            <h1 className="title is-1">Africa</h1>
             <figure className="countryPic is-medium">
               <img src="https://rccl-h.assetsadobe.com/is/image/content/dam/royal/content/destinations/italy/italy-amalfi-coast.jpg?$750x667$" alt="Italian town by sea" />
             </figure>
-            <h2 className="subtitle is-5 is-2 ">
-                {`${Italy.Title}`}
-            </h2>
+            <h2 className="subtitle is-5 is-2 ">{labels.italy}</h2>
             <h2 className="subtitle is-5 is-2 ">{labels.italy2}</h2>
             <h2 className="subtitle is-5 is-2 ">{labels.italy3}</h2>
 
@@ -50,4 +41,4 @@ const Italy = () => {
   )
 }
 
-export default withAuthorization(Italy)
+export default withAuthorization(Africa)

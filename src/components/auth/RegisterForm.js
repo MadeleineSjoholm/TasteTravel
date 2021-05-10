@@ -1,13 +1,14 @@
 /* eslint no-useless-escape: 0 */
 
-import React from 'react'
+import React, { useState } from 'react'
 import useForm from 'react-hook-form'
-
+import { useHistory } from "react-router-dom"
 import { isValidImage, isValidUrl, sameAs } from 'helpers/validators'
 
 const RegisterForm = (props) => {
 
   const { register, handleSubmit, errors, getValues } = useForm()
+  const history = useHistory()
 
   return (
     <form onSubmit={handleSubmit(props.onRegister)}>
@@ -91,9 +92,16 @@ const RegisterForm = (props) => {
           }
         </div>
       </div>
+      {/* <a 
+      type="submit"
+      href= "/onBoard"
+      className="button is-block rounded secondary-btn raised is-large is-fullwidth">Register</a> */}
+
       <button
         type="submit"
-        className="button is-block rounded secondary-btn raised is-large is-fullwidth">Register</button>
+        // onClick={()=> history.push("/onboard")}
+        className="button is-block rounded secondary-btn raised is-large is-fullwidth">Register
+        </button>
     </form>
   )
 }

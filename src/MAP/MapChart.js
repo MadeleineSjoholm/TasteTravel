@@ -1,6 +1,14 @@
 import React, { memo } from "react";
 // import { Link } from 'react-router-dom'
-import { NordicCuisine, AfricaCuisine } from 'docs/data'
+import { 
+  NordicCuisine, 
+  AfricaCuisine, 
+  MiddleEastCuisine, 
+  EastEuropeCuisine,
+  LatinAmericaCuisine,
+  AmericaCuisine,
+  MediterraneanCuisine 
+} from 'docs/data'
 import {
   ZoomableGroup,
   ComposableMap,
@@ -41,11 +49,28 @@ const MapChart = ({ setTooltipContent }) => {
                     const { NAME, POP_EST } = geo.properties;
                     console.log(NAME);
                     if (NordicCuisine.includes(NAME)) {
-                      window.location.href = "/MatchingRecipes";
+                      window.location.href = "/Nordic";
                     } else if (AfricaCuisine.includes(NAME)) {
                       window.location.href = "/Africa";
-                    }
-
+                    } else if (MiddleEastCuisine.includes(NAME)) {
+                      window.location.href = "/MiddleEast";
+                    } else if (EastEuropeCuisine.includes(NAME)) {
+                      window.location.href = "/EastEurope";
+                    } else if (LatinAmericaCuisine.includes(NAME)) {
+                      window.location.href = "/LatinAmerica"
+                    } else if (AmericaCuisine.includes(NAME)) {
+                      window.location.href = "/America";
+                    } else if (NAME === "United Kingdom" || NAME === "Ireland" ) {
+                      window.location.href = "/Britain";
+                    } else if (NAME === "India" ) {
+                      window.location.href = "/India";
+                    } else if (NAME === "China" ) {
+                      window.location.href = "/China";
+                    } else if (NAME === "Italy" ) {
+                      window.location.href = "/Italy";
+                    } else if (MediterraneanCuisine.includes(NAME)) {
+                      window.location.href = "/Mediterranean";
+                    }   
                   }}
                   
 

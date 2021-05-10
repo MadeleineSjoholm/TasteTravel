@@ -1,16 +1,20 @@
 
 /* eslint jsx-a11y/anchor-is-valid: 0 */
 
-import React from 'react'
+import React, { useState } from 'react'
 import RegisterForm from 'components/auth/RegisterForm'
 import { register } from 'actions'
 import { useToasts } from 'react-toast-notifications'
 import onlyGuest from 'components/hoc/onlyGuest'
+import { Redirect } from 'react-router-dom'
+
 
 // import { withRouter } from 'react-router-dom'
 
 const Register = (props) => {
 const { addToast } = useToasts()
+const [redirect, setRedirect] = useState(false)
+if (redirect) { return <Redirect to="/onboard" /> }
 
 const registerUser = (userData) => {
   register(userData)

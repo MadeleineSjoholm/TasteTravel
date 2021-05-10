@@ -1,7 +1,8 @@
 
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
-import Africa from './pages/Africa'
+
+import Africa from './pages/cuisine/Africa'
 import Italy from './pages/cuisine/Italy'
 import Britain from './pages/cuisine/Britain'
 import America from './pages/cuisine/America'
@@ -11,11 +12,14 @@ import India from './pages/cuisine/India'
 import LatinAmerica from './pages/cuisine/LatinAmerica'
 import MiddleEast from './pages/cuisine/MiddleEast'
 import Nordic from './pages/cuisine/Nordic'
+import Mediterranean from './pages/cuisine/Mediterranean'
+import CuisineDetailPage from './pages/cuisine/CuisineDetail'
 
 import HomePage from './pages/Home'
 import FaqPage from './pages/Faq'
 import ProfilePage from './pages/Profile'
 import ServiceDetailPage from './pages/ServiceDetail'
+
 import LoginPage from './pages/Login'
 import LogoutPage from './pages/Logout'
 import RegisterPage from './pages/Register'
@@ -43,6 +47,9 @@ const Routes = () =>
 <Route path="/secret">
 <SecretPage />
 </Route>
+<Route path="/cuisine/:cuisineId">
+<CuisineDetailPage />
+</Route>
 <Route path="/register">
 <RegisterPage />
 </Route>
@@ -61,6 +68,7 @@ const Routes = () =>
 <Route path="/services/:serviceId">
 <ServiceDetailPage />
 </Route>
+
 <Route path="/profile">
 <ProfilePage />
 </Route>
@@ -71,30 +79,6 @@ const Routes = () =>
 <Help />
 </Route>
 
-<Route path="/Preferences">
-<Preferences />
-</Route>
-<Route path="/SavedRecipes">
-<SavedRecipes />
-</Route>
-<Route path="/MostPopular">
-<MostPopular />
-</Route>
-<Route path="/OnBoard">
-<OnBoard />
-</Route>
-<Route path="/MatchingRecipes">
-<MatchingRecipes />
-</Route>
-<Route path="/FindRecipe">
-<FindRecipe />
-</Route>
-<Route path="/Recipe">
-<Recipe />
-</Route>
-<Route path="/">
-<HomePage />
-</Route>
 {/* Countries/Regions: Cuisine */}
 <Route path="/Italy">
 <Italy />
@@ -126,6 +110,36 @@ const Routes = () =>
 <Route path="/Nordic">
 <Nordic />
 </Route>
+<Route path="/Mediterranean">
+<Mediterranean />
+</Route>
+{/* END OF CUISINE */}
+
+<Route path="/Preferences">
+<Preferences />
+</Route>
+<Route path="/SavedRecipes">
+<SavedRecipes />
+</Route>
+<Route path="/MostPopular">
+<MostPopular />
+</Route>
+<Route path="/OnBoard">
+<OnBoard />
+</Route>
+<Route path="/MatchingRecipes">
+<MatchingRecipes />
+</Route>
+<Route path="/FindRecipe">
+<FindRecipe />
+</Route>
+<Route path="/Recipe">
+<Recipe />
+</Route>
+<Route path="/">
+<HomePage />
+</Route>
+
 </Switch>
 
 export default Routes

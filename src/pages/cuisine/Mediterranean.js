@@ -1,12 +1,11 @@
 
-import React from 'react'
 
+import React from 'react'
 import { Link } from 'react-router-dom'
-import withAuthorization from 'components/hoc/withAuthorization'
 import diet from 'docs/diet'
 
-const Africa = () => {
-
+const Mediterranean = () => {
+  
   const labels = diet.Labels
   return (
     <div className="create-page">
@@ -14,7 +13,7 @@ const Africa = () => {
 
         <div className="container">
           <div className="content-wrapper has-text-centered">
-            <h1 className="title is-1">Italy</h1>
+            <h1 className="title is-1">Mediterranean</h1>
             <figure className="countryPic is-medium">
               <img src="https://rccl-h.assetsadobe.com/is/image/content/dam/royal/content/destinations/italy/italy-amalfi-coast.jpg?$750x667$" alt="Italian town by sea" />
             </figure>
@@ -41,4 +40,4 @@ const Africa = () => {
   )
 }
 
-export default withAuthorization(Africa)
+export default Mediterranean

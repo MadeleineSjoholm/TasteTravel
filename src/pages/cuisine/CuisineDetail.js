@@ -1,24 +1,24 @@
 import React, { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { connect } from 'react-redux'
-import { fetchServiceById } from 'actions'
+import { fetchCuisineById } from 'actions'
 
 import Spinner from 'components/Spinner'
 
 const CuisineDetail = props => {
 
-  const { serviceId } = useParams()
-  const { fetchServiceById, isFetching } = props
+  const { cuisineId } = useParams()
+  const { fetchCuisineById, isFetching } = props
 
   useEffect(() => {
-    fetchServiceById(serviceId)
-  }, [serviceId, fetchServiceById])
+    fetchCuisineById(cuisineId)
+  }, [cuisineId, fetchCuisineById])
 
 
-  const { service } = props
-  const { user } = service
+  const { cuisine } = props
+  const { user } = cuisine 
 
-  if (isFetching || serviceId !== service.id) { return <Spinner /> }
+  if (isFetching || cuisineId !== cuisine.id) { return <Spinner /> }
 
   return (
     <section className="hero is-fullheight is-default is-bold service-detail-page">
@@ -27,7 +27,7 @@ const CuisineDetail = props => {
     <div className="columns is-vcentered">
     <div className="column is-5">
     <figure className="image is-4by3">
-    <img src={service.image} alt="Description" />
+    <img src={cuisine.image} alt="Description" />
     </figure>
     </div>
     <div className="column is-6 is-offset-1">
@@ -46,32 +46,17 @@ const CuisineDetail = props => {
     <p className="subtitle is-6">Owner</p>
     </div>
     </div>
-    <div className="service-price">
-    <div className="media service-user">
-    <div className="media-content">
-    <p className="title is-4">${service.price}</p>
-    <p className="subtitle is-6">Per Hour</p>
-    </div>
-    </div>
-    </div>
     </div>
     <h1 className="title service-title is-2">
-    {service.title}
+    {cuisine.title}
     </h1>
-    <div className="tag is-large service-category">
-    {service.category}
-    </div>
+    {/* <div className="tag is-large service-category">
+    {cuisine.category}
+    </div> */}
     <h2 className="subtitle is-4">
-    {service.description}
+    {cuisine.description}
     </h2>
     <br />
-    <div className="has-text-centered">
-    {/* { auth.isAuth && auth.user.uid !== service.user.uid &&
-      <OfferModal
-      auth={auth}
-      service={service}/> } */}
-
-      </div>
       </div>
       </div>
       </div>
@@ -80,12 +65,12 @@ const CuisineDetail = props => {
     )
   }
 
-  const mapStateToProps = ({selectedService, auth}) => (
+  const mapStateToProps = ({selectedCuisine, auth}) => (
     {
-      service: selectedService.item,
-      isFetching: selectedService.isFetching,
+      cuisine: selectedCuisine.item,
+      isFetching: selectedCuisine.isFetching,
       auth
     }
   )
 
-  export default connect(mapStateToProps, {fetchServiceById})(CuisineDetail)
+  export default connect(mapStateToProps, {fetchCuisineById})(CuisineDetail)

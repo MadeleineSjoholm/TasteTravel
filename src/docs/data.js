@@ -82,12 +82,6 @@ export const intoleranceOpt = [
   { value: 'wheat', label: 'Wheat' }
 ]
 
-export const NordicCuisine = [
-  "Sweden", "Norway", "Denmark", "Iceland", "Finland"
-]
-export const AfricaCuisine = [
-  'Algeria', 'Angola', 'Benin', 'Botswana', 'Burkina Faso', 'Burundi', 'Cameroon', 'Cabo Verde', 'Central African Republic', 'Chad', 'Comoros', 'Congo', 'the Democratic Republic of Congo', 'Cote d’Ivoire', 'Djibouti', 'Equatorial Guinea', 'Egypt', 'Eritrea', 'Ethiopia', 'Gabon', 'Gambia', 'Ghana', 'Guinea', 'Guinea-Bissau', 'Kenya', 'Lesotho', 'Liberia', 'Libya', 'Madagascar', 'Malawi', 'Mali', 'Mauritania', 'Mauritius', 'Morocco', 'Mozambique', 'Namibia', 'Niger', 'Nigeria', 'Rwanda', 'Saharawi Arab Democratic Republic', 'Sao Tome and Principe', 'Senegal', 'Seychelles', 'Sierra Leone', 'Somalia', 'South Africa', 'South Sudan', 'Sudan', 'Swaziland', 'Tanzania', 'Togo', 'Tunisia', 'Uganda', 'Zambia', 'Zimbabwe'
-]
 
 export const dietExplained = [
 {title: "Vegetarian", text:"No ingredients may contain meat or meat by-products, such as bones or gelatin."},
@@ -100,4 +94,28 @@ export const dietExplained = [
 {title: "Paleo", text: "Allowed ingredients include meat (especially grass fed), fish, eggs, vegetables, some oils (e.g. coconut and olive oil), and in smaller quantities, fruit, nuts, and sweet potatoes. We also allow honey and maple syrup (popular in Paleo desserts, but strict Paleo followers may disagree). Ingredients not allowed include legumes (e.g. beans and lentils), grains, dairy, refined sugar, and processed foods."},
 {title: "Primal", text: "Very similar to Paleo, except dairy is allowed - think raw and full fat milk, butter, ghee, etc."},
 {title: "Whole 30", text: "Allowed ingredients include meat, fish/seafood, eggs, vegetables, fresh fruit, coconut oil, olive oil, small amounts of dried fruit and nuts/seeds. Ingredients not allowed include added sweeteners (natural and artificial, except small amounts of fruit juice), dairy (except clarified butter or ghee), alcohol, grains, legumes (except green beans, sugar snap peas, and snow peas), and food additives, such as carrageenan, MSG, and sulfites."}
+]
+
+//CUISINE COUNTRIES DIVIDED INTO REGIONS
+
+export const NordicCuisine = [
+  "Sweden", "Norway", "Denmark", "Iceland", "Finland"
+]
+export const AfricaCuisine = [
+  'Algeria', 'Angola', 'Benin', 'Botswana', 'Burkina Faso', 'Burundi', 'Cameroon', 'Cabo Verde', 'Central African Rep.', 'Chad', 'Comoros', 'Congo', 'Dem. Rep. Congo', 'Côte dIvoire', 'Djibouti', 'Eq. Guinea', 'Egypt', 'Eritrea', 'Ethiopia', 'Gabon', 'Gambia', 'Ghana', 'Guinea', 'Guinea-Bissau', 'Kenya', 'Lesotho', 'Liberia', 'Libya', 'Madagascar', 'Malawi', 'Mali', 'Mauritania', 'Mauritius', 'Morocco', 'Mozambique', 'Namibia', 'Niger', 'Nigeria', 'Rwanda', 'W. Sahara', 'Sao Tome and Principe', 'Senegal', 'Seychelles', 'Sierra Leone', 'Somalia', 'South Africa', 'S. Sudan', 'Sudan', 'Swaziland', 'Tanzania', 'Togo', 'Tunisia', 'Uganda', 'Zambia', 'Zimbabwe'
+]
+export const MiddleEastCuisine = [
+  'Turkey', 'Syria', 'Lebanon', 'Iraq', 'Iran', 'Israel', 'the West Bank', 'the Gaza Strip', 'Jordan', 'Egypt', 'Sudan', 'Libya', 'Saudi Arabia', 'Kuwait', 'Yemen', 'Oman', 'Bahrain', 'Qatar', 'United Arab Emirates', 'Bahrain', 'Egypt', 'Palestine', 'Turkey'
+]
+export const EastEuropeCuisine = [
+  'Bulgaria', 'Czechia', 'Hungary', 'Poland', 'Romania', 'Russia', 'Slovakia', 'Belarus', 'Moldova', 'Ukraine', 'Estonia', 'Latvia', 'Lithuania'
+]
+export const LatinAmericaCuisine = [
+  'Mexico', 'Guatemala', 'Honduras', 'El Salvador', 'Nicaragua', 'Costa Rica', 'Panama', 'Colombia', 'Venezuela', 'Ecuador', 'Peru', 'Bolivia', 'Brazil', 'French Guiana', 'Paraguay', 'Chile', 'Argentina', 'Uruguay', 'Cuba', 'Haiti', 'Dominican Rep.', 'Puerto Rico'
+]
+export const AmericaCuisine = [
+  'United States of America', 'Canada'
+]
+export const MediterraneanCuisine = [
+  'Portugal', 'Spain', 'Gibraltar', 'France', 'Monaco', 'Malta', 'Montenegro', 'Albania', 'Greece', 'Cyprus'
 ]
