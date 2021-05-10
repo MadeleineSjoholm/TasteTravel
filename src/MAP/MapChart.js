@@ -41,8 +41,6 @@ const MapChart = ({ setTooltipContent }) => {
                     if (NAME === "Italy") {
                       window.location.href = "/MatchingRecipes";
                     }
-                  
-
                   }}
 
                   onMouseLeave={() => {

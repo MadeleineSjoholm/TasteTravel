@@ -2,22 +2,36 @@
 
 import React from 'react'
 import useForm from 'react-hook-form'
-
-import { isValidImage, isValidUrl, sameAs } from 'helpers/validators'
+import firebase from 'firebase/app'
+import 'firebase/auth'
 
 const UpdateForm = (props) => {
 
   const { register, handleSubmit, errors, getValues } = useForm()
+   const user = firebase.auth().currentUser
+  //  const { fullName, email, avatar } 
 
+   const updateUserProfile = () => {
+     const password = '999999'
+    console.log(user.email)
+    user.updatePassword(password).then(function() {
+      alert('Password updated!')
+    }).catch(function(error){
+    alert('An error!')
+    })
+  }
+
+  
   return (
-    <form onSubmit={handleSubmit(props.onRegister)}>
+    <form /* onSubmit={handleSubmit(props.onRegister)} */ >
+
       <div className="field">
         <div className="control">
-          <input ref={register({required: true, pattern: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/})}
+          <input //ref={register({required: true, pattern: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/})}
                  name="email"
                  className="input is-large"
                  type="email"
-                 placeholder="Your Email"
+                 placeholder= { 'email'}
                  autoComplete="email" />
           { errors.email &&
             <div className="form-error">
@@ -27,9 +41,9 @@ const UpdateForm = (props) => {
           }
         </div>
       </div>
-      <div className="field">
+     {/* <div className="field">
         <div className="control">
-          <input ref={register({required: true, minLength: 5})}
+          <input //ref={register({required: true, minLength: 5})}
                  name="fullName"
                  className="input is-large"
                  type="text"
@@ -44,7 +58,7 @@ const UpdateForm = (props) => {
       </div>
       <div className="field">
         <div className="control">
-          <input ref={register({required: true, validate: {isValidImage, isValidUrl}})}
+          <input //ref={register({required: true, validate: {isValidImage, isValidUrl}})}
                  name="avatar"
                  className="input is-large"
                  type="text"
@@ -57,11 +71,12 @@ const UpdateForm = (props) => {
             </div>
           }
         </div>
-      </div>
+        </div> */}
       <div className="field">
         <div className="control">
-          <input ref={register({required: true, minLength: 6})}
+          <input // ref={register({required: true, minLength: 6})}
                  name="password"
+                 password = 'password'
                  className="input is-large"
                  type="password"
                  placeholder="Your Password"
@@ -76,7 +91,7 @@ const UpdateForm = (props) => {
       </div>
       <div className="field">
         <div className="control">
-          <input ref={register({required: true, minLength: 6, validate: {sameAs: sameAs(getValues, 'password')}})}
+          <input //ref={register({required: true, minLength: 6, validate: {sameAs: sameAs(getValues, 'password')}})}
                  name="passwordConfirmation"
                  className="input is-large"
                  type="password"
@@ -93,6 +108,7 @@ const UpdateForm = (props) => {
       </div>
       <button
         type="submit"
+        onClick = {updateUserProfile()}
         className="button is-block rounded secondary-btn raised is-large is-fullwidth">Update info</button>
     </form>
   )

@@ -29,7 +29,7 @@ return (
         <h3 className="title has-text-grey">Your Profile</h3>
         <p className="subtitle has-text-grey"> Here you can update your information.</p>
         <div className="box">
-          <UpdateForm onRegister={registerUser} />
+          <UpdateForm />
         </div>
       </div>
     </div>
