@@ -1,5 +1,5 @@
 import React, { memo } from "react";
-// import { Link } from 'react-router-dom'
+
 import { 
   NordicCuisine, 
   AfricaCuisine, 
@@ -46,7 +46,8 @@ const MapChart = ({ setTooltipContent }) => {
                     setTooltipContent(`${NAME} — ${rounded(POP_EST)}`);
                   }}
                   onClick={()=> {
-                    const { NAME, POP_EST } = geo.properties;
+                    //const { NAME, POP_EST } = geo.properties; stog nedan///
+                    const { NAME } = geo.properties;
                     console.log(NAME);
                     if (NordicCuisine.includes(NAME)) {
                       window.location.href = "/cuisine/nordic";

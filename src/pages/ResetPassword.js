@@ -1,11 +1,9 @@
-import React, { useState } from 'react'
-import useForm from 'react-hook-form'
+import React from 'react'
 import firebase from 'firebase/app'
 import 'firebase/auth'
 
 
 const ResetPassword = ( ) => {
-    const user = firebase.auth()
     const resetPassword = () => {
         const email = 'alva.b.99@live.se'
         console.log(email)

@@ -1,8 +1,5 @@
 
-
-
 import React from 'react'
-import MapChart from "../MAP/MapChart";
 import withAuthorization from 'components/hoc/withAuthorization'
 
 const Recipe = () => {
