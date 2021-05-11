@@ -17,7 +17,6 @@ return (
     </figure>
     <div className="container">
       <div className="content-wrapper">
-        <center>
         <div  class="profilepage">
         <h3 className=" yourprofile title has-text-grey">Your Profile</h3>
 
@@ -56,7 +55,6 @@ return (
               </div>
             </div>
       </div>
-      </center>
     </div>
   </div>
 </div>
