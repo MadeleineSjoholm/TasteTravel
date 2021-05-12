@@ -8,7 +8,7 @@ import 'firebase/auth'
 
 const Profile = (props) => {
 const user = firebase.auth().currentUser
-const userid  = props.auth
+
 
 const updateUserProfile = () => {
   const password = '999999'
