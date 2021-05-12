@@ -13,20 +13,20 @@ import diet from 'docs/diet'
 
 
 
-  const SetPref = ({ auth }) => {
-
+  const Preferences = ({ auth }) => {
+    
   const [redirect, setRedirect] = useState(false)
   const [prefForm, setPrefForm] = useState({
     diet: 'vegetarian',
-    intolerance: [],
-    ingredient: []
+    intolerance: ['egg', 'milk', 'cheese'],
+    ingredient: ''
   })
-
 
   const handleChange = e => {
     const { name, value } = e.target
-    setPrefForm({...prefForm, [name]: value})
-    console.log()
+    setPrefForm({ prefForm, [name]: value})
+    console.log(value)
+    console.log(prefForm)
   }
 
   const handleSubmit = () => {
@@ -75,41 +75,16 @@ import diet from 'docs/diet'
               <div className="control">
                 <Select
                   value={intoleranceOpt.value}
-                  onChange={handleChange}
+                 
+                  onClick={handleChange}
                   isMulti
                   name="intolerance"
                   options={intoleranceOpt}
                   className="basic-multi-select"
                   classNamePrefix="select"
                 />
-                
               </div>
             </div>
-
-            {/* <div className="field">
-              <label className="label">Intolerances</label>
-              <div className="control">
-                <div className="select">
-                  <select name="intolerance" onChange={handleChange}>
-                  <option value="">None</option>
-                    <option value="dairy">Dairy</option>
-                    <option value="egg">Egg</option>
-                    <option value="gluten">Gluten</option>
-                    <option value="grain">Grain</option>
-                    <option value="peanut">Peanut</option>
-                    <option value="seafood">Seafood</option>
-                    <option value="sesame">Sesame</option>
-                    <option value="shellfish">Shellfish</option>
-                    <option value="soy">Soy</option>
-                    <option value="sulfite">Sulfite</option>
-                    <option value="treenut">Tree Nut</option>
-                    <option value="wheat">Wheat</option>
-                  </select>
-                </div>
-              </div>
-            </div> */}
-            
-         
             <div className="field">
               <label className="label">Exclude Ingredients</label>
               <div className="control">
@@ -190,5 +165,5 @@ import diet from 'docs/diet'
   )
 }
 
-export default withAuthorization(SetPref)
+export default withAuthorization(Preferences)
 
