@@ -308,6 +308,7 @@ Cards and Card content styles
 
   .card-icon img {
     height: 120px;
+    width: 120px;
     margin-top: 20px;
   }
 
@@ -641,8 +642,10 @@ Hero styles
 ========================================================================== */
 
 .hero-body {
-  padding-top: 3rem;
-  padding-bottom: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+
+
   .title, .subtitle {
     font-family: 'Open Sans', sans-serif;
     font-size: 25px;
@@ -1149,7 +1152,8 @@ RecipePage
     }
 
     .hero-body {
-      padding-bottom: 0;
+
+      padding-top: 0;
       img {
         display: block;
         margin: 0 auto;
@@ -1254,14 +1258,15 @@ RecipePage
     &.section-light-grey {
       background-color: $light-grey;
     }
-    &.section-feature-grey {
+    &.section-feature-grey {           //Nedre halvan av sidan.
       background-color: $section-grey;
+
     }
     &.section-secondary {
       background-color: $secondary;
     }
     &.section-half {
-      height: 75vh !important;
+      height: 50vh !important;
     }
     .title, .subtitle {
       font-family: 'Open Sans', sans-serif;
@@ -1277,6 +1282,7 @@ RecipePage
   //Titles
   .title-wrapper {
     max-width: 500px;
+
     margin: 0 auto;
     .title, .subtitle {
       font-family: 'Open Sans', sans-serif;
@@ -1318,9 +1324,10 @@ RecipePage
     }
   }
 
-  //Wrapper
+  //Wrapper Denna snyggar till nedre halvan av sidan.
   .content-wrapper {
-    padding: 60px 0;
+    padding-top: 20px;
+
   }
 
 
@@ -1339,12 +1346,12 @@ RecipePage
       .icon-box-title {
         color: $blue-grey;
         font-size: 1.2rem;
-        font-weight: 600;
+        font-weight: 400;
       }
       .icon-box-text {
         color: $title-grey;
         font-size: 1rem;
-        font-weight: 400;
+        font-weight: 100;
       }
     }
   }

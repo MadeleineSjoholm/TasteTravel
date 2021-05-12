@@ -53,8 +53,9 @@ import diet from 'docs/diet'
               <label className="label">Diet</label>
               <div className="control">
                 <div className="select">
+              
                   <select name="diet" onChange={handleChange}>
-                    
+
                     <option value="vegetarian">Vegetarian</option>
                     <option value="vegan">Vegan</option>
                     <option value="glutenfree">Gluten Free</option>
@@ -66,6 +67,7 @@ import diet from 'docs/diet'
                     <option value="primal">Primal</option>
                     <option value="whole30">Whole30</option>
                   </select>
+
                 </div>
               </div>
             </div>
@@ -98,10 +100,10 @@ import diet from 'docs/diet'
                   className="basic-multi-select"
                   classNamePrefix="select"
                 />
-                
+
               </div>
             </div>
-            
+
 
             <div className="field is-grouped">
               <div className="control">
@@ -111,7 +113,7 @@ import diet from 'docs/diet'
                   className="button is-link">Update Preferences</button>
               </div>
               <div className="control">
-                <button 
+                <button
                 onClick={()=> history.push("/")}
                 className="button is-secondary" >Cancel</button>
               </div>
@@ -119,7 +121,7 @@ import diet from 'docs/diet'
 
           </form>
         </div>
-      </div>  
+      </div>
       </section>
 
       <section className="section section-feature-grey is-medium">
@@ -146,9 +148,9 @@ import diet from 'docs/diet'
               <h4 className="subtitle is-6 is-2">{ labels.primal }</h4>
               <h3 className="title is-4">Whole 30</h3>
               <h4 className="subtitle is-6 is-2">{ labels.whole }</h4>
-              
+
               <div className="divider is-centered"></div>
-              
+
             </div>
 
             <div className="content-wrapper">

@@ -66,7 +66,7 @@ const ServiceDetail = props => {
     {service.description}
     </h2>
     <br />
-    <div className="has-text-centered">
+    <div className="has-text-left">
     {/* { auth.isAuth && auth.user.uid !== service.user.uid &&
       <OfferModal
       auth={auth}
