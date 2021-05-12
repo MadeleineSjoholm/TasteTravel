@@ -41,7 +41,7 @@ const CuisineDetail = props => {
     <figure className="image is-48x48">
     </figure>
     </div>
-    
+
     </div>
     </div>
     <h1 className="title is-2">

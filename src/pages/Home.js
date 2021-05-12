@@ -26,7 +26,7 @@ class Home extends React.Component {
     return (
       <div>
         <Hero />
-        <section className="section section-feature-grey is-medium">
+        <section className="section section-feature-grey is-small">
           <div className="container">
             <div className="title-wrapper has-text-centered">
               <h2 className="title is-2">Popular Destinations </h2>

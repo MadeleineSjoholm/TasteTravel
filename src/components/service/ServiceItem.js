@@ -25,9 +25,7 @@ const ServiceItem = ({service, children, className, noButton}) => {
         <div className="card-icon">
            <img src={service.image} alt=""/>
         </div>
-        <div className="card-text">
-           <p>{shortText(service.description)}</p>
-        </div>
+
         { children &&
           <div className="card-text">
             { children }
@@ -37,7 +35,7 @@ const ServiceItem = ({service, children, className, noButton}) => {
           <div className="card-action">
              <Link
                 to={`/services/${service.id}`}
-                className="button btn-align-md accent-btn raised">Learn More</Link>
+                className="button  accent-btn raised"> Try recipe </Link>
           </div>
         }
       </div>
