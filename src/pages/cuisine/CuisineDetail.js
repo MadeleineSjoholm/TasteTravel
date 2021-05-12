@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { fetchCuisineById } from 'actions'
 import { Link } from 'react-router-dom'
-import RecipeList from 'components/RecipeList'
+import RecipeList from 'components/recipe/RecipeList'
 
 import Spinner from 'components/Spinner'
 
@@ -12,6 +12,8 @@ const CuisineDetail = props => {
   const { cuisineId } = useParams()
   const { fetchCuisineById, isFetching } = props
   const { cuisine } = props
+  const [recipeData, setRecipeData] = useState(null);
+  const [calories, setCalories] = useState(2000);
 
   useEffect(() => {
     fetchCuisineById(cuisineId)
@@ -19,18 +21,20 @@ const CuisineDetail = props => {
  
   function getRecipeData() {
     fetch(
-      `https://api.spoonacular.com/recipes/complexSearch`
+      `https://api.spoonacular.com/mealplanner/generate?apiKey=af04b0009de14e62aa5ed0b9b8cc04b4&timeFrame=day&targetCalories=${calories}`
     )
     .then((response) => response.json()) 
     .then((data) => {
-      // setRecipeData(data)
+       setRecipeData(data)
     })
     .catch(() => {
       console.log("error");
     })
   }
 
- 
+  function handleChange(e) {
+    setCalories(e.target.value);
+  }
 
   if (isFetching || cuisineId !== cuisine.id) { return <Spinner /> }
 
@@ -66,9 +70,7 @@ const CuisineDetail = props => {
     {cuisine.description}
     </h2>
     <br />
-    <button 
-    className="countryButton"
-    onClick={getRecipeData}>Find Recipes</button>
+    
     {/* <Link
               to="/Recipe">
               <button className="countryButton">
@@ -77,6 +79,15 @@ const CuisineDetail = props => {
             </Link> */}
       </div>
       </div>
+      <input
+          type="number"
+          placeholder="Calories (e.g. 2000)"
+          onChange={handleChange}
+        />
+    <button 
+    className="countryButton"
+    onClick={getRecipeData}>Find Recipes</button>
+    {recipeData && <RecipeList recipeData={ recipeData } />}
       </div>
       </div>
       </section>
