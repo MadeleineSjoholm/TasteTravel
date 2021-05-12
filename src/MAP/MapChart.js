@@ -71,9 +71,6 @@ const MapChart = ({ setTooltipContent }) => {
                       window.location.href = "/cuisine/italy";
                     } else if (MediterraneanCuisine.includes(NAME)) {
                       window.location.href = "/cuisine/mediterranean";
-<<<<<<< HEAD
-                    }
-=======
                     } else if (NAME === "France" ) {
                       window.location.href = "/cuisine/french";
                     } else if (NAME === "Germany" ) {
@@ -91,7 +88,6 @@ const MapChart = ({ setTooltipContent }) => {
                     } else if (NAME === "Spain") {
                       window.location.href = "/cuisine/spanish";
                     }
->>>>>>> 16333241f9305a8890dfb3720061502cb5a04559
                   }}
 
 
