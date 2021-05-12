@@ -18,8 +18,8 @@ import diet from 'docs/diet'
   const [redirect, setRedirect] = useState(false)
   const [prefForm, setPrefForm] = useState({
     diet: 'vegetarian',
-    intolerance: 'none',
-    ingredient: ''
+    intolerance: [],
+    ingredient: []
   })
 
 
@@ -77,7 +77,7 @@ import diet from 'docs/diet'
               <div className="control">
                 <Select
                   value={intoleranceOpt.value}
-                  // onChange={handleChange}
+                  onChange={handleChange}
                   isMulti
                   name="intolerance"
                   options={intoleranceOpt}

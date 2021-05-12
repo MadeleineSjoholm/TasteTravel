@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { fetchCuisineById } from 'actions'
 import { Link } from 'react-router-dom'
+import RecipeList from 'components/RecipeList'
 
 import Spinner from 'components/Spinner'
 
@@ -10,13 +11,26 @@ const CuisineDetail = props => {
 
   const { cuisineId } = useParams()
   const { fetchCuisineById, isFetching } = props
+  const { cuisine } = props
 
   useEffect(() => {
     fetchCuisineById(cuisineId)
   }, [cuisineId, fetchCuisineById])
+ 
+  function getRecipeData() {
+    fetch(
+      `https://api.spoonacular.com/recipes/complexSearch`
+    )
+    .then((response) => response.json()) 
+    .then((data) => {
+      // setRecipeData(data)
+    })
+    .catch(() => {
+      console.log("error");
+    })
+  }
 
-
-  const { cuisine } = props
+ 
 
   if (isFetching || cuisineId !== cuisine.id) { return <Spinner /> }
 
@@ -52,12 +66,15 @@ const CuisineDetail = props => {
     {cuisine.description}
     </h2>
     <br />
-    <Link
+    <button 
+    className="countryButton"
+    onClick={getRecipeData}>Find Recipes</button>
+    {/* <Link
               to="/Recipe">
               <button className="countryButton">
                   Find Recipes
               </button>
-            </Link>
+            </Link> */}
       </div>
       </div>
       </div>

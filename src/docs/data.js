@@ -117,5 +117,5 @@ export const AmericaCuisine = [
   'United States of America', 'Canada'
 ]
 export const MediterraneanCuisine = [
-  'Portugal', 'Spain', 'Gibraltar', 'France', 'Monaco', 'Malta', 'Montenegro', 'Albania', 'Greece', 'Cyprus'
+  'Portugal', 'Gibraltar', 'France', 'Monaco', 'Malta', 'Montenegro', 'Albania', 'Greece', 'Cyprus'
 ]

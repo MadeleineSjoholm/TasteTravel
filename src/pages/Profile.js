@@ -1,13 +1,10 @@
 /* eslint no-useless-escape: 0 */
 import React from 'react'
-import UpdateForm from 'components/auth/UpdateForm'
 import { Link } from 'react-router-dom'
 import withAuthorization from 'components/hoc/withAuthorization'
-import firebase from 'firebase/app'
 import 'firebase/auth'
 
 const Profile = (props) => {
-const user = firebase.auth().currentUser
 const userid  = props.auth
 
 return (
@@ -22,7 +19,7 @@ return (
 
               <div class="picture">
                 <figure className=" is-medium">
-                <img class='img' src = {userid.user.avatar} width='150' height='150'/>
+                <img class='img' src = {userid.user.avatar} width='150' height='150' alt='desription'/>
                 </figure>
                 <button className="faqButton">Change Profile Picture</button>
               </div>

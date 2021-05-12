@@ -11,7 +11,8 @@ import { Redirect } from 'react-router-dom'
 
 const Register = (props) => {
 const { addToast } = useToasts()
-const [redirect, setRedirect] = useState(false)
+////const [redirect, setRedirect] = useState(false) stog nedan
+const [ redirect ] = useState(false)
 if (redirect) { return <Redirect to="/onboard" /> }
 
 const registerUser = (userData) => {

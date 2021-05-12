@@ -1,14 +1,12 @@
 /* eslint no-useless-escape: 0 */
 
-import React, { useState } from 'react'
+import React from 'react'
 import useForm from 'react-hook-form'
-import { useHistory } from "react-router-dom"
 import { isValidImage, isValidUrl, sameAs } from 'helpers/validators'
 
 const RegisterForm = (props) => {
 
   const { register, handleSubmit, errors, getValues } = useForm()
-  const history = useHistory()
 
   return (
     <form onSubmit={handleSubmit(props.onRegister)}>

@@ -7,10 +7,6 @@ import { useToasts } from 'react-toast-notifications'
 import { Redirect } from 'react-router-dom'
 import onlyGuest from 'components/hoc/onlyGuest'
 
-import firebase from 'firebase/app'
-import 'firebase/auth'
-
-
 import { login } from 'actions'
 
 const Login = () => {

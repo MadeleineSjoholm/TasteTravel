@@ -1,5 +1,5 @@
 import React, { memo } from "react";
-// import { Link } from 'react-router-dom'
+
 import {
   NordicCuisine,
   AfricaCuisine,
@@ -46,7 +46,8 @@ const MapChart = ({ setTooltipContent }) => {
                     setTooltipContent(`${NAME} — ${rounded(POP_EST)}`);
                   }}
                   onClick={()=> {
-                    const { NAME, POP_EST } = geo.properties;
+                    //const { NAME, POP_EST } = geo.properties; stog nedan///
+                    const { NAME } = geo.properties;
                     console.log(NAME);
                     if (NordicCuisine.includes(NAME)) {
                       window.location.href = "/cuisine/nordic";
@@ -70,7 +71,27 @@ const MapChart = ({ setTooltipContent }) => {
                       window.location.href = "/cuisine/italy";
                     } else if (MediterraneanCuisine.includes(NAME)) {
                       window.location.href = "/cuisine/mediterranean";
+<<<<<<< HEAD
                     }
+=======
+                    } else if (NAME === "France" ) {
+                      window.location.href = "/cuisine/french";
+                    } else if (NAME === "Germany" ) {
+                      window.location.href = "/cuisine/german";
+                    } else if (NAME === "Japan" ) {
+                      window.location.href = "/cuisine/japanese";
+                    } else if (NAME === "South Korea" || NAME === "North Korea") {
+                      window.location.href = "/cuisine/korean";
+                    } else if (NAME === "Mexico") {
+                      window.location.href = "/cuisine/mexican";
+                    } else if (NAME === "Vietnam") {
+                      window.location.href = "/cuisine/vietnamese";
+                    } else if (NAME === "Thailand") {
+                      window.location.href = "/cuisine/thai";
+                    } else if (NAME === "Spain") {
+                      window.location.href = "/cuisine/spanish";
+                    }
+>>>>>>> 16333241f9305a8890dfb3720061502cb5a04559
                   }}
 
 

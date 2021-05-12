@@ -13,8 +13,8 @@ const SetPref = ({auth}) => {
   const [ redirect, setRedirect ] = useState(false)
   const [ prefForm, setPrefForm ] = useState({
     diet: 'vegetarian',
-    intolerance: '',
-    ingredient: ''
+    intolerance: [],
+    ingredient: []
   })
 
   const handleChange = e => {
