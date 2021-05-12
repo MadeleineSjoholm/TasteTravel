@@ -70,7 +70,23 @@ const MapChart = ({ setTooltipContent }) => {
                       window.location.href = "/cuisine/italy";
                     } else if (MediterraneanCuisine.includes(NAME)) {
                       window.location.href = "/cuisine/mediterranean";
-                    }   
+                    } else if (NAME === "France" ) {
+                      window.location.href = "/cuisine/french";
+                    } else if (NAME === "Germany" ) {
+                      window.location.href = "/cuisine/german";
+                    } else if (NAME === "Japan" ) {
+                      window.location.href = "/cuisine/japanese";
+                    } else if (NAME === "South Korea" || NAME === "North Korea") {
+                      window.location.href = "/cuisine/korean";
+                    } else if (NAME === "Mexico") {
+                      window.location.href = "/cuisine/mexican";
+                    } else if (NAME === "Vietnam") {
+                      window.location.href = "/cuisine/vietnamese";
+                    } else if (NAME === "Thailand") {
+                      window.location.href = "/cuisine/thai";
+                    } else if (NAME === "Spain") {
+                      window.location.href = "/cuisine/spanish";
+                    } 
                   }}
                   
 
