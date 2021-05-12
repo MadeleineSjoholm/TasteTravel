@@ -23,7 +23,7 @@ const CuisineDetail = props => {
     )
     .then((response) => response.json()) 
     .then((data) => {
-      setRecipeData(data)
+      // setRecipeData(data)
     })
     .catch(() => {
       console.log("error");
@@ -66,7 +66,9 @@ const CuisineDetail = props => {
     {cuisine.description}
     </h2>
     <br />
-    <button onClick={getRecipeData}>Find Recipes</button>
+    <button 
+    className="countryButton"
+    onClick={getRecipeData}>Find Recipes</button>
     {/* <Link
               to="/Recipe">
               <button className="countryButton">
