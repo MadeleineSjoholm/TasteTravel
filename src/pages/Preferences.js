@@ -72,7 +72,7 @@ import 'firebase/auth'
              <button
                   onClick={createEmptyForm}
                   type="button"
-                  className="button is-link secondary-btn">Click here to reset you preferences!</button>
+                  className="button secondary-btn raised" >Click here to reset you preferences!</button>
             <div className="field">
               <label className="label">Diet</label>
               <div className="control">
