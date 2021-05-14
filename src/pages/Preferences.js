@@ -14,7 +14,7 @@ import 'firebase/auth'
   const Preferences = ({ auth }) => {
     const userid  = auth
     console.log(userid.user.uid)
-    const userID = userid.user.uid 
+    const userID = userid.user.uid
 
   const [redirect, setRedirect] = useState(false)
 
@@ -29,7 +29,7 @@ import 'firebase/auth'
   const createEmptyForm = () => {
     const userid  = auth
     console.log(userid.user.uid)
-    const userID = userid.user.uid 
+    const userID = userid.user.uid
     db.collection("preference").doc(userID).set({
       diet: "",
       ingredients: "",
@@ -52,8 +52,15 @@ import 'firebase/auth'
 
   return (
     <div className="create-page">
-      <section className="section is-medium">
-      <div className="container">
+
+    <figure className="map_background2">
+      <img src="map.png" alt="Company Logo" />
+    </figure>
+      <section className="section is-small">
+
+
+
+      <div className="container ">
         <div className="form-container">
           <h1 className="title">Your Preferences</h1>
           <form>
@@ -82,6 +89,7 @@ import 'firebase/auth'
               </div>
             </div>
 
+            
             <div className="field">
               <label className="label">Intolerances</label>
               <div className="control">
@@ -107,11 +115,61 @@ import 'firebase/auth'
             </div>
 
 
+
             <div className="field">
-              <label className="label">ingredients</label>
               <div className="control">
                 <div className="select">
-              
+                  <select name="intolerances" onChange={handleChange}>
+                  <option value=" "> None </option>
+                    <option value="dairy"> Dairy </option>
+                    <option value= 'egg'> Egg </option>
+                    <option value= 'gluten'> Gluten </option>
+                    <option value= 'grain'> Grain </option>
+                    <option value= 'peanut'> Peanut </option>
+                    <option value= 'seafood'> Seafood </option>
+                    <option value= 'sesame'>  Sesame</option>
+                    <option value= 'shellfish'>Shellfish </option>
+                    <option value= 'soy'> Soy </option>
+                    <option value= 'sulfite'> Sulfite </option>
+                    <option value= 'treenut'> Tree Nut </option>
+                    <option value= 'wheat'> Wheat </option>
+                  </select>
+
+                </div>
+              </div>
+            </div>
+
+
+
+            <div className="field">
+              <div className="control">
+                <div className="select">
+                  <select name="intolerances" onChange={handleChange}>
+                  <option value=" "> None </option>
+                    <option value="dairy"> Dairy </option>
+                    <option value= 'egg'> Egg </option>
+                    <option value= 'gluten'> Gluten </option>
+                    <option value= 'grain'> Grain </option>
+                    <option value= 'peanut'> Peanut </option>
+                    <option value= 'seafood'> Seafood </option>
+                    <option value= 'sesame'>  Sesame</option>
+                    <option value= 'shellfish'>Shellfish </option>
+                    <option value= 'soy'> Soy </option>
+                    <option value= 'sulfite'> Sulfite </option>
+                    <option value= 'treenut'> Tree Nut </option>
+                    <option value= 'wheat'> Wheat </option>
+                  </select>
+
+                </div>
+              </div>
+            </div>
+
+
+            <div className="field">
+              <label className="label">Ingredients</label>
+              <div className="control">
+                <div className="select">
+
                   <select name="ingredients" onChange={handleChange}>
                   <option value=" "> None </option>
                   <option value="onion"> Onion </option>
@@ -180,7 +238,167 @@ import 'firebase/auth'
                    <option value= 'margarine'> Margarine </option>
                    <option value= 'cream'> Cream</option>
 
-       
+
+                  </select>
+
+                </div>
+              </div>
+            </div>
+
+            <div className="field">
+
+              <div className="control">
+                <div className="select">
+
+                  <select name="ingredients" onChange={handleChange}>
+                  <option value=" "> None </option>
+                  <option value="onion"> Onion </option>
+                   <option value='mushroom'> Mushrooms</option>
+                   <option value= 'celery'> Celery</option>
+                   <option value= 'fish'> Fish </option>
+                   <option value= 'tomato'> Tomatoes </option>
+                   <option value= 'broccoli'> Broccoli </option>
+                   <option value= 'tofu'> Tofu </option>
+                   <option value= 'avocado'> Avocado </option>
+                   <option value= 'olives'> Olives </option>
+                   <option value= 'beets'> Beets </option>
+                   <option value= 'cilantro'> Cilantro</option>
+                   <option value= 'eggplant'> Eggplant</option>
+                   <option value= 'pineapple'> Pineapple </option>
+                   <option value= 'ginger'> Ginger </option>
+                   <option value= 'mayonnaise'> Mayonnaise </option>
+                   <option value= 'mustard'> Mustard </option>
+                   <option value= 'corn'> Corn </option>
+                   <option value= 'tuna'> Tuna </option>
+                   <option value= 'pickles'> Pickles </option>
+                   <option value= 'coriander'> Coriander </option>
+                   <option value= 'anchovis'> Anchovis </option>
+                   <option value= 'arugula'> Arugula </option>
+                   <option value= 'apple'> Apples </option>
+                   <option value= 'banana'> Banana </option>
+                   <option value= 'beans'> Beans </option>
+                   <option value= 'cauliflower'> Cauliflower </option>
+                   <option value= 'chicken'> Chicken </option>
+                   <option value= 'beef'> Beef </option>
+                   <option value= 'milk'> Milk </option>
+                   <option value= 'cheese'> Cheese </option>
+                   <option value= 'lettuce'> Lettuce </option>
+                   <option value= 'garlic'> Garlic </option>
+                   <option value= 'paprika'> Paprika </option>
+                   <option value= 'spinach'> Spinach </option>
+                   <option value= 'chili'> Chili Peppers </option>
+                   <option value= 'cucumber'> Cucumber </option>
+                   <option value= 'potato'> Potato </option>
+                   <option value= 'jalapeno'> Jalapeno </option>
+                   <option value= 'zucchini'> Zucchini </option>
+                   <option value= 'asparagus'> Asparagus </option>
+                   <option value= 'rice'> Rice </option>
+                   <option value= 'pasta'> Pasta </option>
+                   <option value= 'quinoa'> Quinoa </option>
+                   <option value= 'honey'> Honey </option>
+                   <option value= 'fennel'> Fennel </option>
+                   <option value= 'oats'> Oats </option>
+                   <option value= 'yeast'> yeast </option>
+                   <option value= 'goatcheese'> Goat Cheese </option>
+                   <option value= 'mozzarella'> Mozzarella </option>
+                   <option value= 'tortillas'> Tortillas </option>
+                   <option value= 'cayenne'> Cayenne </option>
+                   <option value= 'aniseed'> Aniseed </option>
+                   <option value= 'bacon'> Bacon </option>
+                   <option value= 'turkey'> Turkey </option>
+                   <option value= 'pork'> Pork </option>
+                   <option value= 'lamb'> Lamb </option>
+                   <option value= 'cod'> Cod </option>
+                   <option value= 'salmon'> Salmon </option>
+                   <option value= 'ketchup'> Ketchup </option>
+                   <option value= 'oil'> Olive Oil </option>
+                   <option value= 'soya'> Soya Sauce </option>
+                   <option value= 'peas'> Peas </option>
+                   <option value= 'butter'> Butter </option>
+                   <option value= 'margarine'> Margarine </option>
+                   <option value= 'cream'> Cream</option>
+
+
+                  </select>
+
+                </div>
+              </div>
+            </div>
+
+            <div className="field is-secondary">
+
+              <div className="control">
+                <div className="select">
+
+                  <select name="ingredients" onChange={handleChange}>
+                  <option value=" "> None </option>
+                  <option value="onion"> Onion </option>
+                   <option value='mushroom'> Mushrooms</option>
+                   <option value= 'celery'> Celery</option>
+                   <option value= 'fish'> Fish </option>
+                   <option value= 'tomato'> Tomatoes </option>
+                   <option value= 'broccoli'> Broccoli </option>
+                   <option value= 'tofu'> Tofu </option>
+                   <option value= 'avocado'> Avocado </option>
+                   <option value= 'olives'> Olives </option>
+                   <option value= 'beets'> Beets </option>
+                   <option value= 'cilantro'> Cilantro</option>
+                   <option value= 'eggplant'> Eggplant</option>
+                   <option value= 'pineapple'> Pineapple </option>
+                   <option value= 'ginger'> Ginger </option>
+                   <option value= 'mayonnaise'> Mayonnaise </option>
+                   <option value= 'mustard'> Mustard </option>
+                   <option value= 'corn'> Corn </option>
+                   <option value= 'tuna'> Tuna </option>
+                   <option value= 'pickles'> Pickles </option>
+                   <option value= 'coriander'> Coriander </option>
+                   <option value= 'anchovis'> Anchovis </option>
+                   <option value= 'arugula'> Arugula </option>
+                   <option value= 'apple'> Apples </option>
+                   <option value= 'banana'> Banana </option>
+                   <option value= 'beans'> Beans </option>
+                   <option value= 'cauliflower'> Cauliflower </option>
+                   <option value= 'chicken'> Chicken </option>
+                   <option value= 'beef'> Beef </option>
+                   <option value= 'milk'> Milk </option>
+                   <option value= 'cheese'> Cheese </option>
+                   <option value= 'lettuce'> Lettuce </option>
+                   <option value= 'garlic'> Garlic </option>
+                   <option value= 'paprika'> Paprika </option>
+                   <option value= 'spinach'> Spinach </option>
+                   <option value= 'chili'> Chili Peppers </option>
+                   <option value= 'cucumber'> Cucumber </option>
+                   <option value= 'potato'> Potato </option>
+                   <option value= 'jalapeno'> Jalapeno </option>
+                   <option value= 'zucchini'> Zucchini </option>
+                   <option value= 'asparagus'> Asparagus </option>
+                   <option value= 'rice'> Rice </option>
+                   <option value= 'pasta'> Pasta </option>
+                   <option value= 'quinoa'> Quinoa </option>
+                   <option value= 'honey'> Honey </option>
+                   <option value= 'fennel'> Fennel </option>
+                   <option value= 'oats'> Oats </option>
+                   <option value= 'yeast'> yeast </option>
+                   <option value= 'goatcheese'> Goat Cheese </option>
+                   <option value= 'mozzarella'> Mozzarella </option>
+                   <option value= 'tortillas'> Tortillas </option>
+                   <option value= 'cayenne'> Cayenne </option>
+                   <option value= 'aniseed'> Aniseed </option>
+                   <option value= 'bacon'> Bacon </option>
+                   <option value= 'turkey'> Turkey </option>
+                   <option value= 'pork'> Pork </option>
+                   <option value= 'lamb'> Lamb </option>
+                   <option value= 'cod'> Cod </option>
+                   <option value= 'salmon'> Salmon </option>
+                   <option value= 'ketchup'> Ketchup </option>
+                   <option value= 'oil'> Olive Oil </option>
+                   <option value= 'soya'> Soya Sauce </option>
+                   <option value= 'peas'> Peas </option>
+                   <option value= 'butter'> Butter </option>
+                   <option value= 'margarine'> Margarine </option>
+                   <option value= 'cream'> Cream</option>
+
+
                   </select>
 
                 </div>
@@ -192,14 +410,14 @@ import 'firebase/auth'
                 <button
                   onClick={handleSubmit}
                   type="button"
-                  className="button is-link">Update Preferences</button>
+                  className="button secondary-btn raised">Update Preferences</button>
               </div>
               <div className="control">
                 <button
                 onClick={()=> history.update("/")}
                 className="button is-secondary" >Cancel</button>
               </div>
-        </div> 
+        </div>
 
           </form>
         </div>
@@ -250,4 +468,3 @@ import 'firebase/auth'
 }
 
 export default withAuthorization(Preferences)
-

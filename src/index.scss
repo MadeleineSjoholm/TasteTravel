@@ -2,6 +2,45 @@
 /* ==========================================================================
 Color variables
 ========================================================================== */
+.prefff {
+
+  display: grid;
+  grid-template-columns: repeat(3, 50px);
+  grid-gap: 10px;
+  padding: 10px;
+
+
+}
+
+ .test1 {
+
+   grid-column-start: 1;
+   grid-column-end: 1;
+   grid-row-start: 1;
+   grid-row-end: 1;
+
+ }
+
+.test2{
+
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 1;
+
+}
+
+
+.test3 {
+
+  grid-column-start: 3;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 1;
+
+}
+
+
 
 $white: #482728;
 $smoke-white: #fcfcfc;
@@ -1078,6 +1117,19 @@ RecipePage
     opacity: 0.9;
     background-repeat: no-repeat;
     background-attachment: fixed;
+  }
+
+//Bakgrunden för preference-sidan
+
+  .map_background2{
+    max-width: 100%;
+    height: auto;
+    img {width: 100%}
+    position: absolute;
+    opacity: 0.6;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin-top: -10px;
   }
 
 
