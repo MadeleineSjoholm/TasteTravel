@@ -93,22 +93,14 @@ import 'firebase/auth'
               </div>
             </div>
 
-
             <label className="label">Intolerances</label>
             <div class="intolerances">
 
             <div className="field">
-
               <div className="control">
-<<<<<<< HEAD
                 <div className="int">
-                  <select name="intolerances" onChange={handleChange}>
-                  <option value=" "> None </option>
-=======
-                <div className="select">
                   <select name="intolerances1" onChange={handleChange}>
                   <option value="-"> No more intolerances </option>
->>>>>>> 2ca969ba3118d81ea396bad663cbc65a536be3f7
                     <option value="dairy"> Dairy </option>
                     <option value= 'egg'> Egg </option>
                     <option value= 'gluten'> Gluten </option>
@@ -125,22 +117,15 @@ import 'firebase/auth'
 
                 </div>
               </div>
-
             </div>
 
 
 
             <div className="field">
               <div className="control">
-<<<<<<< HEAD
                 <div className="int">
-                  <select name="intolerances" onChange={handleChange}>
-                  <option value=" "> None </option>
-=======
-                <div className="select">
                   <select name="intolerances2" onChange={handleChange}>
                     <option value="-"> No more intolerances </option>
->>>>>>> 2ca969ba3118d81ea396bad663cbc65a536be3f7
                     <option value="dairy"> Dairy </option>
                     <option value= 'egg'> Egg </option>
                     <option value= 'gluten'> Gluten </option>
@@ -163,15 +148,9 @@ import 'firebase/auth'
 
             <div className="field">
               <div className="control">
-<<<<<<< HEAD
                 <div className="int">
-                  <select name="intolerances" onChange={handleChange}>
-                  <option value=" "> None </option>
-=======
-                <div className="select">
                   <select name="intolerances3" onChange={handleChange}>
                     <option value="-"> No more intolerances </option>
->>>>>>> 2ca969ba3118d81ea396bad663cbc65a536be3f7
                     <option value="dairy"> Dairy </option>
                     <option value= 'egg'> Egg </option>
                     <option value= 'gluten'> Gluten </option>
@@ -189,10 +168,12 @@ import 'firebase/auth'
                 </div>
               </div>
             </div>
-    </div>
+            </div>
+
+            <label className="label">Ingredients</label>
+            <div class="intolerances">
 
             <div className="field">
-              <label className="label">Ingredients</label>
               <div className="control">
                 <div className="select">
 
@@ -350,7 +331,7 @@ import 'firebase/auth'
             <div className="field is-secondary">
               <div className="control">
                 <div className="select">
-                  
+
                   <select name="ingredients3" onChange={handleChange}>
                   <option value="-"> No more ingredients </option>
                   <option value="onion"> Onion </option>
@@ -422,6 +403,7 @@ import 'firebase/auth'
 
                 </div>
               </div>
+            </div>
             </div>
 
             <div className="field is-grouped">
