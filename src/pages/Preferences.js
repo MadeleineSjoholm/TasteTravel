@@ -4,37 +4,43 @@
 import React, { useState } from 'react'
 import withAuthorization from 'components/hoc/withAuthorization'
 import { Redirect } from 'react-router-dom'
-
-import { createPreference } from 'actions'
 import { useHistory } from "react-router-dom"
 import diet from 'docs/diet'
+import db from 'db'
+import 'firebase/auth'
 
 
 
   const Preferences = ({ auth }) => {
+    const userid  = auth
+    console.log(userid.user.uid)
+    const userID = userid.user.uid
 
   const [redirect, setRedirect] = useState(false)
-  const [prefForm, updatePrefForm] = useState({
-    diet: '',
-    ingredients: '',
-
-    intolerances: ''
-  })
-
 
   const handleChange = e => {
     const { name, value } = e.target
-    updatePrefForm({ prefForm, [name]: value })
+    console.log({ [name]: value })
+    db.collection("preference").doc(userID).update({
+      [name]: value
+    })
+  }
 
-    console.log(prefForm)
+  const createEmptyForm = () => {
+    const userid  = auth
+    console.log(userid.user.uid)
+    const userID = userid.user.uid
+    db.collection("preference").doc(userID).set({
+      diet: "",
+      ingredients: "",
+      intolerances: ""
+  })
+  alert('Reset Succesfull, now you can set your new ones!')
   }
 
   const handleSubmit = () => {
     const { user } = auth
-    createPreference(prefForm, user.uid)
-      .then(() => setRedirect(true))
-      .catch(() => alert('SOME ERROR!'))
-      console.log(prefForm)
+    alert('updated Succesfully')
   }
 
   const history = useHistory()
@@ -57,6 +63,10 @@ import diet from 'docs/diet'
         <div className="form-container">
           <h1 className="title">Your Preferences</h1>
           <form>
+             <button
+                  onClick={createEmptyForm}
+                  type="button"
+                  className="button is-link">Click here to reset you preferences!</button>
             <div className="field">
               <label className="label">Diet</label>
               <div className="control">

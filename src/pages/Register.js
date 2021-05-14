@@ -8,7 +8,6 @@ import { useToasts } from 'react-toast-notifications'
 import onlyGuest from 'components/hoc/onlyGuest'
 import { Redirect } from 'react-router-dom'
 
-
 const Register = (props) => {
 const { addToast } = useToasts()
 ////const [redirect, setRedirect] = useState(false) stog nedan
@@ -20,7 +19,7 @@ const registerUser = (userData) => {
     .then(
       _ => () => {},
       errorMessage => addToast(errorMessage, { appearance: 'error', autoDismiss: true, autoDismissTimeout: 3000 }))
-}
+  }
 
 return (
   <div className="auth-page">
