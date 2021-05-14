@@ -5,7 +5,8 @@ import 'firebase/auth'
 
 const ResetPassword = ( ) => {
     const resetPassword = () => {
-        const email = 'alva.b.99@live.se'
+        //samma här som lösenordet, man måste ange mailen här i koden.
+        const email = ''
         console.log(email)
         firebase.auth().sendPasswordResetEmail(email)
         alert('An email has been sent')
