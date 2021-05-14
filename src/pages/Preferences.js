@@ -60,6 +60,7 @@ import 'firebase/auth'
     <figure className="map_background2">
       <img src="map.png" alt="Company Logo" />
     </figure>
+
       <section className="section is-small">
 
 
