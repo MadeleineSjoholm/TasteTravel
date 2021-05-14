@@ -37,6 +37,7 @@ import 'firebase/auth'
   })
   alert('Reset Succesfull, now you can set your new ones!')
   }
+  
 
   const handleSubmit = () => {
     const { user } = auth
