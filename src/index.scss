@@ -835,6 +835,24 @@ Navbar
     }
   }
 
+/*=============================================================================
+PREFERENCE-PAGE
+=============================================================================*/
+
+.intolerances {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  //padding: 10px;
+}
+
+.int {
+  //background-color: rgba(255, 255, 255, 0.8);
+  //padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+
 
   /*===========================================================================
   OnBoard-och allt som görs på den!! Har detta nya system och all denna kod pga cirklarna blir annars konstiga.

@@ -10,6 +10,8 @@ import db from 'db'
 const Profile = (props) => {
 
   const userid  = props.auth
+  const test = db.collection("preference");
+  const testdiet = test.get();
 
 return (
   <div >
@@ -35,9 +37,11 @@ return (
                 <h2 className="subtitle has-text-grey">User ID: <em>{`${userid.user.uid}`}</em></h2>
                 <h2 className="subtitle has-text-grey"> Preferences: <em>hejhejhej</em> </h2>
                 <br></br>
+                <h2 className="subtitle has-text-grey"> Diet: <em>{ `${test.diet}` }</em></h2>
+                <br></br>
                 <h1 className="title has-text-grey">Settings</h1>
                 <p className="subtitle has-text-grey"><em>Want to update your password?</em></p>
-                
+
 
                 <Link
                   to="/ChangePassword">
