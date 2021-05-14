@@ -9,16 +9,16 @@ import 'firebase/auth'
 const Profile = (props) => {
 const user = firebase.auth().currentUser
 
-
-const updateUserProfile = () => {
-  const password = '999999'
+/*
+const updateUserProfile = e => {
+ // const password = '999999'
   //NU ÄR DET DETTA LÖSEN OVAN SOM SÄTTS NÄR MAN UPPDATERAR OAVSETT VAD MAN SKRIVER IN
  user.updatePassword(password).then(function() {
    alert('Password updated!')
  }).catch(function(errors) {
  alert('An error!')
  })
-}
+}*/
 
 return (
   <div className="auth-page">
@@ -32,7 +32,7 @@ return (
 
         <div className="box">
         <p className="subtitle has-text-grey"> Here you can update your information. If it does not work, try to logout then login again.</p>
-          <UpdateForm onClick={updateUserProfile()}/>
+          <UpdateForm />
         <p className="subtitle has-text-grey"> Have you forgotten your password?</p>
           <Link
             to="/ResetPassword">

@@ -11,6 +11,19 @@ const UpdateForm = () => {
   const { errors } = useForm()
   const user = firebase.auth().currentUser
 
+  const updateUserProfile = e => {
+    const password = e.target
+    console.log(password)
+    // const password = '999999'
+     //NU ÄR DET DETTA LÖSEN OVAN SOM SÄTTS NÄR MAN UPPDATERAR OAVSETT VAD MAN SKRIVER IN
+    user.updatePassword(password).then(function() {
+      alert('Password updated!')
+    }).catch(function(errors) {
+    alert('An error!')
+    })
+   }
+
+
 
   return (
     <form >
@@ -33,6 +46,7 @@ const UpdateForm = () => {
       <div className="field">
         <div className="control">
           <input 
+                 onChange={updateUserProfile}
                  name="password"
                  password = 'password'
                  className="input is-large"
@@ -66,6 +80,7 @@ const UpdateForm = () => {
       </div>
       <button
         type="submit"
+        onChange={updateUserProfile}
         className="button is-block rounded secondary-btn raised is-large is-fullwidth">Update info</button>
     </form>
   )

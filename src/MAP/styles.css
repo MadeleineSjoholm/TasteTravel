@@ -4,8 +4,8 @@ html {
   }
 
   body {
-    margin: 0;
-    padding: 0 1.5rem;
+
+
   }
 
   svg {
@@ -15,5 +15,5 @@ html {
   }
 
   svg.rsm-svg { /* kartan bara, svg ovan är också kryssknappen i sidebar */
-    border: dotted #B287A3 6px;
+    border: dotted #B287A3 4px;
   }

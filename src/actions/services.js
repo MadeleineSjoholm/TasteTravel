@@ -48,10 +48,10 @@ export const createService = (newService, userId) => {
   return api.createService(newService)
 }
 
-export const createPreference = (newPreference, userId) => {
-  newPreference.user = api.createRef('profiles', userId)
+export const createPreference = (updatePreference, userId) => {
+  updatePreference.user = api.updateRef('preference', userId)
 
-  return api.createPreference(newPreference)
+  return api.createPreference(updatePreference)
 }
 
 export const createCuisine = (newCuisine) => {

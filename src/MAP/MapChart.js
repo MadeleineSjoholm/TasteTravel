@@ -1,13 +1,13 @@
 import React, { memo } from "react";
 
-import { 
-  NordicCuisine, 
-  AfricaCuisine, 
-  MiddleEastCuisine, 
+import {
+  NordicCuisine,
+  AfricaCuisine,
+  MiddleEastCuisine,
   EastEuropeCuisine,
   LatinAmericaCuisine,
   AmericaCuisine,
-  MediterraneanCuisine 
+  MediterraneanCuisine
 } from 'docs/data'
 import {
   ZoomableGroup,
@@ -18,7 +18,7 @@ import {
 
 const geoUrl =
   "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json";
- 
+
 
 const rounded = num => {
   if (num > 1000000000) {
@@ -87,9 +87,9 @@ const MapChart = ({ setTooltipContent }) => {
                       window.location.href = "/cuisine/thai";
                     } else if (NAME === "Spain") {
                       window.location.href = "/cuisine/spanish";
-                    } 
+                    }
                   }}
-                  
+
 
                   onMouseLeave={() => {
                     setTooltipContent("");

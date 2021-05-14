@@ -3,9 +3,13 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import withAuthorization from 'components/hoc/withAuthorization'
 import 'firebase/auth'
+import db from 'db'
+
+
 
 const Profile = (props) => {
-const userid  = props.auth
+
+  const userid  = props.auth
 
 return (
   <div >
