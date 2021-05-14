@@ -41,7 +41,7 @@ import 'firebase/auth'
   })
   alert('Reset Succesfull, now you can set your new ones!')
   }
-  
+
 
   const handleSubmit = () => {
     const { user } = auth
@@ -71,7 +71,7 @@ import 'firebase/auth'
              <button
                   onClick={createEmptyForm}
                   type="button"
-                  className="button is-link">Click here to reset you preferences!</button>
+                  className="button is-link secondary-btn">Click here to reset you preferences!</button>
             <div className="field">
               <label className="label">Diet</label>
               <div className="control">
@@ -93,7 +93,7 @@ import 'firebase/auth'
               </div>
             </div>
 
-            
+
             <div className="field">
               <label className="label">Intolerances</label>
               <div className="control">
