@@ -98,7 +98,7 @@ import 'firebase/auth'
 
             <div className="field">
               <div className="control">
-                <div className="int">
+                <div className="select">
                   <select name="intolerances1" onChange={handleChange}>
                   <option value="-"> No more intolerances </option>
                     <option value="dairy"> Dairy </option>
@@ -123,7 +123,7 @@ import 'firebase/auth'
 
             <div className="field">
               <div className="control">
-                <div className="int">
+                <div className="select">
                   <select name="intolerances2" onChange={handleChange}>
                     <option value="-"> No more intolerances </option>
                     <option value="dairy"> Dairy </option>
@@ -148,7 +148,7 @@ import 'firebase/auth'
 
             <div className="field">
               <div className="control">
-                <div className="int">
+                <div className="select">
                   <select name="intolerances3" onChange={handleChange}>
                     <option value="-"> No more intolerances </option>
                     <option value="dairy"> Dairy </option>
