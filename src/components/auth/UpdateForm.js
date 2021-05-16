@@ -12,10 +12,10 @@ const UpdateForm = () => {
   const user = firebase.auth().currentUser
 
   const updateUserProfile = e => {
-    const password = e.target
-    console.log(password)
-    // const password = '999999'
-     //NU ÄR DET DETTA LÖSEN OVAN SOM SÄTTS NÄR MAN UPPDATERAR OAVSETT VAD MAN SKRIVER IN
+   // const password = e.target
+    //console.log(password)
+   const password = document.getElementsByClassName('password')
+   console.log(password)
     user.updatePassword(password).then(function() {
       alert('Password updated!')
     }).catch(function(errors) {
@@ -45,6 +45,7 @@ const UpdateForm = () => {
       </div>
       <div className="field">
         <div className="control">
+          <div className='password'>
           <input 
                  onChange={updateUserProfile}
                  name="password"
@@ -59,6 +60,7 @@ const UpdateForm = () => {
              { errors.password.type === 'minLength' && <span className="help is-danger">Minimum length is 6 characters</span> }
             </div>
           }
+        </div>
         </div>
       </div>
       <div className="field">

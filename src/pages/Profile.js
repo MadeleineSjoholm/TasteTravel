@@ -2,14 +2,20 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import withAuthorization from 'components/hoc/withAuthorization'
-import 'firebase/auth'
 import db from 'db'
-
-
+import 'firebase/auth'
+import auth from 'reducers/auth'
 
 const Profile = (props) => {
-
   const userid  = props.auth
+  console.log(userid.user.uid)
+  const userID = userid.user.uid
+  
+  db.collection("preference").doc(userID).onSnapshot((doc) => {
+    const Prefs = doc.data()
+    console.log(Prefs)
+  })
+
 
 return (
   <div >
@@ -33,7 +39,8 @@ return (
                 <h2 className="subtitle has-text-grey">Name: <em>{`${userid.user.fullName}`}</em></h2>
                 <h2 className="subtitle has-text-grey">Email: <em>{`${userid.user.email}`}</em></h2>
                 <h2 className="subtitle has-text-grey">User ID: <em>{`${userid.user.uid}`}</em></h2>
-                <h2 className="subtitle has-text-grey"> Preferences: <em>hejhejhej</em> </h2>
+                <h2 className="subtitle has-text-grey" > Preferences:<em> HÄR SKA DEM SKRIVAS UT</em> </h2>
+              
                 <br></br>
                 <h1 className="title has-text-grey">Settings</h1>
                 <p className="subtitle has-text-grey"><em>Want to update your password?</em></p>
