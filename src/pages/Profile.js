@@ -42,9 +42,11 @@ return (
                 <h2 className="subtitle has-text-grey" > Preferences:<em> HÄR SKA DEM SKRIVAS UT</em> </h2>
               
                 <br></br>
+                <h2 className="subtitle has-text-grey"> Diet: <em>{ `${test.diet}` }</em></h2>
+                <br></br>
                 <h1 className="title has-text-grey">Settings</h1>
                 <p className="subtitle has-text-grey"><em>Want to update your password?</em></p>
-                
+
 
                 <Link
                   to="/ChangePassword">

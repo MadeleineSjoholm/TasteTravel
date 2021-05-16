@@ -61,6 +61,7 @@ import 'firebase/auth'
     <figure className="map_background2">
       <img src="map.png" alt="Company Logo" />
     </figure>
+
       <section className="section is-small">
       <div className="container ">
         <div className="form-container">
@@ -90,8 +91,11 @@ import 'firebase/auth'
                 </div>
               </div>
             </div>
+
+            <label className="label">Intolerances</label>
+            <div class="intolerances">
+
             <div className="field">
-              <label className="label">Intolerances</label>
               <div className="control">
                 <div className="select">
                   <select name="intolerances1" onChange={handleChange}>
@@ -154,8 +158,12 @@ import 'firebase/auth'
                 </div>
               </div>
             </div>
+            </div>
+
+            <label className="label">Ingredients</label>
+            <div class="intolerances">
+
             <div className="field">
-              <label className="label">Ingredients</label>
               <div className="control">
                 <div className="select">
                   <select name="ingredients1" onChange={handleChange}>
@@ -377,6 +385,8 @@ import 'firebase/auth'
                 </div>
               </div>
             </div>
+            </div>
+
             <div className="field is-grouped">
               <div className="control">
                 <button

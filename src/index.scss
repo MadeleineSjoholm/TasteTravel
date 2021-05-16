@@ -2,43 +2,6 @@
 /* ==========================================================================
 Color variables
 ========================================================================== */
-.prefff {
-
-  display: grid;
-  grid-template-columns: repeat(3, 50px);
-  grid-gap: 10px;
-  padding: 10px;
-
-
-}
-
- .test1 {
-
-   grid-column-start: 1;
-   grid-column-end: 1;
-   grid-row-start: 1;
-   grid-row-end: 1;
-
- }
-
-.test2{
-
-  grid-column-start: 2;
-  grid-column-end: 2;
-  grid-row-start: 1;
-  grid-row-end: 1;
-
-}
-
-
-.test3 {
-
-  grid-column-start: 3;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 1;
-
-}
 
 
 
@@ -834,6 +797,18 @@ Navbar
       transform: translateY(0);
     }
   }
+
+/*=============================================================================
+PREFERENCE-PAGE
+=============================================================================*/
+
+.intolerances {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  //padding: 10px;
+}
+
+
 
 
   /*===========================================================================

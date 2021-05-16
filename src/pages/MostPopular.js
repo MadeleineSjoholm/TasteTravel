@@ -7,9 +7,11 @@ const MostPopular = () => {
     <div className="container">
       <div className="content-wrapper">
         <h1 className="title">Most Popular</h1>
-        <p>
-          Here is the Most Popular Page
-        </p>
+
+        <figure className="map_background2">
+          <img src="map.png" alt="Company Logo" />
+        </figure>
+
       </div>
     </div>
   )
