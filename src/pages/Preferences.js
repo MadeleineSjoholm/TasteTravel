@@ -10,13 +10,11 @@ import db from 'db'
 import 'firebase/auth'
 
 
-
   const Preferences = ({ auth }) => {
     const userid  = auth
-    console.log(userid.user.uid)
     const userID = userid.user.uid
 
-  const [redirect, setRedirect] = useState(false)
+  const [redirect ] = useState(false)
 
   const handleChange = e => {
     const { name, value } = e.target
@@ -45,9 +43,7 @@ import 'firebase/auth'
 
 
   const handleSubmit = () => {
-    const { user } = auth
     alert('updated Succesfully')
-
   }
 
   const history = useHistory()
@@ -72,10 +68,10 @@ import 'firebase/auth'
                   type="button"
                   className="button is-link secondary-btn">Click here to reset you preferences!</button>
             <div className="field">
-              <label className="label">Diet</label>
+              <label className="label" width='50' >Diet</label>
               <div className="control">
                 <div className="select">
-                  <select name="diet" onChange={handleChange}>
+                  <select name="diet" onChange={handleChange} >
                     <option value="-"> No diet </option>
                     <option value="vegetarian">Vegetarian</option>
                     <option value="vegan">Vegan</option>
@@ -86,7 +82,7 @@ import 'firebase/auth'
                     <option value="ketogenic">Ketogenic</option>
                     <option value="paleo">Paleo</option>
                     <option value="primal">Primal</option>
-                    <option value="whole30">Whole30</option>
+                    <option value="whole30">Whole30</option> 
                   </select>
                 </div>
               </div>
@@ -99,7 +95,7 @@ import 'firebase/auth'
               <div className="control">
                 <div className="select">
                   <select name="intolerances1" onChange={handleChange}>
-                  <option value="-"> No more intolerances </option>
+                    <option value="-"> No more intolerances </option>
                     <option value="dairy"> Dairy </option>
                     <option value= 'egg'> Egg </option>
                     <option value= 'gluten'> Gluten </option>
@@ -111,7 +107,7 @@ import 'firebase/auth'
                     <option value= 'soy'> Soy </option>
                     <option value= 'sulfite'> Sulfite </option>
                     <option value= 'treenut'> Tree Nut </option>
-                    <option value= 'wheat'> Wheat </option>
+                    <option value= 'wheat'> Wheat </option> 
                   </select>
                 </div>
               </div>
