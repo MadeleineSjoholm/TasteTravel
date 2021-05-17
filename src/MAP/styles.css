@@ -3,17 +3,11 @@ html {
     font-size: 1.25rem;
   }
 
-  body {
-
-
-  }
-
   svg {
     display: inline-block;
     vertical-align: middle;
-
   }
-
+  
   svg.rsm-svg { /* kartan bara, svg ovan är också kryssknappen i sidebar */
     border: dotted #B287A3 4px;
   }

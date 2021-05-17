@@ -17,8 +17,6 @@ export const fetchCuisines = () => dispatch =>
     )
   )
 
-
-
 export const fetchCuisineById = cuisineId => (dispatch, getState) => {
   const lastCuisine = getState().selectedCuisine.item
   if (lastCuisine.id && lastCuisine.id === cuisineId) { return Promise.resolve() }

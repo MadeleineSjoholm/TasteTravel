@@ -27,11 +27,11 @@ class App extends React.Component {
   render() {
     return (
       <Provider store={store}>
-      <ToastProvider>
-      <Router>
-      <ServiceApp />
-      </Router>
-      </ToastProvider>
+        <ToastProvider>
+          <Router>
+            <ServiceApp />
+          </Router>
+        </ToastProvider>
       </Provider>
     )
   }

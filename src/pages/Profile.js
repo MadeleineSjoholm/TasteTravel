@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 import withAuthorization from 'components/hoc/withAuthorization'
 import db from 'db'
 import 'firebase/auth'
-//import auth from 'reducers/auth'
 
 const Profile = (props) => {
   const userid  = props.auth
@@ -26,7 +25,6 @@ return (
       <div className="content-wrapper">
         <div  class="profilepage">
         <h3 className=" yourprofile title has-text-grey">Your Profile</h3>
-
               <div class="picture">
                 <figure className=" is-medium">
                 <img class='img' src = {userid.user.avatar} width='150' height='150' alt='desription'/>
@@ -46,8 +44,7 @@ return (
                 <br></br> */}
                 <h1 className="title has-text-grey">Settings</h1>
                 <p className="subtitle has-text-grey"><em>Want to update your password?</em></p>
-
-
+                
                 <Link
                   to="/ChangePassword">
                   <button className="faqButton">

@@ -34,7 +34,6 @@ const Navbar = props => {
             className="navbar-item">
              <div className="title">TasteTravel</div>
           </Link>
-
           <a className="navbar-item is-hidden-desktop is-hidden-tablet">
             <div id="menu-icon-wrapper" className="menu-icon-wrapper" style={{visibility: 'visible'}}>
               <svg width="1000px" height="1000px">
@@ -45,18 +44,12 @@ const Navbar = props => {
               <button id="menu-icon-trigger" className="menu-icon-trigger"></button>
             </div>
           </a>
-          
-
           <a role="button" className="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar-menu">
               <span aria-hidden="true"></span>
               <span aria-hidden="true"></span>
               <span aria-hidden="true"></span>
           </a>
         </div>
-
-
-
-
         <div id="navbar-menu" className="navbar-menu is-static">
           <div className="navbar-start">
             <a className="navbar-item is-hidden-mobile">
@@ -70,10 +63,6 @@ const Navbar = props => {
               </div>
             </a>
           </div>
-
-          
-
-
           <div className="navbar-end">
             { isAuth &&
               <div className="navbar-item">
@@ -95,7 +84,7 @@ const Navbar = props => {
               className="navbar-item is-secondary">
                 Faq
             </Link>
-            { isAuth &&
+           {/* { isAuth &&
               <div className="navbar-item has-dropdown is-hoverable">
                 <a className="navbar-link">
                     Manage Your Recipes
@@ -113,7 +102,9 @@ const Navbar = props => {
                   </Link>
                 </div>
               </div>
-            }
+            } */}
+
+            
             { !isAuth &&
               <React.Fragment>
                 <Link
