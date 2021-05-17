@@ -19,6 +19,8 @@ const updateUserProfile = e => {
  })
 }*/
 
+
+
 return (
   <div className="auth-page">
     <figure className="map_background">

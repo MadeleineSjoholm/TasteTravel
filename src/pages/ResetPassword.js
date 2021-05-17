@@ -4,13 +4,20 @@ import 'firebase/auth'
 
 
 const ResetPassword = ( ) => {
-    const resetPassword = () => {
-        //samma här som lösenordet, man måste ange mailen här i koden.
-        const email = ''
-        console.log(email)
-        firebase.auth().sendPasswordResetEmail(email)
+    
+    const handleChange = e => {
+        const {Name, value} = e.target
+        console.log({[Name]: value})
+        firebase.auth().sendPasswordResetEmail(value)
+      }
+    
+     const resetProfilePassword = () => {
+    //     //samma här som lösenordet, man måste ange mailen här i koden.
+    //     const email = document.getElementsByClassName('email')
+    //     console.log(email)
+    //     firebase.auth().sendPasswordResetEmail(email)
         alert('An email has been sent')
-    }
+     }
 
 return (
     <div className="auth-page">
@@ -20,14 +27,15 @@ return (
         <h3 className="title has-text-grey"> Reset Password: </h3>
         <p className="subtitle has-text-grey"> Here you can write your email to get a reset password mail.</p>
        <input
-          name="email"
-          className="input is-large"
+          onChange = {handleChange}  
+          Name="email"
+          className="email input is-large"
           type="email"
           placeholder="Your Email"
           autoComplete="email" />
     <button
         type='submit'
-        onClick = {resetPassword()}
+        onClick = {resetProfilePassword}
         className="button is-block rounded secondary-btn raised is-large is-fullwidth">
             Send Email
     </button>

@@ -10,30 +10,28 @@ const UpdateForm = () => {
 
   const { errors } = useForm()
   const user = firebase.auth().currentUser
-
-  const updateUserProfile = e => {
-    
-   const { password } = e.target
-   //const password = document.getElementsByName('password')
-   console.log(password)
-    user.updatePassword(password).then(function() {
-    
-    })
+ 
+ 
+  const handleChange = e => {
+    const {Name, value} = e.target
+    console.log({[Name]: value})
+    user.updatePassword(value) 
   }
-    const updateUserProfileSubmit = () => {
-    alert('Password updated!')
+  
+  const updateUserProfileSubmit = () => {
+    alert('Password as been updated successfully!')
   }
 
   return (
     <form >
       <div className="field">
         <div className="control">
-          <input onChange={updateUserProfile}
-                 name="email"
-                 className="input is-large"
-                 type="email"
-                 placeholder= { user.email }
-                 autoComplete="email" />
+          <input 
+            name="email"
+            className="input is-large"
+            type="email"
+            placeholder= { user.email }
+            autoComplete="email" />
           { errors.email &&
             <div className="form-error">
               { errors.email.type === 'required' && <span className="help is-danger">Email is required</span> }
@@ -46,7 +44,7 @@ const UpdateForm = () => {
         <div className="control">
           <div className='password'>
           <input 
-                 onChange={updateUserProfile}
+                 onChange={handleChange}
                  name="password"
                  password = 'password'
                  className="input is-large"
@@ -64,7 +62,7 @@ const UpdateForm = () => {
       </div>
       <div className="field">
         <div className="control">
-          <input onChange={updateUserProfile}
+          <input 
                  name="passwordConfirmation"
                  className="input is-large"
                  type="password"
@@ -81,7 +79,7 @@ const UpdateForm = () => {
       </div>
       <button
         type="submit"
-        onChange={updateUserProfileSubmit}
+        onClick={updateUserProfileSubmit}
         className="button is-block rounded secondary-btn raised is-large is-fullwidth">Update info</button>
     </form>
   )
