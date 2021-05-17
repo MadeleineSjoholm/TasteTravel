@@ -2,21 +2,21 @@ import React from 'react'
 import Recipe from './Recipe'
 
 export default function RecipeList({ recipeData }) {
-const nutrients = recipeData.extendedIngredients
+const totalResults = recipeData.totalResults
 
   return (
     <main>
-      {/* <section className="nutrients">
-        <h1>Macros</h1>
+      <section className="nutrients">
+        <h1>Your Recomendations</h1>
         <ul>
-          <li>Calories: {nutrients}</li>
-          <li>Carbohydrates: {nutrients.}</li>
-          <li>Fat: {nutrients.}</li>
-          <li>Protein: {nutrients.}</li>
+          <li>Results: {totalResults}</li>
+          {/* <li>Carbohydrates: {nutrients.carbohydrates.toFixed(0)}</li>
+          <li>Fat: {nutrients.fat.toFixed(0)}</li>
+          <li>Protein: {nutrients.protein.toFixed(0)}</li> */}
         </ul>
-      </section> */}
+      </section>
       <section className="recipes">
-        {recipeData.meals.map((recipe) => {
+        {recipeData.results.map((recipe) => {
           return <Recipe key={recipe.id} recipe={recipe} />
         })}
       </section>
