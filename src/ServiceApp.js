@@ -14,17 +14,17 @@ class ServiceApp extends React.Component {
 
   renderApplication = auth =>
   <React.Fragment>
-  <Navbar
-  loadFresh
-  id="navbar-main"
-  logout={() => this.handleLogout(auth.user.uid)}
-  auth={auth}/>
-  <Navbar
-  auth={auth}
-  logout={() => this.handleLogout(auth.user.uid)}
-  id="navbar-clone" />
-  <Sidebar />
-  <Routes />
+    <Navbar
+        loadFresh
+        id="navbar-main"
+        logout={() => this.handleLogout(auth.user.uid)}
+        auth={auth}/>
+    <Navbar
+      auth={auth}
+      logout={() => this.handleLogout(auth.user.uid)}
+      id="navbar-clone" />
+    <Sidebar />
+    <Routes />
   </React.Fragment>
 
   render() {

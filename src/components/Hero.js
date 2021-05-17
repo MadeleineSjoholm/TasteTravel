@@ -5,15 +5,9 @@ import MapIndex from './MapIndex'
 
 
 const Hero = () =>
-
-
   <section className="hero is-default is-bold">
-
     <div className="hero-body">
-
       <div className="container">
-    
-
           <MapIndex className= 'map'/>
           </div>
         </div>

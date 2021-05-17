@@ -2,16 +2,19 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import withAuthorization from 'components/hoc/withAuthorization'
-import 'firebase/auth'
 import db from 'db'
-
-
+import 'firebase/auth'
 
 const Profile = (props) => {
-
   const userid  = props.auth
-  const test = db.collection("preference");
-  const testdiet = test.get();
+  console.log(userid.user.uid)
+  const userID = userid.user.uid
+  
+  db.collection("preference").doc(userID).onSnapshot((doc) => {
+    const Prefs = doc.data()
+    console.log(Prefs)
+  })
+
 
 return (
   <div >
@@ -22,7 +25,6 @@ return (
       <div className="content-wrapper">
         <div  class="profilepage">
         <h3 className=" yourprofile title has-text-grey">Your Profile</h3>
-
               <div class="picture">
                 <figure className=" is-medium">
                 <img class='img' src = {userid.user.avatar} width='150' height='150' alt='desription'/>
@@ -35,14 +37,14 @@ return (
                 <h2 className="subtitle has-text-grey">Name: <em>{`${userid.user.fullName}`}</em></h2>
                 <h2 className="subtitle has-text-grey">Email: <em>{`${userid.user.email}`}</em></h2>
                 <h2 className="subtitle has-text-grey">User ID: <em>{`${userid.user.uid}`}</em></h2>
-                <h2 className="subtitle has-text-grey"> Preferences: <em>hejhejhej</em> </h2>
+                <h2 className="subtitle has-text-grey" > Preferences: HÄR ska dem stå, skrivs ut i consolen men inte här???<em> {`${userid.Prefs}`}</em> </h2>
+              
                 <br></br>
-                <h2 className="subtitle has-text-grey"> Diet: <em>{ `${test.diet}` }</em></h2>
-                <br></br>
+              {/*  <h2 className="subtitle has-text-grey"> Diet: <em>{ `${test.diet}` }</em></h2>
+                <br></br> */}
                 <h1 className="title has-text-grey">Settings</h1>
                 <p className="subtitle has-text-grey"><em>Want to update your password?</em></p>
-
-
+                
                 <Link
                   to="/ChangePassword">
                   <button className="faqButton">

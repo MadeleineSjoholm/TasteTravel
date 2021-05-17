@@ -10,13 +10,11 @@ import db from 'db'
 import 'firebase/auth'
 
 
-
   const Preferences = ({ auth }) => {
     const userid  = auth
-    console.log(userid.user.uid)
     const userID = userid.user.uid
 
-  const [redirect, setRedirect] = useState(false)
+  const [redirect ] = useState(false)
 
   const handleChange = e => {
     const { name, value } = e.target
@@ -44,7 +42,6 @@ import 'firebase/auth'
 
 
   const handleSubmit = () => {
-    const { user } = auth
     alert('updated Succesfully')
   }
 
@@ -56,15 +53,11 @@ import 'firebase/auth'
 
   return (
     <div className="create-page">
-
     <figure className="map_background2">
       <img src="map.png" alt="Company Logo" />
     </figure>
 
       <section className="section is-small">
-
-
-
       <div className="container ">
         <div className="form-container">
           <h1 className="title">Your Preferences</h1>
@@ -74,10 +67,10 @@ import 'firebase/auth'
                   type="button"
                   className="button secondary-btn raised" >Click here to reset you preferences!</button>
             <div className="field">
-              <label className="label">Diet</label>
+              <label className="label" >Diet</label>
               <div className="control">
                 <div className="select">
-                  <select name="diet" onChange={handleChange}>
+                  <select name="diet" onChange={handleChange} >
                     <option value="-"> No diet </option>
                     <option value="vegetarian">Vegetarian</option>
                     <option value="vegan">Vegan</option>
@@ -88,7 +81,7 @@ import 'firebase/auth'
                     <option value="ketogenic">Ketogenic</option>
                     <option value="paleo">Paleo</option>
                     <option value="primal">Primal</option>
-                    <option value="whole30">Whole30</option>
+                    <option value="whole30">Whole30</option> 
                   </select>
                 </div>
               </div>
@@ -101,7 +94,7 @@ import 'firebase/auth'
               <div className="control">
                 <div className="select">
                   <select name="intolerances1" onChange={handleChange}>
-                  <option value="-"> No more intolerances </option>
+                    <option value="-"> No more intolerances </option>
                     <option value="dairy"> Dairy </option>
                     <option value= 'egg'> Egg </option>
                     <option value= 'gluten'> Gluten </option>
@@ -113,15 +106,11 @@ import 'firebase/auth'
                     <option value= 'soy'> Soy </option>
                     <option value= 'sulfite'> Sulfite </option>
                     <option value= 'treenut'> Tree Nut </option>
-                    <option value= 'wheat'> Wheat </option>
+                    <option value= 'wheat'> Wheat </option> 
                   </select>
-
                 </div>
               </div>
             </div>
-
-
-
             <div className="field">
               <div className="control">
                 <div className="select">
@@ -140,13 +129,9 @@ import 'firebase/auth'
                     <option value= 'treenut'> Tree Nut </option>
                     <option value= 'wheat'> Wheat </option>
                   </select>
-
                 </div>
               </div>
             </div>
-
-
-
             <div className="field">
               <div className="control">
                 <div className="select">
@@ -165,7 +150,6 @@ import 'firebase/auth'
                     <option value= 'treenut'> Tree Nut </option>
                     <option value= 'wheat'> Wheat </option>
                   </select>
-
                 </div>
               </div>
             </div>
@@ -177,7 +161,6 @@ import 'firebase/auth'
             <div className="field">
               <div className="control">
                 <div className="select">
-
                   <select name="ingredients1" onChange={handleChange}>
                    <option value="-"> No more ingredients </option>
                    <option value="onion"> Onion </option>
@@ -245,19 +228,13 @@ import 'firebase/auth'
                    <option value= 'butter'> Butter </option>
                    <option value= 'margarine'> Margarine </option>
                    <option value= 'cream'> Cream</option>
-
-
                   </select>
-
                 </div>
               </div>
             </div>
-
             <div className="field">
-
               <div className="control">
                 <div className="select">
-
                   <select name="ingredients2" onChange={handleChange}>
                   <option value="-"> No more ingredients </option>
                   <option value="onion"> Onion </option>
@@ -332,7 +309,6 @@ import 'firebase/auth'
             <div className="field is-secondary">
               <div className="control">
                 <div className="select">
-
                   <select name="ingredients3" onChange={handleChange}>
                   <option value="-"> No more ingredients </option>
                   <option value="onion"> Onion </option>
@@ -401,7 +377,6 @@ import 'firebase/auth'
                    <option value= 'margarine'> Margarine </option>
                    <option value= 'cream'> Cream</option>
                   </select>
-
                 </div>
               </div>
             </div>
@@ -419,13 +394,11 @@ import 'firebase/auth'
                 onClick={()=> history.update("/")}
                 className="button is-secondary" >Cancel</button>
               </div>
-        </div>
-
+            </div>
           </form>
         </div>
       </div>
       </section>
-
       <section className="section section-feature-grey is-medium">
           <div className="container">
             <div className="diet-wrapper has-text-centered">
@@ -450,23 +423,15 @@ import 'firebase/auth'
               <h4 className="subtitle is-6 is-2">{ labels.primal }</h4>
               <h3 className="title is-4">Whole 30</h3>
               <h4 className="subtitle is-6 is-2">{ labels.whole }</h4>
-
               <div className="divider is-centered"></div>
-
             </div>
-
             <div className="content-wrapper">
               <div className="columns is-multiline">
               </div>
             </div>
           </div>
         </section>
-
     </div>
-
-
-
   )
 }
-
 export default withAuthorization(Preferences)

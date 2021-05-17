@@ -4,7 +4,7 @@ import React from 'react'
 import useForm from 'react-hook-form'
 import firebase from 'firebase/app'
 import 'firebase/auth'
-
+import withAuthorization from 'components/hoc/withAuthorization'
 
 const UpdateForm = () => {
 
@@ -12,24 +12,23 @@ const UpdateForm = () => {
   const user = firebase.auth().currentUser
 
   const updateUserProfile = e => {
-    const password = e.target
-    console.log(password)
-    // const password = '999999'
-     //NU ÄR DET DETTA LÖSEN OVAN SOM SÄTTS NÄR MAN UPPDATERAR OAVSETT VAD MAN SKRIVER IN
+    
+   const { password } = e.target
+   //const password = document.getElementsByName('password')
+   console.log(password)
     user.updatePassword(password).then(function() {
-      alert('Password updated!')
-    }).catch(function(errors) {
-    alert('An error!')
+    
     })
-   }
-
-
+  }
+    const updateUserProfileSubmit = () => {
+    alert('Password updated!')
+  }
 
   return (
     <form >
       <div className="field">
         <div className="control">
-          <input 
+          <input onChange={updateUserProfile}
                  name="email"
                  className="input is-large"
                  type="email"
@@ -45,6 +44,7 @@ const UpdateForm = () => {
       </div>
       <div className="field">
         <div className="control">
+          <div className='password'>
           <input 
                  onChange={updateUserProfile}
                  name="password"
@@ -60,10 +60,11 @@ const UpdateForm = () => {
             </div>
           }
         </div>
+        </div>
       </div>
       <div className="field">
         <div className="control">
-          <input 
+          <input onChange={updateUserProfile}
                  name="passwordConfirmation"
                  className="input is-large"
                  type="password"
@@ -80,10 +81,10 @@ const UpdateForm = () => {
       </div>
       <button
         type="submit"
-        onChange={updateUserProfile}
+        onChange={updateUserProfileSubmit}
         className="button is-block rounded secondary-btn raised is-large is-fullwidth">Update info</button>
     </form>
   )
 }
 
-export default UpdateForm
+export default withAuthorization(UpdateForm)
