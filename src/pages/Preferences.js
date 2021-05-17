@@ -68,7 +68,7 @@ import 'firebase/auth'
                   type="button"
                   className="button is-link secondary-btn">Click here to reset you preferences!</button>
             <div className="field">
-              <label className="label" width='50' >Diet</label>
+              <label className="label" >Diet</label>
               <div className="control">
                 <div className="select">
                   <select name="diet" onChange={handleChange} >

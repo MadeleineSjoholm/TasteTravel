@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 import withAuthorization from 'components/hoc/withAuthorization'
 import db from 'db'
 import 'firebase/auth'
-//import auth from 'reducers/auth'
 
 const Profile = (props) => {
   const userid  = props.auth
@@ -13,7 +12,7 @@ const Profile = (props) => {
   
   db.collection("preference").doc(userID).onSnapshot((doc) => {
     const Prefs = doc.data()
-    console.log(Prefs)
+    console.log(Prefs.diet)
   })
 
 

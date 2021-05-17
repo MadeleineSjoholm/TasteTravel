@@ -12,24 +12,25 @@ const UpdateForm = () => {
   const user = firebase.auth().currentUser
 
   const updateUserProfile = e => {
-   // const password = e.target
-    //console.log(password)
-   const password = document.getElementsByClassName('password')
+    
+   const { password } = e.target
+   //const password = document.getElementsByName('password')
    console.log(password)
     user.updatePassword(password).then(function() {
-      alert('Password updated!')
-    }).catch(function(errors) {
-    alert('An error!')
+    
     })
-   }
+  }
 
+    const updateUserProfileSubmit = () => {
+    alert('Password updated!')
+  }
 
 
   return (
     <form >
       <div className="field">
         <div className="control">
-          <input 
+          <input onChange={updateUserProfile}
                  name="email"
                  className="input is-large"
                  type="email"
@@ -65,7 +66,7 @@ const UpdateForm = () => {
       </div>
       <div className="field">
         <div className="control">
-          <input 
+          <input onChange={updateUserProfile}
                  name="passwordConfirmation"
                  className="input is-large"
                  type="password"
@@ -82,7 +83,7 @@ const UpdateForm = () => {
       </div>
       <button
         type="submit"
-        onChange={updateUserProfile}
+        onChange={updateUserProfileSubmit}
         className="button is-block rounded secondary-btn raised is-large is-fullwidth">Update info</button>
     </form>
   )
