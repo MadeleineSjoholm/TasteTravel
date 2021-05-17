@@ -5,13 +5,13 @@ import { Link } from 'react-router-dom'
 
 const ServiceItem = ({service, children, className, noButton}) => {
 
-  const shortText = (text, maxLength = 50) => {
+/* const shortText = (text, maxLength = 50) => {
 
     if (!text) { return ' '}
     if (text.length <= maxLength ) { return text }
 
     return text.substr(0, maxLength) + '...'
-  }
+  } */ 
 
   return (
     <div

@@ -7,9 +7,9 @@ const SavedRecipes = ({auth}) => {
     <div className="container">
       <div className="content-wrapper">
         <h1 className="title">Saved Recipes</h1>
-        <p>
-          Here is the Saved Recipes Page
-        </p>
+        <figure className="map_background2">
+          <img src="map.png" alt="Company Logo" />
+        </figure>
       </div>
     </div>
   )

@@ -3,6 +3,8 @@
 Color variables
 ========================================================================== */
 
+
+
 $white: #482728;
 $smoke-white: #fcfcfc;
 $grey-white: #f2f2f2;
@@ -796,6 +798,18 @@ Navbar
     }
   }
 
+/*=============================================================================
+PREFERENCE-PAGE
+=============================================================================*/
+
+.intolerances {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  //padding: 10px;
+}
+
+
+
 
   /*===========================================================================
   OnBoard-och allt som görs på den!! Har detta nya system och all denna kod pga cirklarna blir annars konstiga.
@@ -1078,6 +1092,19 @@ RecipePage
     opacity: 0.9;
     background-repeat: no-repeat;
     background-attachment: fixed;
+  }
+
+//Bakgrunden för preference-sidan
+
+  .map_background2{
+    max-width: 100%;
+    height: auto;
+    img {width: 100%}
+    position: absolute;
+    opacity: 0.6;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin-top: -10px;
   }
 
 
