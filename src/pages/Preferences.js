@@ -22,7 +22,6 @@ import 'firebase/auth'
     db.collection("preference").doc(userID).update({
       [name]: value
     })
-    
   }
 
   const createEmptyForm = () => {

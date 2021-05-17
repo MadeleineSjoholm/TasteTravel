@@ -4,7 +4,7 @@ import React from 'react'
 import useForm from 'react-hook-form'
 import firebase from 'firebase/app'
 import 'firebase/auth'
-
+import withAuthorization from 'components/hoc/withAuthorization'
 
 const UpdateForm = () => {
 
@@ -20,11 +20,9 @@ const UpdateForm = () => {
     
     })
   }
-
     const updateUserProfileSubmit = () => {
     alert('Password updated!')
   }
-
 
   return (
     <form >
@@ -89,4 +87,4 @@ const UpdateForm = () => {
   )
 }
 
-export default UpdateForm
+export default withAuthorization(UpdateForm)

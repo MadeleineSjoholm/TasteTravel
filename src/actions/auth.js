@@ -13,10 +13,10 @@ export const onAuthStateChanged = onAuthCallback => api.onAuthStateChanged(onAut
 export const logout = uid => dispatch => 
   api
     .logout()
-    .then(_ => {
-      //const userStatusDatabaseRef = api.createFirebaseRef('status', uid)
-      //return userStatusDatabaseRef.set(api.isOfflineForDatabase)
-    })
+     .then(_ => {
+    //   const userStatusDatabaseRef = api.createFirebaseRef('status', uid)
+    //   return userStatusDatabaseRef.set(api.isOfflineForDatabase)
+     })
     .then(_ => dispatch({user: null, type: SET_AUTH_USER})) 
 
 export const storeAuthUser = authUser => dispatch => {
@@ -25,6 +25,7 @@ export const storeAuthUser = authUser => dispatch => {
     return api
       .getUserProfile(authUser.uid)
       .then(userWithProfile => dispatch({user: userWithProfile, type: SET_AUTH_USER}))
+
   } else {
     return dispatch({user: null, type: SET_AUTH_USER})
   }

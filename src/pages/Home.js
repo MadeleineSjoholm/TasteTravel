@@ -1,11 +1,11 @@
 /* eslint jsx-a11y/anchor-is-valid: 0 */
 
 import React from 'react'
-import { connect } from 'react-redux' // HOC
+//import { connect } from 'react-redux' // HOC
 import Hero from 'components/Hero'
-import ServiceItem from 'components/service/ServiceItem'
+//import ServiceItem from 'components/service/ServiceItem'
 
-import { fetchServices } from 'actions'
+//import { fetchServices } from 'actions'
 
 class Home extends React.Component {
 
@@ -13,16 +13,17 @@ class Home extends React.Component {
     services: []
   }
 
-  componentDidMount() {
-    this.props.fetchServices()
-  }
+  //FETCHAR POPULAT DESTINATIONS
+  //  componentDidMount() {
+  //    this.props.fetchServices()
+  //  }
 
-  renderServices = (services) =>
-    services.map(service => <ServiceItem key={service.id} service={service} />)
+  // renderServices = (services) =>
+  //   services.map(service => <ServiceItem key={service.id} service={service} />)
 
 
   render() {
-    const { services } = this.props
+   // const { services } = this.props
     return (
       <div>
         <Hero />
@@ -36,7 +37,8 @@ class Home extends React.Component {
 
             <div className="content-wrapper">
               <div className="columns is-multiline">
-                { this.renderServices(services) }
+               {/* DISPLAYAR SERVICES
+                { this.renderServices(services) } */}
               </div>
             </div>
           </div>
@@ -46,6 +48,8 @@ class Home extends React.Component {
   }
 }
 
-const mapStateToProps = state => ({services: state.services.all})
+//const mapStateToProps = state => ({services: state.services.all})
 
-export default connect(mapStateToProps, {fetchServices})(Home)
+//export default connect(mapStateToProps, {fetchServices})(Home)
+
+export default Home

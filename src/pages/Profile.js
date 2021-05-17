@@ -12,7 +12,7 @@ const Profile = (props) => {
   
   db.collection("preference").doc(userID).onSnapshot((doc) => {
     const Prefs = doc.data()
-    console.log(Prefs.diet)
+    console.log(Prefs)
   })
 
 
@@ -25,7 +25,6 @@ return (
       <div className="content-wrapper">
         <div  class="profilepage">
         <h3 className=" yourprofile title has-text-grey">Your Profile</h3>
-
               <div class="picture">
                 <figure className=" is-medium">
                 <img class='img' src = {userid.user.avatar} width='150' height='150' alt='desription'/>
@@ -45,8 +44,7 @@ return (
                 <br></br> */}
                 <h1 className="title has-text-grey">Settings</h1>
                 <p className="subtitle has-text-grey"><em>Want to update your password?</em></p>
-
-
+                
                 <Link
                   to="/ChangePassword">
                   <button className="faqButton">
