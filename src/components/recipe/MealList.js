@@ -2,21 +2,23 @@ import React from 'react'
 import Recipe from './Meal'
 
 export default function MostPopList({ mealData }) {
-const totalResults = mealData.totalResults
+const Recipes = mealData.recipes
 
   return (
     <main>
       <section className="nutrients">
         <h1>Most Popular</h1>
         <ul>
-          <li>Results: {totalResults}</li>
+          <li><b>Most popular: {Recipes.veryPopular}</b></li>
+          <li>Sustainable: {Recipes.sustainable}</li>
+          <li>Health Score: {Recipes.healthScore}</li>
           {/* <li>Carbohydrates: {nutrients.carbohydrates.toFixed(0)}</li>
           <li>Fat: {nutrients.fat.toFixed(0)}</li>
           <li>Protein: {nutrients.protein.toFixed(0)}</li> */}
         </ul>
       </section>
       <section className="recipes">
-        {mealData.meals.map((meal) => {
+        {mealData.recipes.map((meal) => {
           return <Recipe key={meal.id} recipe={meal} />
         })}
       </section>

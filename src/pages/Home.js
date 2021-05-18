@@ -42,7 +42,7 @@ changeHandler = (e) => {
    const { tags } = this.state
    function getMealData() {
     fetch(
-      `https://api.spoonacular.com/recipes/random?limitLicense=false&tags=${tags}&number=4&apiKey=df8f6279130e4a768bd08e6a5d7ad77b`
+      `https://api.spoonacular.com/recipes/random?limitLicense=true&tags=${tags}&number=4&apiKey=9c651708cc604ceaa7d0cad063018dd4`
     )
       .then((response) => response.json())
       .then((data) => {

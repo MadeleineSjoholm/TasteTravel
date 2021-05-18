@@ -7,13 +7,13 @@ const totalResults = recipeData.totalResults
   return (
     <main>
       <section className="nutrients">
-        <h1><b>Your Recomendations</b></h1>
+        <h1>Your Recomendations</h1>
         <ul>
-          <li><b>Results: {totalResults}</b></li>
+          <li>Results: {totalResults}</li>
           {/* <li>Carbohydrates: {nutrients.carbohydrates.toFixed(0)}</li>
           <li>Fat: {nutrients.fat.toFixed(0)}</li>
           <li>Protein: {nutrients.protein.toFixed(0)}</li> */}
-        </ul><br></br>
+        </ul>
       </section>
       <section className="recipes">
         {recipeData.results.map((recipe) => {
