@@ -6,7 +6,8 @@ export default function Meal({ meal }) {
   
 useEffect(() => {
   fetch(
-    `https://api.spoonacular.com/recipes/${meal.id}/information?apiKey=df8f6279130e4a768bd08e6a5d7ad77b&includeNutrition=false` 
+    `https://api.spoonacular.com/recipes/${meal.id}/information?apiKey=f94d33a64b6f4135ab3e6a2b9fc8ce3c
+    &includeNutrition=false` 
     )
     .then((response) => response.json())
     .then((data) => {
@@ -23,6 +24,8 @@ useEffect(() => {
       <ul>
         <li>Preperation time: {meal.readyInMinutes} minutes</li>
         <li>Number of servings: {meal.servings}</li>
+        <li>Cuisines: {meal.cuisines}</li>
+        <li>Cuisines: {meal.summary}</li>
       </ul>
 
       <a href={meal.sourceUrl}>Go to Recipe</a>

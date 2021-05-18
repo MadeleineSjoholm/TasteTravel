@@ -25,7 +25,8 @@ const Recipe = props => {
 
   function getRecipeData() {
     fetch(
-      `https://api.spoonacular.com/recipes/complexSearch?cuisine=${cuisine.title}&diet=${diet}&excludeIngredients=${ingredient}&intolerances=${intolerance}&addRecipeInformation=true&apiKey=2b27d20d15814f56a742d05fa5d873a8`
+      `https://api.spoonacular.com/recipes/complexSearch?cuisine=${cuisine.title}&diet=${diet}&excludeIngredients=${ingredient}&intolerances=${intolerance}&addRecipeInformation=true&apiKey=f94d33a64b6f4135ab3e6a2b9fc8ce3c
+      `
     )
       .then((response) => response.json())
       .then((data) => {
