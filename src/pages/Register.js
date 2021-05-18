@@ -14,12 +14,12 @@ const { addToast } = useToasts()
 const [redirect, setRedirect] = useState(false)
 
 const registerUser = (userData) => {
-  setRedirect(true)
+  if (registerUser.ok) {setRedirect(true)}
   register(userData)
   .then(
       _ => () => {},
       errorMessage => addToast(errorMessage, { appearance: 'error', autoDismiss: true, autoDismissTimeout: 3000 }))
-      
+
 
     }
 
