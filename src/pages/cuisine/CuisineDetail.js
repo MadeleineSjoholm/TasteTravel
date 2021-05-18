@@ -4,20 +4,35 @@ import { connect } from 'react-redux'
 import { fetchCuisineById } from 'actions'
 //import { Link } from 'react-router-dom'
 import RecipeList from 'components/recipe/RecipeList'
+import db from 'db'
+import 'firebase/auth'
+
 
 import Spinner from 'components/Spinner'
 
-const CuisineDetail = props => {
+const CuisineDetail = (props) => {
+  const userid  = props.auth
+  console.log(userid.user.uid)
+  const userID = userid.user.uid
 
   const { cuisineId } = useParams()
   const { fetchCuisineById, isFetching } = props
   const { cuisine } = props
   const [recipeData, setRecipeData] = useState(null)
-  const [diet, setDiet] = useState('vegetarian')
-  const [type, setType] = useState('')
-  const [intolerance, setIntolerance] = useState('gluten')
-  const [ingredient, setIngredient] = useState('cilantro')
+  const [diet, setDiet] = useState()
+  const [type, setType] = useState()
+  const [intolerance, setIntolerance] = useState()
+  const [ingredient, setIngredient] = useState()
 
+
+  db.collection("preference").doc(userID).onSnapshot((doc) => {
+    const Prefs = doc.data()
+    setIntolerance((Prefs.intolerances1 && Prefs.intolerances1) + (Prefs.intolerances2 && ', ' + Prefs.intolerances2) + (Prefs.intolerances3 && ', ' + Prefs.intolerances3))
+    setDiet(Prefs.diet)
+    setIngredient((Prefs.ingredients1 && Prefs.ingredients1) + (Prefs.ingredients2 && ', ' + Prefs.ingredients2) + (Prefs.ingredients3 && ', ' + Prefs.ingredients3))
+    console.log('t1',Prefs)
+  })
+  
 
   useEffect(() => {
     fetchCuisineById(cuisineId)
@@ -25,8 +40,9 @@ const CuisineDetail = props => {
   console.log(diet, cuisine.title)
 
   function getRecipeData() {
+    console.log('t2', intolerance, '!', diet,'!', ingredient, '!', type,'!', cuisine.title)
     fetch(
-      `https://api.spoonacular.com/recipes/complexSearch?cuisine=${cuisine.title}&diet=${diet}&excludeIngredients=${ingredient}&intolerances=${intolerance}&type=${type}&addRecipeInformation=true&apiKey=df8f6279130e4a768bd08e6a5d7ad77b`
+      `https://api.spoonacular.com/recipes/complexSearch?cuisine=${cuisine.title}&diet=${diet}&excludeIngredients=${ingredient}&intolerances=${intolerance}&type=${type}&addRecipeInformation=true&apiKey=9c651708cc604ceaa7d0cad063018dd4`
     )
       .then((response) => response.json())
       .then((data) => {
@@ -39,9 +55,9 @@ const CuisineDetail = props => {
 
   function handleChange(e) {
     setType(e.target.value)
-    setDiet()
-    setIngredient()
-    setIntolerance()
+    // setDiet()
+    // setIngredient()
+    // setIntolerance()
   }
 
   if (isFetching || cuisineId !== cuisine.id) { return <Spinner /> }
