@@ -1,5 +1,5 @@
 import React from 'react'
-import Recipe from './MostPop'
+import Recipe from './Meal'
 
 export default function MostPopList({ mealData }) {
 const totalResults = mealData.totalResults

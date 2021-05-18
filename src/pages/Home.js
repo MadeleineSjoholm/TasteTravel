@@ -3,16 +3,30 @@
 import React from 'react'
 //import { connect } from 'react-redux' // HOC
 import Hero from 'components/Hero'
+import MealList from 'components/recipe/MealList'
 //import ServiceItem from 'components/service/ServiceItem'
 
 //import { fetchServices } from 'actions'
 
 class Home extends React.Component {
+  constructor(props) {
+    super(props)
 
-  state = {
-    services: [],
-    trivia: null
-  }
+    this.state = {
+        mealData: null,
+        tags: ''
+    }
+}
+
+changeHandler = (e) => {
+    this.setState({ [e.target.name]: e.target.value })
+}
+
+
+  // state = {
+  //   mealData: null,
+  //   tags: ''
+  // }
 
   //FETCHAR POPULAT DESTINATIONS
   //  componentDidMount() {
@@ -25,18 +39,23 @@ class Home extends React.Component {
 
   render() {
    // const { services } = this.props
-   function getTrivia() {
+   const { tags } = this.state
+   function getMealData() {
     fetch(
-      `https://api.spoonacular.com/recipes/random?limitLicense=<boolean>&tags=<string>&number=<number>&apiKey=fd6e9efd3d8b45ff90bee15ea56c6d77`
+      `https://api.spoonacular.com/recipes/random?limitLicense=false&tags=${tags}&number=4&apiKey=df8f6279130e4a768bd08e6a5d7ad77b`
     )
       .then((response) => response.json())
       .then((data) => {
-        this.trivia(data)
+        this.mealData(data)
       })
       .catch(() => {
         console.log("error");
       })
   }
+  // function handleChange(e) {
+  //   this.tags(e.target.value);
+  // }
+  
 
  
     return (
@@ -52,10 +71,18 @@ class Home extends React.Component {
 
             <div className="content-wrapper">
               <div className="columns is-multiline">
+              <div className="control">
+          <input
+                 name="tags"
+                 onChange={this.changeHandler}
+                 className="input is-large"
+                 type="text"
+                 placeholder="Searchwords"/>
+        </div>
               <button
             className="countryButton"
-            onClick={getTrivia}>Find Recipes</button>
-          { this.trivia }
+            onClick={getMealData}>Find Recipes</button>
+          {this.mealData && <MealList MealData={this.mealData} />}
                {/* DISPLAYAR SERVICES
                 { this.renderServices(services) } */}
               </div>
