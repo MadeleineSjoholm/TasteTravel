@@ -7,19 +7,24 @@ import { register } from 'actions'
 import { useToasts } from 'react-toast-notifications'
 import onlyGuest from 'components/hoc/onlyGuest'
 import { Redirect } from 'react-router-dom'
+import db from 'db'
 
 const Register = (props) => {
 const { addToast } = useToasts()
-////const [redirect, setRedirect] = useState(false) stog nedan
-const [ redirect ] = useState(false)
-if (redirect) { return <Redirect to="/onboard" /> }
+const [redirect, setRedirect] = useState(false)
 
 const registerUser = (userData) => {
+  setRedirect(true)
   register(userData)
-    .then(
+  .then(
       _ => () => {},
       errorMessage => addToast(errorMessage, { appearance: 'error', autoDismiss: true, autoDismissTimeout: 3000 }))
-  }
+      
+
+    }
+
+  if (redirect) { return <Redirect to="/onboard" /> }
+
 
 return (
   <div className="auth-page">
@@ -36,13 +41,9 @@ return (
           </figure>
           <RegisterForm onRegister={registerUser} />
         </div>
-
         <p className="has-text-grey">
-
-
           <a href="/Faq">Need Help?</a>
         </p>
-
       </div>
     </div>
   </div>

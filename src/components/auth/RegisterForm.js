@@ -99,7 +99,7 @@ const RegisterForm = (props) => {
 
       <button
         type="submit"
-        // onClick={()=> history.push("/onboard")}
+         //onClick={()=> history.push("/onboard")}
         className="button is-block rounded secondary-btn raised is-large is-fullwidth">Register
         </button>
     </form>
