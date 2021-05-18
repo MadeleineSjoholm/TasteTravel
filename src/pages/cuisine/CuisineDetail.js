@@ -108,6 +108,7 @@ const CuisineDetail = props => {
           </div>
           </div>
         </div>
+        </div>
 
     </section>
   )
