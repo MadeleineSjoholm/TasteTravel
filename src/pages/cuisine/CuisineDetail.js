@@ -78,22 +78,10 @@ const CuisineDetail = props => {
                 {cuisine.description}
               </h2>
               <br />
-
-              {/* <Link
-              to="/Recipe">
-              <button className="countryButton">
-                  Find Recipes
-              </button>
-            </Link> */}
             </div>
           </div>
-          <input
-            type="number"
-            placeholder="Calories (e.g. 2000)"
-            onChange={handleChange}
-          />
           <div className="field">
-              <label className="label" >Dish</label>
+              <label className="label">Type of Dish</label>
               <div className="control">
                 <div className="select">
                   <select name="dish" onChange={handleChange} >
