@@ -101,7 +101,12 @@ const CuisineDetail = props => {
           <button
             className="countryButton"
             onClick={getRecipeData}>Find Recipes</button>
-          {recipeData && <RecipeList recipeData={recipeData} />}
+          <div className="recipeSection columns is-centered is-mobile">
+          <div className="column is-one-third">
+
+            {recipeData && <RecipeList recipeData={recipeData} />}
+          </div>
+          </div>
         </div>
       </div>
     </section>

@@ -917,6 +917,21 @@ PREFERENCE-PAGE
     height:30%;
   }
 
+
+/*=============================================================================
+  Recipes on country page
+=============================================================================*/
+
+.recipeSection {
+  background-color: $green;
+  font-size: 25px;
+}
+.hreflink{
+    color: $sienna;
+   text-decoration: none;
+   background-color: none;
+}
+
 /*============================================================================
 RecipePage
 ============================================================================*/
@@ -986,6 +1001,7 @@ RecipePage
   .faqButton{                   //Samma knapp används på Help sidan.
     background-color: $secondary;
     border-color: $secondary;
+    color: black;
     border-style: solid;
     border-radius: 100px;
     opacity: 1;
