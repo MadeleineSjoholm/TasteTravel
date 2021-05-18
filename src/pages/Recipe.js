@@ -1,43 +1,111 @@
+import React, { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom'
+import { connect } from 'react-redux'
+import { fetchCuisineById } from 'actions'
+//import { Link } from 'react-router-dom'
+import RecipeList from 'components/recipe/RecipeList'
 
-import React from 'react'
-import withAuthorization from 'components/hoc/withAuthorization'
+import Spinner from 'components/Spinner'
 
-const Recipe = () => {
+const Recipe = props => {
+
+  const { cuisineId } = useParams()
+  const { fetchCuisineById, isFetching } = props
+  const { cuisine } = props
+  const [recipeData, setRecipeData] = useState(null)
+  const [diet, setDiet] = useState('vegetarian')
+  const [intolerance, setIntolerance] = useState('gluten')
+  const [ingredient, setIngredient] = useState('cilantro')
+
+
+  useEffect(() => {
+    fetchCuisineById(cuisineId)
+  }, [cuisineId, fetchCuisineById])
+  console.log(diet, cuisine.title)
+
+  function getRecipeData() {
+    fetch(
+      `https://api.spoonacular.com/recipes/complexSearch?cuisine=${cuisine.title}&diet=${diet}&excludeIngredients=${ingredient}&intolerances=${intolerance}&addRecipeInformation=true&apiKey=fd6e9efd3d8b45ff90bee15ea56c6d77`
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        setRecipeData(data)
+      })
+      .catch(() => {
+        console.log("error");
+      })
+  }
+
+  function handleChange(e) {
+    setDiet()
+    setIngredient()
+    setIntolerance()
+  }
+
+  if (isFetching || cuisineId !== cuisine.id) { return <Spinner /> }
+
   return (
-    <div className="container">
-      <div className="content-wrapper">
-        <div class="recipe">
-          <div class="img"><img src="https://res.cloudinary.com/coopsverige/image/upload/w_1200,h_1200/v1573725187/385546.jpg" width="400" height="200" alt="alternatetext"/></div>
-          <div class="ingredients">
-          <ul>
-            <li> 400g - Spaghetti </li>
-            <li> 4 - Eggs</li>
-            <li> 200g - Pancetta </li>
-            <li> 30g - Pecorino </li>
-            <li> 30g - Parmesan </li>
-            <li> Salt and pepper </li>
-          </ul>
+    <section className="hero is-fullheight is-default is-bold service-detail-page">
+      <div className="hero-body">
+        <div className="container has-text-centered">
+          <div className="columns is-vcentered">
+            <div className="column is-5">
+              <figure className="image is-4by3">
+                <img src={cuisine.image} alt="First pic of region" />
+              </figure>
+              <br />
+              <figure className="image is-4by3">
+                <img src={cuisine.altimage} alt="Second pic of region" />
+              </figure>
+            </div>
+            <div className="column is-6 is-offset-1">
+              <div className="service-header-container">
+                <div className="media service-user">
+                  <div className="media-left">
+                    <figure className="image is-48x48">
+                    </figure>
+                  </div>
+
+                </div>
+              </div>
+              <h1 className="title is-2">
+                {cuisine.title}
+              </h1>
+              <br />
+              <h2 className="subtitle is-6">
+                {cuisine.description}
+              </h2>
+              <br />
+
+              {/* <Link
+              to="/Recipe">
+              <button className="countryButton">
+                  Find Recipes
+              </button>
+            </Link> */}
+            </div>
           </div>
-          <div class="name">
-            <h2 className="title">Carbonara</h2>
-            <p>Spaghetti carbonara är en snabblagad italiensk klassiker. En äkta carbonara görs utan grädde och blir krämig tack vare en skvätt pastavatten i såsen. Snåla inte med svartpepparn och använd nymalen från kvarn. </p>
-            <img src="stars.png" width="70" height="70" alt="Italian Trulli"/>
-            <img src="heart.png" width="40" height="40" alt="Italian Trulli"/>
-          </div>
-          <div class="instructions">
-            <ol>
-              <li>Koka spaghettin ca 3 minuter kortare än anvisningen på förpackningen säger.</li>
-              <li>Skär pancettan i små bitar. Stek pancettan i en wokpanna eller en stekpanna med höga kanter utan fett tills den blivit krispig. Lyft upp och lägg åt sidan. Låt fettet vara kvar i pannan.</li>
-              <li>Vispa ihop äggulorna med den fint rivna osten och rikligt med nymalen svartpeppar i en skål.</li>
-              <li>Sätt på värmen igen på pannan med stekfettet, häll i ca 3 dl av pastavattnet och låt koka.</li>
-              <li>Häll av spagettin och lägg i pannan med pancettan. Precis som när man kokar risotto i en buljong ska pastan få koka i stekfettet. Låt koka ca 2-3 minuter och rör om hela tiden, det gör att stärkelsen från pastan utsöndras och det blir en krämig sås.</li>
-              <li>När vattnet börjar koka in och det är någon matsked kvar, ta pannan från värmen. Tillsätt äggsmeten, rör runt tills det blir krämigt, tillsätt lite vatten om det blir torrt. Smaka av med salt och peppar.</li>
-            </ol>
-          </div>
+          <input
+            type="number"
+            placeholder="Calories (e.g. 2000)"
+            onChange={handleChange}
+          />
+          <button
+            className="countryButton"
+            onClick={getRecipeData}>Find Recipes</button>
+          {recipeData && <RecipeList recipeData={recipeData} />}
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 
-export default withAuthorization(Recipe)
+const mapStateToProps = ({ selectedCuisine, auth }) => (
+  {
+    cuisine: selectedCuisine.item,
+    isFetching: selectedCuisine.isFetching,
+    auth
+  }
+)
+
+export default connect(mapStateToProps, { fetchCuisineById })(Recipe)

@@ -10,7 +10,8 @@ import Hero from 'components/Hero'
 class Home extends React.Component {
 
   state = {
-    services: []
+    services: [],
+    trivia: null
   }
 
   //FETCHAR POPULAT DESTINATIONS
@@ -24,6 +25,20 @@ class Home extends React.Component {
 
   render() {
    // const { services } = this.props
+   function getTrivia() {
+    fetch(
+      `https://api.spoonacular.com/recipes/random?limitLicense=<boolean>&tags=<string>&number=<number>&apiKey=fd6e9efd3d8b45ff90bee15ea56c6d77`
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        this.trivia(data)
+      })
+      .catch(() => {
+        console.log("error");
+      })
+  }
+
+ 
     return (
       <div>
         <Hero />
@@ -37,6 +52,10 @@ class Home extends React.Component {
 
             <div className="content-wrapper">
               <div className="columns is-multiline">
+              <button
+            className="countryButton"
+            onClick={getTrivia}>Find Recipes</button>
+          { this.trivia }
                {/* DISPLAYAR SERVICES
                 { this.renderServices(services) } */}
               </div>
