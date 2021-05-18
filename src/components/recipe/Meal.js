@@ -1,7 +1,7 @@
 
 import React, {useState, useEffect} from 'react'
 
-export default function MostPop({ meal }) {
+export default function Meal({ meal }) {
   const [imageUrl, setImageUrl] = useState("")
   
 useEffect(() => {
