@@ -6,19 +6,6 @@ import withAuthorization from 'components/hoc/withAuthorization'
 import 'firebase/auth'
 
 const Profile = (props) => {
-/*const user = firebase.auth().currentUser
-
-
-const updateUserProfile = e => {
- // const password = '999999'
-  //NU ÄR DET DETTA LÖSEN OVAN SOM SÄTTS NÄR MAN UPPDATERAR OAVSETT VAD MAN SKRIVER IN
- user.updatePassword(password).then(function() {
-   alert('Password updated!')
- }).catch(function(errors) {
- alert('An error!')
- })
-}*/
-
 
 
 return (

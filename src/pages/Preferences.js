@@ -14,14 +14,14 @@ import 'firebase/auth'
     const userid  = auth
     const userID = userid.user.uid
 
-  const [redirect ] = useState(false)
+  const [redirect, setRedirect ] = useState(false)
 
   const handleChange = e => {
     const { name, value } = e.target
     console.log({ [name]: value })
     db.collection("preference").doc(userID).update({
       [name]: value
-    })
+    }) 
   }
 
   const createEmptyForm = () => {
@@ -42,6 +42,8 @@ import 'firebase/auth'
 
 
   const handleSubmit = () => {
+    db.collection("preference").doc(userID).get()
+    .then(() => setRedirect(true))
     alert('updated Succesfully')
   }
 

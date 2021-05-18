@@ -6,21 +6,26 @@ import firebase from 'firebase/app'
 import 'firebase/auth'
 import withAuthorization from 'components/hoc/withAuthorization'
 
+
+
+
 const UpdateForm = () => {
+
 
   const { errors } = useForm()
   const user = firebase.auth().currentUser
  
- 
   const handleChange = e => {
     const {Name, value} = e.target
     console.log({[Name]: value})
-    user.updatePassword(value) 
+    user.updatePassword(value)
   }
   
   const updateUserProfileSubmit = () => {
     alert('Password as been updated successfully!')
   }
+
+
 
   return (
     <form >
