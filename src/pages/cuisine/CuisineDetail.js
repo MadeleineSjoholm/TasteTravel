@@ -14,6 +14,7 @@ const CuisineDetail = props => {
   const { cuisine } = props
   const [recipeData, setRecipeData] = useState(null)
   const [diet, setDiet] = useState('vegetarian')
+  const [type, setType] = useState('')
   const [intolerance, setIntolerance] = useState('gluten')
   const [ingredient, setIngredient] = useState('cilantro')
 
@@ -25,7 +26,7 @@ const CuisineDetail = props => {
 
   function getRecipeData() {
     fetch(
-      `https://api.spoonacular.com/recipes/complexSearch?cuisine=${cuisine.title}&diet=${diet}&excludeIngredients=${ingredient}&intolerances=${intolerance}&addRecipeInformation=true&apiKey=fd6e9efd3d8b45ff90bee15ea56c6d77`
+      `https://api.spoonacular.com/recipes/complexSearch?cuisine=${cuisine.title}&diet=${diet}&excludeIngredients=${ingredient}&intolerances=${intolerance}&type=${type}&addRecipeInformation=true&apiKey=fd6e9efd3d8b45ff90bee15ea56c6d77`
     )
       .then((response) => response.json())
       .then((data) => {
@@ -37,6 +38,7 @@ const CuisineDetail = props => {
   }
 
   function handleChange(e) {
+    setType(e.target.value)
     setDiet()
     setIngredient()
     setIntolerance()
@@ -90,6 +92,24 @@ const CuisineDetail = props => {
             placeholder="Calories (e.g. 2000)"
             onChange={handleChange}
           />
+          <div className="field">
+              <label className="label" >Dish</label>
+              <div className="control">
+                <div className="select">
+                  <select name="dish" onChange={handleChange} >
+                    <option value="main course">Main Course</option>
+                    <option value="side dish">Side Dish</option>
+                    <option value="dessert">Dessert</option>
+                    <option value="appetizer">Appetizer</option>
+                    <option value="salad">Salad</option>
+                    <option value="breakfast">Breakfast</option>
+                    <option value="soup">Soup</option>
+                    <option value="fingerfood">Fingerfood</option>
+                    <option value="snack">Snack</option>
+                  </select>
+                </div>
+              </div>
+            </div>
           <button
             className="countryButton"
             onClick={getRecipeData}>Find Recipes</button>
