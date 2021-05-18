@@ -96,7 +96,7 @@ import 'firebase/auth'
               <div className="control">
                 <div className="select">
                   <select name="intolerances1" onChange={handleChange}>
-                    <option value="-"> No more intolerances </option>
+                    <option value="-"> Add intolerance </option>
                     <option value="dairy"> Dairy </option>
                     <option value= 'egg'> Egg </option>
                     <option value= 'gluten'> Gluten </option>
@@ -117,7 +117,7 @@ import 'firebase/auth'
               <div className="control">
                 <div className="select">
                   <select name="intolerances2" onChange={handleChange}>
-                    <option value="-"> No more intolerances </option>
+                    <option value="-"> Add intolerance </option>
                     <option value="dairy"> Dairy </option>
                     <option value= 'egg'> Egg </option>
                     <option value= 'gluten'> Gluten </option>
@@ -138,7 +138,7 @@ import 'firebase/auth'
               <div className="control">
                 <div className="select">
                   <select name="intolerances3" onChange={handleChange}>
-                    <option value="-"> No more intolerances </option>
+                    <option value="-"> Add intolerance </option>
                     <option value="dairy"> Dairy </option>
                     <option value= 'egg'> Egg </option>
                     <option value= 'gluten'> Gluten </option>
@@ -157,14 +157,14 @@ import 'firebase/auth'
             </div>
             </div>
 
-            <label className="label">Ingredients</label>
+            <label className="label">Ingredients to avoid</label>
             <div class="intolerances">
 
             <div className="field">
               <div className="control">
                 <div className="select">
                   <select name="ingredients1" onChange={handleChange}>
-                   <option value="-"> No more ingredients </option>
+                   <option value="-"> Add ingredient </option>
                    <option value="onion"> Onion </option>
                    <option value='mushroom'> Mushrooms</option>
                    <option value= 'celery'> Celery</option>
@@ -238,7 +238,7 @@ import 'firebase/auth'
               <div className="control">
                 <div className="select">
                   <select name="ingredients2" onChange={handleChange}>
-                  <option value="-"> No more ingredients </option>
+                  <option value="-"> Add ingredient </option>
                   <option value="onion"> Onion </option>
                    <option value='mushroom'> Mushrooms</option>
                    <option value= 'celery'> Celery</option>
@@ -312,7 +312,7 @@ import 'firebase/auth'
               <div className="control">
                 <div className="select">
                   <select name="ingredients3" onChange={handleChange}>
-                  <option value="-"> No more ingredients </option>
+                  <option value="-"> Add ingredient </option>
                   <option value="onion"> Onion </option>
                    <option value='mushroom'> Mushrooms</option>
                    <option value= 'celery'> Celery</option>
