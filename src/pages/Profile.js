@@ -49,7 +49,7 @@ return (
                 <h2 className="subtitle has-text-grey" > <b>Preferences: </b> </h2>
                 <h3 className="subtitle has-text-grey">
                   <ul>Diet : <em>{diet}</em> </ul>
-                  <ul>Ingredients to exclude : <em>{ingredient}</em> </ul>
+                  <ul>Ingredients : <em>{ingredient}</em> </ul>
                   <ul>Intolernces : <em>{intolerance}</em> </ul>
                 </h3>
               
