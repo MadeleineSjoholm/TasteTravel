@@ -1,5 +1,5 @@
 /* eslint no-useless-escape: 0 */
-import React from 'react'
+import React, {useState} from 'react'
 import { Link } from 'react-router-dom'
 import withAuthorization from 'components/hoc/withAuthorization'
 import db from 'db'
@@ -9,10 +9,19 @@ const Profile = (props) => {
   const userid  = props.auth
   console.log(userid.user.uid)
   const userID = userid.user.uid
+
+  const [diet, setDiet] = useState()
+  const [intolerance, setIntolerance] = useState()
+  const [ingredient, setIngredient] = useState()
   
   db.collection("preference").doc(userID).onSnapshot((doc) => {
     const Prefs = doc.data()
-    console.log(Prefs)
+    setIntolerance((Prefs.intolerances1 && Prefs.intolerances1) + (Prefs.intolerances2 && ', ' + Prefs.intolerances2) + (Prefs.intolerances3 && ', ' + Prefs.intolerances3))
+    setDiet(Prefs.diet)
+    setIngredient((Prefs.ingredients1 && Prefs.ingredients1) + (Prefs.ingredients2 && ', ' + Prefs.ingredients2) + (Prefs.ingredients3 && ', ' + Prefs.ingredients3))
+    console.log('t1',Prefs)
+    //const ingredients = [Prefs.ingredients1, Prefs.ingredients2, Prefs.ingredients3]
+    //const intolerances = [Prefs.intolerances1, Prefs.intolerances2, Prefs.intolerances3]
   })
 
 
@@ -37,7 +46,12 @@ return (
                 <h2 className="subtitle has-text-grey">Name: <em>{`${userid.user.fullName}`}</em></h2>
                 <h2 className="subtitle has-text-grey">Email: <em>{`${userid.user.email}`}</em></h2>
                 <h2 className="subtitle has-text-grey">User ID: <em>{`${userid.user.uid}`}</em></h2>
-                <h2 className="subtitle has-text-grey" > Preferences: HÄR ska dem stå, skrivs ut i consolen men inte här???<em> {`${userid.Prefs}`}</em> </h2>
+                <h2 className="subtitle has-text-grey" > <b>Preferences: </b> </h2>
+                <h3 className="subtitle has-text-grey">
+                  <ul>Diet : <em>{diet}</em> </ul>
+                  <ul>Ingredients to exclude : <em>{ingredient}</em> </ul>
+                  <ul>Intolernces : <em>{intolerance}</em> </ul>
+                </h3>
               
                 <br></br>
               {/*  <h2 className="subtitle has-text-grey"> Diet: <em>{ `${test.diet}` }</em></h2>

@@ -118,7 +118,14 @@ const CuisineDetail = (props) => {
           <button
             className="countryButton"
             onClick={getRecipeData}>Find Recipes</button>
-
+              <div>
+                <h3 className="subtitle has-text-grey">The recipes are based on your preferences: </h3>
+                  <ul>Diet <em>{diet}</em> </ul>
+                  <ul> Ingredients <em>{ingredient}</em> </ul>
+                  <ul>Intolernces <em>{intolerance}</em> </ul>
+              </div>
+              <br></br>
+              <br></br>
           <div className="recipeSection columns is-centered is-mobile">
 
 
