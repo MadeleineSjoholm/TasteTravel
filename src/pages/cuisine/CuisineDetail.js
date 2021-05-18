@@ -83,6 +83,7 @@ const CuisineDetail = props => {
           <div className="field">
               <label className="label">Type of Dish</label>
               <div className="control">
+              
                 <div className="select">
                   <select name="dish" onChange={handleChange} >
                     <option value="main course">Main Course</option>
@@ -108,7 +109,7 @@ const CuisineDetail = props => {
             {recipeData && <RecipeList recipeData={recipeData} />}
           </div>
           </div>
-      
+
         </div>
 
     </section>

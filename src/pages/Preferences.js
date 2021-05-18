@@ -21,7 +21,7 @@ import 'firebase/auth'
     console.log({ [name]: value })
     db.collection("preference").doc(userID).update({
       [name]: value
-    }) 
+    })
   }
 
   const createEmptyForm = () => {
@@ -83,7 +83,7 @@ import 'firebase/auth'
                     <option value="ketogenic">Ketogenic</option>
                     <option value="paleo">Paleo</option>
                     <option value="primal">Primal</option>
-                    <option value="whole30">Whole30</option> 
+                    <option value="whole30">Whole30</option>
                   </select>
                 </div>
               </div>
@@ -108,7 +108,7 @@ import 'firebase/auth'
                     <option value= 'soy'> Soy </option>
                     <option value= 'sulfite'> Sulfite </option>
                     <option value= 'treenut'> Tree Nut </option>
-                    <option value= 'wheat'> Wheat </option> 
+                    <option value= 'wheat'> Wheat </option>
                   </select>
                 </div>
               </div>
@@ -393,7 +393,7 @@ import 'firebase/auth'
               </div>
               <div className="control">
                 <button
-                onClick={()=> history.update("/")}
+                onClick={()=> history.update("/Home")}
                 className="button is-secondary" >Cancel</button>
               </div>
             </div>
