@@ -6,7 +6,7 @@ export default function MostPop({ meal }) {
   
 useEffect(() => {
   fetch(
-    `https://api.spoonacular.com/recipes/${meal.id}/information?apiKey=fd6e9efd3d8b45ff90bee15ea56c6d77&includeNutrition=false` 
+    `https://api.spoonacular.com/recipes/${meal.id}/information?apiKey=df8f6279130e4a768bd08e6a5d7ad77b&includeNutrition=false` 
     )
     .then((response) => response.json())
     .then((data) => {
