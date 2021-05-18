@@ -4,7 +4,7 @@ import React, {useState, useEffect} from 'react'
 
 export default function Recipe({recipe}) {
   const [imageUrl, setImageUrl] = useState("")
-  
+
 useEffect(() => {
   fetch(
     `https://api.spoonacular.com/recipes/${recipe.id}/information?apiKey=9c651708cc604ceaa7d0cad063018dd4&includeNutrition=false` 
@@ -26,6 +26,6 @@ useEffect(() => {
         <li>Number of servings: {recipe.servings}</li>
       </ul>
 
-      <a href={recipe.sourceUrl}>Go to Recipe</a>
+      <button className="faqButton"><a href={recipe.sourceUrl}><div className="hreflink">Go to Recipe</div></a></button>
     </article>
 }

@@ -99,6 +99,7 @@ const CuisineDetail = (props) => {
           <div className="field">
               <label className="label">Type of Dish</label>
               <div className="control">
+              
                 <div className="select">
                   <select name="dish" onChange={handleChange} >
                     <option value="main course">Main Course</option>
@@ -117,9 +118,16 @@ const CuisineDetail = (props) => {
           <button
             className="countryButton"
             onClick={getRecipeData}>Find Recipes</button>
-          {recipeData && <RecipeList recipeData={recipeData} />}
+
+          <div className="recipeSection columns is-centered is-mobile">
+
+
+            {recipeData && <RecipeList recipeData={recipeData} />}
+          </div>
+          </div>
+
         </div>
-      </div>
+
     </section>
   )
 }
