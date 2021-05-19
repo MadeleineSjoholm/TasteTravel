@@ -121,7 +121,7 @@ const Routes = () =>
 </Route>
 <Route path="/Nordic">
 <Nordic />
-</Route>
+</Route> 
 <Route path="/Mediterranean">
 <Mediterranean />
 </Route>

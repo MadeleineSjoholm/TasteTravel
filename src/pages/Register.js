@@ -7,7 +7,6 @@ import { register } from 'actions'
 import { useToasts } from 'react-toast-notifications'
 import onlyGuest from 'components/hoc/onlyGuest'
 import { Redirect } from 'react-router-dom'
-import db from 'db'
 
 const Register = (props) => {
 const { addToast } = useToasts()

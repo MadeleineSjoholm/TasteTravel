@@ -52,10 +52,7 @@ return (
                   <ul>Ingredients : <em>{ingredient}</em> </ul>
                   <ul>Intolernces : <em>{intolerance}</em> </ul>
                 </h3>
-              
                 <br></br>
-              {/*  <h2 className="subtitle has-text-grey"> Diet: <em>{ `${test.diet}` }</em></h2>
-                <br></br> */}
                 <h1 className="title has-text-grey">Settings</h1>
                 <p className="subtitle has-text-grey"><em>Want to update your password?</em></p>
                 
