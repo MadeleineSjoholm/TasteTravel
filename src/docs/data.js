@@ -1,4 +1,5 @@
 export const tagsOpt = [
+  {"hejjjj"},
   { value: "onion", label: "Onion" },
   { value: 'mushroom', label: 'Mushrooms' },
   { value: 'celery', label: 'Celery' },
