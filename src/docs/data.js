@@ -1,5 +1,4 @@
 export const tagsOpt = [
-  {"hejjjj"},
   { value: "onion", label: "Onion" },
   { value: 'mushroom', label: 'Mushrooms' },
   { value: 'celery', label: 'Celery' },
@@ -72,7 +71,7 @@ export const tagsOpt = [
   { value: 'chinese', label: 'Chinese' },
   { value: 'african', label: 'African' },
   { value: 'mediterranean', label: 'Mediterranean' }
-  
+
 ];
 
 
