@@ -9,7 +9,7 @@ import 'firebase/auth'
 
 import Spinner from 'components/Spinner'
 
-import { Fragment } from 'react'; 
+import { Fragment } from 'react'
 
 
 const CuisineDetail = (props) => {
