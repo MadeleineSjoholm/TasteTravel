@@ -1,4 +1,4 @@
-export const ingredientOpt = [
+export const tagsOpt = [
   { value: "onion", label: "Onion" },
   { value: 'mushroom', label: 'Mushrooms' },
   { value: 'celery', label: 'Celery' },
@@ -63,7 +63,15 @@ export const ingredientOpt = [
   { value: 'peas', label: 'Peas' },
   { value: 'butter', label: 'Butter' },
   { value: 'margarine', label: 'Margarine' },
-  { value: 'cream', label: 'Cream' }
+  { value: 'cream', label: 'Cream' },
+  { value: 'italian', label: 'italian' },
+  { value: 'indian', label: 'Indian' },
+  { value: 'mexican', label: 'Mexican' },
+  { value: 'american', label: 'American' },
+  { value: 'chinese', label: 'Chinese' },
+  { value: 'african', label: 'African' },
+  { value: 'mediterranean', label: 'Mediterranean' }
+  
 ];
 
 

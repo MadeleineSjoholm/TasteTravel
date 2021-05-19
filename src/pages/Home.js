@@ -1,6 +1,8 @@
 /* eslint jsx-a11y/anchor-is-valid: 0 */
 
-import React from 'react'
+import React, { useState } from 'react';
+import Select from 'react-select';
+import { tagsOpt } from 'docs/data'
 //import { connect } from 'react-redux' // HOC
 import Hero from 'components/Hero'
 import MealList from 'components/recipe/MealList'
@@ -9,24 +11,31 @@ import MealList from 'components/recipe/MealList'
 //import { fetchServices } from 'actions'
 
 class Home extends React.Component {
-  constructor(props) {
-    super(props)
+  state = {
+    selectedOption: null
+  }
 
+  constructor(props) {
+    super(props);
     this.state = {
+      selectedOption: null,
         mealData: null,
-        tags: ''
+        tags: []
     }
 }
 
-changeHandler = (e) => {
-    this.setState({ [e.target.name]: e.target.value })
-}
+ handleChange = selectedOption => {
+  this.setState(
+    { selectedOption },
+    () => console.log(`Option selected:`, this.state.selectedOption)
+  );
+};
+
+// changeHandler = (e) => {
+//     this.setState({ [e.target.name]: e.target.value })
+// }
 
 
-  // state = {
-  //   mealData: null,
-  //   tags: ''
-  // }
 
   //FETCHAR POPULAT DESTINATIONS
   //  componentDidMount() {
@@ -38,11 +47,13 @@ changeHandler = (e) => {
 
 
   render() {
+    const { tags } = this.state;
    // const { services } = this.props
-   const { tags } = this.state
+   console.log(tags)
+   
    function getMealData() {
     fetch(
-      `https://api.spoonacular.com/recipes/random?limitLicense=true&tags=${tags}&number=4&apiKey=9c651708cc604ceaa7d0cad063018dd4`
+      // `https://api.spoonacular.com/recipes/random?limitLicense=true&tags=${tags}&number=4&apiKey=9c651708cc604ceaa7d0cad063018dd4`
     )
       .then((response) => response.json())
       .then((data) => {
@@ -55,6 +66,7 @@ changeHandler = (e) => {
   // function handleChange(e) {
   //   this.tags(e.target.value);
   // }
+   
   
 
  
@@ -71,13 +83,20 @@ changeHandler = (e) => {
 
             <div className="content-wrapper">
               <div className="columns is-multiline">
+              <div className="field">
+              <label className="label" >Quick Search (e.g. "Italian" or "Salmon")</label>
               <div className="control">
-          <input
-                 name="tags"
-                 onChange={this.changeHandler}
-                 className="input is-large"
-                 type="text"
-                 placeholder="Searchwords"/>
+              
+           <Select
+             value={tags}
+             onChange={this.handleChange}
+             options={tagsOpt}
+             isMulti
+             name="tags"
+             className="basic-multi-select"
+             classNamePrefix="select"
+           />
+        </div>
         </div>
               <button
             className="countryButton"
