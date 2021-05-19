@@ -6,16 +6,15 @@ const Footer = () => (
 
 
   <div className="team">
-    <h1>OUR TEAM</h1>
+  <a href="/OurTeam">OUR TEAM</a>
     </div>
 
     <div className="contact">
-      <h1>CONTACT US</h1>
+    <a href="/contact">CONTACT</a>
       </div>
 
-      <div className="faq">
-        <h1>FAQ</h1>
-        </div>
+
+
 
         <div className="follow">
           <h1>FOLLOW US</h1>
@@ -23,8 +22,10 @@ const Footer = () => (
 
 
           <div className="about">
-            <h1> ABOUT TASTETRAVEL</h1>
+          <a href="/About">ABOUT US</a>
             </div>
+
+
 
     </div>
 );

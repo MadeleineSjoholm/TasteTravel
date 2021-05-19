@@ -531,14 +531,14 @@ Footer
 
 .footer{
   position: absolute;
-  height: 0.5rem;
+  height: 0rem;
   background-color: lighten($secondary, 30%);
   left: 0;
   right: 0;
   display: grid;
   grid-template-rows: 0vh;
-  grid-template-columns: 10vw 10vw 10vw 15vw 10vw 10vw ;
-  grid-column-gap: 2rem;
+  grid-template-columns: 10vw 10vw 10vw 10vw 10vw 10vw ;
+  grid-column-gap: 4rem;
   grid-template-areas:
   "logo team contact about follow faq"
 }
@@ -555,6 +555,9 @@ Footer
     grid-area: faq;
     align: right;
     position: center;
+
+
+
   }
   .follow {
     grid-area: follow;
