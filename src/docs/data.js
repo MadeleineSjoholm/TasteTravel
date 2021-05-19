@@ -71,7 +71,7 @@ export const tagsOpt = [
   { value: 'chinese', label: 'Chinese' },
   { value: 'african', label: 'African' },
   { value: 'mediterranean', label: 'Mediterranean' }
-  
+
 ];
 
 
