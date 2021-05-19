@@ -15,6 +15,7 @@ const CuisineDetail = (props) => {
   console.log(userid.user.uid)
   const userID = userid.user.uid
 
+
   const { cuisineId } = useParams()
   const { fetchCuisineById, isFetching } = props
   const { cuisine } = props
@@ -23,7 +24,8 @@ const CuisineDetail = (props) => {
   const [type, setType] = useState()
   const [intolerance, setIntolerance] = useState()
   const [ingredient, setIngredient] = useState()
-
+ 
+  const amountOfResults = 5
 
   db.collection("preference").doc(userID).onSnapshot((doc) => {
     const Prefs = doc.data()
@@ -42,16 +44,19 @@ const CuisineDetail = (props) => {
   function getRecipeData() {
     console.log('t2', intolerance, '!', diet,'!', ingredient, '!', type,'!', cuisine.title)
     fetch(
-      `https://api.spoonacular.com/recipes/complexSearch?cuisine=${cuisine.title}&diet=${diet}&excludeIngredients=${ingredient}&intolerances=${intolerance}&type=${type}&addRecipeInformation=true&apiKey=f94d33a64b6f4135ab3e6a2b9fc8ce3c`
+      `https://api.spoonacular.com/recipes/complexSearch?cuisine=${cuisine.title}&diet=${diet}&excludeIngredients=${ingredient}&intolerances=${intolerance}&type=${type}&number=${amountOfResults}&addRecipeInformation=true&apiKey=df8f6279130e4a768bd08e6a5d7ad77b`
     )
       .then((response) => response.json())
       .then((data) => {
         setRecipeData(data)
+        
       })
       .catch(() => {
         console.log("error");
       })
   }
+
+ 
 
   function handleChange(e) {
     setType(e.target.value)
@@ -59,6 +64,8 @@ const CuisineDetail = (props) => {
     // setIngredient()
     // setIntolerance()
   }
+
+  
 
   if (isFetching || cuisineId !== cuisine.id) { return <Spinner /> }
 
@@ -126,6 +133,9 @@ const CuisineDetail = (props) => {
               </div>
               <br></br>
               <br></br>
+
+              <h3 className="subtitle has-text-grey">Shows {amountOfResults} </h3>
+
           <div className="recipeSection columns is-centered is-mobile">
 
 
@@ -139,8 +149,7 @@ const CuisineDetail = (props) => {
   )
 }
 
-const mapStateToProps = ({ selectedCuisine, auth }) => (
-  {
+const mapStateToProps = ({ selectedCuisine, auth }) => ( {
     cuisine: selectedCuisine.item,
     isFetching: selectedCuisine.isFetching,
     auth

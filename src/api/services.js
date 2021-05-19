@@ -45,3 +45,10 @@ export const createCuisine = newCuisine => {
     .add(newCuisine)
     .then(docRef => docRef.id)
 }
+
+export const createFavorite = newFavoriteRecipe => {
+  return db
+    .collection('FavRec')
+    .add(newFavoriteRecipe)
+    .then(docRef => docRef.id)
+}

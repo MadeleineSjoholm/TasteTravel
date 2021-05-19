@@ -27,7 +27,7 @@ const Navbar = props => {
       <div className="container">
         <div className="navbar-brand">
         <div className= "logo">
-            <img src="nylogg.png" alt='logo'/>
+           <img src="nylogg.png" alt='logo'/>
           </div>
           <Link 
             to="/"
