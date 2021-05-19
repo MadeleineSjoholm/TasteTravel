@@ -72,7 +72,7 @@ const Navbar = props => {
            <Link
               to="/"
               className="navbar-item is-secondary">
-                Home
+                HOME
             </Link>
             {/* <Link
               to="/services"
@@ -82,7 +82,7 @@ const Navbar = props => {
             <Link
               to="/faq"
               className="navbar-item is-secondary">
-                Faq
+                FAQ
             </Link>
            {/* { isAuth &&
               <div className="navbar-item has-dropdown is-hoverable">

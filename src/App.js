@@ -8,6 +8,7 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import ServiceApp from './ServiceApp'
 
 import { onAuthStateChanged, storeAuthUser } from 'actions'
+import Footer from './pages/footer'
 
 const store = initStore()
 
@@ -22,7 +23,7 @@ class App extends React.Component {
   componentWillUnmount() {
     this.unsubscribeAuth()
   }
-  
+
 
   render() {
     return (
@@ -32,9 +33,14 @@ class App extends React.Component {
             <ServiceApp />
           </Router>
         </ToastProvider>
+        <Footer>
+          </Footer>
       </Provider>
+
     )
   }
 }
+
+
 
 export default App;

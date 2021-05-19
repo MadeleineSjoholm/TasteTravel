@@ -21,19 +21,19 @@
 //         <div className="modal-card">
 //           <header className="modal-card-head">
 //             <p className="modal-card-title">Make a Deal</p>
-//             <button 
+//             <button
 //               onClick={() => changeModalState(false)}
-//               className="delete" 
+//               className="delete"
 //               aria-label="close"></button>
 //           </header>
 //           <section className="modal-card-body">
 //             { props.children }
 //           </section>
 //           <footer className="modal-card-foot">
-//             <button 
+//             <button
 //               onClick={() => props.onModalSubmit(() => changeModalState(false))}
 //               className="button is-success">Save changes</button>
-//             <button 
+//             <button
 //               onClick={() => changeModalState(false)}
 //               className="button">Cancel</button>
 //           </footer>
