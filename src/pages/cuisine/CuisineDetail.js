@@ -7,10 +7,14 @@ import RecipeList from 'components/recipe/RecipeList'
 import db from 'db'
 import 'firebase/auth'
 
-
 import Spinner from 'components/Spinner'
 
+import { Fragment } from 'react'
+
+
 const CuisineDetail = (props) => {
+  const [visible, setVisible] = useState(true) 
+    
   const userid  = props.auth
   console.log(userid.user.uid)
   const userID = userid.user.uid
@@ -34,7 +38,7 @@ const CuisineDetail = (props) => {
     setIngredient((Prefs.ingredients1 && Prefs.ingredients1) + (Prefs.ingredients2 && ', ' + Prefs.ingredients2) + (Prefs.ingredients3 && ', ' + Prefs.ingredients3))
     console.log('t1',Prefs)
   })
-  
+
 
   useEffect(() => {
     fetchCuisineById(cuisineId)
@@ -55,6 +59,26 @@ const CuisineDetail = (props) => {
         console.log("error");
       })
   }
+  const toggleVisible = () => { 
+    const scrolled = document.documentElement.scrollTop; 
+    if (scrolled > 0){ 
+      setVisible(false) 
+    }  
+    else if (scrolled <= 0){ 
+      setVisible(true) 
+    } 
+  }; 
+    
+  window.addEventListener('scroll', toggleVisible); 
+  const scrollToBottom = () =>{
+    getRecipeData() 
+    window.scrollTo({ 
+      top: document.documentElement.scrollHeight, 
+      behavior: 'smooth'
+      /* you can also use 'auto' behaviour 
+         in place of 'smooth' */
+    }); 
+  }; 
 
  
 
@@ -70,6 +94,7 @@ const CuisineDetail = (props) => {
   if (isFetching || cuisineId !== cuisine.id) { return <Spinner /> }
 
   return (
+    <Fragment> 
     <section className="hero is-fullheight is-default is-bold service-detail-page">
       <div className="hero-body">
         <div className="container has-text-centered">
@@ -105,10 +130,10 @@ const CuisineDetail = (props) => {
           </div>
           <div className="field">
               <label className="label">Type of Dish</label>
-              <div className="control">
-              
+
                 <div className="select">
                   <select name="dish" onChange={handleChange} >
+                  <option value="">-</option>
                     <option value="main course">Main Course</option>
                     <option value="side dish">Side Dish</option>
                     <option value="dessert">Dessert</option>
@@ -119,12 +144,16 @@ const CuisineDetail = (props) => {
                     <option value="fingerfood">Fingerfood</option>
                     <option value="snack">Snack</option>
                   </select>
-                </div>
+
               </div>
             </div>
           <button
             className="countryButton"
-            onClick={getRecipeData}>Find Recipes</button>
+            onClick={scrollToBottom}
+
+             style={{display: visible}} 
+            >Find Recipes</button>
+             
               <div>
                 <h3 className="subtitle has-text-grey">The recipes are based on your preferences: </h3>
                   <ul>Diet <em>{diet}</em> </ul>
@@ -146,6 +175,7 @@ const CuisineDetail = (props) => {
         </div>
 
     </section>
+    </Fragment> 
   )
 }
 

@@ -14,6 +14,8 @@ import MiddleEast from './pages/cuisine/MiddleEast'
 import Nordic from './pages/cuisine/Nordic'
 import Mediterranean from './pages/cuisine/Mediterranean'
 import CuisineDetailPage from './pages/cuisine/CuisineDetail'
+import About from './pages/About'
+import OurTeam from './pages/OurTeam'
 
 import HomePage from './pages/Home'
 import FaqPage from './pages/Faq'
@@ -60,6 +62,13 @@ const Routes = () =>
 </Route>
 <Route path="/logout">
 <LogoutPage />
+</Route>
+
+<Route path="/about">
+<About />
+</Route>
+<Route path="/OurTeam">
+<OurTeam />
 </Route>
 
 {/* HÖR TILL CREATE SERVICE OCH YOUR SERVICE
@@ -121,7 +130,7 @@ const Routes = () =>
 </Route>
 <Route path="/Nordic">
 <Nordic />
-</Route> 
+</Route>
 <Route path="/Mediterranean">
 <Mediterranean />
 </Route>

@@ -1,6 +1,8 @@
 /* eslint jsx-a11y/anchor-is-valid: 0 */
 
-import React from 'react'
+import React, { useState } from 'react';
+import Select from 'react-select';
+import { tagsOpt } from 'docs/data'
 //import { connect } from 'react-redux' // HOC
 import Hero from 'components/Hero'
 import MealList from 'components/recipe/MealList'
@@ -9,24 +11,35 @@ import MealList from 'components/recipe/MealList'
 //import { fetchServices } from 'actions'
 
 class Home extends React.Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-        mealData: null,
-        tags: ''
-    }
-}
-
-changeHandler = (e) => {
-    this.setState({ [e.target.name]: e.target.value })
-}
-
-
   // state = {
-  //   mealData: null,
-  //   tags: ''
+  //   selectedOption: null
   // }
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      // mealData: null,
+      tags: ''
+    }
+    this.handleChange = this.handleChange.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({ value: event.target.value });
+  }
+
+  handleSubmit(event) {
+    alert('A tag was submitted: ' + this.state.value);
+    event.preventDefault();
+  }
+
+
+  // changeHandler = (e) => {
+  //     this.setState({ [e.target.name]: e.target.value })
+  // }
+
+
 
   //FETCHAR POPULAT DESTINATIONS
   //  componentDidMount() {
@@ -38,26 +51,29 @@ changeHandler = (e) => {
 
 
   render() {
-   // const { services } = this.props
-   const { tags } = this.state
-   function getMealData() {
-    fetch(
-      `https://api.spoonacular.com/recipes/random?limitLicense=true&tags=${tags}&number=4&apiKey=9c651708cc604ceaa7d0cad063018dd4`
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        this.mealData(data)
-      })
-      .catch(() => {
-        console.log("error");
-      })
-  }
-  // function handleChange(e) {
-  //   this.tags(e.target.value);
-  // }
-  
+    const { tags } = this.state;
+    // const { services } = this.props
+    console.log(tags)
 
- 
+    function getMealData() {
+      fetch(
+        // `https://api.spoonacular.com/recipes/random?limitLicense=true&tags=${tags}&number=4&apiKey=9c651708cc604ceaa7d0cad063018dd4`
+      )
+        .then((response) => response.json())
+        .then((data) => {
+          this.mealData(data)
+        })
+        .catch(() => {
+          console.log("error");
+        })
+    }
+    // function handleChange(e) {
+    //   this.tags(e.target.value);
+    // }
+
+
+
+
     return (
       <div>
         <Hero />
@@ -71,24 +87,29 @@ changeHandler = (e) => {
 
             <div className="content-wrapper">
               <div className="columns is-multiline">
-              <div className="control">
-          <input
-                 name="tags"
-                 onChange={this.changeHandler}
-                 className="input is-large"
-                 type="text"
-                 placeholder="Searchwords"/>
-        </div>
-              <button
-            className="countryButton"
-            onClick={getMealData}>Find Recipes</button>
-          {this.mealData && <MealList MealData={this.mealData} />}
-               {/* DISPLAYAR SERVICES
+                <div className="field">
+                  <form onSubmit={this.handleSubmit}>
+                    <label className="label" >Quick Search (e.g. "Italian" or "Salmon")
+              <input type="text" value={this.state.value} onChange={this.handleChange} /></label>
+
+                    <input type="submit" value="Find Recipes"
+                      className="countryButton"
+                      onClick={getMealData} 
+                      />
+                  </form>
+                </div>
+                {this.mealData && <MealList MealData={this.mealData} />}
+                {/* DISPLAYAR SERVICES
                 { this.renderServices(services) } */}
               </div>
             </div>
           </div>
+
+
+
         </section>
+
+
       </div>
     )
   }

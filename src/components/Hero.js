@@ -11,6 +11,11 @@ const Hero = () =>
           <MapIndex className= 'map'/>
           </div>
         </div>
+
+      
+
   </section>
+
+
 
 export default Hero

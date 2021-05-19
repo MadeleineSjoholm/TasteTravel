@@ -25,3 +25,10 @@ const Recipes = mealData.recipes
     </main>
   )
 }
+
+//  {/* <input
+//                  name="tags"
+//                  onChange={this.changeHandler}
+//                  className="input is-large"
+//                  type="text"
+//                  placeholder="Searchwords"/> */}

@@ -411,6 +411,7 @@ Cards and Card content styles
           display: block;
           font-weight: 500;
           font-size: .9rem;
+          padding-top: 100px;
         }
 
         .input {
@@ -525,52 +526,57 @@ div.nav-item.is-drop {
 
 
 /* ==========================================================================
-Fresh Footer
+Footer
 ========================================================================== */
-/*
-footer.footer-dark {
-  background: $secondary;
-  color: $sienna;
-  .columns {
-    margin-top: 35px;
-  }
-  .footer-logo {
-    img {
-      height: 40px;
-    }
-  }
-  .footer-column {
-    .footer-header h3 {
-      font-weight:500;
-      font-size: 1.2rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 20px;
-    }
-    ul.link-list {
-      line-height: 40px;
-      font-size: 1.1rem;
-      a {
-        color: pink;
-        font-weight: 400;
-        transition: all 0.5s;
-      }
-      :hover {
-        color: $secondary;
-      }
-    }
-    .level-item .icon {
-      color: $secondary;
-      transition: all 0.5s;
-      :hover {
-        color: $secondary;
-      }
-    }
-  }
-}
-*/
 
-//Detta används inte just nu.
+.footer{
+  position: absolute;
+  height: 0rem;
+  background-color: lighten($secondary, 30%);
+  left: 0;
+  right: 0;
+  display: grid;
+  grid-template-rows: 0vh;
+  grid-template-columns: 10vw 10vw 10vw 10vw 10vw 10vw ;
+  grid-column-gap: 4rem;
+  grid-template-areas:
+  "logo team contact about follow faq"
+}
+
+  .team {
+    grid-area: team;
+  }
+  .about {
+    grid-area: about;
+  }
+  .contact {
+    grid-area: contact;
+  }
+  .faq {
+    grid-area: faq;
+    align: right;
+    position: center;
+
+
+
+  }
+  .follow {
+    grid-area: follow;
+    display: flex;
+      img {width: 50%}
+  }
+
+.footer img {
+grid-area:logo;
+display: flex;
+width: 7vw;
+height: 11vh;
+padding-top: -10px;
+
+
+
+}
+
 
 /* ==========================================================================
 Inputs styles
@@ -899,10 +905,10 @@ PREFERENCE-PAGE
     background-color: $secondary;
     border-color: $secondary;
     border-style: solid;
-    border-radius: 100px;
+    border-radius: 50px;
     opacity: 1;
-    padding: 30px;
-    margin: 50px;
+    padding: 20px;
+    margin: 10px;
     transition: 0.3s;
 
   }
@@ -921,6 +927,13 @@ PREFERENCE-PAGE
 /*=============================================================================
   Recipes on country page
 =============================================================================*/
+
+.label{
+
+padding-top: 10px;
+
+
+}
 
 .recipeSection {
   background-color: $green;

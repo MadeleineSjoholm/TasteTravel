@@ -7,9 +7,9 @@ export default function RecipeList({ recipeData }) {
   return (
     <main>
       <section className="nutrients">
-        <h1>Your Recomendations</h1>
+        <h1><b>Your Recomendations</b></h1>
         <ul>
-           <li>Results: {totalResults}</li>
+          <li><b>Results: {totalResults}</b></li>
           {/* <li>Carbohydrates: {nutrients.carbohydrates.toFixed(0)}</li>
           <li>Fat: {nutrients.fat.toFixed(0)}</li>
           <li>Protein: {nutrients.protein.toFixed(0)}</li> */}
