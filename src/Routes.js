@@ -15,6 +15,7 @@ import Nordic from './pages/cuisine/Nordic'
 import Mediterranean from './pages/cuisine/Mediterranean'
 import CuisineDetailPage from './pages/cuisine/CuisineDetail'
 import About from './pages/About'
+import OurTeam from './pages/OurTeam'
 
 import HomePage from './pages/Home'
 import FaqPage from './pages/Faq'
@@ -65,6 +66,9 @@ const Routes = () =>
 
 <Route path="/about">
 <About />
+</Route>
+<Route path="/OurTeam">
+<OurTeam />
 </Route>
 
 {/* HÖR TILL CREATE SERVICE OCH YOUR SERVICE
