@@ -19,17 +19,17 @@ const Navbar = props => {
 
 
   return (
-    <nav 
+    <nav
       id={props.id || ''}
-      className="navbar is-fresh is-transparent no-shadow" 
-      role="navigation" 
+      className="navbar is-fresh is-transparent no-shadow"
+      role="navigation"
       aria-label="main navigation">
       <div className="container">
         <div className="navbar-brand">
         <div className= "logo">
             <img src="nylogg.png" alt='logo'/>
           </div>
-          <Link 
+          <Link
             to="/"
             className="navbar-item">
              <div className="title">TasteTravel</div>
@@ -69,18 +69,18 @@ const Navbar = props => {
                 {`Hi ${user.fullName}`}
               </div>
             }
-           <Link 
-              to="/" 
+           <Link
+              to="/"
               className="navbar-item is-secondary">
                 Home
             </Link>
-            {/* <Link 
-              to="/services" 
+            {/* <Link
+              to="/services"
               className="navbar-item is-secondary">
                 Services
             </Link> */}
-            <Link 
-              to="/faq" 
+            <Link
+              to="/faq"
               className="navbar-item is-secondary">
                 Faq
             </Link>
@@ -90,12 +90,12 @@ const Navbar = props => {
                     Manage Your Recipes
                 </a>
                 <div className="navbar-dropdown">
-                  <Link 
+                  <Link
                     to="/services/new"
                     className="navbar-item">
                       Create Recipe
                   </Link>
-                  <Link 
+                  <Link
                     to="/services/me"
                     className="navbar-item">
                       Your Recipes
@@ -104,7 +104,7 @@ const Navbar = props => {
               </div>
             } */}
 
-            
+
             { !isAuth &&
               <React.Fragment>
                 <Link
@@ -112,7 +112,7 @@ const Navbar = props => {
                   className="navbar-item is-secondary modal-trigger" data-modal="auth-modal">
                     Login
                 </Link>
-                <Link 
+                <Link
                   to="/register"
                   className="navbar-item">
                   <span className="button signup-button rounded secondary-btn raised">
@@ -122,7 +122,7 @@ const Navbar = props => {
               </React.Fragment>
             }
             { isAuth &&
-              <Link 
+              <Link
                 to="/profile"
                 className="navbar-item">
                 <span className="button signup-button rounded secondary-btn raised">
@@ -131,7 +131,7 @@ const Navbar = props => {
               </Link>
             }
             { isAuth &&
-              <Link 
+              <Link
                 to="/logout"
                 className="navbar-item">
                 <span className="button signup-button rounded secondary-btn raised">

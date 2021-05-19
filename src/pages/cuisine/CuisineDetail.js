@@ -32,7 +32,7 @@ const CuisineDetail = (props) => {
     setIngredient((Prefs.ingredients1 && Prefs.ingredients1) + (Prefs.ingredients2 && ', ' + Prefs.ingredients2) + (Prefs.ingredients3 && ', ' + Prefs.ingredients3))
     console.log('t1',Prefs)
   })
-  
+
 
   useEffect(() => {
     fetchCuisineById(cuisineId)
@@ -98,8 +98,7 @@ const CuisineDetail = (props) => {
           </div>
           <div className="field">
               <label className="label">Type of Dish</label>
-              <div className="control">
-              
+
                 <div className="select">
                   <select name="dish" onChange={handleChange} >
                     <option value="main course">Main Course</option>
@@ -112,7 +111,7 @@ const CuisineDetail = (props) => {
                     <option value="fingerfood">Fingerfood</option>
                     <option value="snack">Snack</option>
                   </select>
-                </div>
+
               </div>
             </div>
           <button

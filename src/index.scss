@@ -411,6 +411,7 @@ Cards and Card content styles
           display: block;
           font-weight: 500;
           font-size: .9rem;
+          padding-top: 100px;
         }
 
         .input {
@@ -899,10 +900,10 @@ PREFERENCE-PAGE
     background-color: $secondary;
     border-color: $secondary;
     border-style: solid;
-    border-radius: 100px;
+    border-radius: 50px;
     opacity: 1;
-    padding: 30px;
-    margin: 50px;
+    padding: 20px;
+    margin: 10px;
     transition: 0.3s;
 
   }
@@ -921,6 +922,13 @@ PREFERENCE-PAGE
 /*=============================================================================
   Recipes on country page
 =============================================================================*/
+
+.label{
+
+padding-top: 10px;
+
+
+}
 
 .recipeSection {
   background-color: $green;
