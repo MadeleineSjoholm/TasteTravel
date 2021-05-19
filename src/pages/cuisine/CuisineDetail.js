@@ -7,10 +7,14 @@ import RecipeList from 'components/recipe/RecipeList'
 import db from 'db'
 import 'firebase/auth'
 
-
 import Spinner from 'components/Spinner'
 
+import { Fragment } from 'react'; 
+
+
 const CuisineDetail = (props) => {
+  const [visible, setVisible] = useState(true) 
+    
   const userid  = props.auth
   console.log(userid.user.uid)
   const userID = userid.user.uid
@@ -42,7 +46,7 @@ const CuisineDetail = (props) => {
   function getRecipeData() {
     console.log('t2', intolerance, '!', diet,'!', ingredient, '!', type,'!', cuisine.title)
     fetch(
-      `https://api.spoonacular.com/recipes/complexSearch?cuisine=${cuisine.title}&diet=${diet}&excludeIngredients=${ingredient}&intolerances=${intolerance}&type=${type}&addRecipeInformation=true&apiKey=f94d33a64b6f4135ab3e6a2b9fc8ce3c`
+      `https://api.spoonacular.com/recipes/complexSearch?cuisine=${cuisine.title}&diet=${diet}&excludeIngredients=${ingredient}&intolerances=${intolerance}&type=${type}&addRecipeInformation=true&apiKey=9c651708cc604ceaa7d0cad063018dd4`
     )
       .then((response) => response.json())
       .then((data) => {
@@ -52,6 +56,26 @@ const CuisineDetail = (props) => {
         console.log("error");
       })
   }
+  const toggleVisible = () => { 
+    const scrolled = document.documentElement.scrollTop; 
+    if (scrolled > 0){ 
+      setVisible(false) 
+    }  
+    else if (scrolled <= 0){ 
+      setVisible(true) 
+    } 
+  }; 
+    
+  window.addEventListener('scroll', toggleVisible); 
+  const scrollToBottom = () =>{
+    getRecipeData() 
+    window.scrollTo({ 
+      top: document.documentElement.scrollHeight, 
+      behavior: 'smooth'
+      /* you can also use 'auto' behaviour 
+         in place of 'smooth' */
+    }); 
+  }; 
 
   function handleChange(e) {
     setType(e.target.value)
@@ -63,6 +87,7 @@ const CuisineDetail = (props) => {
   if (isFetching || cuisineId !== cuisine.id) { return <Spinner /> }
 
   return (
+    <Fragment> 
     <section className="hero is-fullheight is-default is-bold service-detail-page">
       <div className="hero-body">
         <div className="container has-text-centered">
@@ -101,6 +126,7 @@ const CuisineDetail = (props) => {
 
                 <div className="select">
                   <select name="dish" onChange={handleChange} >
+                  <option value="">-</option>
                     <option value="main course">Main Course</option>
                     <option value="side dish">Side Dish</option>
                     <option value="dessert">Dessert</option>
@@ -116,7 +142,11 @@ const CuisineDetail = (props) => {
             </div>
           <button
             className="countryButton"
-            onClick={getRecipeData}>Find Recipes</button>
+            onClick={scrollToBottom}
+
+             style={{display: visible}} 
+            >Find Recipes</button>
+             
               <div>
                 <h3 className="subtitle has-text-grey">The recipes are based on your preferences: </h3>
                   <ul>Diet <em>{diet}</em> </ul>
@@ -135,6 +165,7 @@ const CuisineDetail = (props) => {
         </div>
 
     </section>
+    </Fragment> 
   )
 }
 
