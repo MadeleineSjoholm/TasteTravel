@@ -35,7 +35,8 @@ import 'firebase/auth'
       ingredients3: "",
       intolerances1: "",
       intolerances2: "",
-      intolerances3: ""
+      intolerances3: "",
+      savedRecipes: ''
   })
   alert('Reset Succesfull, now you can set your new ones!')
   }

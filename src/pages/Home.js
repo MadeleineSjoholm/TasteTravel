@@ -11,29 +11,33 @@ import MealList from 'components/recipe/MealList'
 //import { fetchServices } from 'actions'
 
 class Home extends React.Component {
-  state = {
-    selectedOption: null
-  }
+  // state = {
+  //   selectedOption: null
+  // }
 
   constructor(props) {
     super(props);
     this.state = {
-      selectedOption: null,
-        mealData: null,
-        tags: []
+      // mealData: null,
+      tags: ''
     }
-}
+    this.handleChange = this.handleChange.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
 
- handleChange = selectedOption => {
-  this.setState(
-    { selectedOption },
-    () => console.log(`Option selected:`, this.state.selectedOption)
-  );
-};
+  handleChange(event) {
+    this.setState({ value: event.target.value });
+  }
 
-// changeHandler = (e) => {
-//     this.setState({ [e.target.name]: e.target.value })
-// }
+  handleSubmit(event) {
+    alert('A tag was submitted: ' + this.state.value);
+    event.preventDefault();
+  }
+
+
+  // changeHandler = (e) => {
+  //     this.setState({ [e.target.name]: e.target.value })
+  // }
 
 
 
@@ -48,24 +52,24 @@ class Home extends React.Component {
 
   render() {
     const { tags } = this.state;
-   // const { services } = this.props
-   console.log(tags)
+    // const { services } = this.props
+    console.log(tags)
 
-   function getMealData() {
-    fetch(
-      // `https://api.spoonacular.com/recipes/random?limitLicense=true&tags=${tags}&number=4&apiKey=9c651708cc604ceaa7d0cad063018dd4`
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        this.mealData(data)
-      })
-      .catch(() => {
-        console.log("error");
-      })
-  }
-  // function handleChange(e) {
-  //   this.tags(e.target.value);
-  // }
+    function getMealData() {
+      fetch(
+        // `https://api.spoonacular.com/recipes/random?limitLicense=true&tags=${tags}&number=4&apiKey=9c651708cc604ceaa7d0cad063018dd4`
+      )
+        .then((response) => response.json())
+        .then((data) => {
+          this.mealData(data)
+        })
+        .catch(() => {
+          console.log("error");
+        })
+    }
+    // function handleChange(e) {
+    //   this.tags(e.target.value);
+    // }
 
 
 
@@ -83,26 +87,19 @@ class Home extends React.Component {
 
             <div className="content-wrapper">
               <div className="columns is-multiline">
-              <div className="field">
-              <label className="label" >Quick Search (e.g. "Italian" or "Salmon")</label>
-              <div className="control">
+                <div className="field">
+                  <form onSubmit={this.handleSubmit}>
+                    <label className="label" >Quick Search (e.g. "Italian" or "Salmon")
+              <input type="text" value={this.state.value} onChange={this.handleChange} /></label>
 
-           <Select
-             value={tags}
-             onChange={this.handleChange}
-             options={tagsOpt}
-             isMulti
-             name="tags"
-             className="basic-multi-select"
-             classNamePrefix="select"
-           />
-        </div>
-        </div>
-              <button
-            className="countryButton"
-            onClick={getMealData}>Find Recipes</button>
-          {this.mealData && <MealList MealData={this.mealData} />}
-               {/* DISPLAYAR SERVICES
+                    <input type="submit" value="Find Recipes"
+                      className="countryButton"
+                      onClick={getMealData} 
+                      />
+                  </form>
+                </div>
+                {this.mealData && <MealList MealData={this.mealData} />}
+                {/* DISPLAYAR SERVICES
                 { this.renderServices(services) } */}
               </div>
             </div>
