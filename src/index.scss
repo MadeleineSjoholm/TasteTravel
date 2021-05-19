@@ -526,52 +526,50 @@ div.nav-item.is-drop {
 
 
 /* ==========================================================================
-Fresh Footer
+Footer
 ========================================================================== */
-/*
-footer.footer-dark {
-  background: $secondary;
-  color: $sienna;
-  .columns {
-    margin-top: 35px;
-  }
-  .footer-logo {
-    img {
-      height: 40px;
-    }
-  }
-  .footer-column {
-    .footer-header h3 {
-      font-weight:500;
-      font-size: 1.2rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 20px;
-    }
-    ul.link-list {
-      line-height: 40px;
-      font-size: 1.1rem;
-      a {
-        color: pink;
-        font-weight: 400;
-        transition: all 0.5s;
-      }
-      :hover {
-        color: $secondary;
-      }
-    }
-    .level-item .icon {
-      color: $secondary;
-      transition: all 0.5s;
-      :hover {
-        color: $secondary;
-      }
-    }
-  }
-}
-*/
 
-//Detta används inte just nu.
+.footer{
+  position: absolute;
+  height: 0.5rem;
+  background-color: lighten($secondary, 30%);
+  left: 0;
+  right: 0;
+  display: grid;
+  grid-template-rows: 0vh;
+  grid-template-columns: 10vw 10vw 10vw 15vw 10vw 10vw ;
+  grid-column-gap: 2rem;
+  grid-template-areas:
+  "logo team contact about follow faq"
+}
+  .team {
+    grid-area: team;
+  }
+  .about {
+    grid-area: about;
+  }
+  .contact {
+    grid-area: contact;
+  }
+  .faq {
+    grid-area: faq;
+    align: right;
+    position: center;
+  }
+  .follow {
+    grid-area: follow;
+  }
+
+.footer img {
+grid-area:logo;
+width: 7vw;
+height: 11vh;
+padding-top: -10px;
+
+
+
+}
+
 
 /* ==========================================================================
 Inputs styles

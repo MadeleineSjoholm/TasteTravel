@@ -50,7 +50,7 @@ class Home extends React.Component {
     const { tags } = this.state;
    // const { services } = this.props
    console.log(tags)
-   
+
    function getMealData() {
     fetch(
       // `https://api.spoonacular.com/recipes/random?limitLicense=true&tags=${tags}&number=4&apiKey=9c651708cc604ceaa7d0cad063018dd4`
@@ -66,10 +66,10 @@ class Home extends React.Component {
   // function handleChange(e) {
   //   this.tags(e.target.value);
   // }
-   
-  
 
- 
+
+
+
     return (
       <div>
         <Hero />
@@ -86,7 +86,7 @@ class Home extends React.Component {
               <div className="field">
               <label className="label" >Quick Search (e.g. "Italian" or "Salmon")</label>
               <div className="control">
-              
+
            <Select
              value={tags}
              onChange={this.handleChange}
@@ -107,7 +107,12 @@ class Home extends React.Component {
               </div>
             </div>
           </div>
+
+
+
         </section>
+
+
       </div>
     )
   }
