@@ -1,4 +1,4 @@
-/* eslint jsx-a11y/anchor-is-valid: 0 */
+/*eslint jsx-a11y/anchor-is-valid: 0*/
 
 import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
@@ -27,7 +27,7 @@ const Navbar = props => {
       <div className="container">
         <div className="navbar-brand">
         <div className= "logo">
-           <img src="nylogg.png" alt='logo'/>
+           <img src="nylogg.png" alt="/"/>
           </div>
           <Link
             to="/"
