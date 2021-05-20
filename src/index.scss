@@ -815,33 +815,40 @@ Our team -page
 
 .member {
 
-
-
-
-
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 9vw 9vw 9vw 9vw;
+  grid-column-gap: 4rem;
+  grid-template-areas:
+  "member1 member2 member3 member4"
 }
 
 .member1 img {
-height: 15%;
-width: 15%;
+grid-area: member1;
 border-radius: 50%;
+
 
 }
 
 .member2 img{
-height: 15%;
-width: 15%;
+grid-area: member2;
+
 border-radius: 50%;
 
 }
 .member3 img {
-height: 15%;
-width: 15%;
+grid-area: member3;
+
 }
 
 .member4 img {
-height: 15%;
-width: 15%;
+grid-area: member4;
+
+}
+
+.person {
+text-align: center;
+color: $sienna;
 }
 
 
