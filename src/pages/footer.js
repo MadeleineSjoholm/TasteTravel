@@ -1,8 +1,9 @@
 import React from "react";
 
 const Footer = () => (
-  <footer class="footer">
-    <div>
+  <div class="footer">
+  
+
 
   <div className="team">
   <a href="/OurTeam">OUR TEAM</a>
@@ -16,9 +17,7 @@ const Footer = () => (
     <a href="/About">ABOUT US</a>
     </div>
 
-    <div className="follow">
-    <a href="/">FOLLOW</a>
-    </div>
+    <div className="follow"> <h1>FOLLOW US</h1></div>
 
         <div className="logos">
         <div className="facebook"><img src="facebook.png"/></div>
@@ -27,8 +26,8 @@ const Footer = () => (
         <div className="twitter"><img src="twitter.png"/></div>
 
         </div>
-</div>
-    </footer>
+
+    </div>
 );
 
 export default Footer;
