@@ -19,7 +19,6 @@ const registerUser = (userData) => {
       _ => () => {},
       errorMessage => addToast(errorMessage, { appearance: 'error', autoDismiss: true, autoDismissTimeout: 3000 }))
 
-
     }
 
   if (redirect) { return <Redirect to="/onboard" /> }

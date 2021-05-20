@@ -10,23 +10,42 @@ import 'firebase/auth'
 export default function Recipe({recipe}, { auth }) {
   
   const [imageUrl, setImageUrl] = useState("")
-  const user = firebase.auth().currentUser
+  const user = firebase.auth().currentUser  
+  console.log( recipe.id )
+  console.log(user)
+  // db.collection("FavRec").doc(user.uid).set({
+  //   FavoriteRecipe: ' '
+  // })
 
 
 const setFavorite = () => {
-  console.log( recipe.id )
-  const userid  = auth
-  console.log(user)
-  db.collection("FavRec").doc(user.uid).set({
-    FavoriteRecipe: recipe.id
-})
-alert('Reset Succesfull, now you can set your new ones!')
+  db.collection("FavRec").doc(user.uid).onSnapshot((doc) => {
+    const favoriteRecipes = doc.data()
+    console.log(favoriteRecipes.FavoriteRecipe)
 
-  }
+    db.collection("FavRec").doc(user.uid).set({
+      FavoriteRecipe: favoriteRecipes.FavoriteRecipe
+    })
+
+    if (favoriteRecipes.FavoriteRecipe.includes(recipe.id)) {
+      alert('Already added to your favorites!')
+      return favoriteRecipes.FavoriteRecipe
+
+    }
+    else{
+      db.collection("FavRec").doc(user.uid).set({
+        FavoriteRecipe: favoriteRecipes.FavoriteRecipe+','+recipe.id
+      })
+      alert('Added successfully to yout SAVED RECIPES')
+      return favoriteRecipes.FavoriteRecipe
+    }
+ })
+}
+
 
 useEffect(() => {
   fetch(
-    `https://api.spoonacular.com/recipes/${recipe.id}/information?apiKey=df8f6279130e4a768bd08e6a5d7ad77b&includeNutrition=false` 
+    `https://api.spoonacular.com/recipes/${recipe.id}/information?apiKey=9c651708cc604ceaa7d0cad063018dd4&includeNutrition=false` 
     )
     .then((response) => response.json())
     .then((data) => {
