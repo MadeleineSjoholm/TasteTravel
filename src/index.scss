@@ -531,52 +531,70 @@ Footer
 
 .footer{
   position: absolute;
-  height: 0rem;
+  display: hidden;
+  padding: 30px;
   background-color: lighten($secondary, 30%);
+  grid-column-gap: 5rem;
   left: 0;
   right: 0;
   display: grid;
-  grid-template-rows: 0vh;
-  grid-template-columns: 10vw 10vw 10vw 10vw 10vw 10vw ;
-  grid-column-gap: 4rem;
+  grid-template-rows: auto;
+  grid-template-columns: 8vw 12vw 12vw 12vw 6vw 10vw;
+
   grid-template-areas:
-  "logo team contact about follow faq"
+  "space team contact about follow logos"
 }
 
+
   .team {
+    //margin-left: 200px;
     grid-area: team;
   }
   .about {
+  //  margin-left: 50px;
     grid-area: about;
   }
   .contact {
+  // margin-left: 100px;
     grid-area: contact;
   }
-  .faq {
-    grid-area: faq;
-    align: right;
-    position: center;
 
-
-
-  }
   .follow {
+  //  margin-left: 10px;
     grid-area: follow;
-    display: flex;
-      img {width: 50%}
-  }
-
-.footer img {
-grid-area:logo;
-display: flex;
-width: 7vw;
-height: 11vh;
-padding-top: -10px;
-
-
 
 }
 
+.logos{
+margin-left: -60px;
+grid-area: logos;
+display: grid;
+grid-template-rows: auto;
+grid-template-columns: 2vw 2vw 3vw 2vw;
+grid-template-areas: "facebook instagram youtube twitter"
+}
+
+.facebook img{
+grid-area: facebook;
+margin-left: -8px;
+}
+
+
+.instagram img{
+grid-area: instagram;
+}
+
+
+.youtube img{
+grid-area: youtube;
+
+}
+
+
+.twitter img{
+grid-area: twitter;
+
+}
 
 /* ==========================================================================
 Inputs styles
@@ -809,6 +827,44 @@ PREFERENCE-PAGE
 }
 
 
+/*===========================================================================
+Our team -page
+===========================================================================*/
+
+.member {
+
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 9vw 9vw 9vw 9vw;
+  grid-column-gap: 4rem;
+  grid-template-areas:
+  "member1 member2 member3 member4"
+}
+
+.member1 img {
+grid-area: member1;
+}
+.member2 img{
+grid-area: member2;
+}
+.member3 img {
+grid-area: member3;
+}
+.member4 img {
+grid-area: member4;
+}
+
+.person {
+text-align: center;
+color: $sienna;
+}
+
+
+
+/*===========================================================================
+
+===========================================================================*/
+
   /*===========================================================================
   OnBoard-och allt som görs på den!! Har detta nya system och all denna kod pga cirklarna blir annars konstiga.
   ===========================================================================*/
@@ -956,7 +1012,6 @@ article {
    text-decoration: none;
    background-color: none;
 }
-
 
 /*============================================================================
 RecipePage
@@ -1184,6 +1239,16 @@ RecipePage
         font-size: 1rem;
       }
     }
+      .footer {
+        //position: absolute;
+        display: block;
+        //padding-bottom: 100px;
+        grid-column-gap: 1rem;
+        letter-spacing: 5px;
+        height: 50vh;
+        margin: 0;
+        background-color: lighten($secondary, 30%);
+      }
   }
 
   @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
