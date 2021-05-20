@@ -22,7 +22,6 @@ const SavedRecipes = () => {
     
     console.log(savedRec.FavoriteRecipe)
     const recipeStr = savedRec.FavoriteRecipe
-    console.log(recipeStr)
     const recipes = recipeStr.split(',')
     console.log(recipes)
     console.log(recipes.length)
