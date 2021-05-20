@@ -531,14 +531,15 @@ Footer
 
 .footer{
   position: absolute;
-  padding: 20px;
+  display: hidden;
+  padding: 30px;
   background-color: lighten($secondary, 30%);
   grid-column-gap: 5rem;
   left: 0;
   right: 0;
   display: grid;
   grid-template-rows: auto;
-  grid-template-columns: 5vw 12vw 12vw 12vw 10vw 15vw;
+  grid-template-columns: 8vw 12vw 12vw 12vw 6vw 10vw;
 
   grid-template-areas:
   "space team contact about follow logos"
@@ -565,6 +566,7 @@ Footer
 }
 
 .logos{
+margin-left: -60px;
 grid-area: logos;
 display: grid;
 grid-template-rows: auto;
