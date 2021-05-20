@@ -538,28 +538,28 @@ Footer
   right: 0;
   display: grid;
   grid-template-rows: auto;
-  grid-template-columns: 20vw 15vw 10vw 10vw 15vw;
+  grid-template-columns: 5vw 12vw 12vw 12vw 10vw 15vw;
 
   grid-template-areas:
-  "team contact about follow logos"
+  "space team contact about follow logos"
 }
 
 
   .team {
-    margin-left: 200px;
+    //margin-left: 200px;
     grid-area: team;
   }
   .about {
-    margin-left: 50px;
+  //  margin-left: 50px;
     grid-area: about;
   }
   .contact {
-   margin-left: 100px;
+  // margin-left: 100px;
     grid-area: contact;
   }
 
   .follow {
-    margin-left: 10px;
+  //  margin-left: 10px;
     grid-area: follow;
 
 }

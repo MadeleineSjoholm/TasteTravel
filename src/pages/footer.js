@@ -16,7 +16,7 @@ const Footer = () => (
     <a className="hreflink" href="/About">ABOUT US</a>
     </div>
 
-    <div className="follow"> <h1>FOLLOW US</h1></div>
+    <div className="follow"> <h1>FOLLOW US:</h1></div>
 
         <div className="logos">
         <div className="facebook"><img src="facebook.png"/></div>
