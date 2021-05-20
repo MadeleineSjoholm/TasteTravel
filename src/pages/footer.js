@@ -19,10 +19,10 @@ const Footer = () => (
     <div className="follow"> <h1>FOLLOW US:</h1></div>
 
         <div className="logos">
-        <div className="facebook"><img src="facebook.png"/></div>
-        <div className="instagram"><img src="instagram.png"/></div>
-        <div className="youtube"> <img src="youtube.png"/></div>
-        <div className="twitter"><img src="twitter.png"/></div>
+        <div className="facebook"><img src="facebook.png" alt='pic'/></div>
+        <div className="instagram"><img src="instagram.png" alt='pic'/></div>
+        <div className="youtube"> <img src="youtube.png" alt='pic'/></div>
+        <div className="twitter"><img src="twitter.png" alt='pic'/></div>
 
         </div>
 

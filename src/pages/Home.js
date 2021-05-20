@@ -1,8 +1,8 @@
 /* eslint jsx-a11y/anchor-is-valid: 0 */
 
-import React, { useState } from 'react';
-import Select from 'react-select';
-import { tagsOpt } from 'docs/data'
+import React from 'react';
+// import Select from 'react-select';
+// import { tagsOpt } from 'docs/data'
 //import { connect } from 'react-redux' // HOC
 import Hero from 'components/Hero'
 import MealList from 'components/recipe/MealList'

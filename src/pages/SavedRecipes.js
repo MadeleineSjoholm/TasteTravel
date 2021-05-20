@@ -1,5 +1,5 @@
 import withAuthorization from 'components/hoc/withAuthorization'
-import React, {useState, useEffect} from 'react'
+import React, {useState } from 'react'
 import db from 'db'
 import firebase from 'firebase/app'
 import 'firebase/auth'
@@ -8,7 +8,7 @@ import 'firebase/auth'
 
 const SavedRecipes = () => {
   const [imageUrl, setImageUrl] = useState("")
-  const [FavRecipe, setFavRecipe] = useState("")
+  //const [FavRecipe, setFavRecipe] = useState("")
   const [title, settitle] = useState("")
   const [readyInMinutes, setreadyInMinutes] = useState("")
   const [servings, setservings] = useState("")
