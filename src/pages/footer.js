@@ -1,38 +1,34 @@
 import React from "react";
 
 const Footer = () => (
-  <div class="footer">
-
-
-    <img src="nylogg.png" alt='logo' />
+  <footer class="footer">
+    <div>
 
   <div className="team">
   <a href="/OurTeam">OUR TEAM</a>
-    </div>
+  </div>
 
     <div className="contact">
     <a href="/contact">CONTACT</a>
-      </div>
-
-
-
-
-        <div className="follow">
-          <h1>FOLLOW US</h1>
-          <img className="follow" src="facebook.png" alt='logo' width="200" height="300" />
-          <img className="follow" src="instagram.png" alt='logo' width="200" height="300" />
-          <img className="follow" src="youtube.png" alt='logo' width="200" height="300" />
-          <img className="follow" src="twitter.png" alt='logo' width="200" height="300" />
-          </div>
-
-
-          <div className="about">
-          <a href="/About">ABOUT US</a>
-            </div>
-
-
-
     </div>
+
+    <div className="about">
+    <a href="/About">ABOUT US</a>
+    </div>
+
+    <div className="follow">
+    <a href="/">FOLLOW</a>
+    </div>
+
+        <div className="logos">
+        <div className="facebook"><img src="facebook.png"/></div>
+        <div className="instagram"><img src="instagram.png"/></div>
+        <div className="youtube"> <img src="youtube.png"/></div>
+        <div className="twitter"><img src="twitter.png"/></div>
+
+        </div>
+</div>
+    </footer>
 );
 
 export default Footer;

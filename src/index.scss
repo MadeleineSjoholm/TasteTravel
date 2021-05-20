@@ -531,17 +531,19 @@ Footer
 
 .footer{
   position: absolute;
-  height: 0rem;
+
   background-color: lighten($secondary, 30%);
+
   left: 0;
   right: 0;
   display: grid;
-  grid-template-rows: 0vh;
-  grid-template-columns: 10vw 10vw 10vw 10vw 10vw 10vw ;
-  grid-column-gap: 4rem;
+  grid-template-rows: auto;
+  grid-template-columns: 10vw 10vw 10vw 10vw 1vw;
+
   grid-template-areas:
-  "logo team contact about follow faq"
+  "team contact about follow logos"
 }
+
 
   .team {
     grid-area: team;
@@ -552,31 +554,41 @@ Footer
   .contact {
     grid-area: contact;
   }
-  .faq {
-    grid-area: faq;
-    align: right;
-    position: center;
 
-
-
-  }
   .follow {
     grid-area: follow;
-    display: flex;
-      img {width: 50%}
-  }
-
-.footer img {
-grid-area:logo;
-display: flex;
-width: 7vw;
-height: 11vh;
-padding-top: -10px;
-
-
 
 }
 
+.logos{
+
+display: grid;
+grid-template-rows: auto;
+grid-template-columns: 3vw 3vw 4vw 3vw;
+grid-template-areas: "facebook instagram youtube twitter"
+}
+
+.facebook img{
+grid-area: facebook;
+
+}
+
+
+.instagram img{
+grid-area: instagram;
+}
+
+
+.youtube img{
+grid-area: youtube;
+
+}
+
+
+.twitter img{
+grid-area: twitter;
+
+}
 
 /* ==========================================================================
 Inputs styles
@@ -825,25 +837,15 @@ Our team -page
 
 .member1 img {
 grid-area: member1;
-border-radius: 50%;
-
-
 }
-
 .member2 img{
 grid-area: member2;
-
-border-radius: 50%;
-
 }
 .member3 img {
 grid-area: member3;
-
 }
-
 .member4 img {
 grid-area: member4;
-
 }
 
 .person {
