@@ -2,19 +2,18 @@ import React from "react";
 
 const Footer = () => (
   <div class="footer">
-  
 
 
   <div className="team">
-  <a href="/OurTeam">OUR TEAM</a>
+      <a className="hreflink" href="/OurTeam">OUR TEAM</a>
   </div>
 
     <div className="contact">
-    <a href="/contact">CONTACT</a>
+    <a className="hreflink" href="/contact">CONTACT</a>
     </div>
 
     <div className="about">
-    <a href="/About">ABOUT US</a>
+    <a className="hreflink" href="/About">ABOUT US</a>
     </div>
 
     <div className="follow"> <h1>FOLLOW US</h1></div>
