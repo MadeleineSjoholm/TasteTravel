@@ -2,17 +2,17 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 
-import Africa from './pages/cuisine/Africa'
-import Italy from './pages/cuisine/Italy'
-import Britain from './pages/cuisine/Britain'
-import America from './pages/cuisine/America'
-import China from './pages/cuisine/China'
-import EastEurope from './pages/cuisine/EastEurope'
-import India from './pages/cuisine/India'
-import LatinAmerica from './pages/cuisine/LatinAmerica'
-import MiddleEast from './pages/cuisine/MiddleEast'
-import Nordic from './pages/cuisine/Nordic'
-import Mediterranean from './pages/cuisine/Mediterranean'
+// import Africa from './pages/cuisine/Africa'
+// import Italy from './pages/cuisine/Italy'
+// import Britain from './pages/cuisine/Britain'
+// import America from './pages/cuisine/America'
+// import China from './pages/cuisine/China'
+// import EastEurope from './pages/cuisine/EastEurope'
+// import India from './pages/cuisine/India'
+// import LatinAmerica from './pages/cuisine/LatinAmerica'
+// import MiddleEast from './pages/cuisine/MiddleEast'
+// import Nordic from './pages/cuisine/Nordic'
+// import Mediterranean from './pages/cuisine/Mediterranean'
 import CuisineDetailPage from './pages/cuisine/CuisineDetail'
 import About from './pages/About'
 import OurTeam from './pages/OurTeam'
@@ -101,7 +101,7 @@ const Routes = () =>
 <Help />
 </Route>
 {/* Countries/Regions: Cuisine */}
-<Route path="/Italy">
+{/* <Route path="/Italy">
 <Italy />
 </Route>
 <Route path="/Africa">
@@ -133,7 +133,7 @@ const Routes = () =>
 </Route>
 <Route path="/Mediterranean">
 <Mediterranean />
-</Route>
+</Route> */}
 {/* END OF CUISINE */}
 
 <Route path="/Preferences">
