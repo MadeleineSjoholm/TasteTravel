@@ -4,6 +4,8 @@ import React from 'react'
 
 
 const Sidebar = () => {
+
+
   return (
     <div className="sidebar">
       <div className="sidebar-header">
@@ -30,9 +32,10 @@ const Sidebar = () => {
         </button>
 
         <br></br>
-        <button className="nav-section-title">
+        <button  className="nav-section-title">
         <li>
-        <a href="/savedRecipes"><img src="heart.png" width="50" height="50" alt='heart' /><br></br>SAVED RECIPES</a>        
+        <a href="/savedRecipes">
+        <img src="heart.png" width="50" height="50" alt='heart' /><br></br>SAVED RECIPES</a>        
         </li>
         </button>
 

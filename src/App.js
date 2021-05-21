@@ -8,7 +8,7 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import ServiceApp from './ServiceApp'
 
 import { onAuthStateChanged, storeAuthUser } from 'actions'
-import Footer from './pages/footer'
+import Footer from './components/footer'
 
 const store = initStore()
 

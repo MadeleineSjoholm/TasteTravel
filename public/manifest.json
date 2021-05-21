@@ -8,12 +8,12 @@
       "type": "image/x-icon"
     },
     {
-      "_src": "logo192.png",
+      "_src": "nylogg.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logga.png",
+      "src": "nylogg.png",
       "type": "image/png",
       "sizes": "512x512"
     }

@@ -37,7 +37,7 @@ return (
         <p className="subtitle has-text-grey">Please login to start TasteTravel! </p>
         <div className="box">
           <figure className="avatar">
-            <img src="Logga.png" alt="Company Logo" />
+            <img src="nylogg.png" alt="Company Logo" />
           </figure>
           <form onSubmit={handleSubmit(onLogin)}>
             <div className="field">
