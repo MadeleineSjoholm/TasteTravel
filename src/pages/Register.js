@@ -7,6 +7,7 @@ import { register } from 'actions'
 import { useToasts } from 'react-toast-notifications'
 import onlyGuest from 'components/hoc/onlyGuest'
 import { Redirect } from 'react-router-dom'
+import 'firebase/auth'
 
 const Register = (props) => {
 const { addToast } = useToasts()
@@ -23,7 +24,6 @@ const registerUser = (userData) => {
 
   if (redirect) { return <Redirect to="/onboard" /> }
 
-
 return (
   <div className="auth-page">
     <figure className="map_background">
@@ -35,7 +35,7 @@ return (
         <p className="subtitle has-text-grey"> Let's start your TasteTravel journey!</p>
         <div className="box">
           <figure className="avatar">
-            <img src="logga.png" alt="Company Logo" />
+            <img src="nylogg.png" alt="Company Logo" />
           </figure>
           <RegisterForm onRegister={registerUser} />
         </div>

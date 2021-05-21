@@ -15,7 +15,7 @@ const OurTeam = ({auth}) => {
 <div className = "member">
 
 <div className="member1">
-<img src="Madeleine.png" alt='pic'/>
+<img src="./TEAM/Madeleine.png" alt='pic'/>
 <div className="person"> Madeleine </div><br></br>
 <p>
 
@@ -36,7 +36,7 @@ här text om personen och dess roll.....
 </div>
 
 <div className= "member2" >
-<img src="moana.png" alt='pic'/>
+<img src="./TEAM/moana.png" alt='pic'/>
 <div className="person"> Moana </div><br></br>
 <p>
 
@@ -59,7 +59,7 @@ här text om personen och dess roll.....
 </div>
 
 <div className= "member3" >
-<img src="alva.png" alt='pic'/>
+<img src="./TEAM/alva.png" alt='pic'/>
 <div className="person"> Alva </div><br></br>
 <p>
 
@@ -81,7 +81,7 @@ här text om personen och dess roll.....
 </div>
 
 <div className= "member4" >
-<img src="felicia.png" alt='pic'/>
+<img src="./TEAM/felicia.png" alt='pic'/>
 <div className="person"> Felicia </div><br></br>
 <p>
 
