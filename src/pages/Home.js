@@ -1,8 +1,7 @@
 /* eslint jsx-a11y/anchor-is-valid: 0 */
 
-import React from 'react';
-// import Select from 'react-select';
-// import { tagsOpt } from 'docs/data'
+import React, { useState } from 'react';
+import ReactDOM from 'react-dom'
 //import { connect } from 'react-redux' // HOC
 import Hero from 'components/Hero'
 import MealList from 'components/recipe/MealList'
@@ -18,26 +17,38 @@ class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      // mealData: null,
-      tags: ''
+      mealData: null,
+      tags1: ''
     }
-    this.handleChange = this.handleChange.bind(this)
-    this.handleSubmit = this.handleSubmit.bind(this);
+    // this.handleChange = this.handleChange.bind(this)
+    // this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleChange(event) {
-    this.setState({ value: event.target.value });
-  }
-
-  handleSubmit(event) {
-    alert('A tag was submitted: ' + this.state.value);
+  mySubmitHandler = (event) => {
     event.preventDefault();
+    this.getMealData();
+    alert("You are submitting " + this.state.tags1);
   }
 
+  myChangeHandler = (event) => {
+    this.setState({ tags1: event.target.value });
+    console.log(this.state.tags1)
+  }
 
-  // changeHandler = (e) => {
-  //     this.setState({ [e.target.name]: e.target.value })
-  // }
+   getMealData = (event) => {
+    event.preventDefault();
+    var tags = this.state.tags1
+    fetch(
+      `https://api.spoonacular.com/recipes/random?limitLicense=true&tags=${tags}&number=4&apiKey=df8f6279130e4a768bd08e6a5d7ad77b`
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        this.mealData(data)
+      })
+      .catch(() => {
+        console.log("error");
+      })
+  }
 
 
 
@@ -51,26 +62,23 @@ class Home extends React.Component {
 
 
   render() {
-    const { tags } = this.state;
-    // const { services } = this.props
-    console.log(tags)
+  //   const tags = this.state.tags1;
+  //   // const { services } = this.props
+  //   console.log(tags)
+  // function getMealData() {
+  //     fetch(
+  //       // `https://api.spoonacular.com/recipes/random?limitLicense=true&tags=${tags}&number=4&apiKey=9c651708cc604ceaa7d0cad063018dd4`
+  //     )
+  //       .then((response) => response.json())
+  //       .then((data) => {
+  //         this.mealData(data)
+  //       })
+  //       .catch(() => {
+  //         console.log("error");
+  //       })
+  //   }
 
-    function getMealData() {
-      fetch(
-        // `https://api.spoonacular.com/recipes/random?limitLicense=true&tags=${tags}&number=4&apiKey=9c651708cc604ceaa7d0cad063018dd4`
-      )
-        .then((response) => response.json())
-        .then((data) => {
-          this.mealData(data)
-        })
-        .catch(() => {
-          console.log("error");
-        })
-    }
-    // function handleChange(e) {
-    //   this.tags(e.target.value);
-    // }
-
+  
 
 
 
@@ -88,14 +96,22 @@ class Home extends React.Component {
             <div className="content-wrapper">
               <div className="columns is-multiline">
                 <div className="field">
-                  <form onSubmit={this.handleSubmit}>
+                  <form onSubmit={this.getMealData}>
                     <label className="label" >Quick Search (e.g. "Italian" or "Salmon")
-              <input type="text" value={this.state.value} onChange={this.handleChange} /></label>
-
-                    <input type="submit" value="Find Recipes"
-                      className="countryButton"
-                      onClick={getMealData} 
+                    <input
+                        type='text'
+                        onChange={this.myChangeHandler}
                       />
+                      {/* <input type="text" value={this.state.tags1} onChange={this.handleChange} /> */}
+                    </label>
+                    <h1>Hello {this.state.tags1}</h1>
+                    <input
+                      type="submit"
+                      value="Find Recipes"
+                      className="countryButton"
+
+                    // onClick={getMealData}
+                    />
                   </form>
                 </div>
                 {this.mealData && <MealList MealData={this.mealData} />}
