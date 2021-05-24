@@ -141,7 +141,7 @@ const Navbar = props => {
               <Link
                 to="/logout"
                 className="navbar-item">
-                <span className="button signup-button rounded secondary-btn raised">
+                <span className="button signup-button rounded redish raised">
                     Logout
                 </span>
               </Link>

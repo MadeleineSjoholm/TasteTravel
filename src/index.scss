@@ -8,6 +8,7 @@ $sienna: #482728; // Dark Sienna - the darkest purple
 $secondary: #B287A3; //Opera Mauve
 $lavender:#7E4E60; // Twilight Lavender
 $white: #ffff; //white
+$redish:rgb(248, 140, 140); //fÄRG TILL LOGOUT KNAPPEN
 
 
 /* ==========================================================================
@@ -271,6 +272,10 @@ Classes to change the feel of bulma buttons
         background-color: $secondary;
       }
     }
+  }
+  &.button.redish {
+    color: black;
+    background-color: $redish;
   }
 }
 
