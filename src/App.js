@@ -7,8 +7,9 @@ import initStore from './store'
 import { BrowserRouter as Router } from 'react-router-dom'
 import ServiceApp from './ServiceApp'
 
+
 import { onAuthStateChanged, storeAuthUser } from 'actions'
-import Footer from './components/footer'
+
 
 const store = initStore()
 
@@ -33,8 +34,7 @@ class App extends React.Component {
             <ServiceApp />
           </Router>
         </ToastProvider>
-        <Footer>
-          </Footer>
+
       </Provider>
 
     )

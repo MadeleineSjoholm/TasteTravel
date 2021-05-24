@@ -1,4 +1,7 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faYoutube,faFacebook,faTwitter,faInstagram} from "@fortawesome/free-brands-svg-icons";
+
 
 const Footer = () => (
   <div className="footer">
@@ -18,13 +21,24 @@ const Footer = () => (
 
     <div className="follow"> <h1>FOLLOW US:</h1></div>
 
-        <div className="logos">
-        <div className="facebook"><img src="facebook.png" alt='pic'/></div>
-        <div className="instagram"><img src="instagram.png" alt='pic'/></div>
-        <div className="youtube"> <img src="youtube.png" alt='pic'/></div>
-        <div className="twitter"><img src="twitter.png" alt='pic'/></div>
+    <div className = "socialmedia">
 
-        </div>
+
+    <a className="youtube" href="https://www.youtube.com/">
+      <FontAwesomeIcon icon={faYoutube} size="2x" /></a>
+
+      <a className="facebook" href="https://www.facebook.com/">
+        <FontAwesomeIcon icon={faFacebook} size="2x" /></a>
+
+        <a className="twitter" href="https://www.twitter.com/">
+          <FontAwesomeIcon icon={faTwitter} size="2x" /></a>
+
+          <a className="instagram" href="https://www.instagram.com/">
+            <FontAwesomeIcon icon={faInstagram} size="2x" />
+            </a>
+</div>
+
+
 
     </div>
 );

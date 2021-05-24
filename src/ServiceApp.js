@@ -5,6 +5,8 @@ import Sidebar from 'components/Sidebar'
 import Navbar from 'components/Navbar'
 import Routes from './Routes'
 import Spinner from 'components/Spinner'
+import Footer from 'components/footer'
+
 
 import { logout } from 'actions'
 
@@ -14,6 +16,7 @@ class ServiceApp extends React.Component {
 
   renderApplication = auth =>
   <React.Fragment>
+
     <Navbar
         loadFresh
         id="navbar-main"
@@ -24,7 +27,10 @@ class ServiceApp extends React.Component {
       logout={() => this.handleLogout(auth.user.uid)}
       id="navbar-clone" />
     <Sidebar />
+
     <Routes />
+      <Footer/>
+      
   </React.Fragment>
 
   render() {
