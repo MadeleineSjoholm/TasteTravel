@@ -18,7 +18,7 @@ class Home extends React.Component {
     super(props);
     this.state = {
       mealData: null,
-      tags1: ''
+      tags: ''
     }
     // this.handleChange = this.handleChange.bind(this)
     // this.handleSubmit = this.handleSubmit.bind(this);
@@ -27,27 +27,27 @@ class Home extends React.Component {
   mySubmitHandler = (event) => {
     event.preventDefault();
     this.getMealData();
-    alert("You are submitting " + this.state.tags1);
+    alert("You are submitting " + this.state.tags);
   }
 
   myChangeHandler = (event) => {
-    this.setState({ tags1: event.target.value });
-    console.log(this.state.tags1)
+    this.setState({ tags: event.target.value });
+    console.log(this.state.tags)
   }
 
    getMealData = (event) => {
     event.preventDefault();
-    var tags = this.state.tags1
+    var tags = this.state.tags
+    // const { mealData } = this.state.mealData
+    console.log(tags + " test")
     fetch(
       `https://api.spoonacular.com/recipes/random?limitLicense=true&tags=${tags}&number=4&apiKey=df8f6279130e4a768bd08e6a5d7ad77b`
     )
       .then((response) => response.json())
       .then((data) => {
-        this.mealData(data)
-      })
-      .catch(() => {
-        console.log("error");
-      })
+        this.setState({ mealData: data });
+        console.log(tags)
+    });
   }
 
 
@@ -104,7 +104,7 @@ class Home extends React.Component {
                       />
                       {/* <input type="text" value={this.state.tags1} onChange={this.handleChange} /> */}
                     </label>
-                    <h1>Hello {this.state.tags1}</h1>
+                    <h1>Hello {this.state.tags}</h1>
                     <input
                       type="submit"
                       value="Find Recipes"
