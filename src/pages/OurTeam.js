@@ -22,6 +22,8 @@ const OurTeam = ({auth}) => {
             <img src="./TEAM/moana.png" alt='pic'/>
             <div className="person"> Moana </div><br />
             <p>
+            Acting project manager and database designer. 
+            Also as a part of the back-end team.
             <br />
             </p>
           </div>
