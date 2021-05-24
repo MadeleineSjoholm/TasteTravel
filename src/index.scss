@@ -818,7 +818,7 @@ Our team -page
 
   display: grid;
   grid-template-rows: auto;
-  grid-template-columns: 9vw 9vw 9vw 9vw;
+  grid-template-columns: 10vw 10vw 10vw 10vw;
   grid-column-gap: 4rem;
   grid-template-areas:
   "member1 member2 member3 member4"
@@ -840,6 +840,10 @@ grid-area: member4;
 .person {
 text-align: center;
 color: $sienna;
+}
+
+.p {
+  font-size: smaller;
 }
 
 
