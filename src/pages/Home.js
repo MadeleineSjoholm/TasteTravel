@@ -41,12 +41,13 @@ class Home extends React.Component {
     // const { mealData } = this.state.mealData
     console.log(tags + " test")
     fetch(
-      `https://api.spoonacular.com/recipes/random?limitLicense=true&tags=${tags}&number=4&apiKey=df8f6279130e4a768bd08e6a5d7ad77b`
+      // `https://api.spoonacular.com/recipes/random?limitLicense=true&tags=${tags}&number=4&apiKey=df8f6279130e4a768bd08e6a5d7ad77b`
+      `https://api.spoonacular.com/recipes/complexSearch?cuisine=${tags}&addRecipeInformation=true&apiKey=2b27d20d15814f56a742d05fa5d873a8`
     )
       .then((response) => response.json())
       .then((data) => {
         this.setState({ mealData: data });
-        console.log(tags)
+        console.log(tags +" wowow")
     });
   }
 

@@ -1,8 +1,8 @@
 import React from 'react'
-import Recipe from './Meal'
+import Meal from './Meal'
 
-export default function MostPopList({ mealData }) {
-// const Recipes = mealData.recipes
+export default function MealList({ mealData }) {
+const recipes = mealData.recipes
 
   return (
     <main>
@@ -12,23 +12,17 @@ export default function MostPopList({ mealData }) {
           {/* <li><b>Most popular: {Recipes.veryPopular}</b></li>
           <li>Sustainable: {Recipes.sustainable}</li>
           <li>Health Score: {Recipes.healthScore}</li> */}
+          <li><b>Most popular: {mealData.recipes.total}</b></li>
           {/* <li>Carbohydrates: {nutrients.carbohydrates.toFixed(0)}</li>
           <li>Fat: {nutrients.fat.toFixed(0)}</li>
           <li>Protein: {nutrients.protein.toFixed(0)}</li> */}
         </ul>
       </section>
-      <section className="recipes">
-        {mealData.recipes.map((meal) => {
-          return <Recipe key={meal.id} recipe={meal} />
+      <section className="meals">
+        {mealData.meals.map((meal) => {
+          return <Meal key={meal.id} meal={meal} />
         })}
       </section>
     </main>
   )
 }
-
-//  {/* <input
-//                  name="tags"
-//                  onChange={this.changeHandler}
-//                  className="input is-large"
-//                  type="text"
-//                  placeholder="Searchwords"/> */}
