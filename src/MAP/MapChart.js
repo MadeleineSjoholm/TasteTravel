@@ -1,4 +1,5 @@
 import React, { memo } from "react";
+import {useState, useEffect} from 'react'
 
 import {
   NordicCuisine,
@@ -29,9 +30,20 @@ const rounded = num => {
     return Math.round(num / 100) / 10 + "K";
   }
 };
-*/ 
+*/
+
 
 const MapChart = ({ setTooltipContent }) => {
+  const [didMount, setDidMount] = useState(false);
+
+  useEffect(() => {
+     setDidMount(true);
+     return () => setDidMount(false);
+  }, [])
+
+  if(!didMount) {
+    return null;
+  }
   return (
     <>
       <ComposableMap data-tip="" projectionConfig={{ scale: 200 }}>
