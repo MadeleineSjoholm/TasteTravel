@@ -123,6 +123,13 @@ const Navbar = props => {
             }
             { isAuth &&
               <Link
+                to="/OnBoard"
+                className="navbar-item is-secondary">
+                    On Board
+              </Link>
+            }
+            { isAuth &&
+              <Link
                 to="/profile"
                 className="navbar-item">
                 <span className="button signup-button rounded secondary-btn raised">
