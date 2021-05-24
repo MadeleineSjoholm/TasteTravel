@@ -35,10 +35,9 @@ const Sidebar = () => {
         <button  className="nav-section-title">
         <li>
         <a href="/savedRecipes">
-        <img src="heart.png" width="50" height="50" alt='heart' /><br></br>SAVED RECIPES</a>        
+        <img src="heart.png" width="50" height="50" alt='heart' /><br></br>SAVED RECIPES</a>
         </li>
         </button>
-
         <br></br>
         <button className="nav-section-title">
         <li>
@@ -49,7 +48,6 @@ const Sidebar = () => {
       </div>
       </div>
     </div>
-
 
   )
 }
