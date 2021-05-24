@@ -6,31 +6,42 @@ const About = ({auth}) => {
 
   return (
     <div className="container">
-
-        <h1 className="title">ABOUT US</h1>
+        <h1 className="title">ABOUT</h1>
         <figure className="map_background2">
           <img src="map.png" alt="Company Logo" />
         </figure>
-
-
         <p>
 
-        What is Lorem Ipsum?
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        <em>What is TasteTravel?</em>
+  <p></p>
+        TasteTravel is a web application allowing users to travel and explore the world through culinary experiences. The system will allow users to interactively 
+        explore recipes from the countries or regions of the world, enabling the user to travel through their culinary experiences. The app will cater to the user’s 
+        food preferences and match them with a recipe from a chosen country. This is done by allowing the user to initially specify their food preferences and allergies. 
+        The system will then provide an interactive world map where the user can choose the country of interest. Through the preferences listed and a match-making algorithm, 
+        the user will then be presented with a recipe from that country. The system will, through this, offer a personalized and interactive experience, allowing the 
+        user to travel with their taste buds.
 
-        Why do we use it?
-        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+<br></br>
+<br></br>
 
+        <em>Why do we use it?</em>
+<p></p>
+        This past year has seen a lot of big changes in the way we live and our mobility due to the ongoing pandemic. Another tangible consequence of the pandemic
+        has been our lack of possibility to travel and explore the world. When not being able to explore the world like before, you need to find new ways of
+        taking part in culinary experiences, explore new cultures along with seeking new cuisines. 
 
-        Where does it come from?
-        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+<br></br>
+<br></br>
 
-        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+        In combination, as an effect of our limited mobility and spending more time at home - a surge in interest has been created to explore new recipes and 
+        food cultures. The survey we conducted  with 55 people showed that 75% of people asked, worked either fully or partly remote, with a majority of people 
+        now cooking all or almost all meals from home. The survey showed that 76% of those surveyed have a high interest in traveling and when traveling 82% said 
+        that taking part in the food culture was very important to them. 
 
-
+<br></br>
+<br></br>
 
         </p>
-
     </div>
   )
 }
