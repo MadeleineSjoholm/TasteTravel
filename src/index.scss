@@ -886,11 +886,12 @@ font-weight: bold;
   ===========================================================================*/
 
   .text-area{
-    position: absolute;
+
     width: 80%;
     border:6px dotted #BDCFB5;
     padding: 30px;
     margin: 0px;
+    margin-bottom: 100px;
     box-sizing: border-box;
     display: grid;
     grid-template-rows: 15vh 15vh 15vh;

@@ -6,11 +6,11 @@ import { Link } from 'react-router-dom'
 const OnBoard = () => {
   return (
 
-<div className="OnboardPage">
+<div className="container">
       <figure className="map_background">
         <img src="map.png" alt="Company Logo" />
       </figure>
-        <div className="container">
+
       <div className="content-wrapper">
         <h1 className="title">How does it work?</h1>
         <div className="text-area">
@@ -35,10 +35,10 @@ const OnBoard = () => {
           </Link>
 
           <div className="circle3">Step 3</div>
-          <p className="step3"> <b>Get your matching recipes and start cooking!</b> <br></br>The recipe provided matches you personal preferences. From here you can just enjoy your experience but also add your recipes to your favourites as well as rate it to let your fellow travelers know what you think about it. </p>
+          <p className="step3"> <b>Get your matching recipes and start cooking!</b><br/>The recipe provided matches you personal preferences. From here you can just enjoy your experience but also add your recipes to your favourites as well as rate it to let your fellow travelers know what you think about it. </p>
         </div>
         </div>
-        </div>
+
         </div>
   )
 }
