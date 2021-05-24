@@ -545,7 +545,6 @@ Footer
   "space team contact about follow media"
 }
 
-
   .team {
     grid-area: team;
   }
@@ -558,6 +557,7 @@ Footer
 
   .follow {
     grid-area: follow;
+    color: $lavender;
 
 }
 
@@ -991,7 +991,7 @@ article {
   box-shadow: 0 4px 8px 2px rgba(77, 77, 77, 0.15);
 }
 .hreflink{
-    color: $sienna;
+    color: $lavender;
    text-decoration: none;
    background-color: none;
 }
@@ -1299,7 +1299,7 @@ RecipePage
       }
     }
 
-    
+
     .level.is-mobile {
       justify-content: center !important;
       .level-item {
