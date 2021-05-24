@@ -8,7 +8,7 @@ const OurTeam = ({auth}) => {
 
 <br />
 <h1 className="title">Our Team</h1>
-<p> The team behind TasteTravel consist of four members. </p> <br />
+<p> We are the team behind TasteTravel! </p> <br />
 
 
 
@@ -39,8 +39,7 @@ här text om personen och dess roll.....
 <img src="./TEAM/moana.png" alt='pic'/>
 <div className="person"> Moana </div><br />
 <p>
-Acting project manager and database designer. 
-Also as a part of the back-end team.
+Acting project manager and database designer, as well as part of the back-end team.
 
 <br />
 </p>
@@ -89,6 +88,7 @@ här text om personen och dess roll.....
 ....
 <br />
 </p>
+
 
 </div>
 
