@@ -52,7 +52,7 @@ Also as a part of the back-end team.
 <img src="./TEAM/alva.png" alt='pic'/>
 <div className="person"> Alva </div><br />
 <p>
-
+  
 här text om personen och dess roll.....
 
 ......
