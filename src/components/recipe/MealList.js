@@ -12,7 +12,6 @@ const recipes = mealData.recipes
           {/* <li><b>Most popular: {Recipes.veryPopular}</b></li>
           <li>Sustainable: {Recipes.sustainable}</li>
           <li>Health Score: {Recipes.healthScore}</li> */}
-          <li><b>Most popular: {mealData.recipes.total}</b></li>
           {/* <li>Carbohydrates: {nutrients.carbohydrates.toFixed(0)}</li>
           <li>Fat: {nutrients.fat.toFixed(0)}</li>
           <li>Protein: {nutrients.protein.toFixed(0)}</li> */}
