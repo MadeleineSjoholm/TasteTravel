@@ -7,7 +7,7 @@ import MapIndex from './MapIndex'
 const Hero = () =>
   <section className="hero is-default is-bold">
     <div className="hero-body">
-      <div className="container" width="50" height="50" Color ="$secondary">
+      <div className="container" width="50" height="50" color ="$secondary">
 
           <MapIndex className= 'map'/>
           </div>
