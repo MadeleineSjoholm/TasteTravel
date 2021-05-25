@@ -13,7 +13,7 @@ const Profile = (props) => {
   const [diet, setDiet] = useState()
   const [intolerance, setIntolerance] = useState()
   const [ingredient, setIngredient] = useState()
-  
+
   db.collection("preference").doc(userID).onSnapshot((doc) => {
     const Prefs = doc.data()
     setIntolerance((Prefs.intolerances1 && Prefs.intolerances1) + (Prefs.intolerances2 && ', ' + Prefs.intolerances2) + (Prefs.intolerances3 && ', ' + Prefs.intolerances3))
@@ -55,7 +55,7 @@ return (
                 <br></br>
                 <h1 className="title has-text-grey">Settings</h1>
                 <p className="subtitle has-text-grey"><em>Want to update your password?</em></p>
-                
+
                 <Link
                   to="/ChangePassword">
                   <button className="faqButton">
@@ -70,6 +70,8 @@ return (
                       Update Preferences
                   </button>
                 </Link>
+                <br />
+                <br />
               </div>
             </div>
       </div>

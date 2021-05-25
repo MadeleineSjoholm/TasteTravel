@@ -20,7 +20,7 @@ const OnBoard = () => {
 
 
           <div className="circle2">Step 2</div>
-          <p className= "step2"> <b>Choose where you want to travel.</b> Click on a country on the map that interests you and travel to that region.</p>
+          <p className= "step2"> <b>Choose where you want to travel.</b> Click on a country on the <a className="hreflink" href="/">map </a> that interests you and travel to that region.</p>
 
 
 
