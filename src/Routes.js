@@ -37,7 +37,6 @@ import Help from './pages/Help'
 
 
 const Routes = () =>
-<BrowserRouter>
 <Switch>
 {/* <Route path="/secret">
 <SecretPage />
@@ -121,6 +120,5 @@ const Routes = () =>
 </Route>
 
 </Switch>
-</BrowserRouter>
 
 export default Routes
