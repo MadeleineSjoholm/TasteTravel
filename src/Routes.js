@@ -4,10 +4,10 @@ import { Switch, Route } from 'react-router-dom'
 
 // import QuickSearch from "./QuickSearch";
 import CuisineDetailPage from './pages/cuisines/CuisineDetail'
-import About from './pages/About'
-import OurTeam from './pages/OurTeam'
+import About from './pages/helpInfo/About'
+import OurTeam from './pages/helpInfo/OurTeam'
 import HomePage from './pages/Home'
-import FaqPage from './pages/Faq'
+import FaqPage from './pages/helpInfo/Faq'
 import ProfilePage from './pages/handleAccount/Profile'
 //import ServiceDetailPage from './pages/ServiceDetail'
 
@@ -21,13 +21,13 @@ import Recipe from './pages/Recipe'
 import Preferences from './pages/Preferences'
 import SavedRecipes from './pages/SavedRecipes'
 import MostPopular from './pages/MostPopular'
-import OnBoard from './pages/OnBoard'
+import OnBoard from './pages/helpInfo/OnBoard'
 import ResetPasswordPage from './pages/handleAccount/ResetPassword'
 import ChangePasswordPage from './pages/handleAccount/ChangePassword'
 import QuickRecipe from './components/recipe/TopRecipe'
 
 
-import Help from './pages/Help'
+import Help from './pages/helpInfo/Help'
 
 // import ServiceCreatePage from './pages/services/ServiceCreate'
 // import UserServicesPage from './pages/services/UserServices'
