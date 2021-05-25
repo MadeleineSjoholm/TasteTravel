@@ -6,8 +6,15 @@ html {
   svg {
     display: inline-block;
     vertical-align: middle;
+
   }
-  
+
   svg.rsm-svg { /* kartan bara, svg ovan är också kryssknappen i sidebar */
-    border: dotted #B287A3 4px;
+    height: 20%;
+    border: double #BDCFB5 2px;
+    
+    width: 100%;
+    display: inline-block;
+  vertical-align: middle;
+
   }

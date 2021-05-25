@@ -556,8 +556,10 @@ Footer
   padding: 25px;
   background-color: lighten($secondary, 30%);
   grid-column-gap: 2rem;
+
   display: grid;
   grid-template-columns: 18vw 10vw 8vw 8vw 10vw 12vw;
+
   grid-template-areas:
   "space team contact about follow media"
 }
