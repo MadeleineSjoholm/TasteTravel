@@ -35,7 +35,7 @@ return (
         <p className="subtitle has-text-grey"> Let's start your TasteTravel journey!</p>
         <div className="box">
           <figure className="avatar">
-            <img src="nylogg.png" alt="Company Logo" />
+              <img src={process.env.PUBLIC_URL + '/nylogg.png'} alt='Company Logo'/>
           </figure>
           <RegisterForm onRegister={registerUser} />
         </div>

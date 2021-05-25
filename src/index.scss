@@ -8,7 +8,7 @@ $sienna: #482728; // Dark Sienna - the darkest purple
 $secondary: #B287A3; //Opera Mauve
 $lavender:#7E4E60; // Twilight Lavender
 $white: #ffff; //white
-$redish:rgb(248, 140, 140); //fÄRG TILL LOGOUT KNAPPEN
+$redish:rgb(248, 140, 140); // For the logout-button
 
 
 /* ==========================================================================
@@ -845,8 +845,10 @@ Our team -page
 
   display: grid;
   grid-template-rows: auto;
+  padding-left: 16%;
+
   grid-template-columns: 14vw 14vw 14vw 14vw;
-  grid-column-gap: 4rem;
+  grid-column-gap: 2rem;
   padding-bottom: 3%;
   grid-template-areas:
   "member1 member2 member3 member4"
@@ -876,13 +878,8 @@ font-weight: bold;
 }
 
 
-
-/*===========================================================================
-
-===========================================================================*/
-
   /*===========================================================================
-  OnBoard-och allt som görs på den!! Har detta nya system och all denna kod pga cirklarna blir annars konstiga.
+  OnBoard-page
   ===========================================================================*/
 
   .text-area{
@@ -894,17 +891,16 @@ font-weight: bold;
     margin-bottom: 100px;
     box-sizing: border-box;
     display: grid;
-    grid-template-rows: 15vh 15vh 15vh;
-    grid-template-columns: 1fr 20fr 1fr;
+    grid-template-rows: 15vh 15vh;
+    grid-template-columns: 1fr 20fr;
     grid-template-areas:
-    "circle1 step1 button1"
-    "circle2 step2 button2"
-    "circle3 step3 step3"
+    "circle1 step1"
+    "circle2 step2"
+    "circle3 step3"
 
   }
   .circle1 {
     grid-area: circle1;
-    position: relative;
     width: 70px;
     height: 70px;
     line-height: 7.5vh;
@@ -916,7 +912,6 @@ font-weight: bold;
 
   .circle2 {
     grid-area: circle2;
-    position: relative;
     width: 70px;
     height: 70px;
     line-height: 7.5vh;
@@ -928,7 +923,6 @@ font-weight: bold;
 
   .circle3 {
     grid-area: circle3;
-    position: relative;
     width: 70px;
     height: 70px;
     line-height: 7.5vh;
@@ -940,36 +934,24 @@ font-weight: bold;
 
   .step1{
     grid-area: step1;
-    padding-top: 1px;
     margin: 1rem;
     color:#482728;
   }
 
   .step2 {
     grid-area: step2;
-    padding-top: 1px;
     margin: 1rem;
     color:#482728;
   }
 
   .step3{
     grid-area: step3;
-    padding-top: 1px;
     margin: 1rem;
     color:#482728;
 
   }
 
-  .onBoardButton1, .onBoardButton2 {
-    grid-area: button1;
-    grid-area: button2;
-    background-color: $secondary;
-    border-color: $secondary;
-    border-style: solid;
-    border-radius: 500px;
-    padding: 20px;
 
-  }
   /*===========================================================================
   Country Page
   ===========================================================================*/
@@ -1028,6 +1010,7 @@ article {
     color: $lavender;
    text-decoration: none;
    background-color: none;
+
 }
 
 /*============================================================================
@@ -1091,7 +1074,13 @@ RecipePage
 
   /*===========================================================================
   Faq
+
   ===========================================================================*/
+.FaqPage {
+margin-top: -10px;
+
+}
+
   .question{
     font-size: 30px;
     color: #482728;
@@ -1163,15 +1152,6 @@ RecipePage
   grid-column-end: 3;
   }
 
-  /*===========================================================================
-  Photo gallary
-  ===========================================================================*/
-  // .gallery {
-  //     display: grid;
-  //     grid-template-columns: repeat(8, 1fr);
-  //     grid-template-rows: repeat(8, 5vw);
-  //     grid-gap: 15px;
-  // }
 
   /*===========================================================================
   Map styles
@@ -1261,9 +1241,35 @@ RecipePage
         grid-column-gap: 1rem;
         letter-spacing: 5px;
         height: 50vh;
+        width: 100%;
         margin: 0;
         background-color: lighten($secondary, 30%);
       }
+
+      .text-area{
+
+        width: 80%;
+        border:6px dotted #BDCFB5;
+        padding: 30px;
+        margin: 0px;
+        box-sizing: border-box;
+        display: block;
+        grid-template-rows: 15vh 15vh 15vh;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "step1"
+        "step2"
+        "step3"
+
+      }
+
+
+
+
+
+
+
+
   }
 
   @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {

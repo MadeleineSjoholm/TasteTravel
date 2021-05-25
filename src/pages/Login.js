@@ -37,7 +37,8 @@ return (
         <p className="subtitle has-text-grey">Please login to start TasteTravel! </p>
         <div className="box">
           <figure className="avatar">
-            <img src="nylogg.png" alt="Company Logo" />
+
+          <img src={process.env.PUBLIC_URL + '/nylogg.png'} alt='Company Logo'/>
           </figure>
           <form onSubmit={handleSubmit(onLogin)}>
             <div className="field">
@@ -71,7 +72,7 @@ return (
           <a href="/Register">SIGN UP</a> &nbsp;·&nbsp;
           <a href="/Faq">Need Help?</a>
           <a href='/ResetPassword'>Forgot Password?</a>
-      
+
         </p>
       </div>
     </div>

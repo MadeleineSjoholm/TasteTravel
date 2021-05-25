@@ -20,28 +20,32 @@ const Sidebar = () => {
         <ul className="sidebar-menu">
         <button className="nav-section-title">
         <li>
-         <a href="/preferences"><img src="preferences.png" width="40" height="40" alt='list'/><br></br>PREFERENCES</a>
+         <a href="/preferences"><img src={process.env.PUBLIC_URL + '/preferences.svg'} alt='Preferences' width="40" height="40" /><br/>PREFERENCES</a>
+
+
+
+
          </li>
         </button>
 
-        <br></br>
+        <br/>
         <button className="nav-section-title">
         <li>
-        <a href="/mostPopular"><img src="stars.png" width="50" height="20" alt='stars' /><br></br>MOST POPULAR</a>
+        <a href="/mostPopular"><img src={process.env.PUBLIC_URL + '/stars.svg'} alt='Rating' width="40" height="40" /><br/>MOST POPULAR</a>
         </li>
         </button>
 
-        <br></br>
+        <br/>
         <button  className="nav-section-title">
         <li>
         <a href="/savedRecipes">
-        <img src="heart.png" width="50" height="50" alt='heart' /><br></br>SAVED RECIPES</a>
+        <img src={process.env.PUBLIC_URL + '/heart.svg'} alt='Saved' width="40" height="40" /><br/>SAVED RECIPES</a>
         </li>
         </button>
-        <br></br>
+        <br/>
         <button className="nav-section-title">
         <li>
-        <a href="/onBoard"><img src="help.png" width="30" height="30" alt='question mark' /><br/>HOW DOES IT WORK?</a>
+        <a href="/onBoard"><img src={process.env.PUBLIC_URL + '/help.svg'} alt='Help' width="30" height="30" /><br/>HOW DOES IT WORK?</a>
         </li>
         </button>
         </ul>
