@@ -24,7 +24,7 @@ import MostPopular from './pages/MostPopular'
 import OnBoard from './pages/OnBoard'
 import ResetPasswordPage from './pages/ResetPassword'
 import ChangePasswordPage from './pages/ChangePassword'
-import QuickRecipe from './components/recipe/QuickRecipe'
+import QuickRecipe from './components/recipe/TopRecipe'
 
 
 import Help from './pages/Help'

@@ -8,7 +8,7 @@ import 'firebase/auth'
 
 
 export default function Recipe({recipe}, { auth }) {
-  
+  const API_KEY = "f94d33a64b6f4135ab3e6a2b9fc8ce3c"
   const [imageUrl, setImageUrl] = useState("")
   const user = firebase.auth().currentUser  
   console.log( recipe.id )
@@ -45,7 +45,7 @@ const setFavorite = () => {
 
 useEffect(() => {
   fetch(
-    `https://api.spoonacular.com/recipes/${recipe.id}/information?apiKey=9c651708cc604ceaa7d0cad063018dd4&includeNutrition=false` 
+    `https://api.spoonacular.com/recipes/${recipe.id}/information?apiKey=${API_KEY}&includeNutrition=false` 
     )
     .then((response) => response.json())
     .then((data) => {

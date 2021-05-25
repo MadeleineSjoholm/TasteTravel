@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom'
 //import { connect } from 'react-redux' // HOC
 import Hero from 'components/Hero'
-import QuickRecipeList from 'components/recipe/QuickRecipeList'
+import QuickRecipeList from 'components/recipe/TopRecipeList'
 import SearchForm from 'components/recipe/SearchForm'
 //import ServiceItem from 'components/service/ServiceItem'
 

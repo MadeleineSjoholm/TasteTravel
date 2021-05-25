@@ -1,7 +1,7 @@
 import React from 'react'
-import Recipe from './Recipe'
+import Recipe from './TopRecipe'
 
-export default function RecipeList({ recipeData }) {
+export default function TopRecipeList({ recipeData }) {
   const totalResults = recipeData.totalResults
 
   return (
