@@ -47,11 +47,11 @@ class Home extends React.Component {
     const url = `https://api.spoonacular.com/recipes/complexSearch?cuisine=${weeklyCuisine}&addRecipeInformation=true&apiKey=${API_KEY}`
     const response = await fetch(url)
     const data = await response.json()
-    this.setState({ 
-      feature1: data.results[0], 
-      feature2: data.results[1], 
-      feature3: data.results[2], 
-      feature4: data.results[3], 
+    this.setState({
+      feature1: data.results[0],
+      feature2: data.results[1],
+      feature3: data.results[2],
+      feature4: data.results[3],
       imageurl1: data.results[0].image,
       imageurl2: data.results[1].image,
       imageurl3: data.results[2].image,
@@ -62,7 +62,7 @@ class Home extends React.Component {
 
   // renderRecipes =(recipes) =>
   // recipes.map(recipes => <RecipeItem key={recipe.id} recipe={recipe} />)
- 
+
 
   //FETCHAR POPULAT DESTINATIONS
   //  componentDidMount() {
@@ -86,58 +86,59 @@ class Home extends React.Component {
             </div>
 
             <div className="content-wrapper">
-              <div className="columns is-multiline">
-                <div className="field">
+              <div className="columns is-multiline is-one-quarter">
+                <div className="homeRecipes">
                 {this.state.loading || !this.state.feature1 ? <div>loading...</div> :
                 <ul>
                 <img src={this.state.imageurl1} alt="recipe" />
-               <h1>{this.state.feature1.title}</h1>
-               <li>Serves {this.state.feature1.servings} People</li>
-               <li>Ready In {this.state.feature1.readyInMinutes} Minutes</li>
-               <li>Amounts of likes: {this.state.feature1.aggregateLikes}</li>
-               <li>Dish Type: {this.state.feature1.dishTypes}</li>
-               
-               <a href={this.state.feature2.sourceUrl}>Go to Recipe</a>
+               <h1><b>{this.state.feature1.title}</b></h1>
+               <li><b>Serves: </b> {this.state.feature1.servings} People</li>
+               <li><b>Time: </b>{this.state.feature1.readyInMinutes} Minutes</li>
+               <li><b>Likes: </b>{this.state.feature1.aggregateLikes} <img src={process.env.PUBLIC_URL + '/heart.svg'} alt='Saved' width="20" height="20" /></li><br/>
+
+
+               <a href={this.state.feature2.sourceUrl} className="faqButton">Go to Recipe</a>
                </ul>}
                    {this.state.loading || !this.state.feature2 ? <div>loading...</div> :
                  <ul>
                     <img src={this.state.imageurl2} alt="recipe" />
-                   <h1>{this.state.feature2.title}</h1>
-                   <li>Serves {this.state.feature2.servings} People</li>
-                   <li>Ready In {this.state.feature2.readyInMinutes} Minutes</li>
-                   <li>Amounts of likes: {this.state.feature2.aggregateLikes}</li>
-                   <li>Dish Type: {this.state.feature2.dishTypes}</li>
-                   
-                   <a href={this.state.feature2.sourceUrl}>Go to Recipe</a>
+                   <h1><b>{this.state.feature2.title}</b></h1>
+                   <li><b>Serves: </b> {this.state.feature2.servings} People</li>
+                   <li><b>Time: </b> {this.state.feature2.readyInMinutes} Minutes</li>
+                   <li><b>Likes: </b>{this.state.feature2.aggregateLikes} <img src={process.env.PUBLIC_URL + '/heart.svg'} alt='Saved' width="20" height="20" /></li><br/>
+
+
+                   <a href={this.state.feature2.sourceUrl} className="faqButton">Go to Recipe</a>
                    </ul>}
 
                    {this.state.loading || !this.state.feature3 ? <div>loading...</div> :
                 <ul>
                 <img src={this.state.imageurl3} alt="recipe" />
-               <h1>{this.state.feature3.title}</h1>
-               <li>Serves {this.state.feature3.servings} People</li>
-               <li>Ready In {this.state.feature3.readyInMinutes} Minutes</li>
-               <li>Amounts of likes: {this.state.feature3.aggregateLikes}</li>
-               <li>Dish Type: {this.state.feature3.dishTypes}</li>
-               
-               <a href={this.state.feature3.sourceUrl}>Go to Recipe</a>
-               </ul>}
+                 <h1><b>{this.state.feature3.title}</b></h1>
+                 <li><b>Serves: </b> {this.state.feature3.servings} People</li>
+                 <li><b>Time: </b>{this.state.feature3.readyInMinutes} Minutes</li>
+                 <li><b>Likes: </b>{this.state.feature3.aggregateLikes} <img src={process.env.PUBLIC_URL + '/heart.svg'} alt='Saved' width="20" height="20" /></li><br/>
+
+
+                 <a href={this.state.feature3.sourceUrl} className="faqButton">Go to Recipe</a>
+                 </ul>}
 
                {this.state.loading || !this.state.feature4 ? <div>loading...</div> :
-               
+
                 <ul>
-                <h1>{this.state.feature4.title}</h1>
+
                <img src={this.state.imageurl4} alt="recipe" />
-               <li>Serves {this.state.feature4.servings} People</li>
-               <li>Ready In {this.state.feature4.readyInMinutes} Minutes</li>
-               <li>Amounts of likes: {this.state.feature4.aggregateLikes}</li>
-               <li>Dish Type: {this.state.feature4.dishTypes}</li>
-               
-               <a href={this.state.feature4.sourceUrl}>Go to Recipe</a>
+               <h1><b>{this.state.feature4.title}</b></h1>
+               <li><b>Serves: </b> {this.state.feature4.servings} People</li>
+               <li><b>Time: </b>{this.state.feature4.readyInMinutes} Minutes</li>
+               <li><b>Likes: </b> {this.state.feature4.aggregateLikes} <img src={process.env.PUBLIC_URL + '/heart.svg'} alt='Saved' width="20" height="20" /></li><br/>
+
+
+               <a href={this.state.feature4.sourceUrl} className="faqButton">Go to Recipe</a>
                </ul>}
                 </div>
                 {/* {this.state.mealData && <MealList MealData={this.state.mealData} />} */}
-                 
+
               </div>
             </div>
           </div>
@@ -151,10 +152,9 @@ class Home extends React.Component {
     )
   }
 }
-
+  // <li>Dish Type: {this.state.feature3.dishTypes}</li>
 //const mapStateToProps = state => ({services: state.services.all})
 
 //export default connect(mapStateToProps, {fetchServices})(Home)
 
 export default Home
-           
