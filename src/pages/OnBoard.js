@@ -16,11 +16,11 @@ const OnBoard = () => {
         <div className="text-area">
 
           <div className="circle1">Step 1</div>
-          <p className="step1"> <b>Start off by specifying you preferences.</b> On the <a className="hreflink" href="/preferences">Preferences Page</a> you will be able to add your diet, allergies and food items you just particularly don't like. </p>
+          <p className="step1"> <b>Start off by specifying you preferences.</b> On the <a className="hreflink" href="/preferences"><b>Preferences Page</b></a> you will be able to add your diet, allergies and food items you just particularly don't like. </p>
 
 
           <div className="circle2">Step 2</div>
-          <p className= "step2"> <b>Choose where you want to travel.</b> Click on a country on the <a className="hreflink" href="/">map </a> that interests you and travel to that region.</p>
+          <p className= "step2"> <b>Choose where you want to travel.</b> Click on a country on the <a className="hreflink" href="/"><b>map</b> </a> that interests you and travel to that region.</p>
 
 
 
