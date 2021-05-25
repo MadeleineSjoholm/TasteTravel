@@ -6,10 +6,10 @@ import ReactDOM from 'react-dom'
 import Hero from 'components/Hero'
 // import MealList from 'components/recipe/MealList'
 //import ServiceItem from 'components/service/ServiceItem'
-import RecipeItem from 'components/service/ServiceItem'
+// import RecipeItem from 'components/service/ServiceItem'
 
 //import { fetchServices } from 'actions'
-import { fetchRecipes } from 'actions'
+// import { fetchRecipes } from 'actions'
 const weeklyCuisine = "Korean";
 const API_KEY = "df8f6279130e4a768bd08e6a5d7ad77b"
 
@@ -37,7 +37,7 @@ class Home extends React.Component {
 
 
   async componentDidMount() {
-    this.props.fetchRecipes()
+    // this.props.fetchRecipes()
     var tags = this.state.tags
     const url = `https://api.spoonacular.com/recipes/complexSearch?cuisine=${weeklyCuisine}&addRecipeInformation=true&apiKey=${API_KEY}`
     const response = await fetch(url)
@@ -48,8 +48,8 @@ class Home extends React.Component {
     console.log(tags)
   }
 
-  renderRecipes =(recipes) =>
-  recipes.map(recipes => <RecipeItem key={recipe.id} recipe={recipe} />)
+  // renderRecipes =(recipes) =>
+  // recipes.map(recipes => <RecipeItem key={recipe.id} recipe={recipe} />)
  
 
   //FETCHAR POPULAT DESTINATIONS

@@ -1,10 +1,11 @@
 
 import React from 'react'
-import { Switch, Route } from 'react-router-dom'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
+
+import QuickSearch from "./QuickSearch";
 import CuisineDetailPage from './pages/cuisine/CuisineDetail'
 import About from './pages/About'
 import OurTeam from './pages/OurTeam'
-
 import HomePage from './pages/Home'
 import FaqPage from './pages/Faq'
 import ProfilePage from './pages/Profile'
@@ -23,6 +24,7 @@ import MostPopular from './pages/MostPopular'
 import OnBoard from './pages/OnBoard'
 import ResetPasswordPage from './pages/ResetPassword'
 import ChangePasswordPage from './pages/ChangePassword'
+import QuickRecipe from './components/recipe/QuickRecipe'
 
 
 import Help from './pages/Help'
@@ -35,10 +37,12 @@ import Help from './pages/Help'
 
 
 const Routes = () =>
+<BrowserRouter>
 <Switch>
 {/* <Route path="/secret">
 <SecretPage />
 </Route> */}
+<Route path="/Quick" component={QuickSearch} exact />
 <Route path="/cuisine/:cuisineId">
 <CuisineDetailPage />
 </Route>
@@ -89,6 +93,7 @@ const Routes = () =>
 <Help />
 </Route>
 
+<Route path="/recipe/:id" component={QuickRecipe} />
 
 <Route path="/Preferences">
 <Preferences />
@@ -116,5 +121,6 @@ const Routes = () =>
 </Route>
 
 </Switch>
+</BrowserRouter>
 
 export default Routes
