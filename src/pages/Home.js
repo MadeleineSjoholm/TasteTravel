@@ -4,15 +4,17 @@ import React, { useState } from 'react';
 import ReactDOM from 'react-dom'
 //import { connect } from 'react-redux' // HOC
 import Hero from 'components/Hero'
-import MealList from 'components/recipe/MealList'
+// import MealList from 'components/recipe/MealList'
 //import ServiceItem from 'components/service/ServiceItem'
+import RecipeItem from 'components/service/ServiceItem'
 
 //import { fetchServices } from 'actions'
+import { fetchRecipes } from 'actions'
+const weeklyCuisine = "Korean";
+const API_KEY = "df8f6279130e4a768bd08e6a5d7ad77b"
+
 
 class Home extends React.Component {
-  // state = {
-  //   selectedOption: null
-  // }
 
   constructor(props) {
     super(props);
@@ -21,8 +23,6 @@ class Home extends React.Component {
       tags: '',
       loading: true
     }
-    // this.handleChange = this.handleChange.bind(this)
-    // this.handleSubmit = this.handleSubmit.bind(this);
   }
   mySubmitHandler = (event) => {
     event.preventDefault();
@@ -37,8 +37,9 @@ class Home extends React.Component {
 
 
   async componentDidMount() {
+    this.props.fetchRecipes()
     var tags = this.state.tags
-    const url = `https://api.spoonacular.com/recipes/complexSearch?cuisine=${tags}&addRecipeInformation=true&apiKey=df8f6279130e4a768bd08e6a5d7ad77b `
+    const url = `https://api.spoonacular.com/recipes/complexSearch?cuisine=${weeklyCuisine}&addRecipeInformation=true&apiKey=${API_KEY}`
     const response = await fetch(url)
     const data = await response.json()
     this.setState({ mealData: data.results[0], loading: false })
@@ -47,26 +48,9 @@ class Home extends React.Component {
     console.log(tags)
   }
 
-   
-
-  //  getMealData = (event, mealData) => {
-  //   event.preventDefault();
-  //   var tags = this.state.tags
-  //   // const { mealData } = this.state.mealData
-  //   console.log(tags + " test")
-  //   fetch(
-  //     // `https://api.spoonacular.com/recipes/random?limitLicense=true&tags=${tags}&number=4&apiKey=df8f6279130e4a768bd08e6a5d7ad77b`
-  //     `https://api.spoonacular.com/recipes/complexSearch?cuisine=italian&addRecipeInformation=true&apiKey=f94d33a64b6f4135ab3e6a2b9fc8ce3c`
-  //   )
-  //     .then((response) => response.json())
-  //     .then((data) => {
-  //       this.setState({ mealData: data });
-  //       console.log(this.mealData)
-  //       console.log(data)
-  //   });
-  // }
-
-
+  renderRecipes =(recipes) =>
+  recipes.map(recipes => <RecipeItem key={recipe.id} recipe={recipe} />)
+ 
 
   //FETCHAR POPULAT DESTINATIONS
   //  componentDidMount() {
@@ -78,60 +62,20 @@ class Home extends React.Component {
 
 
   render() {
-  //   const tags = this.state.tags1;
-  //   // const { services } = this.props
-  //   console.log(tags)
-  // function getMealData() {
-  //     fetch(
-  //       // `https://api.spoonacular.com/recipes/random?limitLicense=true&tags=${tags}&number=4&apiKey=9c651708cc604ceaa7d0cad063018dd4`
-  //     )
-  //       .then((response) => response.json())
-  //       .then((data) => {
-  //         this.mealData(data)
-  //       })
-  //       .catch(() => {
-  //         console.log("error");
-  //       })
-  //   }
-
-  
-
-
-
     return (
       <div>
         <Hero />
         <section className="section section-feature-grey is-small">
           <div className="container">
             <div className="title-wrapper has-text-centered">
-              <h2 className="title is-2">Popular Destinations </h2>
-              <h3 className="subtitle is-5 is-2">View the top rated recipes</h3>
+              <h2 className="title is-2">Popular Destinations</h2>
+              <h3 className="subtitle is-5 is-2">View this weeks highlighted cuisine: <b>Korean</b></h3>
               <div className="divider is-centered"></div>
             </div>
 
             <div className="content-wrapper">
               <div className="columns is-multiline">
                 <div className="field">
-                  <form onSubmit={this.mySubmitHandler}>
-                    <label className="label" >Quick Search (e.g. "Italian" or "Salmon")
-                    <input
-                        type='text'
-                        onChange={this.myChangeHandler}
-                      />
-                      {/* <input type="text" value={this.state.tags1} onChange={this.handleChange} /> */}
-                    </label>
-                    <h1>Hello {this.state.tags}</h1>
-                    <input
-                      type="submit"
-                      value="Find Recipes"
-                      className="countryButton"
-
-                    // onClick={getMealData}
-                    />
-               
-                {/* DISPLAYAR SERVICES
-                { this.renderServices(services) } */}
-                  </form>
                 </div>
                 {/* {this.state.mealData && <MealList MealData={this.state.mealData} />} */}
                 {this.state.loading || !this.state.mealData ? <div>loading...</div> :
@@ -142,10 +86,7 @@ class Home extends React.Component {
                    <div>Cuisines: {this.state.mealData.cuisines}</div>
                    <div>Diets: {this.state.mealData.diets}</div>
                    <a href={this.state.mealData.sourceUrl}>Go to Recipe</a>
-                   </div>} 
-               
-      
-      
+                   </div>}   
               </div>
             </div>
           </div>
