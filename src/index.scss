@@ -549,7 +549,7 @@ Footer
 
 .footer{
   text-align:center;
-  position: fixed;
+  position: absolute;
   display: hidden;
   padding: 25px;
   background-color: lighten($secondary, 30%);
@@ -896,7 +896,7 @@ font-weight: bold;
   ===========================================================================*/
 
   .text-area{
-
+    position: absolute;
     width: 80%;
     border:6px dotted #BDCFB5;
     padding: 30px;
@@ -1092,7 +1092,6 @@ RecipePage
 .FaqPage {
 margin-top: -10px;
 padding-bottom: 5%;
-position: absolute;
 
 }
 
@@ -1191,10 +1190,10 @@ position: absolute;
     max-width: 100%;
     height: auto;
     img {width: 100%}
-    position: fixed;
+    position: absolute;
     opacity: 0.6;
     background-repeat: no-repeat;
-
+    background-attachment: fixed;
     margin-top: -10px;
   }
 
