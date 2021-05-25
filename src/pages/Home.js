@@ -10,8 +10,8 @@ import Hero from 'components/Hero'
 
 //import { fetchServices } from 'actions'
 // import { fetchRecipes } from 'actions'
-const weeklyCuisine = "Korean";
-const API_KEY = "df8f6279130e4a768bd08e6a5d7ad77b"
+const weeklyCuisine = "Italian";
+const API_KEY = "2b27d20d15814f56a742d05fa5d873a8"
 
 
 class Home extends React.Component {
@@ -19,8 +19,14 @@ class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      mealData: null,
-      tags: '',
+      feature1: null,
+      feature2: null,
+      feature3: null,
+      feature4: null,
+      imageurl1: "",
+      imageurl2: "",
+      imageurl3: "",
+      imageurl4: "",
       loading: true
     }
   }
@@ -38,14 +44,20 @@ class Home extends React.Component {
 
   async componentDidMount() {
     // this.props.fetchRecipes()
-    var tags = this.state.tags
     const url = `https://api.spoonacular.com/recipes/complexSearch?cuisine=${weeklyCuisine}&addRecipeInformation=true&apiKey=${API_KEY}`
     const response = await fetch(url)
     const data = await response.json()
-    this.setState({ mealData: data.results[0], loading: false })
+    this.setState({ 
+      feature1: data.results[0], 
+      feature2: data.results[1], 
+      feature3: data.results[2], 
+      feature4: data.results[3], 
+      imageurl1: data.results[0].image,
+      imageurl2: data.results[1].image,
+      imageurl3: data.results[2].image,
+      imageurl4: data.results[3].image,
+      loading: false,  })
     console.log(data)
-    console.log(this.MealList)
-    console.log(tags)
   }
 
   // renderRecipes =(recipes) =>
@@ -68,25 +80,64 @@ class Home extends React.Component {
         <section className="section section-feature-grey is-small">
           <div className="container">
             <div className="title-wrapper has-text-centered">
-              <h2 className="title is-2">Popular Destinations</h2>
-              <h3 className="subtitle is-5 is-2">View this weeks highlighted cuisine: <b>Korean</b></h3>
+              <h2 className="title is-2">Featured Destinations</h2>
+              <h3 className="subtitle is-5 is-2">This weeks highlighted cuisine: <b>{weeklyCuisine}</b></h3>
               <div className="divider is-centered"></div>
             </div>
 
             <div className="content-wrapper">
               <div className="columns is-multiline">
                 <div className="field">
+                {this.state.loading || !this.state.feature1 ? <div>loading...</div> :
+                <ul>
+                <img src={this.state.imageurl1} alt="recipe" />
+               <h1>{this.state.feature1.title}</h1>
+               <li>Serves {this.state.feature1.servings} People</li>
+               <li>Ready In {this.state.feature1.readyInMinutes} Minutes</li>
+               <li>Amounts of likes: {this.state.feature1.aggregateLikes}</li>
+               <li>Dish Type: {this.state.feature1.dishTypes}</li>
+               
+               <a href={this.state.feature2.sourceUrl}>Go to Recipe</a>
+               </ul>}
+                   {this.state.loading || !this.state.feature2 ? <div>loading...</div> :
+                 <ul>
+                    <img src={this.state.imageurl2} alt="recipe" />
+                   <h1>{this.state.feature2.title}</h1>
+                   <li>Serves {this.state.feature2.servings} People</li>
+                   <li>Ready In {this.state.feature2.readyInMinutes} Minutes</li>
+                   <li>Amounts of likes: {this.state.feature2.aggregateLikes}</li>
+                   <li>Dish Type: {this.state.feature2.dishTypes}</li>
+                   
+                   <a href={this.state.feature2.sourceUrl}>Go to Recipe</a>
+                   </ul>}
+
+                   {this.state.loading || !this.state.feature3 ? <div>loading...</div> :
+                <ul>
+                <img src={this.state.imageurl3} alt="recipe" />
+               <h1>{this.state.feature3.title}</h1>
+               <li>Serves {this.state.feature3.servings} People</li>
+               <li>Ready In {this.state.feature3.readyInMinutes} Minutes</li>
+               <li>Amounts of likes: {this.state.feature3.aggregateLikes}</li>
+               <li>Dish Type: {this.state.feature3.dishTypes}</li>
+               
+               <a href={this.state.feature3.sourceUrl}>Go to Recipe</a>
+               </ul>}
+
+               {this.state.loading || !this.state.feature4 ? <div>loading...</div> :
+               
+                <ul>
+                <h1>{this.state.feature4.title}</h1>
+               <img src={this.state.imageurl4} alt="recipe" />
+               <li>Serves {this.state.feature4.servings} People</li>
+               <li>Ready In {this.state.feature4.readyInMinutes} Minutes</li>
+               <li>Amounts of likes: {this.state.feature4.aggregateLikes}</li>
+               <li>Dish Type: {this.state.feature4.dishTypes}</li>
+               
+               <a href={this.state.feature4.sourceUrl}>Go to Recipe</a>
+               </ul>}
                 </div>
                 {/* {this.state.mealData && <MealList MealData={this.state.mealData} />} */}
-                {this.state.loading || !this.state.mealData ? <div>loading...</div> :
-                 <div>
-                   <div>ID: {this.state.mealData.id}</div>
-                   <div>Title: {this.state.mealData.title}</div>
-                   <div>Amounts of likes: {this.state.mealData.aggregateLikes}</div>
-                   <div>Cuisines: {this.state.mealData.cuisines}</div>
-                   <div>Diets: {this.state.mealData.diets}</div>
-                   <a href={this.state.mealData.sourceUrl}>Go to Recipe</a>
-                   </div>}   
+                 
               </div>
             </div>
           </div>
