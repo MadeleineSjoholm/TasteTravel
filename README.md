@@ -8,9 +8,6 @@ Madeleine Sjöholm
 Moana Södergren
 Felicia Östling
 
-Supervised by:
-Georgios Panayiotou
-Georgios Fakas 
 ----------------------------------------------------------------------------------------------------------------------------------------------
 ## Introduction
 This past year has seen a lot of big changes in the way we live and our mobility due to the ongoing pandemic. Another tangible consequence of the pandemic has been our lack of possibility to travel and explore the world. When not being able to explore the world like before, you need to find new ways of taking part in culinary experiences, explore new cultures along with seeking new cuisines. 
