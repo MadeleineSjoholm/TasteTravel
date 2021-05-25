@@ -1,8 +1,8 @@
 
 import React from 'react'
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
 
-import QuickSearch from "./QuickSearch";
+// import QuickSearch from "./QuickSearch";
 import CuisineDetailPage from './pages/cuisine/CuisineDetail'
 import About from './pages/About'
 import OurTeam from './pages/OurTeam'
@@ -41,7 +41,7 @@ const Routes = () =>
 {/* <Route path="/secret">
 <SecretPage />
 </Route> */}
-<Route path="/Quick" component={QuickSearch} exact />
+{/* <Route path="/Quick" component={QuickSearch} exact /> */}
 <Route path="/cuisine/:cuisineId">
 <CuisineDetailPage />
 </Route>

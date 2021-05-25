@@ -1078,12 +1078,15 @@ RecipePage
   ===========================================================================*/
 .FaqPage {
 margin-top: -10px;
+padding-bottom: 5%;
 
 }
 
   .question{
     font-size: 30px;
     color: #482728;
+    padding-top: 3%;
+
   }
   .faqButton{                   //Samma knapp används på Help sidan.
     background-color: $secondary;

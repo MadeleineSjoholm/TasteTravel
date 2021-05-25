@@ -125,7 +125,7 @@ const Navbar = props => {
               <Link
                 to="/OnBoard"
                 className="navbar-item is-secondary">
-                    On Board
+                    Onboard
               </Link>
             }
             { isAuth &&
