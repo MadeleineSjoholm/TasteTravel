@@ -1,15 +1,16 @@
 /* eslint no-useless-escape: 0 */
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import withAuthorization from 'components/hoc/withAuthorization'
 import db from 'db'
 import 'firebase/auth'
+import Spinner from 'components/Spinner'
 
 const Profile = (props) => {
-  const userid  = props.auth
+  const userid = props.auth
   console.log(userid.user.uid)
   const userID = userid.user.uid
-
+  const { isFetching } = props
   const [diet, setDiet] = useState()
   const [intolerance, setIntolerance] = useState()
   const [ingredient, setIngredient] = useState()
@@ -19,29 +20,27 @@ const Profile = (props) => {
     setIntolerance((Prefs.intolerances1 && Prefs.intolerances1) + (Prefs.intolerances2 && ', ' + Prefs.intolerances2) + (Prefs.intolerances3 && ', ' + Prefs.intolerances3))
     setDiet(Prefs.diet)
     setIngredient((Prefs.ingredients1 && Prefs.ingredients1) + (Prefs.ingredients2 && ', ' + Prefs.ingredients2) + (Prefs.ingredients3 && ', ' + Prefs.ingredients3))
-    console.log('t1',Prefs)
-    //const ingredients = [Prefs.ingredients1, Prefs.ingredients2, Prefs.ingredients3]
-    //const intolerances = [Prefs.intolerances1, Prefs.intolerances2, Prefs.intolerances3]
+    console.log('t1', Prefs)
   })
 
-
-return (
-  <div >
-    <figure className="map_background">
-      <img src="map.png" alt="Company Logo" />
-    </figure>
-    <div className="container">
-      <div className="content-wrapper">
-        <div  class="profilepage">
-        <h3 className=" yourprofile title has-text-grey">Your Profile</h3>
-              <div class="picture">
-                <figure className=" is-medium">
-                <img class='img' src = {userid.user.avatar} width='150' height='150' alt='desription'/>
-                </figure>
-                <button className="faqButton">Change Profile Picture</button>
-              </div>
-              <div class="infoBox">
-                <div align='left'>
+  if (isFetching) { return <Spinner /> }
+  return (
+    <div >
+      <figure className="map_background">
+        <img src="map.png" alt="Company Logo" />
+      </figure>
+      <div className="container">
+        <div className="content-wrapper">
+          <div class="profilepage">
+            <h3 className=" yourprofile title has-text-grey">Your Profile</h3>
+            <div class="picture">
+              <figure className=" is-medium">
+                <img class='img' src={userid.user.avatar} width='150' height='150' alt='desription' />
+              </figure>
+              <button className="faqButton">Change Profile Picture</button>
+            </div>
+            <div class="infoBox">
+              <div align='left'>
                 <h1 className="title has-text-grey"> Your Information:</h1>
                 <h2 className="subtitle has-text-grey">Name: <em>{`${userid.user.fullName}`}</em></h2>
                 <h2 className="subtitle has-text-grey">Email: <em>{`${userid.user.email}`}</em></h2>
@@ -55,11 +54,10 @@ return (
                 <br></br>
                 <h1 className="title has-text-grey">Settings</h1>
                 <p className="subtitle has-text-grey"><em>Want to update your password?</em></p>
-
                 <Link
                   to="/ChangePassword">
                   <button className="faqButton">
-                      Update Password
+                    Update Password
                   </button>
                   <br></br>
                 </Link>
@@ -67,18 +65,18 @@ return (
                 <Link
                   to="/Preferences">
                   <button className="faqButton">
-                      Update Preferences
+                    Update Preferences
                   </button>
                 </Link>
                 <br />
                 <br />
               </div>
             </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
-)
+  )
 }
 
 export default withAuthorization(Profile)

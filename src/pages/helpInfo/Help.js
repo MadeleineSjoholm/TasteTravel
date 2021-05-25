@@ -2,8 +2,12 @@
 
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Spinner from 'components/Spinner'
 
-const Help = () => {
+const Help = (props) => {
+  const { isFetching } = props
+  if (isFetching) { return <Spinner /> }
+
   return (
     <div className="container">
       <figure className="map_background">
@@ -16,20 +20,20 @@ const Help = () => {
           <div className="circle1">Step 1</div>
           <p className="step1"> Put in your preferences. Here you can specify your allergies or food you don't like. </p>
           <Link
-                      to="/Preferences">
-                      <button className="onBoardButton1">
-                          Go to Preferences
+            to="/Preferences">
+            <button className="onBoardButton1">
+              Go to Preferences
                       </button>
-           </Link>
+          </Link>
           <div className="circle2">Step 2</div>
-          <p className= "step2"> Choose where you want to travel. Click on a country on the map and travel to that region.</p>
+          <p className="step2"> Choose where you want to travel. Click on a country on the map and travel to that region.</p>
 
           <Link
             to="/">
             <button className="onBoardButton2">
-                Go to Map
+              Go to Map
             </button>
-            </Link>
+          </Link>
 
           <div className="circle3">Step 3</div>
           <p className="step3"> Get your matching recipes and start coocking! The recipes you will see matches your preferences. </p>

@@ -1,5 +1,5 @@
 import React, { memo } from "react";
-import {useState, useEffect} from 'react'
+import { useState, useEffect } from 'react'
 
 import {
   NordicCuisine,
@@ -37,19 +37,19 @@ const MapChart = ({ setTooltipContent }) => {
   const [didMount, setDidMount] = useState(false);
 
   useEffect(() => {
-     setDidMount(true);
-     return () => setDidMount(false);
+    setDidMount(true);
+    return () => setDidMount(false);
   }, [])
 
-  if(!didMount) {
+  if (!didMount) {
     return null;
   }
   return (
     <>
-      <ComposableMap data-tip="" projectionConfig={{ scale: 100 }}
-      width={700}
-      height={300}
-      style={{ width: "100%", height: "auto" }}
+      <ComposableMap data-tip="" projectionConfig={{ scale: 120 }}
+        width={700}
+        height={300}
+        style={{ width: "100%", height: "auto" }}
 
       >
 
@@ -68,7 +68,7 @@ const MapChart = ({ setTooltipContent }) => {
                     //— ${rounded(POP_EST) - tog bort population
 
                   }}
-                  onClick={()=> {
+                  onClick={() => {
                     //const { NAME, POP_EST } = geo.properties; stog nedan///
                     const { NAME } = geo.properties;
                     console.log(NAME);
@@ -84,21 +84,21 @@ const MapChart = ({ setTooltipContent }) => {
                       window.location.href = "/cuisine/latinamerica"
                     } else if (AmericaCuisine.includes(NAME)) {
                       window.location.href = "/cuisine/america";
-                    } else if (NAME === "United Kingdom" || NAME === "Ireland" ) {
+                    } else if (NAME === "United Kingdom" || NAME === "Ireland") {
                       window.location.href = "/cuisine/britain";
-                    } else if (NAME === "India" ) {
+                    } else if (NAME === "India") {
                       window.location.href = "/cuisine/india";
-                    } else if (NAME === "China" ) {
+                    } else if (NAME === "China") {
                       window.location.href = "/cuisine/china";
-                    } else if (NAME === "Italy" ) {
+                    } else if (NAME === "Italy") {
                       window.location.href = "/cuisine/italy";
                     } else if (MediterraneanCuisine.includes(NAME)) {
                       window.location.href = "/cuisine/mediterranean";
-                    } else if (NAME === "France" ) {
+                    } else if (NAME === "France") {
                       window.location.href = "/cuisine/french";
-                    } else if (NAME === "Germany" ) {
+                    } else if (NAME === "Germany") {
                       window.location.href = "/cuisine/german";
-                    } else if (NAME === "Japan" ) {
+                    } else if (NAME === "Japan") {
                       window.location.href = "/cuisine/japanese";
                     } else if (NAME === "South Korea" || NAME === "North Korea") {
                       window.location.href = "/cuisine/korean";

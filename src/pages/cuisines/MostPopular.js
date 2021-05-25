@@ -1,23 +1,19 @@
 import React, { useState } from 'react'
 //import { Link } from 'react-router-dom'
-import RecipeList from 'components/recipe/RecipeList'
 import 'firebase/auth'
-
 import Spinner from 'components/Spinner'
-
 import { Fragment } from 'react'
 import TopRecipeList from 'components/recipe/TopRecipeList'
 
+//CHANGE API HERE
+const API_KEY = "827194b19189427195018b97d09cde94"
 
 
-const MostPopular = () => {
+const MostPopular = (props) => {
+  const { isFetching } = props
   const [recipeData, setRecipeData] = useState(null)
   const [cuisine, setCuisine] = useState()
-  const API_KEY = "827194b19189427195018b97d09cde94"
-
-
   const amountOfResults = 5
-
 
   function getRecipeData() {
     fetch(
@@ -36,7 +32,7 @@ const MostPopular = () => {
   function handleChange(e) {
     setCuisine(e.target.value)
   }
-
+  if (isFetching) { return <Spinner /> }
   return (
     <Fragment>
       <section className="hero is-fullheight is-default is-bold service-detail-page">
@@ -49,34 +45,34 @@ const MostPopular = () => {
             </div>
             <div className="content-wrapper">
               <div className="columns is-multiline is-one-quarter">
-              <div className="homeRecipes">
-                <div className="select">
-                  <select name="cuisine" onChange={handleChange} >
-                    <option value="">-</option>
-                    <option value="African">Africa</option>
-                    <option value="American">America</option>
-                    <option value="British">Britain</option>
-                    <option value="Chinese">China</option>
-                    <option value="Eastern European">Eastern Europe</option>
-                    <option value="French">France</option>
-                    <option value="German">Germany</option>
-                    <option value="Greek">India</option>
-                    <option value="Italian">Italy</option>
-                    <option value="Japanese">Japanese</option>
-                    <option value="Korean">Korean</option>
-                    <option value="Latin American">Latin America</option>
-                    <option value="Mediterranean">Mediterranean</option>
-                    <option value="Mexican">Mexican</option>
-                    <option value="Middle Eastern">Middle East</option>
-                    <option value="Nordic">Nordic Countries</option>
-                    <option value="Spanish">Spain</option>
-                    <option value="Thai">Thailand</option>
-                    <option value="Vietnamese">Vietnam</option>
-                  </select>
-                </div>
+                <div className="homeRecipes">
+                  <div className="select">
+                    <select name="cuisine" onChange={handleChange} >
+                      <option value="">-</option>
+                      <option value="African">Africa</option>
+                      <option value="American">America</option>
+                      <option value="British">Britain</option>
+                      <option value="Chinese">China</option>
+                      <option value="Eastern European">Eastern Europe</option>
+                      <option value="French">France</option>
+                      <option value="German">Germany</option>
+                      <option value="Greek">India</option>
+                      <option value="Italian">Italy</option>
+                      <option value="Japanese">Japanese</option>
+                      <option value="Korean">Korean</option>
+                      <option value="Latin American">Latin America</option>
+                      <option value="Mediterranean">Mediterranean</option>
+                      <option value="Mexican">Mexican</option>
+                      <option value="Middle Eastern">Middle East</option>
+                      <option value="Nordic">Nordic Countries</option>
+                      <option value="Spanish">Spain</option>
+                      <option value="Thai">Thailand</option>
+                      <option value="Vietnamese">Vietnam</option>
+                    </select>
+                  </div>
                 </div>
               </div>
-              
+
               <button
                 className="countryButton"
                 onClick={getRecipeData}
@@ -87,11 +83,8 @@ const MostPopular = () => {
                 </div>
               </div>
             </div>
-
-
           </div>
         </div>
-
       </section>
     </Fragment>
   )
