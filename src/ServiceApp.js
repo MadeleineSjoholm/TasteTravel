@@ -28,10 +28,13 @@ class ServiceApp extends React.Component {
       id="navbar-clone" />
     <Sidebar />
 
+
     <Routes />
-      <Footer/>
-      
+
+  <Footer/>
   </React.Fragment>
+
+
 
   render() {
     const { auth } = this.props
