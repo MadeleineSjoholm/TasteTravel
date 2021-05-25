@@ -5,16 +5,17 @@ const OurTeam = ({auth}) => {
   return (
     <div className= "container">
       <br />
-      <h1 className="title">Our Team</h1>
-        <p> This is the team behind TasteTravel! </p> <br />
+      <h1 className="title" align="center">Our Team</h1>
+      <br/>
+
         <div className = "member">
           <div className="member1">
             <img src="./TEAM/Madeleine.png" alt='pic'/>
               <div className="person"> Madeleine </div><br />
               <p>
               This is Madeleine, she is a frontend developer and
-              UI designer. She is also TasteTravels own security expert.
-              <br />
+              UI designer. She is also TasteTravels own security expert and the technical manager.
+              <br/>
               </p>
           </div>
 

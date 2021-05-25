@@ -56,6 +56,8 @@
     ]
   },
   "devDependencies": {
-    "firebase-mock": "^2.3.2"
+    "file-loader": "^6.2.0",
+    "firebase-mock": "^2.3.2",
+    "url-loader": "^4.1.1"
   }
 }
