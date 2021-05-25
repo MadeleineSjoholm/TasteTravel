@@ -2,26 +2,25 @@ import React from 'react'
 import Meal from './Meal'
 
 export default function MealList({ mealData }) {
-const recipes = mealData.recipes
+// const recipes = mealData.results
 
   return (
     <main>
-      <section className="nutrients">
-        <h1>Most Popular</h1>
+      <section className="results">
+        <h1>Your Results:</h1>
         <ul>
-          {/* <li><b>Most popular: {Recipes.veryPopular}</b></li>
-          <li>Sustainable: {Recipes.sustainable}</li>
-          <li>Health Score: {Recipes.healthScore}</li> */}
-          {/* <li>Carbohydrates: {nutrients.carbohydrates.toFixed(0)}</li>
-          <li>Fat: {nutrients.fat.toFixed(0)}</li>
-          <li>Protein: {nutrients.protein.toFixed(0)}</li> */}
+          <li><b>Results: {mealData}</b></li>
+          {/* <li>Total Results: {mealData.totalResults}</li> */}
+         
         </ul>
       </section>
       <section className="meals">
-        {mealData.meals.map((meal) => {
+        {mealData.results.map((meal) => {
           return <Meal key={meal.id} meal={meal} />
         })}
       </section>
     </main>
   )
 }
+
+

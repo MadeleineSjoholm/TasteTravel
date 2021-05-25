@@ -73,7 +73,7 @@ useEffect(() => {
         height="50" 
         alt='heart' 
         >
-        <br></br>SAVE RECIPE
+        <br />SAVE RECIPE
       </button>   
 
       <button className="faqButton"><a href={recipe.sourceUrl}><div className="hreflink">Go to Recipe</div></a></button>

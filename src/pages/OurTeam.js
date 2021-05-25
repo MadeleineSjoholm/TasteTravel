@@ -6,7 +6,7 @@ const OurTeam = ({auth}) => {
     <div className= "container">
       <br />
       <h1 className="title">Our Team</h1>
-        <p> This is the team behind TasteTravel! </p> <br></br>
+        <p> This is the team behind TasteTravel! </p> <br />
         <div className = "member">
           <div className="member1">
             <img src="./TEAM/Madeleine.png" alt='pic'/>
