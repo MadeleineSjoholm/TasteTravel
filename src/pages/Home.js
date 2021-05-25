@@ -10,8 +10,8 @@ import Hero from 'components/Hero'
 
 //import { fetchServices } from 'actions'
 // import { fetchRecipes } from 'actions'
-const weeklyCuisine = "Italian";
-const API_KEY = "f94d33a64b6f4135ab3e6a2b9fc8ce3c"
+const weeklyCuisine = "mexican";
+const API_KEY = "827194b19189427195018b97d09cde94"
 
 
 class Home extends React.Component {
@@ -57,7 +57,7 @@ class Home extends React.Component {
       imageurl3: data.results[2].image,
       imageurl4: data.results[3].image,
       loading: false,  })
-    console.log(data)
+    console.log(data.results[0])
   }
 
   // renderRecipes =(recipes) =>

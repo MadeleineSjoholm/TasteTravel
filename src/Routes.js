@@ -3,27 +3,27 @@ import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 
 // import QuickSearch from "./QuickSearch";
-import CuisineDetailPage from './pages/cuisine/CuisineDetail'
+import CuisineDetailPage from './pages/cuisines/CuisineDetail'
 import About from './pages/About'
 import OurTeam from './pages/OurTeam'
 import HomePage from './pages/Home'
 import FaqPage from './pages/Faq'
-import ProfilePage from './pages/Profile'
+import ProfilePage from './pages/handleAccount/Profile'
 //import ServiceDetailPage from './pages/ServiceDetail'
 
-import LoginPage from './pages/Login'
-import LogoutPage from './pages/Logout'
+import LoginPage from './pages/handleAccount/Login'
+import LogoutPage from './pages/handleAccount/Logout'
 import RegisterPage from './pages/Register'
 //import SecretPage from './pages/Secret'
-import MatchingRecipes from './pages/MatchingRecipes'
-import FindRecipe from './pages/FindRecipe'
+// import MatchingRecipes from './pages/MatchingRecipes'
+// import FindRecipe from './pages/cuisines/FindRecipe'
 import Recipe from './pages/Recipe'
 import Preferences from './pages/Preferences'
 import SavedRecipes from './pages/SavedRecipes'
 import MostPopular from './pages/MostPopular'
 import OnBoard from './pages/OnBoard'
-import ResetPasswordPage from './pages/ResetPassword'
-import ChangePasswordPage from './pages/ChangePassword'
+import ResetPasswordPage from './pages/handleAccount/ResetPassword'
+import ChangePasswordPage from './pages/handleAccount/ChangePassword'
 import QuickRecipe from './components/recipe/TopRecipe'
 
 
@@ -106,12 +106,12 @@ const Routes = () =>
 <Route path="/OnBoard">
 <OnBoard />
 </Route>
-<Route path="/MatchingRecipes">
+{/* <Route path="/MatchingRecipes">
 <MatchingRecipes />
-</Route>
-<Route path="/FindRecipe">
+</Route> */}
+{/* <Route path="/FindRecipe">
 <FindRecipe />
-</Route>
+</Route> */}
 <Route path="/Recipe">
 <Recipe />
 </Route>

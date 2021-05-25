@@ -5,7 +5,7 @@ import Sidebar from 'components/Sidebar'
 import Navbar from 'components/Navbar'
 import Routes from './Routes'
 import Spinner from 'components/Spinner'
-import Footer from 'pages/footer'
+import Footer from 'components/footer'
 
 
 import { logout } from 'actions'

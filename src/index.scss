@@ -1000,8 +1000,10 @@ font-weight: bold;
 .label{
 
 padding-top: 10px;
+}
 
-
+.cuisinePref{
+  padding-bottom: 5%;
 }
 
 .recipeSection {
@@ -1089,7 +1091,7 @@ RecipePage
 
 
   /*===========================================================================
-  Faq
+  Faq and about page
 
   ===========================================================================*/
 .FaqPage {
@@ -1105,6 +1107,7 @@ position: relative;
     padding-top: 3%;
 
   }
+
   .faqButton{                   //Samma knapp används på Help sidan.
     background-color: $secondary;
     border-color: $secondary;
@@ -1122,6 +1125,15 @@ position: relative;
     opacity: 0.8;
   }
 
+  .aboutDetail{
+    padding-bottom: 5%;
+  }
+  .aboutQuestion{
+    font-size: 30px;
+    color: #482728;
+  
+
+  }
   /*===========================================================================
   ProfilePage
   ===========================================================================*/

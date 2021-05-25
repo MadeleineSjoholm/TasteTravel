@@ -6,11 +6,10 @@ import { fetchCuisineById } from 'actions'
 import RecipeList from 'components/recipe/RecipeList'
 import db from 'db'
 import 'firebase/auth'
-
 import Spinner from 'components/Spinner'
-
 import { Fragment } from 'react'
 
+const API_KEY = "827194b19189427195018b97d09cde94"
 
 const CuisineDetail = (props) => {
   const [visible, setVisible] = useState(true) 
@@ -48,7 +47,7 @@ const CuisineDetail = (props) => {
   function getRecipeData() {
     console.log('t2', intolerance, '!', diet,'!', ingredient, '!', type,'!', cuisine.title)
     fetch(
-      `https://api.spoonacular.com/recipes/complexSearch?cuisine=${cuisine.title}&diet=${diet}&excludeIngredients=${ingredient}&intolerances=${intolerance}&type=${type}&number=${amountOfResults}&addRecipeInformation=true&apiKey=2b27d20d15814f56a742d05fa5d873a8`
+      `https://api.spoonacular.com/recipes/complexSearch?cuisine=${cuisine.title}&diet=${diet}&excludeIngredients=${ingredient}&intolerances=${intolerance}&type=${type}&number=${amountOfResults}&addRecipeInformation=true&apiKey=${API_KEY}`
     )
       .then((response) => response.json())
       .then((data) => {
@@ -130,7 +129,6 @@ const CuisineDetail = (props) => {
           </div>
           <div className="field">
               <label className="label">Type of Dish</label>
-
                 <div className="select">
                   <select name="dish" onChange={handleChange} >
                   <option value="">-</option>
@@ -144,36 +142,24 @@ const CuisineDetail = (props) => {
                     <option value="fingerfood">Fingerfood</option>
                     <option value="snack">Snack</option>
                   </select>
-
               </div>
             </div>
           <button
             className="countryButton"
             onClick={scrollToBottom}
-
              style={{display: visible}} 
-            >Find Recipes</button>
-             
-              <div>
+            >Find Recipes</button>           
+              <div className="cuisinePref">
                 <h3 className="subtitle has-text-grey">The recipes are based on your preferences: </h3>
                   <ul>Diet <em>{diet}</em> </ul>
                   <ul> Ingredients <em>{ingredient}</em> </ul>
                   <ul>Intolernces <em>{intolerance}</em> </ul>
               </div>
-              <br></br>
-              <br></br>
-
-              <h3 className="subtitle has-text-grey">Shows {amountOfResults} </h3>
-
           <div className="recipeSection columns is-centered is-mobile">
-
-
             {recipeData && <RecipeList recipeData={recipeData} />}
           </div>
           </div>
-
         </div>
-
     </section>
     </Fragment> 
   )

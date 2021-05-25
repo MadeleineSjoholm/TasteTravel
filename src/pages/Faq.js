@@ -47,7 +47,7 @@ const Faq = () => {
 
         <h3 className="question"> How do I change my profile settings? </h3>
           <p>
-            You can change your preferences on your <a  href="/profile" className="hreflink"><b>Profile Page</b></a> Click here to navigate to the page:
+            You can change your profile on your <a  href="/profile" className="hreflink"><b>Profile Page</b></a> Click here to navigate to the page:
 
 
           </p>
@@ -60,6 +60,9 @@ const Faq = () => {
 
         
         <h3 className="question"> How do I save recipes? </h3>
+        <p>
+          When being presented with a recipe, you will see a button labeled "Save Recipe". Make sure to go back to the cuisine-site when you want to save a specific recipe. Unfortunately, you won't be able to save the recipe from the redirected page. To view your saved recipes, visit the <a  href="/new" className="hreflink"><b> Saved Recipes Page</b></a>.
+        </p>
 
         <h3 className="question"> Why should I specify my food preferences? </h3>
           <p>
@@ -75,10 +78,7 @@ const Faq = () => {
           <p>
             We take data protection and your integrity very seriously. With the new Data Protection Ordinance (GDPR) your privacy and security are strengthened as to how we as a service will process and protect your personal data. TasteTravel only collects and processes personal data relevant to a specified purposes with support from one of the legal basis. Personal data will never be stored for a longer period than is necessary for the purposes for which they are processed. You are entitled to delete your personal information. This means that you are entitled to request that your personal information be removed if they are no longer required for the purposes for which they have been collected.
           </p>
-
-
       </div>
-
     </div>
 
   )

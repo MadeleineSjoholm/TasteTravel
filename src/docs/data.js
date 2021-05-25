@@ -119,7 +119,7 @@ export const EastEuropeCuisine = [
   'Bulgaria', 'Czechia', 'Hungary', 'Poland', 'Romania', 'Russia', 'Slovakia', 'Belarus', 'Moldova', 'Ukraine', 'Estonia', 'Latvia', 'Lithuania'
 ]
 export const LatinAmericaCuisine = [
-  'Mexico', 'Guatemala', 'Honduras', 'El Salvador', 'Nicaragua', 'Costa Rica', 'Panama', 'Colombia', 'Venezuela', 'Ecuador', 'Peru', 'Bolivia', 'Brazil', 'French Guiana', 'Paraguay', 'Chile', 'Argentina', 'Uruguay', 'Cuba', 'Haiti', 'Dominican Rep.', 'Puerto Rico'
+  'Guatemala', 'Honduras', 'El Salvador', 'Nicaragua', 'Costa Rica', 'Panama', 'Colombia', 'Venezuela', 'Ecuador', 'Peru', 'Bolivia', 'Brazil', 'French Guiana', 'Paraguay', 'Chile', 'Argentina', 'Uruguay', 'Cuba', 'Haiti', 'Dominican Rep.', 'Puerto Rico'
 ]
 export const AmericaCuisine = [
   'United States of America', 'Canada'
