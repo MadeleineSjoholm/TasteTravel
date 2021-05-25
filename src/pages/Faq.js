@@ -30,7 +30,7 @@ const Faq = () => {
 
         <h3 className="question"> Do I need to have an account to use TasteTravel? </h3>
           <p>
-            Yes, you need to have an account to use TasteTravel. To be able to experience the full TasteTravel journey you will need to create an account. Go to the <a className="hreflink" href="/register">Register Page</a> to get ready for your travels.
+            Yes, you need to have an account to use TasteTravel. To be able to experience the full TasteTravel journey you will need to create an account. Go to the <a className="hreflink" href="/register"><b>Register Page</b></a> to get ready for your travels.
           </p>
 
 
@@ -58,7 +58,7 @@ const Faq = () => {
             Indeed you can! You have the option to add your own favourite recipes on the <a  href="/new" className="hreflink"><b> Create Recipe Page</b></a>. We'd love to be able to take part of it no matter if it's a favourite family recipes, something you picked up on your trip to the Andes or anything there in between. Please note that the recipes you add will be visible to other users. So maybe check with your grandma before you spill her secret recipe.
           </p>
 
-        <h3 className="question"> Can I share recipe to others? </h3>
+        
         <h3 className="question"> How do I save recipes? </h3>
 
         <h3 className="question"> Why should I specify my food preferences? </h3>
@@ -78,7 +78,7 @@ const Faq = () => {
 
 
       </div>
-      
+
     </div>
 
   )
