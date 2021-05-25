@@ -18,15 +18,15 @@ class Home extends React.Component {
     super(props);
     this.state = {
       mealData: null,
-      tags: ''
+      tags: '',
+      loading: true
     }
     // this.handleChange = this.handleChange.bind(this)
     // this.handleSubmit = this.handleSubmit.bind(this);
   }
-
   mySubmitHandler = (event) => {
     event.preventDefault();
-    this.getMealData();
+    this.componentDidMount();
     alert("You are submitting " + this.state.tags);
   }
 
@@ -35,21 +35,36 @@ class Home extends React.Component {
     console.log(this.state.tags)
   }
 
-   getMealData = (event) => {
-    event.preventDefault();
+
+  async componentDidMount() {
     var tags = this.state.tags
-    // const { mealData } = this.state.mealData
-    console.log(tags + " test")
-    fetch(
-      // `https://api.spoonacular.com/recipes/random?limitLicense=true&tags=${tags}&number=4&apiKey=df8f6279130e4a768bd08e6a5d7ad77b`
-      `https://api.spoonacular.com/recipes/complexSearch?cuisine=${tags}&addRecipeInformation=true&apiKey=2b27d20d15814f56a742d05fa5d873a8`
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        this.setState({ mealData: data });
-        console.log(tags +" wowow")
-    });
+    const url = `https://api.spoonacular.com/recipes/complexSearch?cuisine=${tags}&addRecipeInformation=true&apiKey=df8f6279130e4a768bd08e6a5d7ad77b `
+    const response = await fetch(url)
+    const data = await response.json()
+    this.setState({ mealData: data.results[0], loading: false })
+    console.log(data)
+    console.log(this.MealList)
+    console.log(tags)
   }
+
+   
+
+  //  getMealData = (event, mealData) => {
+  //   event.preventDefault();
+  //   var tags = this.state.tags
+  //   // const { mealData } = this.state.mealData
+  //   console.log(tags + " test")
+  //   fetch(
+  //     // `https://api.spoonacular.com/recipes/random?limitLicense=true&tags=${tags}&number=4&apiKey=df8f6279130e4a768bd08e6a5d7ad77b`
+  //     `https://api.spoonacular.com/recipes/complexSearch?cuisine=italian&addRecipeInformation=true&apiKey=f94d33a64b6f4135ab3e6a2b9fc8ce3c`
+  //   )
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       this.setState({ mealData: data });
+  //       console.log(this.mealData)
+  //       console.log(data)
+  //   });
+  // }
 
 
 
@@ -97,7 +112,7 @@ class Home extends React.Component {
             <div className="content-wrapper">
               <div className="columns is-multiline">
                 <div className="field">
-                  <form onSubmit={this.getMealData}>
+                  <form onSubmit={this.mySubmitHandler}>
                     <label className="label" >Quick Search (e.g. "Italian" or "Salmon")
                     <input
                         type='text'
@@ -113,11 +128,24 @@ class Home extends React.Component {
 
                     // onClick={getMealData}
                     />
-                  </form>
-                </div>
-                {this.mealData && <MealList MealData={this.mealData} />}
+               
                 {/* DISPLAYAR SERVICES
                 { this.renderServices(services) } */}
+                  </form>
+                </div>
+                {/* {this.state.mealData && <MealList MealData={this.state.mealData} />} */}
+                {this.state.loading || !this.state.mealData ? <div>loading...</div> :
+                 <div>
+                   <div>ID: {this.state.mealData.id}</div>
+                   <div>Title: {this.state.mealData.title}</div>
+                   <div>Amounts of likes: {this.state.mealData.aggregateLikes}</div>
+                   <div>Cuisines: {this.state.mealData.cuisines}</div>
+                   <div>Diets: {this.state.mealData.diets}</div>
+                   <a href={this.state.mealData.sourceUrl}>Go to Recipe</a>
+                   </div>} 
+               
+      
+      
               </div>
             </div>
           </div>
@@ -137,3 +165,4 @@ class Home extends React.Component {
 //export default connect(mapStateToProps, {fetchServices})(Home)
 
 export default Home
+           
