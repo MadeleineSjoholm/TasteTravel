@@ -1,13 +1,12 @@
 /* eslint no-useless-escape: 0 */
 
+//Filip Jerga
+
 import React from 'react'
 import useForm from 'react-hook-form'
 import { isValidImage, isValidUrl, sameAs } from 'helpers/validators'
 
-
 const RegisterForm = (props) => {
-
-
   const { register, handleSubmit, errors, getValues } = useForm()
 
   return (
@@ -92,10 +91,6 @@ const RegisterForm = (props) => {
           }
         </div>
       </div>
-      {/* <a 
-      type="submit" 
-      href= "/onBoard"
-      className="button is-block rounded secondary-btn raised is-large is-fullwidth">Register</a> */}
 
       <button
         type="submit"
