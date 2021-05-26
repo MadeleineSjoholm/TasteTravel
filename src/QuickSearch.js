@@ -1,5 +1,6 @@
 /* eslint jsx-a11y/anchor-is-valid: 0 */
 
+// Ta bort
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom'
 //import { connect } from 'react-redux' // HOC

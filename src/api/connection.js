@@ -1,4 +1,4 @@
-
+// From Filip Jerga's course: {link}
 
 import firebase from 'firebase/app'
 import 'firebase/database'

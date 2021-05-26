@@ -18,5 +18,4 @@ const serviceApp = combineReducers({
   cuisines
 })
 
-
 export default serviceApp

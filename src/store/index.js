@@ -1,3 +1,5 @@
+//Filip Jerga
+
 
 import { createStore, applyMiddleware, compose } from 'redux'
 import serviceApp from 'reducers'

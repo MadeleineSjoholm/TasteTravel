@@ -2,7 +2,6 @@
 import { FETCH_PREFERENCE_SUCCESS, REQUEST_PREFERENCE } from 'types'
 import { combineReducers } from 'redux'
 
-
 const initSelectedPreference = () => {
   const item = (state = {}, action) => {
     switch(action.type) {
@@ -12,7 +11,6 @@ const initSelectedPreference = () => {
         return state
     }
   }
-
 
   const isFetching = (state = false, action) => {
     switch(action.type) {

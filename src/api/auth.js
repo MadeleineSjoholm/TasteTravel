@@ -1,3 +1,4 @@
+// From Filip Jerga's course: {course}
 
 import firebase from 'firebase/app'
 import 'firebase/auth'
@@ -29,10 +30,6 @@ export const logout = () => firebase.auth().signOut()
 
 export const onAuthStateChanged = onAuthCallback => 
   firebase.auth().onAuthStateChanged(onAuthCallback)
-
-  // export const preferences = ({diet, intolerance, ingredient}) => 
-  // firebase.auth().signInWithEmailAndPassword(email, password)
-  //   .catch(error => Promise.reject(error.message))
 
 export const getUserProfile = uid =>
   db.collection('profiles')

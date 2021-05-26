@@ -27,7 +27,7 @@ const setFavorite = () => {
       FavoriteRecipe: favoriteRecipes.FavoriteRecipe
     })
 
-    if (favoriteRecipes.FavoriteRecipe == '') {
+    if (favoriteRecipes.FavoriteRecipe === '') {
       db.collection("FavRec").doc(user.uid).set({
         FavoriteRecipe: recipe.id
     })

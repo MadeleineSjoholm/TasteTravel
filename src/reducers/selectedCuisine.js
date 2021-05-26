@@ -2,7 +2,6 @@
 import { FETCH_CUISINE_SUCCESS, REQUEST_CUISINE } from 'types'
 import { combineReducers } from 'redux'
 
-
 const initSelectedCuisine = () => {
   const item = (state = {}, action) => {
     switch(action.type) {
@@ -12,7 +11,6 @@ const initSelectedCuisine = () => {
         return state
     }
   }
-
 
   const isFetching = (state = false, action) => {
     switch(action.type) {
