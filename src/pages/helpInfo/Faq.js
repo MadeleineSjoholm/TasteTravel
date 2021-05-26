@@ -52,7 +52,7 @@ const Faq = (props) => {
 
         <h3 className="question"> How do I save recipes? </h3>
         <p>
-          When being presented with a recipe, you will see a button labeled "Save Recipe". Make sure to go back to the cuisine-site when you want to save a specific recipe. Unfortunately, you won't be able to save the recipe from the redirected page. To view your saved recipes, visit the <a href="/new" className="hreflink"><b> Saved Recipes Page</b></a>.
+          Start by creating a saved recipe library in you <a href="/profile" className="hreflink"><b> Profile Page</b></a>. When being presented with a recipe, you will see a button labeled "Save Recipe". Make sure to go back to the cuisine-site when you want to save a specific recipe. Unfortunately, you won't be able to save the recipe from the redirected page. To view your saved recipes, visit the <a href="/new" className="hreflink"><b> Saved Recipes Page</b></a>.
         </p>
 
         <h3 className="question"> Why should I specify my food preferences? </h3>
