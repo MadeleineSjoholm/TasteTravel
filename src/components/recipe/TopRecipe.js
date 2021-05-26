@@ -10,7 +10,7 @@ export default function Recipe({recipe}) {
 
 useEffect(() => {
   fetch(
-    `https://api.spoonacular.com/recipes/${recipe.id}/information?apiKey=${API_KEY}&includeNutrition=false` 
+    `https://api.spoonacular.com/recipes/${recipe.id}/information?apiKey=${API_KEY}&includeNutrition=false`
     )
     .then((response) => response.json())
     .then((data) => {
@@ -31,8 +31,8 @@ useEffect(() => {
       <h1><b>{recipe.title}</b></h1>
       <img src={imageUrl} alt="recipe" />
       <ul>
-        <li>Preperation time: {recipe.readyInMinutes} minutes</li>
-        <li>Number of servings: {recipe.servings}</li>
+        <li><b>Time: </b>{recipe.readyInMinutes} min</li>
+        <li><b>Serves: </b> {recipe.servings}</li>
         {/* <div className="card-text">
              { review }
            </div> */}

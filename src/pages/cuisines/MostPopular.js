@@ -35,17 +35,22 @@ const MostPopular = (props) => {
   if (isFetching) { return <Spinner /> }
   return (
     <Fragment>
+    <figure className="map_background2">
+      <img src="map.png" alt="Company Logo" />
+    </figure>
       <section className="hero is-fullheight is-default is-bold service-detail-page">
+    <div className="background">
         <div className="hero-body">
           <div className="container has-text-centered">
-            <div className="field">
-              <h2 className="title is-2">Most Popular Recipes</h2>
+            <div className="field"><br/>
+              <h2 className="title is-2">MUST POPULAR RECIPES</h2>
               <h3 className="subtitle is-5 is-2">Sort by Country/Region</h3>
               <div className="divider is-centered"></div>
             </div>
             <div className="content-wrapper">
               <div className="columns is-multiline is-one-quarter">
-                <div className="homeRecipes">
+                <div className="Popularcountry">
+                <p><b>Choose a country or a region </b></p><br/>
                   <div className="select">
                     <select name="cuisine" onChange={handleChange} >
                       <option value="">-</option>
@@ -84,6 +89,7 @@ const MostPopular = (props) => {
               </div>
             </div>
           </div>
+        </div>
         </div>
       </section>
     </Fragment>
