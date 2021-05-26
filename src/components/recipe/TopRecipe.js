@@ -4,7 +4,7 @@ import 'firebase/auth'
 
 export default function Recipe({recipe}) {
 
-  const API_KEY = "827194b19189427195018b97d09cde94"
+  const API_KEY = "9c651708cc604ceaa7d0cad063018dd4"
   const [imageUrl, setImageUrl] = useState("")
   // const [review, setReview] = useState("")
 

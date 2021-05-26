@@ -5,7 +5,7 @@ import React from 'react';
 //import { connect } from 'react-redux' // HOC
 import Hero from 'components/Hero'
 const weeklyCuisine = "mexican";
-const API_KEY = "827194b19189427195018b97d09cde94"
+const API_KEY = "9c651708cc604ceaa7d0cad063018dd4"
 
 
 class Home extends React.Component {

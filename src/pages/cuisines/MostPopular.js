@@ -6,7 +6,7 @@ import { Fragment } from 'react'
 import TopRecipeList from 'components/recipe/TopRecipeList'
 
 //CHANGE API HERE
-const API_KEY = "827194b19189427195018b97d09cde94"
+const API_KEY = "df8f6279130e4a768bd08e6a5d7ad77b"
 
 
 const MostPopular = (props) => {
