@@ -6,7 +6,7 @@ import { Fragment } from 'react'
 import TopRecipeList from 'components/recipe/TopRecipeList'
 
 //CHANGE API HERE
-const API_KEY = "df8f6279130e4a768bd08e6a5d7ad77b"
+const API_KEY = "9c651708cc604ceaa7d0cad063018dd4"
 
 
 const MostPopular = (props) => {
@@ -22,7 +22,7 @@ const MostPopular = (props) => {
       .then((response) => response.json())
       .then((data) => {
         setRecipeData(data)
-        console.log(recipeData)
+        console.log(data)
       })
       .catch(() => {
         console.log("error");
