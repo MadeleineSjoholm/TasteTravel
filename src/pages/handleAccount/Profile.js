@@ -23,6 +23,14 @@ const Profile = (props) => {
     console.log('t1', Prefs)
   })
 
+  const createForm = () => {
+    //const userID = user.uid
+    db.collection("FavRec").doc(userID).set({
+      FavoriteRecipe: ''
+    })
+    alert('Saved recipes are now set!')
+  }
+
   if (isFetching) { return <Spinner /> }
   return (
     <div >
@@ -68,6 +76,13 @@ const Profile = (props) => {
                     Update Preferences
                   </button>
                 </Link>
+
+                <p className="subtitle has-text-grey">
+                  <em>If you want to save recipes, start by clicking here! 
+                  <br /> You can also reset your saved recipes by clicking on the button below!</em></p>
+                <button onClick={createForm} className="faqButton">
+                    Set Saved Recipes
+                  </button>
                 <br />
                 <br />
               </div>
