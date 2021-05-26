@@ -27,7 +27,13 @@ const setFavorite = () => {
       FavoriteRecipe: favoriteRecipes.FavoriteRecipe
     })
 
-    if (favoriteRecipes.FavoriteRecipe.includes(recipe.id)) {
+    if (favoriteRecipes.FavoriteRecipe == '') {
+      db.collection("FavRec").doc(user.uid).set({
+        FavoriteRecipe: recipe.id
+    })
+  }
+
+    else if (favoriteRecipes.FavoriteRecipe.includes(recipe.id)) {
       alert('Already added to your favorites!')
       return favoriteRecipes.FavoriteRecipe
 
