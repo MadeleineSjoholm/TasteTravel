@@ -6,9 +6,6 @@ import firebase from 'firebase/app'
 import 'firebase/auth'
 import withAuthorization from 'components/hoc/withAuthorization'
 
-
-
-
 const UpdateForm = () => {
 
 
@@ -24,8 +21,6 @@ const UpdateForm = () => {
   const updateUserProfileSubmit = () => {
     alert('Password as been updated successfully!')
   }
-
-
 
   return (
     <form >

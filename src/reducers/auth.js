@@ -1,10 +1,11 @@
-
-//Filip Jerga
+// This structure is written by Filip Jerga who was 
+// the instructor of the online course that the whole 
+// team took at the beginning. 
+// Link: {React JS & Firebase Complete Course (incl. Chat Application) | Udemy}
 
 import {
   SET_AUTH_USER,
   RESET_AUTH_STATE
-  /*FETCH_USER_SERVICES_SUCCESS*/
 } from 'types'
 
 const INITIAL_STATE = {
@@ -23,10 +24,6 @@ const auth = (state = INITIAL_STATE, action) => {
 
     case RESET_AUTH_STATE:
       return { ...state, isAuthResolved: false }
-
-
-    /* case FETCH_USER_SERVICES_SUCCESS:
-     return { ...state, user: {...state.user, services: action.services}} */
 
     default:
 

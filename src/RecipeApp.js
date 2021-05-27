@@ -1,4 +1,7 @@
-// Filip Jerga ?
+// This structure is written by Filip Jerga who was 
+// the instructor of the online course that the whole 
+// team took at the beginning. 
+// Link: {React JS & Firebase Complete Course (incl. Chat Application) | Udemy}
 
 import React from 'react'
 import { connect } from 'react-redux'
@@ -9,7 +12,7 @@ import Spinner from 'components/Spinner'
 import Footer from 'components/footer'
 import { logout } from 'actions'
 
-class ServiceApp extends React.Component {
+class  RecipeApp extends React.Component {
 
   handleLogout = uid => this.props.dispatch(logout(uid))
 
@@ -38,4 +41,4 @@ class ServiceApp extends React.Component {
 
 const mapStateToProps = state => ({ auth: state.auth })
 
-export default connect(mapStateToProps)(ServiceApp)
+export default connect(mapStateToProps)( RecipeApp)

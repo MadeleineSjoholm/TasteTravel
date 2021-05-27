@@ -8,7 +8,6 @@ import 'firebase/auth'
 
 const SavedDisplay = ( ) => {
   const [imageUrl, setImageUrl] = useState("")
-  //const [FavRecipe, setFavRecipe] = useState("")
   const [title, settitle] = useState("")
   const [readyInMinutes, setreadyInMinutes] = useState("")
   const [servings, setservings] = useState("")

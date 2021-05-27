@@ -46,6 +46,4 @@ return (
   </div>
 )
 }
-
-// export default withRouter(Register)
 export default onlyGuest(Register)

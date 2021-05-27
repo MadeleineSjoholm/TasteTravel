@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { fetchCuisineById } from 'actions'
-//import { Link } from 'react-router-dom'
 import RecipeList from 'components/recipe/RecipeList'
 import Spinner from 'components/Spinner'
 
@@ -23,7 +22,7 @@ const Recipe = props => {
 
   function getRecipeData() {
     fetch(
-      `https://api.spoonacular.com/recipes/complexSearch?cuisine=${cuisine.title}&diet=${diet}&excludeIngredients=${ingredient}&intolerances=${intolerance}&addRecipeInformation=true&apiKey=f94d33a64b6f4135ab3e6a2b9fc8ce3c`
+      `https://api.spoonacular.com/recipes/complexSearch?cuisine=${cuisine.title}&diet=${diet}&excludeIngredients=${ingredient}&intolerances=${intolerance}&addRecipeInformation=true&apiKey=81dec389f2504336ba770c381c86dec5`
     )
       .then((response) => response.json())
       .then((data) => {
@@ -74,12 +73,6 @@ const Recipe = props => {
                 {cuisine.description}
               </h2>
               <br />
-              {/* <Link
-              to="/Recipe">
-              <button className="countryButton">
-                  Find Recipes
-              </button>
-            </Link> */}
             </div>
           </div>
           <input

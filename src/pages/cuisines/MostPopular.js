@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
-//import { Link } from 'react-router-dom'
 import 'firebase/auth'
 import Spinner from 'components/Spinner'
 import { Fragment } from 'react'
 import TopRecipeList from 'components/recipe/TopRecipeList'
 
 //CHANGE API HERE
-const API_KEY = "9c651708cc604ceaa7d0cad063018dd4"
+const API_KEY = "81dec389f2504336ba770c381c86dec5"
 
 
 const MostPopular = (props) => {

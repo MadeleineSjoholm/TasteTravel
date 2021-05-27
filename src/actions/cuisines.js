@@ -1,7 +1,6 @@
 
 import * as api from 'api'
 
-
 export const createPreference = (updatePreference, userId) => {
   updatePreference.user = api.updateRef('preference', userId)
   return api.createPreference(updatePreference)

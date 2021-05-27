@@ -24,7 +24,6 @@ const Profile = (props) => {
   })
 
   const createForm = () => {
-    //const userID = user.uid
     db.collection("FavRec").doc(userID).set({
       FavoriteRecipe: ''
     })
@@ -41,13 +40,13 @@ const Profile = (props) => {
         <div className="content-wrapper">
           <div class="profilepage">
             <h3 className=" yourprofile title has-text-grey">Your Profile</h3>
-            <div class="picture">
+            <div className="picture">
               <figure className=" is-medium">
-                <img class='img' src={userid.user.avatar} width='150' height='150' alt='desription' />
+                <img className='img' src={userid.user.avatar} width='150' height='150' alt='desription' />
               </figure>
               <button className="faqButton">Change Profile Picture</button>
             </div>
-            <div class="infoBox">
+            <div className="infoBox">
               <div align='left'>
                 <h1 className="title has-text-grey"> Your Information:</h1>
                 <h2 className="subtitle has-text-grey">Name: <em>{`${userid.user.fullName}`}</em></h2>

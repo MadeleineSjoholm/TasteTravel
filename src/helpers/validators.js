@@ -1,4 +1,7 @@
-
+// This structure is written by Filip Jerga who was 
+// the instructor of the online course that the whole 
+// team took at the beginning. 
+// Link: {React JS & Firebase Complete Course (incl. Chat Application) | Udemy}
 
 
 export const isValidImage = value => {
@@ -29,12 +32,3 @@ export const sameAs = (getValues, field) => value => {
   const compareToValue = getValues()[field]
   return compareToValue === value
 }
-
-// export const isValidIngredient = value => {
-//   if (!value) return true
-//   if (typeof value !== 'string') return false
-
-//   const validFormats = ['png', 'jpeg', 'jpg', 'svg']
-//   const extenstion = value.split(',').pop()
-//   return validFormats.includes(extenstion)
-// }

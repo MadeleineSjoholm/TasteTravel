@@ -12,10 +12,6 @@ const ResetPassword = ( ) => {
       }
     
      const resetProfilePassword = () => {
-    //     //samma här som lösenordet, man måste ange mailen här i koden.
-    //     const email = document.getElementsByClassName('email')
-    //     console.log(email)
-    //     firebase.auth().sendPasswordResetEmail(email)
         alert('An email has been sent')
      }
 

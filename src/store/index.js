@@ -1,8 +1,11 @@
-//Filip Jerga
+// This structure is written by Filip Jerga who was 
+// the instructor of the online course that the whole 
+// team took at the beginning. 
+// Link: {React JS & Firebase Complete Course (incl. Chat Application) | Udemy}
 
 
 import { createStore, applyMiddleware, compose } from 'redux'
-import serviceApp from 'reducers'
+import  RecipeApp from 'reducers'
 
 import thunk from 'redux-thunk'
 import logger from 'redux-logger'
@@ -16,7 +19,7 @@ const initStore = () => {
   }
 
   const store = createStore(
-    serviceApp, 
+     RecipeApp, 
     composeEnhancers(applyMiddleware(...middlewares))
   )
 
