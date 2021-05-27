@@ -4,9 +4,8 @@ import 'firebase/auth'
 
 export default function Recipe({recipe}) {
 
-  const API_KEY = "9c651708cc604ceaa7d0cad063018dd4"
+  const API_KEY = "81dec389f2504336ba770c381c86dec5"
   const [imageUrl, setImageUrl] = useState("")
-  // const [review, setReview] = useState("")
 
 useEffect(() => {
   fetch(
@@ -35,10 +34,6 @@ useEffect(() => {
         <li><b>Serves: </b> {recipe.servings}</li>
         <li><b>Likes: </b> {recipe.aggregateLikes}</li>
         <li><b>Health Score: </b> {recipe.healthScore}</li>
-        {/* <div className="card-text">
-             { review }
-           </div> */}
-        {/* <li>Summary: {review}</li> */}
       </ul>
       <button className="faqButton"><a href={recipe.sourceUrl}><div className="hreflink">Go to Recipe</div></a></button>
       </article>

@@ -1,3 +1,6 @@
+//This Map is provided by React-Simple-Maps and founded at
+//Link: {React Simple Maps | Map chart with tooltips (react-simple-maps.io)}
+
 import React, { memo } from "react";
 import { useState, useEffect } from 'react'
 
@@ -20,7 +23,7 @@ import {
 const geoUrl =
   "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json";
 
-/*
+
 const rounded = num => {
   if (num > 1000000000) {
     return Math.round(num / 100000000) / 10 + "Bn";
@@ -30,7 +33,7 @@ const rounded = num => {
     return Math.round(num / 100) / 10 + "K";
   }
 };
-*/
+
 
 
 const MapChart = ({ setTooltipContent }) => {
@@ -61,12 +64,11 @@ const MapChart = ({ setTooltipContent }) => {
                   key={geo.rsmKey}
                   geography={geo}
                   onMouseEnter={() => {
-                    //const { NAME, POP_EST } = geo.properties;
-                    const { NAME } = geo.properties;
-                    setTooltipContent(`${NAME}`);
-
-                    //— ${rounded(POP_EST) - tog bort population
-
+                    const { NAME, POP_EST } = geo.properties;
+                    setTooltipContent(`${NAME} — ${rounded(POP_EST)}`);
+                  }}
+                  onMouseLeave={() => {
+                    setTooltipContent('');
                   }}
                   onClick={() => {
                     //const { NAME, POP_EST } = geo.properties; stog nedan///
@@ -113,10 +115,6 @@ const MapChart = ({ setTooltipContent }) => {
                     }
                   }}
 
-
-                  onMouseLeave={() => {
-                    setTooltipContent("");
-                  }}
                   style={{
                     default: {
                       fill: "#BDCFB5",

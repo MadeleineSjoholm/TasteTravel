@@ -2,7 +2,7 @@ import React from 'react';
 
 import initStore from './store'
 import { BrowserRouter as Router } from 'react-router-dom'
-import ServiceApp from './ServiceApp'
+import  RecipeApp from './RecipeApp'
 import { onAuthStateChanged, storeAuthUser } from 'actions'
 import { Provider } from 'react-redux'
 import { ToastProvider } from 'react-toast-notifications'
@@ -27,7 +27,7 @@ class App extends React.Component {
       <Provider store={store}>
         <ToastProvider>
           <Router>
-            <ServiceApp />
+            < RecipeApp />
           </Router>
         </ToastProvider>
       </Provider>

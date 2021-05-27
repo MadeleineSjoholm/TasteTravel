@@ -8,7 +8,6 @@ import 'firebase/auth'
 
 const SavedDisplay = ( ) => {
   const [imageUrl, setImageUrl] = useState("")
-  //const [FavRecipe, setFavRecipe] = useState("")
   const [title, settitle] = useState("")
   const [readyInMinutes, setreadyInMinutes] = useState("")
   const [servings, setservings] = useState("")
@@ -66,6 +65,18 @@ const SavedDisplay = ( ) => {
       <button className="faqButton"><a href={sourceUrl}><div className="hreflink">Go to Recipe</div></a></button>
   </article> 
   </div> 
+  < br />
+  < br />
+  < br />
+  < br />
+  < br />
+  < br />
+  < br />
+  < br />
+  < br />
+  < br />
+  < br />
+  < br />
   </div>
   )
   }

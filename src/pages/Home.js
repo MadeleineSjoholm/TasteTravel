@@ -1,11 +1,9 @@
 /* eslint jsx-a11y/anchor-is-valid: 0 */
 
 import React from 'react';
-// import ReactDOM from 'react-dom'
-//import { connect } from 'react-redux' // HOC
 import Hero from 'components/Hero'
 const weeklyCuisine = "mexican";
-const API_KEY = "9c651708cc604ceaa7d0cad063018dd4"
+const API_KEY = "81dec389f2504336ba770c381c86dec5"
 
 
 class Home extends React.Component {
@@ -36,7 +34,6 @@ class Home extends React.Component {
   }
 
   async componentDidMount() {
-    // this.props.fetchRecipes()
     const url = `https://api.spoonacular.com/recipes/complexSearch?cuisine=${weeklyCuisine}&addRecipeInformation=true&apiKey=${API_KEY}`
     const response = await fetch(url)
     const data = await response.json()
@@ -53,13 +50,6 @@ class Home extends React.Component {
     })
     console.log(data.results[0])
   }
-
-  //FETCHAR POPULAT DESTINATIONS
-  //  componentDidMount() {
-  //    this.props.fetchServices()
-  //  }
-  // renderServices = (services) =>
-  //   services.map(service => <ServiceItem key={service.id} service={service} />)
 
   render() {
     return (
@@ -115,7 +105,6 @@ class Home extends React.Component {
                       <a href={this.state.feature4.sourceUrl} className="faqButton">Go to Recipe</a>
                     </ul>}
                 </div>
-                {/* {this.state.mealData && <MealList MealData={this.state.mealData} />} */}
               </div>
             </div>
           </div>

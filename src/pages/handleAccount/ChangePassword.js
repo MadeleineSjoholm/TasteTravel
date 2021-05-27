@@ -2,7 +2,6 @@
 import React from 'react'
 import UpdateForm from 'components/auth/UpdateForm'
 import withAuthorization from 'components/hoc/withAuthorization'
-//import firebase from 'firebase/app'
 import 'firebase/auth'
 import Spinner from 'components/Spinner'
 

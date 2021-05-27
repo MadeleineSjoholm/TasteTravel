@@ -24,7 +24,6 @@ const Profile = (props) => {
   })
 
   const createForm = () => {
-    //const userID = user.uid
     db.collection("FavRec").doc(userID).set({
       FavoriteRecipe: ''
     })
@@ -34,55 +33,57 @@ const Profile = (props) => {
   if (isFetching) { return <Spinner /> }
   return (
     <div >
-      <figure className="map_background">
+      <figure className="map_background3">
         <img src="map.png" alt="Company Logo" />
       </figure>
       <div className="container">
         <div className="content-wrapper">
+        <h3 className="title">Your Profile</h3>
           <div class="profilepage">
-            <h3 className=" yourprofile title has-text-grey">Your Profile</h3>
-            <div class="picture">
+
+            <div className="picture">
               <figure className=" is-medium">
-                <img class='img' src={userid.user.avatar} width='150' height='150' alt='desription' />
+                <img className='img' src={userid.user.avatar} width='150' height='150' alt='desription' />
               </figure>
               <button className="faqButton">Change Profile Picture</button>
             </div>
-            <div class="infoBox">
+            <div className="infoBox">
               <div align='left'>
-                <h1 className="title has-text-grey"> Your Information:</h1>
-                <h2 className="subtitle has-text-grey">Name: <em>{`${userid.user.fullName}`}</em></h2>
-                <h2 className="subtitle has-text-grey">Email: <em>{`${userid.user.email}`}</em></h2>
-                <h2 className="subtitle has-text-grey">User ID: <em>{`${userid.user.uid}`}</em></h2>
-                <h2 className="subtitle has-text-grey" > <b>Preferences: </b> </h2>
+                <h1 className="title2 "><b>Your Information</b> </h1>
+                <p className="subtitle has-text-grey"><b> Name: </b>{`${userid.user.fullName}`}</p>
+                <p className="subtitle has-text-grey"><b> Email: </b>{`${userid.user.email}`}</p>
+                <p className="subtitle has-text-grey"><b> User ID: </b>{`${userid.user.uid}`}</p>
+                <h2 className="subtitle2" > <b>Preferences </b> </h2>
                 <h3 className="subtitle has-text-grey">
-                  <ul>Diet : <em>{diet}</em> </ul>
-                  <ul>Ingredients : <em>{ingredient}</em> </ul>
-                  <ul>Intolernces : <em>{intolerance}</em> </ul>
+                  <ul><b> Diet : </b>{diet}</ul><br/>
+                  <ul><b> Ingredients : </b>{ingredient}</ul><br/>
+                  <ul><b>Intolernces : </b>{intolerance}</ul><br/>
                 </h3>
-                <br></br>
-                <h1 className="title has-text-grey">Settings</h1>
-                <p className="subtitle has-text-grey"><em>Want to update your password?</em></p>
+
+                <h1 className="subtitle2"><b>Settings </b></h1>
+                <p className="subtitle has-text-grey"><em>Want to update your password?</em>
+
                 <Link
                   to="/ChangePassword">
-                  <button className="faqButton">
+                  <button className="PasswordButton">
                     Update Password
                   </button>
-                  <br></br>
-                </Link>
-                <p className="subtitle has-text-grey"><em>Want to update your Preferences?</em></p>
+
+                </Link></p>
+                <p className="subtitle has-text-grey"><em>Want to update your Preferences?</em>
                 <Link
                   to="/Preferences">
-                  <button className="faqButton">
+                  <button className="UpdateButton">
                     Update Preferences
                   </button>
-                </Link>
+                </Link></p>
 
                 <p className="subtitle has-text-grey">
-                  <em>If you want to save recipes, start by clicking here! 
-                  <br /> You can also reset your saved recipes by clicking on the button below!</em></p>
-                <button onClick={createForm} className="faqButton">
+                  <em>If you want to save recipes, start by clicking here!
+                  <br /> You can also reset your saved recipes by clicking on the button below!</em>
+                <button onClick={createForm} className="SavedButton">
                     Set Saved Recipes
-                  </button>
+                  </button> </p>
                 <br />
                 <br />
               </div>

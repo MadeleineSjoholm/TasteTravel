@@ -1,3 +1,7 @@
+// This structure is written by Filip Jerga who was 
+// the instructor of the online course that the whole 
+// team took at the beginning. 
+// Link: {React JS & Firebase Complete Course (incl. Chat Application) | Udemy}
 
 import { 
   SET_AUTH_USER, 
@@ -7,15 +11,12 @@ import * as api from 'api'
 
 export const register = registerFormData => api.register({...registerFormData})
 export const login = loginData => api.login({...loginData})
-// export const preferences = prefData => api.preferences({...prefData})
 export const onAuthStateChanged = onAuthCallback => api.onAuthStateChanged(onAuthCallback)
 
 export const logout = uid => dispatch => 
   api
     .logout()
      .then(_ => {
-    //   const userStatusDatabaseRef = api.createFirebaseRef('status', uid)
-    //   return userStatusDatabaseRef.set(api.isOfflineForDatabase)
      })
     .then(_ => dispatch({user: null, type: SET_AUTH_USER})) 
 

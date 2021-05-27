@@ -1,7 +1,6 @@
 
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
-// import QuickSearch from "./QuickSearch";
 import CuisineDetailPage from './pages/cuisines/CuisineDetail'
 import About from './pages/helpInfo/About'
 import OurTeam from './pages/helpInfo/OurTeam'
@@ -18,7 +17,6 @@ import MostPopular from './pages/cuisines/MostPopular'
 import OnBoard from './pages/helpInfo/OnBoard'
 import ResetPasswordPage from './pages/handleAccount/ResetPassword'
 import ChangePasswordPage from './pages/handleAccount/ChangePassword'
-// import QuickRecipe from './components/recipe/TopRecipe'
 import Help from './pages/helpInfo/Help'
 
 

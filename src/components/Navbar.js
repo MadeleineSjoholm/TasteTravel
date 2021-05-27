@@ -1,5 +1,10 @@
 /*eslint jsx-a11y/anchor-is-valid: 0*/
 
+// This structure is written by Filip Jerga who was 
+// the instructor of the online course that the whole 
+// team took at the beginning. 
+// Link: {React JS & Firebase Complete Course (incl. Chat Application) | Udemy}
+
 import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
@@ -74,37 +79,11 @@ const Navbar = props => {
               className="navbar-item is-secondary">
                 HOME
             </Link>
-            {/* <Link
-              to="/services"
-              className="navbar-item is-secondary">
-                Services
-            </Link> */}
             <Link
               to="/faq"
               className="navbar-item is-secondary">
                 FAQ
             </Link>
-           {/* { isAuth &&
-              <div className="navbar-item has-dropdown is-hoverable">
-                <a className="navbar-link">
-                    Manage Your Recipes
-                </a>
-                <div className="navbar-dropdown">
-                  <Link
-                    to="/services/new"
-                    className="navbar-item">
-                      Create Recipe
-                  </Link>
-                  <Link
-                    to="/services/me"
-                    className="navbar-item">
-                      Your Recipes
-                  </Link>
-                </div>
-              </div>
-            } */}
-
-
             { !isAuth &&
               <React.Fragment>
                 <Link

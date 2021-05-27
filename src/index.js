@@ -1,4 +1,7 @@
-// Filip Jerga
+// This structure is written by Filip Jerga who was 
+// the instructor of the online course that the whole 
+// team took at the beginning. 
+// Link: {React JS & Firebase Complete Course (incl. Chat Application) | Udemy}
 
 import React from 'react';
 import ReactDOM from 'react-dom';
