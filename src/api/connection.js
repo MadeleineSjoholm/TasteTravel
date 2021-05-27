@@ -1,4 +1,4 @@
-// From Filip Jerga's course: {link}
+// From Filip Jerga's course: {link} Ta bort potentiellt, använder vi denna?
 
 import firebase from 'firebase/app'
 import 'firebase/database'
