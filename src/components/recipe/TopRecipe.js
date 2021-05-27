@@ -4,7 +4,7 @@ import 'firebase/auth'
 
 export default function Recipe({recipe}) {
 
-  const API_KEY = "81dec389f2504336ba770c381c86dec5"
+  const API_KEY = "2b27d20d15814f56a742d05fa5d873a8"
   const [imageUrl, setImageUrl] = useState("")
 
 useEffect(() => {

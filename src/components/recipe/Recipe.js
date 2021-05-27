@@ -6,9 +6,9 @@ import 'firebase/auth'
 
 
 export default function Recipe({recipe}, { auth }) {
-  const API_KEY = "81dec389f2504336ba770c381c86dec5"
+  const API_KEY = "2b27d20d15814f56a742d05fa5d873a8"
   const [imageUrl, setImageUrl] = useState("")
-  const user = firebase.auth().currentUser  
+  const user = firebase.auth().currentUser
   console.log( recipe.id )
   console.log(user)
 
@@ -46,7 +46,7 @@ const setFavorite = () => {
 
 useEffect(() => {
   fetch(
-    `https://api.spoonacular.com/recipes/${recipe.id}/information?apiKey=${API_KEY}&includeNutrition=false` 
+    `https://api.spoonacular.com/recipes/${recipe.id}/information?apiKey=${API_KEY}&includeNutrition=false`
     )
     .then((response) => response.json())
     .then((data) => {
@@ -66,16 +66,16 @@ useEffect(() => {
         <li>Preperation time: {recipe.readyInMinutes} minutes</li>
         <li>Number of servings: {recipe.servings}</li>
       </ul>
-      <button 
+      <button
         name='recipeId'
         onClick = {setFavorite}
-        img src="heart.png" 
-        width="50" 
-        height="50" 
-        alt='heart' 
+        img src="heart.png"
+        width="50"
+        height="50"
+        alt='heart'
         >
         <br />SAVE RECIPE
-      </button>   
+      </button>
 
       <button className="faqButton"><a href={recipe.sourceUrl}><div className="hreflink">Go to Recipe</div></a></button>
       </article>
