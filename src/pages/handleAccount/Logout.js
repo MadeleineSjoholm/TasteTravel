@@ -27,6 +27,28 @@ class Logout extends React.Component {
            <br/>
            Hope to see you soon! </h1>}
         </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+
       </div>
 
     )

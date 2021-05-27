@@ -578,6 +578,7 @@ div.nav-item.is-drop {
 Most popular
 ========================================================================== */
 
+
 .Popularcountry {
   //display: flex;
   column-gap: 1rem;
@@ -586,37 +587,10 @@ Most popular
   margin-bottom: 3%;
   margin-left: 38%;
   //box-shadow: 0 4px 8px 2px rgba(77, 77, 77, 0.15);
-}
 
-.popularRecipes{
-  display: flex;
-  column-gap: 1rem;
-  padding: 2rem;
-  width: 130%;
-  margin: 5rem;
-  margin-left: -15%;
-  //max-width: 100rem;
-  box-shadow: 0 4px 8px 2px rgba(77, 77, 77, 0.15);
-}
-
-.popularButton{
-  position: absolute;
-  font-size: larger;
-  background-color: $secondary;
-  border-color: $secondary;
-  border-style: solid;
-  border-radius: 50px;
-  opacity: 1;
-  padding: 20px;
-  margin-left: -100%;
-  margin: -6%;
-  transition: 0.3s;
 
 }
-.popularButton:hover {
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.10), 0 17px 50px 0 rgba(0,0,0,0.19);
-  opacity: 0.8;
-}
+
 
 
 /* ==========================================================================
@@ -625,12 +599,22 @@ Home Page
 
 .homeRecipes{
   display: flex;
-  align-content: center;
   column-gap: 1rem;
   padding: 2rem;
   margin: 0 1rem;
+  background-color: rgba(255, 255, 255, 0.3);
   //max-width: 18rem;
   box-shadow: 0 4px 8px 2px rgba(77, 77, 77, 0.15);
+  margin-top: 10px;
+}
+
+.homeRecipeBox {
+  padding: 10px;
+  max-width: 300px;
+  .img{
+  max-width: 200px;
+  max-height: 500px;
+  }
 
 }
 
@@ -1400,6 +1384,8 @@ position: relative;
         font-size: 1rem;
       }
     }
+
+
       .footer {
         display: block;
         grid-column-gap: 1rem;
@@ -1428,7 +1414,6 @@ position: relative;
         "step3"
 
       }
-
 
 
 
