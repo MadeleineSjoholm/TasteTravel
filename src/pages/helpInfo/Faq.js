@@ -67,7 +67,7 @@ const Faq = (props) => {
 
         <h3 className="question"> How do you handle my personal data? </h3>
         <p>
-          We take data protection and your integrity very seriously. With the new Data Protection Ordinance (GDPR) your privacy and security are strengthened as to how we as a service will process and protect your personal data. TasteTravel only collects and processes personal data relevant to a specified purposes with support from one of the legal basis. Personal data will never be stored for a longer period than is necessary for the purposes for which they are processed. You are entitled to delete your personal information. This means that you are entitled to request that your personal information be removed if they are no longer required for the purposes for which they have been collected.
+          We take data protection and your integrity very seriously. With the new Data Protection Ordinance (GDPR) your privacy and security are strengthened as to how we as a Recipe will process and protect your personal data. TasteTravel only collects and processes personal data relevant to a specified purposes with support from one of the legal basis. Personal data will never be stored for a longer period than is necessary for the purposes for which they are processed. You are entitled to delete your personal information. This means that you are entitled to request that your personal information be removed if they are no longer required for the purposes for which they have been collected.
           </p>
       </div>
     </div>

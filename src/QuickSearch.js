@@ -7,7 +7,7 @@ import ReactDOM from 'react-dom'
 import Hero from 'components/Hero'
 import QuickRecipeList from 'components/recipe/TopRecipeList'
 import SearchForm from 'components/recipe/SearchForm'
-//import ServiceItem from 'components/service/ServiceItem'
+//import ServiceItem from 'components/Recipe/ServiceItem'
 
 //import { fetchServices } from 'actions'
 const API_K = "9c651708cc604ceaa7d0cad063018dd4"

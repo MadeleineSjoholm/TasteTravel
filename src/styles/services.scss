@@ -1,25 +1,25 @@
-service-detail-page {
-  .service-title {
+Recipe-detail-page {
+  .Recipe-title {
     margin-bottom: 5px;
   }
 
-  .service-category {
+  .Recipe-category {
     margin: 10px;
   }
 
-  .service-price {
+  .Recipe-price {
     font-size: 40px;
   }
 
-  .service-description {
+  .Recipe-description {
     font-size: 21px;
   }
 
-  .service-header-container {
+  .Recipe-header-container {
     display: flex;
   }
 
-  .service-user {
+  .Recipe-user {
     margin-bottom: 30px;
     flex: 1;
   }
@@ -40,7 +40,7 @@ service-detail-page {
   }
 }
 
-// SERVICE CREATE
+// Recipe CREATE
 .create-page {
   margin-top: 70px;
   margin-bottom: 70px;
@@ -54,4 +54,4 @@ service-detail-page {
     margin-top: 20px;
   }
 }
-// SERVICE CREATE ENDS
+// Recipe CREATE ENDS

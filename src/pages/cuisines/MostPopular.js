@@ -35,7 +35,7 @@ const MostPopular = (props) => {
   return (
     <Fragment>
 
-      <section className="hero is-fullheight is-default is-bold service-detail-page">
+      <section className="hero is-fullheight is-default is-bold Recipe-detail-page">
     <div className="background">
         <div className="hero-body">
           <div className="container has-text-centered">

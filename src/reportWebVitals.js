@@ -23,22 +23,22 @@ export function register(config) {
     }
 
     window.addEventListener('load', () => {
-      const swUrl = `${process.env.PUBLIC_URL}/service-worker.js`;
+      const swUrl = `${process.env.PUBLIC_URL}/Recipe-worker.js`;
 
       if (isLocalhost) {
-        // This is running on localhost. Let's check if a service worker still exists or not.
+        // This is running on localhost. Let's check if a Recipe worker still exists or not.
         checkValidreportWebVitals(swUrl, config);
 
         // Add some additional logging to localhost, pointing developers to the
-        // service worker/PWA documentation.
+        // Recipe worker/PWA documentation.
         navigator.reportWebVitals.ready.then(() => {
           console.log(
-            'This web app is being served cache-first by a service ' +
+            'This web app is being served cache-first by a Recipe ' +
               'worker. To learn more, visit https://bit.ly/CRA-PWA'
           );
         });
       } else {
-        // Is not localhost. Just register service worker
+        // Is not localhost. Just register Recipe worker
         registerValidSW(swUrl, config);
       }
     });
@@ -58,7 +58,7 @@ function registerValidSW(swUrl, config) {
           if (installingWorker.state === 'installed') {
             if (navigator.reportWebVitals.controller) {
               // At this point, the updated precached content has been fetched,
-              // but the previous service worker will still serve the older
+              // but the previous Recipe worker will still serve the older
               // content until all client tabs are closed.
               console.log(
                 'New content is available and will be used when all ' +
@@ -85,28 +85,28 @@ function registerValidSW(swUrl, config) {
       };
     })
     .catch(error => {
-      console.error('Error during service worker registration:', error);
+      console.error('Error during Recipe worker registration:', error);
     });
 }
 
 function checkValidreportWebVitals(swUrl, config) {
-  // Check if the service worker can be found. If it can't reload the page.
+  // Check if the Recipe worker can be found. If it can't reload the page.
   fetch(swUrl)
     .then(response => {
-      // Ensure service worker exists, and that we really are getting a JS file.
+      // Ensure Recipe worker exists, and that we really are getting a JS file.
       const contentType = response.headers.get('content-type');
       if (
         response.status === 404 ||
         (contentType != null && contentType.indexOf('javascript') === -1)
       ) {
-        // No service worker found. Probably a different app. Reload the page.
+        // No Recipe worker found. Probably a different app. Reload the page.
         navigator.reportWebVitals.ready.then(registration => {
           registration.unregister().then(() => {
             window.location.reload();
           });
         });
       } else {
-        // Service worker found. Proceed as normal.
+        // Recipe worker found. Proceed as normal.
         registerValidSW(swUrl, config);
       }
     })
