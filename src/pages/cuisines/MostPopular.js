@@ -17,7 +17,7 @@ const MostPopular = (props) => {
 
   function getRecipeData() {
     fetch(
-      `https://api.spoonacular.com/recipes/complexSearch?cuisine=${cuisine}&number=${amountOfResults}&addRecipeInformation=true&apiKey=${API_KEY}`
+      `https://api.spoonacular.com/recipes/complexSearch?cuisine=${cuisine}&number=${amountOfResults}&topRated=true&addRecipeInformation=true&apiKey=${API_KEY}`
     )
       .then((response) => response.json())
       .then((data) => {
