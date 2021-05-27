@@ -39,7 +39,7 @@ return (
           <RegisterForm onRegister={registerUser} />
         </div>
         <p className="has-text-grey">
-          <a href="/Faq">Need Help?</a>
+          <a href="/Faq">Need Help? </a>
         </p>
       </div>
     </div>

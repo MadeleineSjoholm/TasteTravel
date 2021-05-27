@@ -18,20 +18,20 @@ const SavedDisplay = ( ) => {
   console.log(user.uid)
   db.collection("FavRec").doc(user.uid).onSnapshot((doc) => {
     const savedRec = doc.data()
-    
+
     console.log(savedRec.FavoriteRecipe)
     const recipeStr = savedRec.FavoriteRecipe
     const recipes = recipeStr.split(',')
     console.log(recipes)
     console.log(recipes.length)
-  
-    
+
+
     console.log(recipes)
     const recipeId = ((recipes))
     console.log((recipeId))
     const recipeInt = parseInt(recipes)
     console.log(recipeInt)
-      fetch(`https://api.spoonacular.com/recipes/${recipeInt}/information?apiKey=81dec389f2504336ba770c381c86dec5&includeNutrition=false`)
+      fetch(`https://api.spoonacular.com/recipes/${recipeInt}/information?apiKey=2b27d20d15814f56a742d05fa5d873a8&includeNutrition=false`)
       .then((response) => response.json())
       .then((data) => {
         setImageUrl(data.image)
@@ -46,9 +46,9 @@ const SavedDisplay = ( ) => {
       }, [recipes])
         console.log(recipes)
 
-}) 
+})
   return (
-    
+
     <div className="container">
     <div className="content-wrapper">
        <h1 className="title">Saved Recipes</h1>
@@ -63,8 +63,8 @@ const SavedDisplay = ( ) => {
         <li>Number of servings: {servings}</li>
       </ul>
       <button className="faqButton"><a href={sourceUrl}><div className="hreflink">Go to Recipe</div></a></button>
-  </article> 
-  </div> 
+  </article>
+  </div>
   < br />
   < br />
   < br />

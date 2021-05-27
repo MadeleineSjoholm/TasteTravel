@@ -17,8 +17,15 @@ class Logout extends React.Component {
     return (
       <div className="container">
         <div className="content-wrapper">
-          { isAuth && <h1 className="title">You are getting logged out...</h1>}
-          { !isAuth && <h1 className="title">You are logged out</h1>}
+        <figure className="map_background2">
+          <img src="map.png" alt="Company Logo" />
+        </figure>
+          { isAuth && <h1 className="LogOut">You are getting logged out...</h1>}
+          { !isAuth && <h1 className="LogOut">You are now logged out.<br/>
+            <a href="/Login" className="hreflink">  Login</a> to keep traveling!
+           <br/>
+           <br/>
+           Hope to see you soon! </h1>}
         </div>
       </div>
 

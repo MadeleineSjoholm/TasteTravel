@@ -15,6 +15,50 @@ $redish:rgb(248, 140, 140); // For the logout-button
 Color variables
 ========================================================================== */
 
+html {
+    font-family: system-ui, sans-serif;
+    font-size: 1.25rem;
+  }
+
+  svg {
+    display: inline-block;
+    vertical-align: middle;
+
+  }
+
+  svg.rsm-svg { /* kartan bara, svg ovan är också kryssknappen i sidebar */
+    height: 20%;
+    border: double #BDCFB5 5px;
+
+    width: 100%;
+    display: inline-block;
+  vertical-align: middle;
+
+  }
+
+
+
+.LogOut {
+
+font-size: 40px;
+margin-top: 10%;
+margin-left: 30%;
+
+margin-bottom: 40%;
+
+
+}
+
+
+
+
+/* ==========================================================================
+Color variables
+========================================================================== */
+
+
+
+
 .s-m-r {
   margin-right: 5px;
 }
@@ -1039,6 +1083,39 @@ font-weight: bold;
     height:30%;
   }
 
+  .saveButton{
+    font-size: 20px;
+    background-color: white;
+    border-color: $secondary;
+    color: $sienna;
+    border-style: solid;
+    border-radius: 50px;
+    opacity: 1;
+    padding: 10px;
+    margin: 10px;
+    transition: 0.3s;
+
+  }
+
+  .GoButton{
+    font-size: 20px;
+    background-color: $secondary;
+    border-color: $secondary;
+    color: $sienna;
+    border-style: solid;
+    border-radius: 100px;
+    padding: 10px;
+    margin: 10px;
+    transition: 0.3s;
+
+  }
+
+  .nutrients {
+    margin-top: -25px;
+
+
+  }
+
 
 /*=============================================================================
   Recipes on country page
@@ -1073,6 +1150,7 @@ article {
     color: $lavender;
    text-decoration: none;
    background-color: none;
+   opacity: 1;
 
 }
 
@@ -1096,7 +1174,7 @@ position: relative;
 
   }
 
-  .faqButton{                   //Samma knapp används på Help sidan.
+  .faqButton{
     background-color: $secondary;
     border-color: $secondary;
     color: black;
@@ -1331,6 +1409,8 @@ position: relative;
         margin: 0;
         background-color: lighten($secondary, 30%);
       }
+
+
 
       .text-area{
 
