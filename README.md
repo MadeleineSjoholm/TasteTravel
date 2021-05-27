@@ -1,6 +1,4 @@
 # README - TasteTravel
-
-Source for this structure: https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project 
 ----------------------------------------------------------------------------------------------------------------------------------------------
 A project created by:
 Alva Blomkvist
@@ -41,13 +39,22 @@ Google Firebase is a platform developed by Google for creating mobile and web ap
 ### Recipe API from Sponacular 
 Sponacular is a website that organize and saves recipes. TasteTravel fetches recipes from sponacular with the preferences that a user has given. 
 
+## Sources
+### Udemy.com
+The application TasteTravel is inspired by the online course "React JS & Firebase Complete Course (incl. Chatt Application)" that the team of TasteTravel took at Udemy.com. The course instructor is Filip Jerga. Link: {React JS & Firebase Complete Course (incl. Chat Application) | Udemy}
+
+### BulmaThemes.com
+In the course, the instructor Filip Jerga used a template from Bulma at bulmathemes.com, which the team of TasteTravel also did. 
+
+### React-Simple-Maps and React-Tooltip
+On TasteTravels Home page there is an interactive map. This map is a map chart that React-Simple-Maps provides. The code for the map is from, link: {React Simple Maps | Map chart with tooltips (react-simple-maps.io)}
+
 ## Packages
 To run this project a few packages needs to be installed:
 ### React-Dom
 ### React-Hook-Form
 ### React-Redux
 ### React-Router-Dom
-### React-Simple-Maps
 ### React-Tooltip
 ### React-Select
 ### React-Toast-Notification
@@ -75,9 +82,3 @@ You will also see any lint errors in the console.
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-## Sources
-### Udemy.com
-The application TasteTravel is inspired by the online course "React JS & Firebase Complete Course (incl. Chatt Application)" that the team of TasteTravel took at Udemy.com. The course instructor is Filip Jerga. 
-
-### BulmaThemes.com
-In the course Jerga used a template from Bulma at bulmathemes.com, as the team of TasteTravel also did. 
