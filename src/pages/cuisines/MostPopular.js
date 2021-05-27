@@ -35,7 +35,7 @@ const MostPopular = (props) => {
   if (isFetching) { return <Spinner /> }
   return (
     <Fragment>
-    <figure className="map_background2">
+    <figure className="map_background3">
       <img src="map.png" alt="Company Logo" />
     </figure>
       <section className="hero is-fullheight is-default is-bold service-detail-page">
