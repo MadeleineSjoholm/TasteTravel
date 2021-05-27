@@ -66,6 +66,18 @@ const SavedDisplay = ( ) => {
       <button className="faqButton"><a href={sourceUrl}><div className="hreflink">Go to Recipe</div></a></button>
   </article> 
   </div> 
+  < br />
+  < br />
+  < br />
+  < br />
+  < br />
+  < br />
+  < br />
+  < br />
+  < br />
+  < br />
+  < br />
+  < br />
   </div>
   )
   }
