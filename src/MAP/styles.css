@@ -11,8 +11,8 @@ html {
 
   svg.rsm-svg { /* kartan bara, svg ovan är också kryssknappen i sidebar */
     height: 20%;
-    border: double #BDCFB5 2px;
-    
+    border: double #BDCFB5 5px;
+
     width: 100%;
     display: inline-block;
   vertical-align: middle;

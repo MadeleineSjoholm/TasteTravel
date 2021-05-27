@@ -559,7 +559,7 @@ Home Page
   margin: 0 1rem;
   //max-width: 18rem;
   box-shadow: 0 4px 8px 2px rgba(77, 77, 77, 0.15);
-  
+
 }
 
 /* ==========================================================================
@@ -919,7 +919,7 @@ font-weight: bold;
   .text-area{
     position: relative;
     width: 80%;
-    border:6px dotted #BDCFB5;
+    border:6px double #BDCFB5;
     padding: 30px;
     margin: 0px;
     margin-bottom: 100px;
@@ -1050,65 +1050,6 @@ article {
 
 
 
-/*============================================================================
-RecipePage
-============================================================================*/
-
-//
-// .recipe {
-//   display: grid;
-//   grid-template-columns: auto auto;
-//   grid-gap: 10px;
-//   padding: 10px;
-//   color: 482728;
-// }
-//
-// .grid-container > div {
-//   background-color: rgba(255, 255, 255, 0.8);
-//   text-align: center;
-//   padding: 20px 0;
-//   font-size: 30px;
-// }
-//
-// .img {
-//   grid-column-start: 1;
-//   grid-column-end: 1;
-//   grid-row-start: 1;
-//   grid-row-end: 1;
-// }
-// .ingredients {
-//   grid-column-start: 1;
-//   grid-column-end: 1;
-//   grid-row-start: 2;
-//   grid-row-end: 6;
-//   border: dotted;
-//   padding: 30px;
-//   background-color: #BDCFB5;
-//   color: #482728;
-//
-//
-// }
-// .name {
-//   grid-column-start: 2;
-//   grid-column-end: 4;
-//   grid-row-start: 1;
-//   grid-row-end: 1;
-//   border: dotted;
-//   padding: 30px;
-//   color: #BDCFB5;
-// }
-// .instructions {
-//   grid-column-start: 2;
-//   grid-column-end: 4;
-//   grid-row-start: 2;
-//   grid-row-end: 6;
-//   border: dotted;
-//   padding: 30px;
-//   color: #482728;
-//   border-color: #BDCFB5;
-// }
-
-
   /*===========================================================================
   Faq and about page
 
@@ -1179,18 +1120,19 @@ position: relative;
   grid-column-end: 1;
   grid-row-start: 2;
   grid-row-end: 2;
-  border:6px dotted #BDCFB5;
+  border:4px double #BDCFB5;
   padding: 10% ;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.9);
+
 
 }
 .infoBox {
   max-width: 100%;
   grid-column-start: 2;
-  grid-column-end: 5;
+  grid-column-end: 3;
   grid-row-start: 2;
-  grid-row-end: 6;
-  border: 6px dotted #BDCFB5;
+  grid-row-end: 5;
+  border: 4px double #BDCFB5;
   padding-left: 20px;
   padding-top: 10px;
   background-color: rgba(255, 255, 255, 0.6);
@@ -1202,6 +1144,71 @@ position: relative;
   grid-column-start: 3;
   grid-column-end: 3;
   }
+
+  .map_background3 {
+    max-width: 100%;
+    height: auto;
+    img {width: 100%}
+    position: absolute;
+    opacity: 0.8;
+    margin-top: 70px;
+    background-attachment: fixed;
+  }
+
+  .title2{
+    font-size: 30px;
+    color:#482728;
+    padding-top: 1%;
+    padding-bottom: 1%;
+  }
+
+
+  .subtitle {
+    color: $sienna;
+  }
+
+  .subtitle2 {
+    color: $sienna;
+    font-size: 25px;
+    margin-bottom: 1%;
+  }
+
+
+    .PasswordButton{
+      background-color: $secondary;
+      border-color: $secondary;
+      color: black;
+      border-style: solid;
+      border-radius: 70px;
+      padding: 10px;
+      transition: 0.3s;
+      margin-left: 2%;
+
+    }
+
+    .UpdateButton{
+      background-color: $secondary;
+      border-color: $secondary;
+      color: black;
+      border-style: solid;
+      border-radius: 70px;
+      padding: 10px;
+      transition: 0.3s;
+      margin-left: 2%;
+
+    }
+
+    .SavedButton{
+      background-color: $secondary;
+      border-color: $secondary;
+      color: black;
+      border-style: solid;
+      border-radius: 70px;
+      padding: 10px;
+      transition: 0.3s;
+      margin-left: 2%;
+
+    }
 
 
   /*===========================================================================
@@ -1300,7 +1307,7 @@ position: relative;
       .text-area{
 
         width: 80%;
-        border:6px dotted #BDCFB5;
+        border:4px double #BDCFB5;
         padding: 30px;
         margin: 0px;
         box-sizing: border-box;
