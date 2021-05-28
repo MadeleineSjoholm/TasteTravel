@@ -43,7 +43,7 @@ const MostPopular = (props) => {
         <div className="hero-body">
           <div className="container has-text-centered">
             <div className="field"><br/>
-              <h2 className="title is-2">MUST POPULAR RECIPES</h2>
+              <h2 className="title">MOST POPULAR RECIPES</h2>
               <h3 className="subtitle is-5 is-2">Sort by Country/Region</h3>
               <div className="divider is-centered"></div>
             </div>
