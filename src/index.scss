@@ -631,8 +631,6 @@ grid-area: member2; }
           }
         }
 
-        /*! _cards.scss v1.0.0 | Commercial License | built on top of bulma.io/Bulmax */
-
       /* -------------------------------------------------------------------------
                                       Navbar
       ------------------------------------------------------------------------------*/
@@ -706,23 +704,6 @@ z-index: 29;
     display: block;
     line-height: 0;
     font-size: .9rem !important;
-  }
-}
-
-&.is-fixed {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-
-  min-height: 4rem !important;
-  background: $sienna;
-  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.12);
-  a {
-    color: $secondary;
-    &:hover {
-      color: $secondary;
-    }
   }
 }
 }

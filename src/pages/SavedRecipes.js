@@ -31,7 +31,7 @@ const SavedDisplay = ( ) => {
     console.log((recipeId))
     const recipeInt = parseInt(recipes)
     console.log(recipeInt)
-      fetch(`https://api.spoonacular.com/recipes/${recipeInt}/information?apiKey=2b27d20d15814f56a742d05fa5d873a8&includeNutrition=false`)
+      fetch(`https://api.spoonacular.com/recipes/${recipeInt}/information?apiKey=9c651708cc604ceaa7d0cad063018dd4&includeNutrition=false`)
       .then((response) => response.json())
       .then((data) => {
         setImageUrl(data.image)
