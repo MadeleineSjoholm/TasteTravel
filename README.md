@@ -8,9 +8,9 @@ Felicia Östling
 
 ----------------------------------------------------------------------------------------------------------------------------------------------
 ## Introduction
-This past year has seen a lot of big changes in the way we live and our mobility due to the ongoing pandemic. Another tangible consequence of the pandemic has been our lack of possibility to travel and explore the world. When not being able to explore the world like before, you need to find new ways of taking part in culinary experiences, explore new cultures along with seeking new cuisines. 
+This past year has seen a lot of big changes in the way we live and our mobility due to the ongoing pandemic. Another tangible consequence of the pandemic has been our lack of possibility to travel and explore the world. When not being able to explore the world like before, you need to find new ways of taking part in culinary experiences, explore new cultures along with seeking new cuisines.
 
-In combination, as an effect of our limited mobility and spending more time at home - a surge in interest has been created to explore new recipes and food cultures. The survey we conducted  with 55 people showed that 75% of people asked, worked either fully or partly remote, with a majority of people now cooking all or almost all meals from home. The survey showed that 76% of those surveyed have a high interest in traveling and when traveling 82% said that taking part in the food culture was very important to them. 
+In combination, as an effect of our limited mobility and spending more time at home - a surge in interest has been created to explore new recipes and food cultures. The survey we conducted  with 55 people showed that 75% of people asked, worked either fully or partly remote, with a majority of people now cooking all or almost all meals from home. The survey showed that 76% of those surveyed have a high interest in traveling and when traveling 82% said that taking part in the food culture was very important to them.
 
 Therefore the purpose with Tastetravel is to create a way to explore the world through culinary experiences from the safety of our own homes. And this will be done with TasteTravel’s web application.  
 
@@ -18,33 +18,33 @@ TasteTravel is a web application allowing users to travel and explore the world 
 
 ## Features
 ### Create accounts
-The user can register a account, to save recipes and to store their preferences. 
+The user can register a account, to save recipes and to store their preferences.
 
 ### Get recipes
-The user can set their preferences, choose a country by clicking on a map and then get recipes that fulfils their demands. 
+The user can set their preferences, choose a country by clicking on a map and then get recipes that fulfils their demands.
 
 
 ## Technologies
-The technologies that has been used in the process of building TasteTravel are: 
+The technologies that has been used in the process of building TasteTravel are:
 
 ### React JS version: 17.0.2
 React, ReactJS or React.js is an open-source, front end, JavaScript library for building user interfaces.
 
 ### Node JS
-Node JS is an open-source, JavaScript runtime environment. 
+Node JS is an open-source, JavaScript runtime environment.
 
 ### Google Firebase  version: 8.4.1
 Google Firebase is a platform developed by Google for creating mobile and web applications.
 
-### Recipe API from Sponacular 
-Sponacular is a website that organize and saves recipes. TasteTravel fetches recipes from sponacular with the preferences that a user has given. 
+### Recipe API from Sponacular
+Sponacular is a website that organize and saves recipes. TasteTravel fetches recipes from sponacular with the preferences that a user has given.
 
 ## Sources
 ### Udemy.com
 The application TasteTravel is inspired by the online course "React JS & Firebase Complete Course (incl. Chatt Application)" that the team of TasteTravel took at Udemy.com. The course instructor is Filip Jerga. Link: {React JS & Firebase Complete Course (incl. Chat Application) | Udemy}
 
 ### BulmaThemes.com
-In the course, the instructor Filip Jerga used a template from Bulma at bulmathemes.com, which the team of TasteTravel also did. 
+In the course, the instructor Filip Jerga used a template from Bulma at bulmathemes.com, which the team of TasteTravel also did. This is the xource (https://bulmathemes.com/theme/fresh).
 
 ### React-Simple-Maps and React-Tooltip
 On TasteTravels Home page there is an interactive map. This map is a map chart that React-Simple-Maps provides. The code for the map is from, link: {React Simple Maps | Map chart with tooltips (react-simple-maps.io)}
@@ -67,7 +67,7 @@ In the project directory, you can run:
 
 ### `cd TasteTravel`
 
-Goes to the map where the project is stored. This needs to be done befor continuing with the npm start command. 
+Goes to the map where the project is stored. This needs to be done befor continuing with the npm start command.
 
 ### `npm start`
 
@@ -81,4 +81,3 @@ You will also see any lint errors in the console.
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
