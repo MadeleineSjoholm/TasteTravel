@@ -5,14 +5,13 @@ import { Fragment } from 'react'
 import TopRecipeList from 'components/recipe/TopRecipeList'
 
 //CHANGE API HERE
-const API_KEY = "81dec389f2504336ba770c381c86dec5"
-
+const API_KEY = "827194b19189427195018b97d09cde94"
 
 const MostPopular = (props) => {
   const { isFetching } = props
   const [recipeData, setRecipeData] = useState(null)
   const [cuisine, setCuisine] = useState()
-  const amountOfResults = 5
+  const amountOfResults = 4
 
   function getRecipeData() {
     fetch(
