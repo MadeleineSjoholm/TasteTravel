@@ -79,10 +79,9 @@ const Profile = (props) => {
                 </Link></p>
 
                 <p className="subtitle has-text-grey">
-                  <em>If you want to save recipes, start by clicking here!
-                  <br /> You can also reset your saved recipes by clicking on the button below!</em>
+                  <em> You can also reset your saved recipes by clicking on the button!</em>
                 <button onClick={createForm} className="SavedButton">
-                    Set Saved Recipes
+                    Reset Saved Recipes
                   </button> </p>
                 <br />
                 <br />

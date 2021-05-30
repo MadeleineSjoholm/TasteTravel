@@ -9,11 +9,15 @@ import 'firebase/auth'
 import Spinner from 'components/Spinner'
 import { Fragment } from 'react'
 
+<<<<<<< HEAD
 const API_KEY = "827194b19189427195018b97d09cde94"
+=======
+const API_KEY = "9c651708cc604ceaa7d0cad063018dd4"
+>>>>>>> 830ff0deaeffb480f6850e3c657498731d38cfbb
 
 const CuisineDetail = (props) => {
-  const [visible, setVisible] = useState(true) 
-    
+  const [visible, setVisible] = useState(true)
+
   const userid  = props.auth
   console.log(userid.user.uid)
   const userID = userid.user.uid
@@ -27,7 +31,7 @@ const CuisineDetail = (props) => {
   const [type, setType] = useState()
   const [intolerance, setIntolerance] = useState()
   const [ingredient, setIngredient] = useState()
- 
+
   const amountOfResults = 5
 
   db.collection("preference").doc(userID).onSnapshot((doc) => {
@@ -52,45 +56,45 @@ const CuisineDetail = (props) => {
       .then((response) => response.json())
       .then((data) => {
         setRecipeData(data)
-        
+
       })
       .catch(() => {
         console.log("error");
       })
   }
-  const toggleVisible = () => { 
-    const scrolled = document.documentElement.scrollTop; 
-    if (scrolled > 0){ 
-      setVisible(false) 
-    }  
-    else if (scrolled <= 0){ 
-      setVisible(true) 
-    } 
-  }; 
-    
-  window.addEventListener('scroll', toggleVisible); 
-  const scrollToBottom = () =>{
-    getRecipeData() 
-    window.scrollTo({ 
-      top: document.documentElement.scrollHeight, 
-      behavior: 'smooth'
-      /* you can also use 'auto' behaviour 
-         in place of 'smooth' */
-    }); 
-  }; 
+  const toggleVisible = () => {
+    const scrolled = document.documentElement.scrollTop;
+    if (scrolled > 0){
+      setVisible(false)
+    }
+    else if (scrolled <= 0){
+      setVisible(true)
+    }
+  };
 
- 
+  window.addEventListener('scroll', toggleVisible);
+  const scrollToBottom = () =>{
+    getRecipeData()
+    window.scrollTo({
+      top: document.documentElement.scrollHeight,
+      behavior: 'smooth'
+      /* you can also use 'auto' behaviour
+         in place of 'smooth' */
+    });
+  };
+
+
 
   function handleChange(e) {
     setType(e.target.value)
   }
 
-  
+
 
   if (isFetching || cuisineId !== cuisine.id) { return <Spinner /> }
 
   return (
-    <Fragment> 
+    <Fragment>
     <section className="hero is-fullheight is-default is-bold service-detail-page">
       <div className="hero-body">
         <div className="container has-text-centered">
@@ -144,8 +148,8 @@ const CuisineDetail = (props) => {
           <button
             className="countryButton"
             onClick={scrollToBottom}
-             style={{display: visible}} 
-            >Find Recipes</button>           
+             style={{display: visible}}
+            >Find Recipes</button>
               <div className="cuisinePref">
                 <h3 className="subtitle has-text-grey">The recipes are based on your preferences: </h3>
                   <ul>Diet <em>{diet}</em> </ul>
@@ -158,7 +162,7 @@ const CuisineDetail = (props) => {
           </div>
         </div>
     </section>
-    </Fragment> 
+    </Fragment>
   )
 }
 

@@ -1,9 +1,9 @@
 
 /* eslint jsx-a11y/anchor-is-valid: 0 */
 
-// This structure is written by Filip Jerga who was 
-// the instructor of the online course that the whole 
-// team took at the beginning. 
+// This structure is written by Filip Jerga who was
+// the instructor of the online course that the whole
+// team took at the beginning.
 // Link: {React JS & Firebase Complete Course (incl. Chat Application) | Udemy}
 
 import React, { useState } from 'react'
@@ -73,9 +73,9 @@ const Login = (props) => {
             </form>
           </div>
           <p className="has-text-grey">
-            <a href="/Register">SIGN UP</a> &nbsp;·&nbsp;
-          <a href="/Faq">Need Help?</a>
-            <a href='/ResetPassword'>Forgot Password?</a>
+            <a href="/Register" className="hreflink">SIGN UP</a> &nbsp;·&nbsp;
+          <a href="/Faq" className="hreflink"> Need Help? </a>
+            <a href='/ResetPassword' className="hreflink"> Forgot Password? </a>
           </p>
         </div>
       </div>

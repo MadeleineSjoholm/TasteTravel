@@ -13,17 +13,17 @@ import SearchForm from 'components/recipe/SearchForm'
 const API_K = "827194b19189427195018b97d09cde94"
 
 class QuickSearh extends Component {
- 
+
 
     state = {
       recipes: []
     }
- 
+
   getRecipe = async (e) => {
     const recipeName = e.target.elements.recipeName.value;
     e.preventDefault();
     const api_call = await fetch(`https://api.spoonacular.com/recipes/complexSearch?cuisine=${recipeName}&addRecipeInformation=true&apiKey=${API_K}`);
-    
+
     const data = await api_call.json();
     this.setState({ recipes: data.recipes });
     console.log(this.state.recipes);

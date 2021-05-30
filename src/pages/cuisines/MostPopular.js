@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
+//import { Link } from 'react-router-dom'
 import 'firebase/auth'
 import Spinner from 'components/Spinner'
 import { Fragment } from 'react'
 import TopRecipeList from 'components/recipe/TopRecipeList'
 
 //CHANGE API HERE
-const API_KEY = "827194b19189427195018b97d09cde94"
+const API_KEY = "9c651708cc604ceaa7d0cad063018dd4"
+
 
 const MostPopular = (props) => {
   const { isFetching } = props
@@ -33,16 +35,15 @@ const MostPopular = (props) => {
   if (isFetching) { return <Spinner /> }
   return (
     <Fragment>
-
+    <figure className="map_background3">
+      <img src="map.png" alt="Company Logo" />
+    </figure>
       <section className="hero is-fullheight is-default is-bold service-detail-page">
     <div className="background">
         <div className="hero-body">
           <div className="container has-text-centered">
             <div className="field"><br/>
-            <figure className="map_background2">
-              <img src="map.png" alt="Company Logo" />
-            </figure>
-              <h2 className="title is-2">MUST POPULAR RECIPES</h2>
+              <h2 className="title">MOST POPULAR RECIPES</h2>
               <h3 className="subtitle is-5 is-2">Sort by Country/Region</h3>
               <div className="divider is-centered"></div>
             </div>
@@ -78,10 +79,10 @@ const MostPopular = (props) => {
               </div>
 
               <button
-                className="popularButton"
+                className="countryButton"
                 onClick={getRecipeData}
               >Find Recipes</button>
-              <div className="popularRecipes">
+              <div className="homeRecipes">
                 <div className="recipeSectionTop columns is-centered is-mobile">
                   {recipeData && <TopRecipeList recipeData={recipeData} />}
                 </div>
