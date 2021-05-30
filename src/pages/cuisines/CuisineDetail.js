@@ -9,7 +9,8 @@ import 'firebase/auth'
 import Spinner from 'components/Spinner'
 import { Fragment } from 'react'
 
-const API_KEY = "81dec389f2504336ba770c381c86dec5"
+const API_KEY = "9c651708cc604ceaa7d0cad063018dd4"
+
 
 const CuisineDetail = (props) => {
   const [visible, setVisible] = useState(true) 
