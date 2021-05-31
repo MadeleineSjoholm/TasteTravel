@@ -2,7 +2,9 @@
 
 import React from 'react';
 import Hero from 'components/Hero'
-const weeklyCuisine = "mexican";
+import randomize from 'actions/randomize'
+const weeklyCuisine = randomize;
+console.log(randomize)
 const API_KEY = "f94d33a64b6f4135ab3e6a2b9fc8ce3c"
 
 
@@ -22,6 +24,7 @@ class Home extends React.Component {
       loading: true
     }
   }
+
   mySubmitHandler = (event) => {
     event.preventDefault();
     this.componentDidMount();
