@@ -2,8 +2,11 @@
 
 import React from 'react';
 import Hero from 'components/Hero'
-const weeklyCuisine = "mexican";
-const API_KEY = "9c651708cc604ceaa7d0cad063018dd4"
+import randomize from 'actions/randomize'
+import randomizeAPI from 'actions/APIKey'
+
+const weeklyCuisine = randomize;
+const API_KEY = randomizeAPI;
 
 
 class Home extends React.Component {
@@ -22,6 +25,7 @@ class Home extends React.Component {
       loading: true
     }
   }
+
   mySubmitHandler = (event) => {
     event.preventDefault();
     this.componentDidMount();
@@ -59,11 +63,11 @@ class Home extends React.Component {
           <div className="container">
             <div className="title-wrapper has-text-centered">
               <h2 className="title is-2">Featured Destination</h2>
-              <h3 className="subtitle is-5 is-2">This weeks highlighted cuisine: <b>{weeklyCuisine}</b></h3>
+              <h3 className="subtitle is-5 is-2">The highlighted cuisine is: <b>{weeklyCuisine}</b></h3>
               <div className="divider is-centered"></div>
             </div>
             <div className="content-wrapper">
-              <div className="columns is-multiline is-one-quarter">
+              <div className="columns is-multiline is-one-quarter is-mobile">
                 <div className="homeRecipes">
                   {this.state.loading || !this.state.feature1 ? <div>loading...</div> :
                     <ul>
@@ -73,7 +77,8 @@ class Home extends React.Component {
                       <li><b>Time: </b>{this.state.feature1.readyInMinutes} Minutes</li>
                       <li><b>Likes: </b>{this.state.feature1.aggregateLikes} <img src={process.env.PUBLIC_URL + '/heart.svg'} alt='Saved' width="20" height="20" /></li><br />
 
-                      <a href={this.state.feature2.sourceUrl} className="faqButton">Go to Recipe</a>
+                      {/* <a href={this.state.feature2.sourceUrl} className="faqButton">Go to Recipe</a> */}
+                      <button className="faqButton"><a href={this.state.feature2.sourceUrl}><div className="hreflink">Go to Recipe</div></a></button>
                     </ul>}
                   {this.state.loading || !this.state.feature2 ? <div>loading...</div> :
                     <ul>
@@ -82,7 +87,8 @@ class Home extends React.Component {
                       <li><b>Serves: </b> {this.state.feature2.servings} People</li>
                       <li><b>Time: </b> {this.state.feature2.readyInMinutes} Minutes</li>
                       <li><b>Likes: </b>{this.state.feature2.aggregateLikes} <img src={process.env.PUBLIC_URL + '/heart.svg'} alt='Saved' width="20" height="20" /></li><br />
-                      <a href={this.state.feature2.sourceUrl} className="faqButton">Go to Recipe</a>
+                     {/* <a href={this.state.feature2.sourceUrl} className="faqButton">Go to Recipe</a> */}
+                      <button className="faqButton"><a href={this.state.feature2.sourceUrl}><div className="hreflink">Go to Recipe</div></a></button>
                     </ul>}
 
                   {this.state.loading || !this.state.feature3 ? <div>loading...</div> :
@@ -92,7 +98,8 @@ class Home extends React.Component {
                       <li><b>Serves: </b> {this.state.feature3.servings} People</li>
                       <li><b>Time: </b>{this.state.feature3.readyInMinutes} Minutes</li>
                       <li><b>Likes: </b>{this.state.feature3.aggregateLikes} <img src={process.env.PUBLIC_URL + '/heart.svg'} alt='Saved' width="20" height="20" /></li><br />
-                      <a href={this.state.feature3.sourceUrl} className="faqButton">Go to Recipe</a>
+                      <button className="faqButton"><a href={this.state.feature2.sourceUrl}><div className="hreflink">Go to Recipe</div></a></button>
+                      {/* <a href={this.state.feature3.sourceUrl} className="faqButton">Go to Recipe</a> */}
                     </ul>}
 
                   {this.state.loading || !this.state.feature4 ? <div>loading...</div> :
@@ -102,7 +109,8 @@ class Home extends React.Component {
                       <li><b>Serves: </b> {this.state.feature4.servings} People</li>
                       <li><b>Time: </b>{this.state.feature4.readyInMinutes} Minutes</li>
                       <li><b>Likes: </b> {this.state.feature4.aggregateLikes} <img src={process.env.PUBLIC_URL + '/heart.svg'} alt='Saved' width="20" height="20" /></li><br />
-                      <a href={this.state.feature4.sourceUrl} className="faqButton">Go to Recipe</a>
+                      <button className="faqButton"><a href={this.state.feature2.sourceUrl}><div className="hreflink">Go to Recipe</div></a></button>
+                      {/* <a href={this.state.feature4.sourceUrl} className="faqButton">Go to Recipe</a> */}
                     </ul>}
                 </div>
               </div>

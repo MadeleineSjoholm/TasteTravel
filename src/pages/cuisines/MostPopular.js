@@ -4,9 +4,10 @@ import 'firebase/auth'
 import Spinner from 'components/Spinner'
 import { Fragment } from 'react'
 import TopRecipeList from 'components/recipe/TopRecipeList'
+import randomizeAPI from 'actions/APIKey'
 
-//CHANGE API HERE
-const API_KEY = "9c651708cc604ceaa7d0cad063018dd4"
+
+const API_KEY = randomizeAPI;
 
 
 const MostPopular = (props) => {
@@ -17,7 +18,7 @@ const MostPopular = (props) => {
 
   function getRecipeData() {
     fetch(
-      `https://api.spoonacular.com/recipes/complexSearch?cuisine=${cuisine}&number=${amountOfResults}&topRated=true&addRecipeInformation=true&apiKey=${API_KEY}`
+      `https://api.spoonacular.com/recipes/complexSearch?cuisine=${cuisine}&number=${amountOfResults}&veryPopular=true&addRecipeInformation=true&apiKey=${API_KEY}`
     )
       .then((response) => response.json())
       .then((data) => {

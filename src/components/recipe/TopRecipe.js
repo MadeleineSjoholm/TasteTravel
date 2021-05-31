@@ -1,8 +1,9 @@
 import React, {useState, useEffect} from 'react'
 import 'firebase/auth'
+import randomizeAPI from 'actions/APIKey'
 
+const API_KEY = randomizeAPI;
 
-export default function Recipe({recipe}) {
 
   const API_KEY = "9c651708cc604ceaa7d0cad063018dd4"
   const [imageUrl, setImageUrl] = useState("")
