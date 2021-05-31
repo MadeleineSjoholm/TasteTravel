@@ -71,7 +71,7 @@ const MapChart = ({ setTooltipContent }) => {
                     setTooltipContent('');
                   }}
                   onClick={() => {
-
+                    //const { NAME, POP_EST } = geo.properties; stog nedan///
                     const { NAME } = geo.properties;
                     console.log(NAME);
                     if (NordicCuisine.includes(NAME)) {

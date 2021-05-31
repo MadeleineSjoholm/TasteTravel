@@ -8,7 +8,7 @@ import 'firebase/auth'
 export default function Recipe({recipe}, { auth }) {
   const API_KEY = "f94d33a64b6f4135ab3e6a2b9fc8ce3c"
   const [imageUrl, setImageUrl] = useState("")
-  const user = firebase.auth().currentUser
+  const user = firebase.auth().currentUser  
   console.log( recipe.id )
   console.log(user)
 
@@ -46,7 +46,7 @@ const setFavorite = () => {
 
 useEffect(() => {
   fetch(
-    `https://api.spoonacular.com/recipes/${recipe.id}/information?apiKey=${API_KEY}&includeNutrition=false`
+    `https://api.spoonacular.com/recipes/${recipe.id}/information?apiKey=${API_KEY}&includeNutrition=false` 
     )
     .then((response) => response.json())
     .then((data) => {
@@ -66,17 +66,17 @@ useEffect(() => {
         <li>Preperation time: {recipe.readyInMinutes} minutes</li>
         <li>Number of servings: {recipe.servings}</li>
       </ul>
-      <button className="saveButton"
+      <button 
         name='recipeId'
         onClick = {setFavorite}
-        img src="heart.png"
-        width="50"
-        height="50"
-        alt='heart'
-        >Save recipe
-        <br/>
-      </button>
+        img src="heart.png" 
+        width="50" 
+        height="50" 
+        alt='heart' 
+        >
+        <br />SAVE RECIPE
+      </button>   
 
-      <button className="GoButton"><a href={recipe.sourceUrl}><div className="hreflink">Go to recipe</div></a></button>
+      <button className="faqButton"><a href={recipe.sourceUrl}><div className="hreflink">Go to Recipe</div></a></button>
       </article>
 }

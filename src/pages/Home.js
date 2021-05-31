@@ -65,7 +65,6 @@ class Home extends React.Component {
             <div className="content-wrapper">
               <div className="columns is-multiline is-one-quarter">
                 <div className="homeRecipes">
-                  <div className="homeRecipeBox">
                   {this.state.loading || !this.state.feature1 ? <div>loading...</div> :
                     <ul>
                       <img src={this.state.imageurl1} alt="recipe" />
@@ -76,9 +75,6 @@ class Home extends React.Component {
 
                       <a href={this.state.feature2.sourceUrl} className="faqButton">Go to Recipe</a>
                     </ul>}
-                    </div>
-
-                    <div className="homeRecipeBox">
                   {this.state.loading || !this.state.feature2 ? <div>loading...</div> :
                     <ul>
                       <img src={this.state.imageurl2} alt="recipe" />
@@ -88,9 +84,7 @@ class Home extends React.Component {
                       <li><b>Likes: </b>{this.state.feature2.aggregateLikes} <img src={process.env.PUBLIC_URL + '/heart.svg'} alt='Saved' width="20" height="20" /></li><br />
                       <a href={this.state.feature2.sourceUrl} className="faqButton">Go to Recipe</a>
                     </ul>}
-                    </div>
 
-                    <div className="homeRecipeBox">
                   {this.state.loading || !this.state.feature3 ? <div>loading...</div> :
                     <ul>
                       <img src={this.state.imageurl3} alt="recipe" />
@@ -100,9 +94,7 @@ class Home extends React.Component {
                       <li><b>Likes: </b>{this.state.feature3.aggregateLikes} <img src={process.env.PUBLIC_URL + '/heart.svg'} alt='Saved' width="20" height="20" /></li><br />
                       <a href={this.state.feature3.sourceUrl} className="faqButton">Go to Recipe</a>
                     </ul>}
-                    </div>
 
-                    <div className="homeRecipeBox">
                   {this.state.loading || !this.state.feature4 ? <div>loading...</div> :
                     <ul>
                       <img src={this.state.imageurl4} alt="recipe" />
@@ -112,7 +104,6 @@ class Home extends React.Component {
                       <li><b>Likes: </b> {this.state.feature4.aggregateLikes} <img src={process.env.PUBLIC_URL + '/heart.svg'} alt='Saved' width="20" height="20" /></li><br />
                       <a href={this.state.feature4.sourceUrl} className="faqButton">Go to Recipe</a>
                     </ul>}
-                    </div>
                 </div>
               </div>
             </div>

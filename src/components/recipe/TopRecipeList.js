@@ -10,7 +10,7 @@ export default function TopRecipeList({ recipeData }) {
         <h1><b>Your Recomendations</b></h1>
         <ul>
           <li><b>Results: {totalResults}</b></li>
-          <li>Shows at most 4</li>
+          <li>Shows at most 5</li>
         </ul>
       </section>
       <section className="recipes">

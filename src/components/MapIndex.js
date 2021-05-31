@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import ReactTooltip from "react-tooltip";
 
-import "index.scss";
+import "../MAP/styles.css";
 
 import MapChart from "../MAP/MapChart";
 
