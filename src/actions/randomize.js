@@ -22,7 +22,20 @@ var cuisineList=[
   "French",
   "German",
   "Indian",
-  "Irish"
+  "Irish",
+  "Italian",
+  "Japanese",
+  "Jewish",
+  "Korean",
+  "Latin American",
+  "Mediterranean",
+  "Mexican",
+  "Middle Eastern",
+  "Nordic",
+  "Southern",
+  "Spanish",
+  "Thai",
+  "Vietnamese",
 ];
 export default randomize(cuisineList); 
 
