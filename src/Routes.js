@@ -57,8 +57,6 @@ const Routes = () =>
       <Help />
     </Route>
 
-    {/* <Route path="/recipe/:id" component={QuickRecipe} /> */}
-
     <Route path="/Preferences">
       <Preferences />
     </Route>

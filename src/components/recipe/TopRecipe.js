@@ -33,7 +33,6 @@ useEffect(() => {
       <ul>
         <li><b>Time: </b>{recipe.readyInMinutes} min</li>
         <li><b>Serves: </b> {recipe.servings}</li>
-        {/* <li><b>Likes: </b> {recipe.aggregateLikes}</li> */}
         <li><b>Health Score: </b> {recipe.healthScore}</li>
       </ul>
       <button className="faqButton"><a href={recipe.sourceUrl}><div className="hreflink">Go to Recipe</div></a></button>
