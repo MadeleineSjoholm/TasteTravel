@@ -13,7 +13,6 @@ $secondary: #B287A3; //Opera Mauve
 $lavender:#7E4E60; // Twilight Lavender
 $white: #ffff; //white
 $redish:rgb(248, 140, 140); // For the logout-button
-
 /* -------------------------------------------------------------------------
                               LogOut-page.
 ---------------------------------------------------------------------------*/
@@ -24,8 +23,6 @@ margin-left: 30%;
 margin-bottom: 40%;
 position: absolute;
 }
-
-
 /* -------------------------------------------------------------------------
                             Most popular-page.
 ---------------------------------------------------------------------------*/
@@ -56,6 +53,18 @@ max-width: 300px;
 max-width: 200px;
 max-height: 500px;
 }
+}
+
+.section {
+&.section-feature-grey {
+  background-color: $green;
+}
+&.section-half {
+  height: 50vh !important;
+}
+}
+.content-wrapper {
+padding-top: 10px;
 }
 /* -------------------------------------------------------------------------
                                 Footer
@@ -158,9 +167,16 @@ service-detail-page {
     max-width: 860px;
     margin: 0 auto;
   }
-
 }
 
+.diet-wrapper {
+max-width: 500px;
+margin: 0 auto;
+
+.subtitle {
+  margin-bottom: 70px;
+}
+}
 /* -------------------------------------------------------------------------
                 Background-images used in the different pages.
 ---------------------------------------------------------------------------*/
@@ -359,7 +375,6 @@ padding: 10px;
 transition: 0.3s;
 margin-left: 2%;
 }
-
 /* -------------------------------------------------------------------------
                                 Our Team-page
 ---------------------------------------------------------------------------*/
@@ -581,7 +596,6 @@ grid-area: member2; }
         padding-top: 1rem;
       }
     }
-
     /* --------------------------------------------------------------------------
                                     Hero
     ---------------------------------------------------------------------------*/
@@ -591,21 +605,13 @@ grid-area: member2; }
     padding-left: 2rem;
     padding-right: 2rem;
     }
-
     /* --------------------------------------------------------------------------
-                                    
+                Profile/Register-button and LogOut/Login - button
     ---------------------------------------------------------------------------*/
         .button {
           cursor: pointer;
           transition: all 0.5s;
-          &.cta {
-            font-family: 'Open Sans', sans-serif;
-            font-size: 1.5rem;
-            font-weight: 600;
-            padding: 26px 40px 26px 40px;
-            padding: 24px 26px;
-            width: 130px;
-          }
+
 
           &.rounded {
             border-radius: 500px;
@@ -635,10 +641,9 @@ grid-area: member2; }
             background-color: $redish;
           }
         }
-
-      /* -------------------------------------------------------------------------
+  /* -------------------------------------------------------------------------
                                       Navbar
-      ------------------------------------------------------------------------------*/
+  ------------------------------------------------------------------------------*/
 .logo {
 position: center;
 }
@@ -684,27 +689,6 @@ z-index: 29;
       color: $secondary!important;
     }
   }
-  &.has-dropdown {
-    padding: 10px 0;
-
-    .navbar-dropdown {
-      top: 3.4rem;
-      min-width: 220px;
-      margin-top: 4px;
-      border-top-color: $secondary;
-      .navbar-item {
-        padding: 10px 20px;
-      }
-    }
-    &:hover {
-      .navbar-link {
-        color: $secondary;
-        &:after {
-          border-color: $secondary;
-        }
-      }
-    }
-  }
   .signup {
     display: block;
     line-height: 0;
@@ -727,10 +711,9 @@ box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.12);
   transform: translateY(0);
 }
 }
-
-/* -------------------------------------------------------------------------
-                    Responsive style for the application.
-  ---------------------------------------------------------------------------*/
+    /* -------------------------------------------------------------------------
+                        Responsive style for the application.
+      ---------------------------------------------------------------------------*/
 
 @media (max-width: 767px) {
 .landing-caption {
@@ -755,7 +738,6 @@ box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.12);
       width: 100% !important;
     }
   }
-
   .navbar-link {
     padding: 10px 20px !important;
   }
@@ -763,9 +745,7 @@ box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.12);
 
 .title.section-title {
   font-size: 2rem !important;
-
 }
-
 .level-left.level-social {
   display: flex;
   justify-content: flex-start;
@@ -799,148 +779,24 @@ box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.12);
   "step2"
   "step3"
 }
-
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
-.landing-caption {
-  text-align: center;
-  .subtitle {
-    max-width: 440px;
-    margin: 0 auto;
-    margin-bottom: 20px;
-  }
-}
-
-form {
-  padding:  0 40px;
-}
 .hero-body {
 padding-top: 0;
 }
-
-.navbar-menu {
-  .is-static {
-    position: absolute;
-    width: 100%;
-  }
-  .is-fixed {
-    position: fixed;
-    width: 100%;
-  }
-
-  .navbar-item {
-    text-align: center !important;
-
-    .signup-button {
-      width: 100% !important;
-    }
-  }
-
-  .navbar-link {
-    padding: 10px 20px !important;
-  }
-}
-
 .pushed-image {
   margin-top: 0 !important;
-}
-
-
-.is-centered-tablet-portrait {
-  text-align: center !important;
-
-  .divider {
-    margin: 0 auto !important;
-
-  }
-}
-.level.is-mobile {
-  justify-content: center !important;
-  .level-item {
-    margin: 0 .75rem !important;
-  }
 }
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-
-.navbar-menu {
-
-  .navbar-end {
-    a {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .navbar-link {
-      padding-right: 0 !important;
-    }
-    .button {
-      min-width: 180px;
-    }
+.hero-body {
+  padding-top: 0;
   }
-}
-
-.navbar-item {
-  &.is-hidden-mobile {
-    display: none !important;
-  }
-  &.is-hidden-desktop.is-hidden-tablet {
-    display: flex !important;
-  }
-}
-
 .pushed-image {
   margin-top: 0 !important;
 }
-}
-
-/* --------------------------------------------------------------------------
-                              Section  Styles
--------------------------------------------------------------------------- */
-.section {
-&.section-feature-grey {
-  background-color: $green;
-}
-&.section-half {
-  height: 50vh !important;
-}
-
-}
-
-.title-wrapper {
-max-width: 500px;
-
-margin: 0 auto;
-.title, .subtitle {
-  font-family: 'Open Sans', sans-serif;
-}
-.subtitle {
-  &.is-muted {
-    color: $sienna;
-  }
-}
-}
-.diet-wrapper {
-max-width: 500px;
-margin: 0 auto;
-.title, .subtitle {
-  font-family: 'Open Sans', sans-serif;
-}
-.subtitle {
-  &.is-muted {
-    color: $sienna;
-    margin-top: 30px;
-  }
-}
-.subtitle {
-  margin-bottom: 70px;
-}
-}
-
-.content-wrapper {
-padding-top: 20px;
 }
 /* -------------------------------------------------------------------------
                               Sidebar Styles
@@ -1009,6 +865,7 @@ svg {
   padding: 0;
 }
 }
+
 .sidebar {
 background: $secondary;
 width: 225px;
@@ -1078,37 +935,8 @@ overflow-y: auto;
           color: white;
         }
       }
-      a span {
-        margin-right: 20px;
-        color: $sienna;
-      }
-      &.have-children {
-        ul {
-          padding-right: 10px;
-        }
-        li {
-          a {
-            background-color: darken($secondary, 5%);
-            padding-left: 62px;
-            border-bottom: 1px solid darken($secondary, 2%);
-            font-size: 1rem;
-            &:hover {
-              color: $secondary;
-              padding-left: 62px;
-            }
-          }
-        }
-        span::after {
-          position: absolute;
-          top: 27px;
-          right: 30px;
-          content: "\f054";
-          color: $sienna;
-          transition: all .5s;
-          font-weight: 200 !important;
-          font-size: .8rem;
-        }
-      }
+
+
     }
   }
   .category-sidebar-buttons {
