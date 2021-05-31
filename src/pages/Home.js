@@ -3,7 +3,7 @@
 import React from 'react';
 import Hero from 'components/Hero'
 const weeklyCuisine = "mexican";
-const API_KEY = "f94d33a64b6f4135ab3e6a2b9fc8ce3c"
+const API_KEY = "9c651708cc604ceaa7d0cad063018dd4"
 
 
 class Home extends React.Component {

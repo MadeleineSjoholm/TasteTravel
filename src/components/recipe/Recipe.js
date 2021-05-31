@@ -6,7 +6,7 @@ import 'firebase/auth'
 
 
 export default function Recipe({recipe}, { auth }) {
-  const API_KEY = "f94d33a64b6f4135ab3e6a2b9fc8ce3c"
+  const API_KEY = "9c651708cc604ceaa7d0cad063018dd4"
   const [imageUrl, setImageUrl] = useState("")
   const user = firebase.auth().currentUser  
   console.log( recipe.id )
