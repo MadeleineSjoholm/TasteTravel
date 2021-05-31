@@ -20,8 +20,11 @@ TasteTravel is a web application allowing users to travel and explore the world 
 ### Create accounts
 The user can register a account, to save recipes and to store their preferences.
 
-### Get recipes
+### Find recipes: Based on preferences and countries
 The user can set their preferences, choose a country by clicking on a map and then get recipes that fulfils their demands.
+
+### Find recipes: Most Popular
+The user can browse popular recipes filtered by regions. This is done on the "most popular" page. 
 
 
 ## Technologies
