@@ -2,28 +2,31 @@
 
 // Ta bort
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom'
+// import ReactDOM from 'react-dom'
 //import { connect } from 'react-redux' // HOC
-import Hero from 'components/Hero'
+// import Hero from 'components/Hero'
 import QuickRecipeList from 'components/recipe/TopRecipeList'
 import SearchForm from 'components/recipe/SearchForm'
-//import ServiceItem from 'components/Recipe/ServiceItem'
+import randomizeAPI from 'actions/APIKey'
+
+
+const API_KEY = randomizeAPI;
 
 //import { fetchServices } from 'actions'
-const API_K = "f94d33a64b6f4135ab3e6a2b9fc8ce3c"
+const API_K = "9c651708cc604ceaa7d0cad063018dd4"
 
 class QuickSearh extends Component {
- 
+
 
     state = {
       recipes: []
     }
- 
+
   getRecipe = async (e) => {
     const recipeName = e.target.elements.recipeName.value;
     e.preventDefault();
-    const api_call = await fetch(`https://api.spoonacular.com/recipes/complexSearch?cuisine=${recipeName}&addRecipeInformation=true&apiKey=${API_K}`);
-    
+    const api_call = await fetch(`https://api.spoonacular.com/recipes/complexSearch?cuisine=${recipeName}&addRecipeInformation=true&apiKey=${API_KEY}`);
+
     const data = await api_call.json();
     this.setState({ recipes: data.recipes });
     console.log(this.state.recipes);
