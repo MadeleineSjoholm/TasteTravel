@@ -4,12 +4,12 @@ import 'firebase/auth'
 
 export default function Recipe({recipe}) {
 
-  const API_KEY = "9c651708cc604ceaa7d0cad063018dd4"
+  const API_KEY = "f94d33a64b6f4135ab3e6a2b9fc8ce3c"
   const [imageUrl, setImageUrl] = useState("")
 
 useEffect(() => {
   fetch(
-    `https://api.spoonacular.com/recipes/${recipe.id}/information?apiKey=${API_KEY}&includeNutrition=false`
+    `https://api.spoonacular.com/recipes/${recipe.id}/nformation?apiKey=${API_KEY}&includeNutrition=false`
     )
     .then((response) => response.json())
     .then((data) => {
@@ -32,7 +32,7 @@ useEffect(() => {
       <ul>
         <li><b>Time: </b>{recipe.readyInMinutes} min</li>
         <li><b>Serves: </b> {recipe.servings}</li>
-        <li><b>Likes: </b> {recipe.aggregateLikes}</li>
+        {/* <li><b>Likes: </b> {recipe.aggregateLikes}</li> */}
         <li><b>Health Score: </b> {recipe.healthScore}</li>
       </ul>
       <button className="faqButton"><a href={recipe.sourceUrl}><div className="hreflink">Go to Recipe</div></a></button>
