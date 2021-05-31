@@ -3,9 +3,10 @@
 import React from 'react';
 import Hero from 'components/Hero'
 import randomize from 'actions/randomize'
+import randomizeAPI from 'actions/APIKey'
+
 const weeklyCuisine = randomize;
-console.log(randomize)
-const API_KEY = "f94d33a64b6f4135ab3e6a2b9fc8ce3c"
+const API_KEY = randomizeAPI;
 
 
 class Home extends React.Component {
@@ -62,7 +63,7 @@ class Home extends React.Component {
           <div className="container">
             <div className="title-wrapper has-text-centered">
               <h2 className="title is-2">Featured Destination</h2>
-              <h3 className="subtitle is-5 is-2">This weeks highlighted cuisine: <b>{weeklyCuisine}</b></h3>
+              <h3 className="subtitle is-5 is-2">The highlighted cuisine is: <b>{weeklyCuisine}</b></h3>
               <div className="divider is-centered"></div>
             </div>
             <div className="content-wrapper">

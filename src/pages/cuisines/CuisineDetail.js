@@ -8,8 +8,9 @@ import db from 'db'
 import 'firebase/auth'
 import Spinner from 'components/Spinner'
 import { Fragment } from 'react'
+import randomizeAPI from 'actions/APIKey'
 
-const API_KEY = "f94d33a64b6f4135ab3e6a2b9fc8ce3c"
+const API_KEY = randomizeAPI;
 
 
 const CuisineDetail = (props) => {
