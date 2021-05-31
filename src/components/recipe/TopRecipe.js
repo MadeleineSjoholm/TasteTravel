@@ -5,7 +5,7 @@ import randomizeAPI from 'actions/APIKey'
 const API_KEY = randomizeAPI;
 
 
-  const API_KEY = "9c651708cc604ceaa7d0cad063018dd4"
+export default function Recipe({recipe}) {
   const [imageUrl, setImageUrl] = useState("")
 
 useEffect(() => {
