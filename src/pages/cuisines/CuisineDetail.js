@@ -8,7 +8,7 @@ import db from 'db'
 import 'firebase/auth'
 import Spinner from 'components/Spinner'
 import { Fragment } from 'react'
-import randomizeAPI from 'actions/APIKey'
+import randomizeAPI from 'helpers/randomizeAPI'
 
 const API_KEY = randomizeAPI;
 

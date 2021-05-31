@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import 'firebase/auth'
-import randomizeAPI from 'actions/APIKey'
+import randomizeAPI from 'helpers/randomizeAPI'
 
 const API_KEY = randomizeAPI;
 

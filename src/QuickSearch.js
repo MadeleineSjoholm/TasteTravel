@@ -7,7 +7,7 @@ import React, { Component } from 'react';
 // import Hero from 'components/Hero'
 import QuickRecipeList from 'components/recipe/TopRecipeList'
 import SearchForm from 'components/recipe/SearchForm'
-import randomizeAPI from 'actions/APIKey'
+import randomizeAPI from 'helpers/randomizeAPI'
 
 
 const API_KEY = randomizeAPI;

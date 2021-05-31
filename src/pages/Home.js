@@ -2,8 +2,8 @@
 
 import React from 'react';
 import Hero from 'components/Hero'
-import randomize from 'actions/randomize'
-import randomizeAPI from 'actions/APIKey'
+import randomize from 'helpers/randomizeCuisine'
+import randomizeAPI from 'helpers/randomizeAPI'
 
 const weeklyCuisine = randomize;
 const API_KEY = randomizeAPI;
@@ -76,8 +76,6 @@ class Home extends React.Component {
                       <li><b>Serves: </b> {this.state.feature1.servings} People</li>
                       <li><b>Time: </b>{this.state.feature1.readyInMinutes} Minutes</li>
                       <li><b>Likes: </b>{this.state.feature1.aggregateLikes} <img src={process.env.PUBLIC_URL + '/heart.svg'} alt='Saved' width="20" height="20" /></li><br />
-
-                      {/* <a href={this.state.feature2.sourceUrl} className="faqButton">Go to Recipe</a> */}
                       <button className="faqButton"><a href={this.state.feature2.sourceUrl}><div className="hreflink">Go to Recipe</div></a></button>
                     </ul>}
                   {this.state.loading || !this.state.feature2 ? <div>loading...</div> :
@@ -87,7 +85,6 @@ class Home extends React.Component {
                       <li><b>Serves: </b> {this.state.feature2.servings} People</li>
                       <li><b>Time: </b> {this.state.feature2.readyInMinutes} Minutes</li>
                       <li><b>Likes: </b>{this.state.feature2.aggregateLikes} <img src={process.env.PUBLIC_URL + '/heart.svg'} alt='Saved' width="20" height="20" /></li><br />
-                     {/* <a href={this.state.feature2.sourceUrl} className="faqButton">Go to Recipe</a> */}
                       <button className="faqButton"><a href={this.state.feature2.sourceUrl}><div className="hreflink">Go to Recipe</div></a></button>
                     </ul>}
 
@@ -99,7 +96,6 @@ class Home extends React.Component {
                       <li><b>Time: </b>{this.state.feature3.readyInMinutes} Minutes</li>
                       <li><b>Likes: </b>{this.state.feature3.aggregateLikes} <img src={process.env.PUBLIC_URL + '/heart.svg'} alt='Saved' width="20" height="20" /></li><br />
                       <button className="faqButton"><a href={this.state.feature2.sourceUrl}><div className="hreflink">Go to Recipe</div></a></button>
-                      {/* <a href={this.state.feature3.sourceUrl} className="faqButton">Go to Recipe</a> */}
                     </ul>}
 
                   {this.state.loading || !this.state.feature4 ? <div>loading...</div> :
@@ -110,7 +106,6 @@ class Home extends React.Component {
                       <li><b>Time: </b>{this.state.feature4.readyInMinutes} Minutes</li>
                       <li><b>Likes: </b> {this.state.feature4.aggregateLikes} <img src={process.env.PUBLIC_URL + '/heart.svg'} alt='Saved' width="20" height="20" /></li><br />
                       <button className="faqButton"><a href={this.state.feature2.sourceUrl}><div className="hreflink">Go to Recipe</div></a></button>
-                      {/* <a href={this.state.feature4.sourceUrl} className="faqButton">Go to Recipe</a> */}
                     </ul>}
                 </div>
               </div>

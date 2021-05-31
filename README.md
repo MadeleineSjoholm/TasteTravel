@@ -38,6 +38,8 @@ Google Firebase is a platform developed by Google for creating mobile and web ap
 
 ### Recipe API from Sponacular
 Sponacular is a website that organize and saves recipes. TasteTravel fetches recipes from sponacular with the preferences that a user has given.
+PLEASE NOTE: TasteTravel currently uses a randomizing algorithm to try to bypass the request restriction set up by Spoonacular API. This means that with every API query sent out, it randomizes the API key. 
+In case you try to fetch a recipe and it gives you an error message, that means that the API-key has been used too many times that day. In order to continue browsing: simply reload the page. 
 
 ## Sources
 ### Udemy.com
