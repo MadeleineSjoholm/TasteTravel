@@ -1,15 +1,15 @@
 // This page generates a randomized API-Key. We are aware that it might not be the best solution but have figured that it is a fun way to solve one of our issues: having limited requests per API-Key
 
-function randomizeAPI(array) {
-  var currentIndex = array.length, temporaryValue, randomIndex;
-  while (0 !== currentIndex) {
-    randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex -= 1;
-    temporaryValue = array[currentIndex];
-    array[currentIndex] = array[randomIndex];
-    array[randomIndex] = temporaryValue;
+function randomizeAPI(arr) {
+  var current = arr.length, temp, random;
+  while (0 !== current) {
+    random = Math.floor(Math.random() * current);
+    current -= 1;
+    temp = arr[current];
+    arr[current] = arr[random];
+    arr[random] = temp;
   }
-  return array[0];
+  return arr[0];
 }
 var APILIST=[
   "f94d33a64b6f4135ab3e6a2b9fc8ce3c ",

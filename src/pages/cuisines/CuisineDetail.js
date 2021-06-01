@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { fetchCuisineById } from 'actions'
-
 import RecipeList from 'components/recipe/RecipeList'
 import db from 'db'
 import 'firebase/auth'
