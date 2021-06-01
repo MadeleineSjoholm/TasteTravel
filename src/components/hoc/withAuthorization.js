@@ -17,7 +17,7 @@ const withAuthorization = Component => {
     }
   }
 
-  return connect(({auth}) => ({auth}))(WithAuthorization)
+  return connect(({ auth }) => ({ auth }))(WithAuthorization)
 }
 
 

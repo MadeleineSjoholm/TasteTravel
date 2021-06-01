@@ -35,61 +35,61 @@ const MostPopular = (props) => {
   if (isFetching) { return <Spinner /> }
   return (
     <Fragment>
-    <figure className="map_background3">
-      <img src="map.png" alt="Company Logo" />
-    </figure>
+      <figure className="map_background3">
+        <img src="map.png" alt="Company Logo" />
+      </figure>
       <section className="hero is-fullheight is-default is-bold service-detail-page">
-    <div className="background">
-        <div className="hero-body">
-          <div className="container has-text-centered">
-            <div className="field"><br/>
-              <h2 className="title">MOST POPULAR RECIPES</h2>
-              <h3 className="subtitle is-5 is-2">Sort by Country/Region</h3>
-              <div className="divider is-centered"></div>
-            </div>
-            <div className="content-wrapper">
-              <div className="columns is-multiline is-one-quarter">
-                <div className="Popularcountry">
-                <p><b>Choose a country or a region </b></p><br/>
-                  <div className="select">
-                    <select name="cuisine" onChange={handleChange} >
-                      <option value="">-</option>
-                      <option value="African">Africa</option>
-                      <option value="American">America</option>
-                      <option value="British">Britain</option>
-                      <option value="Chinese">China</option>
-                      <option value="Eastern European">Eastern Europe</option>
-                      <option value="French">France</option>
-                      <option value="German">Germany</option>
-                      <option value="Greek">India</option>
-                      <option value="Italian">Italy</option>
-                      <option value="Japanese">Japanese</option>
-                      <option value="Korean">Korean</option>
-                      <option value="Latin American">Latin America</option>
-                      <option value="Mediterranean">Mediterranean</option>
-                      <option value="Mexican">Mexican</option>
-                      <option value="Middle Eastern">Middle East</option>
-                      <option value="Nordic">Nordic Countries</option>
-                      <option value="Spanish">Spain</option>
-                      <option value="Thai">Thailand</option>
-                      <option value="Vietnamese">Vietnam</option>
-                    </select>
+        <div className="background">
+          <div className="hero-body">
+            <div className="container has-text-centered">
+              <div className="field"><br />
+                <h2 className="title">MOST POPULAR RECIPES</h2>
+                <h3 className="subtitle is-5 is-2">Sort by Country/Region</h3>
+                <div className="divider is-centered"></div>
+              </div>
+              <div className="content-wrapper">
+                <div className="columns is-multiline is-one-quarter">
+                  <div className="Popularcountry">
+                    <p><b>Choose a country or a region </b></p><br />
+                    <div className="select">
+                      <select name="cuisine" onChange={handleChange} >
+                        <option value="">-</option>
+                        <option value="African">Africa</option>
+                        <option value="American">America</option>
+                        <option value="British">Britain</option>
+                        <option value="Chinese">China</option>
+                        <option value="Eastern European">Eastern Europe</option>
+                        <option value="French">France</option>
+                        <option value="German">Germany</option>
+                        <option value="Greek">India</option>
+                        <option value="Italian">Italy</option>
+                        <option value="Japanese">Japanese</option>
+                        <option value="Korean">Korean</option>
+                        <option value="Latin American">Latin America</option>
+                        <option value="Mediterranean">Mediterranean</option>
+                        <option value="Mexican">Mexican</option>
+                        <option value="Middle Eastern">Middle East</option>
+                        <option value="Nordic">Nordic Countries</option>
+                        <option value="Spanish">Spain</option>
+                        <option value="Thai">Thailand</option>
+                        <option value="Vietnamese">Vietnam</option>
+                      </select>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <button
-                className="countryButton"
-                onClick={getRecipeData}
-              >Find Recipes</button>
-              <div className="homeRecipes">
-                <div className="recipeSectionTop columns is-centered is-mobile">
-                  {recipeData && <TopRecipeList recipeData={recipeData} />}
+                <button
+                  className="countryButton"
+                  onClick={getRecipeData}
+                >Find Recipes</button>
+                <div className="homeRecipes">
+                  <div className="recipeSectionTop columns is-centered is-mobile">
+                    {recipeData && <TopRecipeList recipeData={recipeData} />}
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
         </div>
       </section>
     </Fragment>

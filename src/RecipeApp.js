@@ -12,7 +12,7 @@ import Spinner from 'components/Spinner'
 import Footer from 'components/footer'
 import { logout } from 'actions'
 
-class  RecipeApp extends React.Component {
+class RecipeApp extends React.Component {
 
   handleLogout = uid => this.props.dispatch(logout(uid))
 
@@ -41,4 +41,4 @@ class  RecipeApp extends React.Component {
 
 const mapStateToProps = state => ({ auth: state.auth })
 
-export default connect(mapStateToProps)( RecipeApp)
+export default connect(mapStateToProps)(RecipeApp)

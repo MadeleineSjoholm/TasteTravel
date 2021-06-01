@@ -10,7 +10,7 @@ function randomize(arr) {
   }
   return arr[0];
 }
-var cuisineList=[
+var cuisineList = [
   "African",
   "American",
   "British",
@@ -37,5 +37,5 @@ var cuisineList=[
   "Thai",
   "Vietnamese",
 ];
-export default randomize(cuisineList); 
+export default randomize(cuisineList);
 

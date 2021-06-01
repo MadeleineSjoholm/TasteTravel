@@ -15,7 +15,7 @@ const onlyGuest = Component => {
     }
   }
 
-  return connect(({auth}) => ({auth}))(OnlyGuest)
+  return connect(({ auth }) => ({ auth }))(OnlyGuest)
 }
 
 

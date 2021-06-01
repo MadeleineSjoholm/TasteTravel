@@ -15,7 +15,7 @@ const API_KEY = randomizeAPI;
 const CuisineDetail = (props) => {
   const [visible, setVisible] = useState(true)
 
-  const userid  = props.auth
+  const userid = props.auth
   console.log(userid.user.uid)
   const userID = userid.user.uid
 
@@ -36,7 +36,7 @@ const CuisineDetail = (props) => {
     setIntolerance((Prefs.intolerances1 && Prefs.intolerances1) + (Prefs.intolerances2 && ', ' + Prefs.intolerances2) + (Prefs.intolerances3 && ', ' + Prefs.intolerances3))
     setDiet(Prefs.diet)
     setIngredient((Prefs.ingredients1 && Prefs.ingredients1) + (Prefs.ingredients2 && ', ' + Prefs.ingredients2) + (Prefs.ingredients3 && ', ' + Prefs.ingredients3))
-    console.log('t1',Prefs)
+    console.log('t1', Prefs)
   })
 
 
@@ -46,7 +46,7 @@ const CuisineDetail = (props) => {
   console.log(diet, cuisine.title)
 
   function getRecipeData() {
-    console.log('t2', intolerance, '!', diet,'!', ingredient, '!', type,'!', cuisine.title)
+    console.log('t2', intolerance, '!', diet, '!', ingredient, '!', type, '!', cuisine.title)
     fetch(
       `https://api.spoonacular.com/recipes/complexSearch?cuisine=${cuisine.title}&diet=${diet}&excludeIngredients=${ingredient}&intolerances=${intolerance}&type=${type}&number=${amountOfResults}&addRecipeInformation=true&apiKey=${API_KEY}`
     )
@@ -61,16 +61,16 @@ const CuisineDetail = (props) => {
   }
   const toggleVisible = () => {
     const scrolled = document.documentElement.scrollTop;
-    if (scrolled > 0){
+    if (scrolled > 0) {
       setVisible(false)
     }
-    else if (scrolled <= 0){
+    else if (scrolled <= 0) {
       setVisible(true)
     }
   };
 
   window.addEventListener('scroll', toggleVisible);
-  const scrollToBottom = () =>{
+  const scrollToBottom = () => {
     getRecipeData()
     window.scrollTo({
       top: document.documentElement.scrollHeight,
@@ -92,82 +92,82 @@ const CuisineDetail = (props) => {
 
   return (
     <Fragment>
-    <section className="hero is-fullheight is-default is-bold Recipe-detail-page">
-      <div className="hero-body">
-        <div className="container has-text-centered">
-          <div className="columns is-vcentered">
-            <div className="column is-5">
-              <figure className="image is-4by3">
-                <img src={cuisine.image} alt="First pic of region" />
-              </figure>
-              <br />
-              <figure className="image is-4by3">
-                <img src={cuisine.altimage} alt="Second pic of region" />
-              </figure>
-            </div>
-            <div className="column is-6 is-offset-1">
-              <div className="Recipe-header-container">
-                <div className="media Recipe-user">
-                  <div className="media-left">
-                    <figure className="image is-48x48">
-                    </figure>
-                  </div>
+      <section className="hero is-fullheight is-default is-bold Recipe-detail-page">
+        <div className="hero-body">
+          <div className="container has-text-centered">
+            <div className="columns is-vcentered">
+              <div className="column is-5">
+                <figure className="image is-4by3">
+                  <img src={cuisine.image} alt="First pic of region" />
+                </figure>
+                <br />
+                <figure className="image is-4by3">
+                  <img src={cuisine.altimage} alt="Second pic of region" />
+                </figure>
+              </div>
+              <div className="column is-6 is-offset-1">
+                <div className="Recipe-header-container">
+                  <div className="media Recipe-user">
+                    <div className="media-left">
+                      <figure className="image is-48x48">
+                      </figure>
+                    </div>
 
+                  </div>
                 </div>
+                <h1 className="title is-2">
+                  {cuisine.title}
+                </h1>
+                <br />
+                <h2 className="subtitle is-6">
+                  {cuisine.description}
+                </h2>
+                <br />
               </div>
-              <h1 className="title is-2">
-                {cuisine.title}
-              </h1>
-              <br />
-              <h2 className="subtitle is-6">
-                {cuisine.description}
-              </h2>
-              <br />
             </div>
-          </div>
-          <div className="field">
+            <div className="field">
               <label className="label">Type of Dish</label>
-                <div className="select">
-                  <select name="dish" onChange={handleChange} >
+              <div className="select">
+                <select name="dish" onChange={handleChange} >
                   <option value="">-</option>
-                    <option value="main course">Main Course</option>
-                    <option value="side dish">Side Dish</option>
-                    <option value="dessert">Dessert</option>
-                    <option value="appetizer">Appetizer</option>
-                    <option value="salad">Salad</option>
-                    <option value="breakfast">Breakfast</option>
-                    <option value="soup">Soup</option>
-                    <option value="fingerfood">Fingerfood</option>
-                    <option value="snack">Snack</option>
-                  </select>
+                  <option value="main course">Main Course</option>
+                  <option value="side dish">Side Dish</option>
+                  <option value="dessert">Dessert</option>
+                  <option value="appetizer">Appetizer</option>
+                  <option value="salad">Salad</option>
+                  <option value="breakfast">Breakfast</option>
+                  <option value="soup">Soup</option>
+                  <option value="fingerfood">Fingerfood</option>
+                  <option value="snack">Snack</option>
+                </select>
               </div>
             </div>
-          <button
-            className="countryButton"
-            onClick={scrollToBottom}
-             style={{display: visible}}
+            <button
+              className="countryButton"
+              onClick={scrollToBottom}
+              style={{ display: visible }}
             >Find Recipes</button>
-              <div className="cuisinePref">
-                <h3 className="subtitle has-text-grey">The recipes are based on your preferences: </h3>
-                  <ul>Diet <em>{diet}</em> </ul>
-                  <ul> Ingredients <em>{ingredient}</em> </ul>
-                  <ul>Intolernces <em>{intolerance}</em> </ul>
-              </div>
-          <div className="recipeSection columns is-centered is-mobile">
-            {recipeData && <RecipeList recipeData={recipeData} />}
-          </div>
+            <div className="cuisinePref">
+              <h3 className="subtitle has-text-grey">The recipes are based on your preferences: </h3>
+              <ul>Diet <em>{diet}</em> </ul>
+              <ul> Ingredients <em>{ingredient}</em> </ul>
+              <ul>Intolernces <em>{intolerance}</em> </ul>
+            </div>
+            <div className="recipeSection columns is-centered is-mobile">
+              {recipeData && <RecipeList recipeData={recipeData} />}
+            </div>
           </div>
         </div>
-    </section>
+      </section>
     </Fragment>
   )
 }
 
-const mapStateToProps = ({ selectedCuisine, auth }) => ( {
-    cuisine: selectedCuisine.item,
-    isFetching: selectedCuisine.isFetching,
-    auth
-  }
+const mapStateToProps = ({ selectedCuisine, auth }) => ({
+  cuisine: selectedCuisine.item,
+  isFetching: selectedCuisine.isFetching,
+  auth
+}
 )
 
 export default connect(mapStateToProps, { fetchCuisineById })(CuisineDetail)

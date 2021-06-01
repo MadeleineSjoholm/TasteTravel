@@ -6,7 +6,7 @@ import { combineReducers } from 'redux'
 const initCuisines = () => {
 
   const all = (state = [], action) => {
-    switch(action.type) {
+    switch (action.type) {
       case FETCH_CUISINES_SUCCESS:
         return action.cuisines
       default:
@@ -14,7 +14,7 @@ const initCuisines = () => {
     }
   }
 
-  return combineReducers({all})
+  return combineReducers({ all })
 }
 
 const cuisines = initCuisines()

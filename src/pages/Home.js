@@ -77,7 +77,7 @@ class Home extends React.Component {
                       <li><b>Time: </b>{this.state.feature1.readyInMinutes} Minutes</li>
                       <li><b>Likes: </b>{this.state.feature1.aggregateLikes} <img src={process.env.PUBLIC_URL + '/heart.svg'} alt='Saved' width="20" height="20" /></li><br />
                       <button className="faqButton"><a href={this.state.feature2.sourceUrl}><div className="hreflink">Go to Recipe</div></a></button>
-                      
+
                     </ul>}
                   {this.state.loading || !this.state.feature2 ? <div>loading...</div> :
                     <ul>

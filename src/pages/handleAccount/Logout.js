@@ -16,37 +16,37 @@ class Logout extends React.Component {
     return (
       <div className="container">
         <div className="content-wrapper">
-        <figure className="map_background2">
-          <img src="map.png" alt="Company Logo" />
-        </figure>
-          { isAuth && <h1 className="LogOut">You are getting logged out...</h1>}
-          { !isAuth && <h1 className="LogOut">You are now logged out.<br/>
+          <figure className="map_background2">
+            <img src="map.png" alt="Company Logo" />
+          </figure>
+          {isAuth && <h1 className="LogOut">You are getting logged out...</h1>}
+          {!isAuth && <h1 className="LogOut">You are now logged out.<br />
             <a href="/Login" className="hreflink">  Login</a> to keep traveling!
-           <br/>
-           <br/>
+           <br />
+            <br />
            Hope to see you soon! </h1>}
         </div>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
 
 
       </div>
@@ -57,4 +57,4 @@ class Logout extends React.Component {
 }
 
 
-export default connect(({auth}) => ({auth}))(Logout)
+export default connect(({ auth }) => ({ auth }))(Logout)

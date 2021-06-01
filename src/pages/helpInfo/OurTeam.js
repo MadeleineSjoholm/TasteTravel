@@ -55,6 +55,12 @@ const OurTeam = (props) => {
           </p>
         </div>
       </div>
+      <br />
+      <h1 className="subtitle" align="center">Your travel plans are safe in this team's hands</h1>
+      <br />
+      <div className="group" align="center">
+        <img src="./TEAM/TasteTravelGang.png" alt='pic' />
+      </div>
     </div>
   )
 }

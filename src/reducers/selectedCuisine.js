@@ -4,7 +4,7 @@ import { combineReducers } from 'redux'
 
 const initSelectedCuisine = () => {
   const item = (state = {}, action) => {
-    switch(action.type) {
+    switch (action.type) {
       case FETCH_CUISINE_SUCCESS:
         return action.cuisine
       default:
@@ -13,8 +13,8 @@ const initSelectedCuisine = () => {
   }
 
   const isFetching = (state = false, action) => {
-    switch(action.type) {
-      case REQUEST_CUISINE: 
+    switch (action.type) {
+      case REQUEST_CUISINE:
         return true
       case FETCH_CUISINE_SUCCESS:
         return false
