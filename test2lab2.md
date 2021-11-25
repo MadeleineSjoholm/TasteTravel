@@ -1,6 +1,0 @@
-# rubrik
-
-text
-
-### rubrik
-texttext
